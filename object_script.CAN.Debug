@@ -1,0 +1,10 @@
+debug/main.o
+debug/mainwindow.o
+debug/canthread.o
+debug/canparamsetting.o
+debug/protocolthrend.o
+debug/qrc_resonrces.o
+debug/moc_mainwindow.o
+debug/moc_canthread.o
+debug/moc_canparamsetting.o
+debug/moc_protocolthrend.o
