@@ -29,7 +29,7 @@
 
 #define RUNMODE (0x00)
 #define UPGRADEMODE (0x01)
-#define MODE2 (0X02)
+#define STATUSMODE (0X02)
 #define MODE3 (0X03)
 #define MODE4 (0X04)
 #define MODE5 (0X05)

@@ -48,7 +48,7 @@ void ProtocolThrend::run()
                     );
 
 
-            if(this->CANdata->ID == (PGN57344 << 8) + PC_SOURCE_ADDR)  //修改MCU flash 初始化标志
+            if(this->CANdata->ID == (PGN57344 << 8) + UpdateReadAddr)  //修改MCU flash 初始化标志
             {
                 this->flash_inited = true;
             }

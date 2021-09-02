@@ -190,20 +190,25 @@ void CANThread::sendData(int ID,unsigned char *ch)
 
 void CANThread::sendADCrequestData()
 {
-    int ID = (PGN57600 << 8) + MDSP_SOURCE_ADDR;  //请求ADC 命令
-    unsigned char arr[8] = {0};  //第[7]字节表示通道号
-    arr[7] = 4;//ADC0  chn4
-    this->sendData(ID,(unsigned char *)arr);
-    sleep(10);  //给AD转换留足够时间
-    arr[7] = 5;//ADC1  chn5
-    this->sendData(ID,(unsigned char *)arr);
-    sleep(10);
-    arr[7] = 6;//ADC2  chn6
-    this->sendData(ID,(unsigned char *)arr);
-    sleep(10);
-    arr[7] = 7;//ADC3  chn7
-    this->sendData(ID,(unsigned char *)arr);
-    sleep(10);
+    for(int i = 0 ; i < 8; i++)
+    {
+        int ID = (PGN57600 << 8) + i;  //请求ADC 命令
+        unsigned char arr[8] = {0};  //第[7]字节表示通道号
+        arr[7] = 4;//ADC0  chn4
+        this->sendData(ID,(unsigned char *)arr);
+        sleep(10);  //给AD转换留足够时间
+        arr[7] = 5;//ADC1  chn5
+        this->sendData(ID,(unsigned char *)arr);
+        sleep(10);
+        arr[7] = 6;//ADC2  chn6
+        this->sendData(ID,(unsigned char *)arr);
+        sleep(10);
+        arr[7] = 7;//ADC3  chn7
+        this->sendData(ID,(unsigned char *)arr);
+        sleep(10);
+    }
+
+
 
 }
 void CANThread::run()

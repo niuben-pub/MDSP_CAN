@@ -17,6 +17,8 @@ public:
 
     bool data_update;  //数据更新标志
     bool flash_inited; //flash擦除完成标志
+    unsigned char UpdateWriteAddr;
+    unsigned char UpdateReadAddr;
     float MDSP_Board_currents;
     float MDSP_Board_HV;
     float MDSP_Board_LV;

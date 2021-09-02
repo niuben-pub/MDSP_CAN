@@ -24,6 +24,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += \
+    boardinfo.cpp \
     j1939_msg.cpp \
         main.cpp \
         mainwindow.cpp \
@@ -31,6 +32,7 @@ SOURCES += \
     protocolthrend.cpp
 
 HEADERS += \
+    boardinfo.h \
     j1939_msg.h \
         mainwindow.h \
     ControlCAN.h \
