@@ -9,5 +9,5 @@ boardinfo::boardinfo()
 boardinfo::boardinfo(unsigned char addr)
 {
     this->writerAddr = addr;
-    this->readAddr = addr | 0x10;
+    this->readAddr = addr << 4;
 }

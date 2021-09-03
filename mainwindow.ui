@@ -30,7 +30,7 @@
      <enum>QTabWidget::West</enum>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="tabCanParam">
      <attribute name="title">
@@ -49,7 +49,7 @@
        <enum>QTabWidget::West</enum>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab_9">
        <attribute name="title">
@@ -1334,7 +1334,7 @@
        <enum>QTabWidget::West</enum>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab_11">
        <attribute name="title">
@@ -1689,8 +1689,8 @@
        <widget class="QPushButton" name="pushButtonTestRBoard1">
         <property name="geometry">
          <rect>
-          <x>475</x>
-          <y>99</y>
+          <x>485</x>
+          <y>28</y>
           <width>35</width>
           <height>22</height>
          </rect>
@@ -1702,8 +1702,8 @@
        <widget class="QLabel" name="labTest">
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>100</y>
+          <x>50</x>
+          <y>29</y>
           <width>161</width>
           <height>21</height>
          </rect>
@@ -1715,8 +1715,8 @@
        <widget class="QLineEdit" name="lineEditTestAddrBoard1">
         <property name="geometry">
          <rect>
-          <x>200</x>
-          <y>100</y>
+          <x>210</x>
+          <y>29</y>
           <width>80</width>
           <height>20</height>
          </rect>
@@ -1725,8 +1725,8 @@
        <widget class="QPushButton" name="pushButtonTestWBoard1">
         <property name="geometry">
          <rect>
-          <x>440</x>
-          <y>99</y>
+          <x>450</x>
+          <y>28</y>
           <width>35</width>
           <height>22</height>
          </rect>
@@ -1738,8 +1738,8 @@
        <widget class="QLabel" name="labTest_2">
         <property name="geometry">
          <rect>
-          <x>290</x>
-          <y>100</y>
+          <x>300</x>
+          <y>29</y>
           <width>61</width>
           <height>21</height>
          </rect>
@@ -1751,8 +1751,8 @@
        <widget class="QLineEdit" name="lineEditTestDataBoard1">
         <property name="geometry">
          <rect>
-          <x>355</x>
-          <y>100</y>
+          <x>365</x>
+          <y>29</y>
           <width>80</width>
           <height>20</height>
          </rect>
@@ -1761,8 +1761,8 @@
        <widget class="QPushButton" name="pushButtonTestRBoard2">
         <property name="geometry">
          <rect>
-          <x>475</x>
-          <y>140</y>
+          <x>485</x>
+          <y>69</y>
           <width>35</width>
           <height>22</height>
          </rect>
@@ -1774,8 +1774,8 @@
        <widget class="QLineEdit" name="lineEditTestDataBoard2">
         <property name="geometry">
          <rect>
-          <x>355</x>
-          <y>141</y>
+          <x>365</x>
+          <y>70</y>
           <width>80</width>
           <height>20</height>
          </rect>
@@ -1784,8 +1784,8 @@
        <widget class="QLabel" name="labTest_3">
         <property name="geometry">
          <rect>
-          <x>290</x>
-          <y>141</y>
+          <x>300</x>
+          <y>70</y>
           <width>61</width>
           <height>21</height>
          </rect>
@@ -1797,8 +1797,8 @@
        <widget class="QLabel" name="labTest_4">
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>141</y>
+          <x>50</x>
+          <y>70</y>
           <width>161</width>
           <height>21</height>
          </rect>
@@ -1810,8 +1810,8 @@
        <widget class="QLineEdit" name="lineEditTestAddrBoard2">
         <property name="geometry">
          <rect>
-          <x>200</x>
-          <y>141</y>
+          <x>210</x>
+          <y>70</y>
           <width>80</width>
           <height>20</height>
          </rect>
@@ -1820,8 +1820,8 @@
        <widget class="QPushButton" name="pushButtonTestWBoard2">
         <property name="geometry">
          <rect>
-          <x>440</x>
-          <y>140</y>
+          <x>450</x>
+          <y>69</y>
           <width>35</width>
           <height>22</height>
          </rect>
@@ -1833,8 +1833,8 @@
        <widget class="QPushButton" name="pushButtonTestRBoard3">
         <property name="geometry">
          <rect>
-          <x>475</x>
-          <y>180</y>
+          <x>485</x>
+          <y>109</y>
           <width>35</width>
           <height>22</height>
          </rect>
@@ -1846,8 +1846,8 @@
        <widget class="QLineEdit" name="lineEditTestDataBoard3">
         <property name="geometry">
          <rect>
-          <x>355</x>
-          <y>181</y>
+          <x>365</x>
+          <y>110</y>
           <width>80</width>
           <height>20</height>
          </rect>
@@ -1856,8 +1856,8 @@
        <widget class="QLabel" name="labTest_5">
         <property name="geometry">
          <rect>
-          <x>290</x>
-          <y>181</y>
+          <x>300</x>
+          <y>110</y>
           <width>61</width>
           <height>21</height>
          </rect>
@@ -1869,8 +1869,8 @@
        <widget class="QLabel" name="labTest_6">
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>181</y>
+          <x>50</x>
+          <y>110</y>
           <width>161</width>
           <height>21</height>
          </rect>
@@ -1882,8 +1882,8 @@
        <widget class="QLineEdit" name="lineEditTestAddrBoard3">
         <property name="geometry">
          <rect>
-          <x>200</x>
-          <y>181</y>
+          <x>210</x>
+          <y>110</y>
           <width>80</width>
           <height>20</height>
          </rect>
@@ -1892,8 +1892,8 @@
        <widget class="QPushButton" name="pushButtonTestWBoard3">
         <property name="geometry">
          <rect>
-          <x>440</x>
-          <y>180</y>
+          <x>450</x>
+          <y>109</y>
           <width>35</width>
           <height>22</height>
          </rect>
@@ -1905,8 +1905,8 @@
        <widget class="QPushButton" name="pushButtonTestRBoard4">
         <property name="geometry">
          <rect>
-          <x>475</x>
-          <y>220</y>
+          <x>485</x>
+          <y>149</y>
           <width>35</width>
           <height>22</height>
          </rect>
@@ -1918,8 +1918,8 @@
        <widget class="QLineEdit" name="lineEditTestDataBoard4">
         <property name="geometry">
          <rect>
-          <x>355</x>
-          <y>221</y>
+          <x>365</x>
+          <y>150</y>
           <width>80</width>
           <height>20</height>
          </rect>
@@ -1928,8 +1928,8 @@
        <widget class="QLabel" name="labTest_7">
         <property name="geometry">
          <rect>
-          <x>290</x>
-          <y>221</y>
+          <x>300</x>
+          <y>150</y>
           <width>61</width>
           <height>21</height>
          </rect>
@@ -1941,8 +1941,8 @@
        <widget class="QLabel" name="labTest_8">
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>221</y>
+          <x>50</x>
+          <y>150</y>
           <width>161</width>
           <height>21</height>
          </rect>
@@ -1954,8 +1954,8 @@
        <widget class="QLineEdit" name="lineEditTestAddrBoard4">
         <property name="geometry">
          <rect>
-          <x>200</x>
-          <y>221</y>
+          <x>210</x>
+          <y>150</y>
           <width>80</width>
           <height>20</height>
          </rect>
@@ -1964,8 +1964,8 @@
        <widget class="QPushButton" name="pushButtonTestWBoard4">
         <property name="geometry">
          <rect>
-          <x>440</x>
-          <y>220</y>
+          <x>450</x>
+          <y>149</y>
           <width>35</width>
           <height>22</height>
          </rect>
@@ -1977,8 +1977,8 @@
        <widget class="QPushButton" name="pushButtonTestRBoard5">
         <property name="geometry">
          <rect>
-          <x>475</x>
-          <y>260</y>
+          <x>485</x>
+          <y>189</y>
           <width>35</width>
           <height>22</height>
          </rect>
@@ -1990,8 +1990,8 @@
        <widget class="QLineEdit" name="lineEditTestDataBoard5">
         <property name="geometry">
          <rect>
-          <x>355</x>
-          <y>261</y>
+          <x>365</x>
+          <y>190</y>
           <width>80</width>
           <height>20</height>
          </rect>
@@ -2000,8 +2000,8 @@
        <widget class="QLabel" name="labTest_9">
         <property name="geometry">
          <rect>
-          <x>290</x>
-          <y>261</y>
+          <x>300</x>
+          <y>190</y>
           <width>61</width>
           <height>21</height>
          </rect>
@@ -2013,8 +2013,8 @@
        <widget class="QLabel" name="labTest_10">
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>261</y>
+          <x>50</x>
+          <y>190</y>
           <width>161</width>
           <height>21</height>
          </rect>
@@ -2026,8 +2026,8 @@
        <widget class="QLineEdit" name="lineEditTestAddrBoard5">
         <property name="geometry">
          <rect>
-          <x>200</x>
-          <y>261</y>
+          <x>210</x>
+          <y>190</y>
           <width>80</width>
           <height>20</height>
          </rect>
@@ -2036,8 +2036,8 @@
        <widget class="QPushButton" name="pushButtonTestWBoard5">
         <property name="geometry">
          <rect>
-          <x>440</x>
-          <y>260</y>
+          <x>450</x>
+          <y>189</y>
           <width>35</width>
           <height>22</height>
          </rect>
@@ -2049,8 +2049,8 @@
        <widget class="QPushButton" name="pushButtonTestRBoard6">
         <property name="geometry">
          <rect>
-          <x>475</x>
-          <y>300</y>
+          <x>485</x>
+          <y>229</y>
           <width>35</width>
           <height>22</height>
          </rect>
@@ -2062,8 +2062,8 @@
        <widget class="QLineEdit" name="lineEditTestDataBoard6">
         <property name="geometry">
          <rect>
-          <x>355</x>
-          <y>301</y>
+          <x>365</x>
+          <y>230</y>
           <width>80</width>
           <height>20</height>
          </rect>
@@ -2072,8 +2072,8 @@
        <widget class="QLabel" name="labTest_11">
         <property name="geometry">
          <rect>
-          <x>290</x>
-          <y>301</y>
+          <x>300</x>
+          <y>230</y>
           <width>61</width>
           <height>21</height>
          </rect>
@@ -2085,8 +2085,8 @@
        <widget class="QLabel" name="labTest_12">
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>301</y>
+          <x>50</x>
+          <y>230</y>
           <width>161</width>
           <height>21</height>
          </rect>
@@ -2098,8 +2098,8 @@
        <widget class="QLineEdit" name="lineEditTestAddrBoard6">
         <property name="geometry">
          <rect>
-          <x>200</x>
-          <y>301</y>
+          <x>210</x>
+          <y>230</y>
           <width>80</width>
           <height>20</height>
          </rect>
@@ -2108,8 +2108,8 @@
        <widget class="QPushButton" name="pushButtonTestWBoard6">
         <property name="geometry">
          <rect>
-          <x>440</x>
-          <y>300</y>
+          <x>450</x>
+          <y>229</y>
           <width>35</width>
           <height>22</height>
          </rect>
@@ -2121,8 +2121,8 @@
        <widget class="QPushButton" name="pushButtonTestRBoard7">
         <property name="geometry">
          <rect>
-          <x>475</x>
-          <y>340</y>
+          <x>485</x>
+          <y>269</y>
           <width>35</width>
           <height>22</height>
          </rect>
@@ -2134,8 +2134,8 @@
        <widget class="QLineEdit" name="lineEditTestDataBoard7">
         <property name="geometry">
          <rect>
-          <x>355</x>
-          <y>341</y>
+          <x>365</x>
+          <y>270</y>
           <width>80</width>
           <height>20</height>
          </rect>
@@ -2144,8 +2144,8 @@
        <widget class="QLabel" name="labTest_13">
         <property name="geometry">
          <rect>
-          <x>290</x>
-          <y>341</y>
+          <x>300</x>
+          <y>270</y>
           <width>61</width>
           <height>21</height>
          </rect>
@@ -2157,8 +2157,8 @@
        <widget class="QLabel" name="labTest_14">
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>341</y>
+          <x>50</x>
+          <y>270</y>
           <width>161</width>
           <height>21</height>
          </rect>
@@ -2170,8 +2170,8 @@
        <widget class="QLineEdit" name="lineEditTestAddrBoard7">
         <property name="geometry">
          <rect>
-          <x>200</x>
-          <y>341</y>
+          <x>210</x>
+          <y>270</y>
           <width>80</width>
           <height>20</height>
          </rect>
@@ -2180,8 +2180,8 @@
        <widget class="QPushButton" name="pushButtonTestWBoard7">
         <property name="geometry">
          <rect>
-          <x>440</x>
-          <y>340</y>
+          <x>450</x>
+          <y>269</y>
           <width>35</width>
           <height>22</height>
          </rect>
@@ -2193,8 +2193,8 @@
        <widget class="QPushButton" name="pushButtonTestRBoard8">
         <property name="geometry">
          <rect>
-          <x>475</x>
-          <y>380</y>
+          <x>485</x>
+          <y>309</y>
           <width>35</width>
           <height>22</height>
          </rect>
@@ -2206,8 +2206,8 @@
        <widget class="QLineEdit" name="lineEditTestDataBoard8">
         <property name="geometry">
          <rect>
-          <x>355</x>
-          <y>381</y>
+          <x>365</x>
+          <y>310</y>
           <width>80</width>
           <height>20</height>
          </rect>
@@ -2216,8 +2216,8 @@
        <widget class="QLabel" name="labTest_15">
         <property name="geometry">
          <rect>
-          <x>290</x>
-          <y>381</y>
+          <x>300</x>
+          <y>310</y>
           <width>61</width>
           <height>21</height>
          </rect>
@@ -2229,8 +2229,8 @@
        <widget class="QLabel" name="labTest_16">
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>381</y>
+          <x>50</x>
+          <y>310</y>
           <width>161</width>
           <height>21</height>
          </rect>
@@ -2242,8 +2242,8 @@
        <widget class="QLineEdit" name="lineEditTestAddrBoard8">
         <property name="geometry">
          <rect>
-          <x>200</x>
-          <y>381</y>
+          <x>210</x>
+          <y>310</y>
           <width>80</width>
           <height>20</height>
          </rect>
@@ -2252,14 +2252,113 @@
        <widget class="QPushButton" name="pushButtonTestWBoard8">
         <property name="geometry">
          <rect>
-          <x>440</x>
-          <y>380</y>
+          <x>450</x>
+          <y>309</y>
           <width>35</width>
           <height>22</height>
          </rect>
         </property>
         <property name="text">
          <string>W</string>
+        </property>
+       </widget>
+       <widget class="QTableWidget" name="tableWidgetTest">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>380</y>
+          <width>471</width>
+          <height>131</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 9pt &quot;微软雅黑&quot;;</string>
+        </property>
+        <property name="lineWidth">
+         <number>1</number>
+        </property>
+        <property name="sizeAdjustPolicy">
+         <enum>QAbstractScrollArea::AdjustToContentsOnFirstShow</enum>
+        </property>
+        <property name="autoScrollMargin">
+         <number>16</number>
+        </property>
+        <property name="gridStyle">
+         <enum>Qt::SolidLine</enum>
+        </property>
+        <property name="sortingEnabled">
+         <bool>true</bool>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+        <property name="cornerButtonEnabled">
+         <bool>true</bool>
+        </property>
+        <property name="rowCount">
+         <number>5</number>
+        </property>
+        <property name="columnCount">
+         <number>11</number>
+        </property>
+        <attribute name="horizontalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="horizontalHeaderCascadingSectionResizes">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="horizontalHeaderMinimumSectionSize">
+         <number>22</number>
+        </attribute>
+        <attribute name="horizontalHeaderDefaultSectionSize">
+         <number>77</number>
+        </attribute>
+        <attribute name="horizontalHeaderStretchLastSection">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="verticalHeaderMinimumSectionSize">
+         <number>23</number>
+        </attribute>
+        <attribute name="verticalHeaderDefaultSectionSize">
+         <number>23</number>
+        </attribute>
+        <attribute name="verticalHeaderHighlightSections">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderStretchLastSection">
+         <bool>false</bool>
+        </attribute>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+        <column/>
+       </widget>
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>360</y>
+          <width>471</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>        Time         Dir         ID                           Data</string>
         </property>
        </widget>
       </widget>
@@ -2320,7 +2419,7 @@
        <enum>QTabWidget::West</enum>
       </property>
       <property name="currentIndex">
-       <number>6</number>
+       <number>7</number>
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
@@ -2386,7 +2485,7 @@
          <rect>
           <x>160</x>
           <y>200</y>
-          <width>150</width>
+          <width>171</width>
           <height>30</height>
          </rect>
         </property>
@@ -2418,7 +2517,7 @@
          <rect>
           <x>160</x>
           <y>260</y>
-          <width>150</width>
+          <width>171</width>
           <height>30</height>
          </rect>
         </property>
@@ -2481,7 +2580,7 @@
          <rect>
           <x>160</x>
           <y>200</y>
-          <width>150</width>
+          <width>171</width>
           <height>30</height>
          </rect>
         </property>
@@ -2536,7 +2635,7 @@
          <rect>
           <x>160</x>
           <y>260</y>
-          <width>150</width>
+          <width>171</width>
           <height>30</height>
          </rect>
         </property>
@@ -2602,7 +2701,7 @@
          <rect>
           <x>160</x>
           <y>200</y>
-          <width>150</width>
+          <width>171</width>
           <height>30</height>
          </rect>
         </property>
@@ -2657,7 +2756,7 @@
          <rect>
           <x>160</x>
           <y>260</y>
-          <width>150</width>
+          <width>171</width>
           <height>30</height>
          </rect>
         </property>
@@ -2723,7 +2822,7 @@
          <rect>
           <x>160</x>
           <y>200</y>
-          <width>150</width>
+          <width>171</width>
           <height>30</height>
          </rect>
         </property>
@@ -2778,7 +2877,7 @@
          <rect>
           <x>160</x>
           <y>260</y>
-          <width>150</width>
+          <width>171</width>
           <height>30</height>
          </rect>
         </property>
@@ -2844,7 +2943,7 @@
          <rect>
           <x>160</x>
           <y>200</y>
-          <width>150</width>
+          <width>171</width>
           <height>30</height>
          </rect>
         </property>
@@ -2899,7 +2998,7 @@
          <rect>
           <x>160</x>
           <y>260</y>
-          <width>150</width>
+          <width>161</width>
           <height>30</height>
          </rect>
         </property>
@@ -2965,7 +3064,7 @@
          <rect>
           <x>160</x>
           <y>200</y>
-          <width>150</width>
+          <width>171</width>
           <height>30</height>
          </rect>
         </property>
@@ -3020,7 +3119,7 @@
          <rect>
           <x>160</x>
           <y>260</y>
-          <width>150</width>
+          <width>171</width>
           <height>30</height>
          </rect>
         </property>
@@ -3086,7 +3185,7 @@
          <rect>
           <x>160</x>
           <y>200</y>
-          <width>150</width>
+          <width>171</width>
           <height>30</height>
          </rect>
         </property>
@@ -3141,7 +3240,7 @@
          <rect>
           <x>160</x>
           <y>260</y>
-          <width>150</width>
+          <width>161</width>
           <height>30</height>
          </rect>
         </property>
@@ -3207,7 +3306,7 @@
          <rect>
           <x>160</x>
           <y>200</y>
-          <width>150</width>
+          <width>171</width>
           <height>30</height>
          </rect>
         </property>
@@ -3262,7 +3361,7 @@
          <rect>
           <x>160</x>
           <y>260</y>
-          <width>150</width>
+          <width>161</width>
           <height>30</height>
          </rect>
         </property>
@@ -3294,7 +3393,7 @@
      <widget class="QPushButton" name="btnStatusBoard1">
       <property name="geometry">
        <rect>
-        <x>370</x>
+        <x>410</x>
         <y>490</y>
         <width>111</width>
         <height>31</height>
@@ -3307,7 +3406,7 @@
      <widget class="QPushButton" name="btnStatusBoard1_2">
       <property name="geometry">
        <rect>
-        <x>240</x>
+        <x>280</x>
         <y>490</y>
         <width>111</width>
         <height>31</height>

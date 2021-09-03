@@ -347,6 +347,29 @@ void MainWindow::displayMonitor(VCI_CAN_OBJ *vci, DWORD dwRel)
         fpga_data += (unsigned int)vci[0].Data[6] << 8;
         fpga_data += (unsigned int)vci[0].Data[7] ;
         ui->lineEditTestDataBoard1->setText(QString::number(fpga_data,16));
+
+        int row = 0;
+        while(ui->tableWidgetTest->item(row,0) != 0)
+        {
+            row++;
+            if(ui->tableWidgetTest->rowCount() < row + 1)
+            {
+                ui->tableWidgetTest->setRowCount(ui->tableWidgetTest->rowCount() + 1);
+                ui->tableWidgetTest->scrollToBottom();
+            }
+        }
+
+        ui->tableWidgetTest->setItem(row,0,new QTableWidgetItem(QTime::currentTime().toString("HH:mm:ss zzz")));  //系统时间
+        ui->tableWidgetTest->setItem(row,1,new QTableWidgetItem("R"));
+        ui->tableWidgetTest->setItem(row,2,new QTableWidgetItem(QString::number(vci->ID,16)));
+        ui->tableWidgetTest->item(row,0)->setTextAlignment(Qt::AlignCenter);
+        ui->tableWidgetTest->item(row,1)->setTextAlignment(Qt::AlignCenter);
+        ui->tableWidgetTest->item(row,2)->setTextAlignment(Qt::AlignCenter);
+        for(int i = 0; i < 8; i++)
+        {
+            ui->tableWidgetTest->setItem(row,3 + i,new QTableWidgetItem(QString::number(vci[0].Data[i],16)));
+            ui->tableWidgetTest->item(row, 3 + i)->setTextAlignment(Qt::AlignCenter);
+        }
     }
     if(vci->ID == (PGN58624 << 8) + board2->readAddr) //读取FPGA数据
     {
@@ -355,6 +378,29 @@ void MainWindow::displayMonitor(VCI_CAN_OBJ *vci, DWORD dwRel)
         fpga_data += (unsigned int)vci[0].Data[6] << 8;
         fpga_data += (unsigned int)vci[0].Data[7] ;
         ui->lineEditTestDataBoard2->setText(QString::number(fpga_data,16));
+
+        int row = 0;
+        while(ui->tableWidgetTest->item(row,0) != 0)
+        {
+            row++;
+            if(ui->tableWidgetTest->rowCount() < row + 1)
+            {
+                ui->tableWidgetTest->setRowCount(ui->tableWidgetTest->rowCount() + 1);
+                ui->tableWidgetTest->scrollToBottom();
+            }
+        }
+
+        ui->tableWidgetTest->setItem(row,0,new QTableWidgetItem(QTime::currentTime().toString("HH:mm:ss zzz")));  //系统时间
+        ui->tableWidgetTest->setItem(row,1,new QTableWidgetItem("R"));
+        ui->tableWidgetTest->setItem(row,2,new QTableWidgetItem(QString::number(vci->ID,16)));
+        ui->tableWidgetTest->item(row,0)->setTextAlignment(Qt::AlignCenter);
+        ui->tableWidgetTest->item(row,1)->setTextAlignment(Qt::AlignCenter);
+        ui->tableWidgetTest->item(row,2)->setTextAlignment(Qt::AlignCenter);
+        for(int i = 0; i < 8; i++)
+        {
+            ui->tableWidgetTest->setItem(row,3 + i,new QTableWidgetItem(QString::number(vci[0].Data[i],16)));
+            ui->tableWidgetTest->item(row, 3 + i)->setTextAlignment(Qt::AlignCenter);
+        }
     }
     if(vci->ID == (PGN58624 << 8) + board3->readAddr) //读取FPGA数据
     {
@@ -363,6 +409,29 @@ void MainWindow::displayMonitor(VCI_CAN_OBJ *vci, DWORD dwRel)
         fpga_data += (unsigned int)vci[0].Data[6] << 8;
         fpga_data += (unsigned int)vci[0].Data[7] ;
         ui->lineEditTestDataBoard3->setText(QString::number(fpga_data,16));
+
+        int row = 0;
+        while(ui->tableWidgetTest->item(row,0) != 0)
+        {
+            row++;
+            if(ui->tableWidgetTest->rowCount() < row + 1)
+            {
+                ui->tableWidgetTest->setRowCount(ui->tableWidgetTest->rowCount() + 1);
+                ui->tableWidgetTest->scrollToBottom();
+            }
+        }
+
+        ui->tableWidgetTest->setItem(row,0,new QTableWidgetItem(QTime::currentTime().toString("HH:mm:ss zzz")));  //系统时间
+        ui->tableWidgetTest->setItem(row,1,new QTableWidgetItem("R"));
+        ui->tableWidgetTest->setItem(row,2,new QTableWidgetItem(QString::number(vci->ID,16)));
+        ui->tableWidgetTest->item(row,0)->setTextAlignment(Qt::AlignCenter);
+        ui->tableWidgetTest->item(row,1)->setTextAlignment(Qt::AlignCenter);
+        ui->tableWidgetTest->item(row,2)->setTextAlignment(Qt::AlignCenter);
+        for(int i = 0; i < 8; i++)
+        {
+            ui->tableWidgetTest->setItem(row,3 + i,new QTableWidgetItem(QString::number(vci[0].Data[i],16)));
+            ui->tableWidgetTest->item(row, 3 + i)->setTextAlignment(Qt::AlignCenter);
+        }
     }
     if(vci->ID == (PGN58624 << 8) + board4->readAddr) //读取FPGA数据
     {
@@ -371,6 +440,29 @@ void MainWindow::displayMonitor(VCI_CAN_OBJ *vci, DWORD dwRel)
         fpga_data += (unsigned int)vci[0].Data[6] << 8;
         fpga_data += (unsigned int)vci[0].Data[7] ;
         ui->lineEditTestDataBoard4->setText(QString::number(fpga_data,16));
+
+        int row = 0;
+        while(ui->tableWidgetTest->item(row,0) != 0)
+        {
+            row++;
+            if(ui->tableWidgetTest->rowCount() < row + 1)
+            {
+                ui->tableWidgetTest->setRowCount(ui->tableWidgetTest->rowCount() + 1);
+                ui->tableWidgetTest->scrollToBottom();
+            }
+        }
+
+        ui->tableWidgetTest->setItem(row,0,new QTableWidgetItem(QTime::currentTime().toString("HH:mm:ss zzz")));  //系统时间
+        ui->tableWidgetTest->setItem(row,1,new QTableWidgetItem("R"));
+        ui->tableWidgetTest->setItem(row,2,new QTableWidgetItem(QString::number(vci->ID,16)));
+        ui->tableWidgetTest->item(row,0)->setTextAlignment(Qt::AlignCenter);
+        ui->tableWidgetTest->item(row,1)->setTextAlignment(Qt::AlignCenter);
+        ui->tableWidgetTest->item(row,2)->setTextAlignment(Qt::AlignCenter);
+        for(int i = 0; i < 8; i++)
+        {
+            ui->tableWidgetTest->setItem(row,3 + i,new QTableWidgetItem(QString::number(vci[0].Data[i],16)));
+            ui->tableWidgetTest->item(row, 3 + i)->setTextAlignment(Qt::AlignCenter);
+        }
     }
     if(vci->ID == (PGN58624 << 8) + board5->readAddr) //读取FPGA数据
     {
@@ -379,6 +471,29 @@ void MainWindow::displayMonitor(VCI_CAN_OBJ *vci, DWORD dwRel)
         fpga_data += (unsigned int)vci[0].Data[6] << 8;
         fpga_data += (unsigned int)vci[0].Data[7] ;
         ui->lineEditTestDataBoard5->setText(QString::number(fpga_data,16));
+
+        int row = 0;
+        while(ui->tableWidgetTest->item(row,0) != 0)
+        {
+            row++;
+            if(ui->tableWidgetTest->rowCount() < row + 1)
+            {
+                ui->tableWidgetTest->setRowCount(ui->tableWidgetTest->rowCount() + 1);
+                ui->tableWidgetTest->scrollToBottom();
+            }
+        }
+
+        ui->tableWidgetTest->setItem(row,0,new QTableWidgetItem(QTime::currentTime().toString("HH:mm:ss zzz")));  //系统时间
+        ui->tableWidgetTest->setItem(row,1,new QTableWidgetItem("R"));
+        ui->tableWidgetTest->setItem(row,2,new QTableWidgetItem(QString::number(vci->ID,16)));
+        ui->tableWidgetTest->item(row,0)->setTextAlignment(Qt::AlignCenter);
+        ui->tableWidgetTest->item(row,1)->setTextAlignment(Qt::AlignCenter);
+        ui->tableWidgetTest->item(row,2)->setTextAlignment(Qt::AlignCenter);
+        for(int i = 0; i < 8; i++)
+        {
+            ui->tableWidgetTest->setItem(row,3 + i,new QTableWidgetItem(QString::number(vci[0].Data[i],16)));
+            ui->tableWidgetTest->item(row, 3 + i)->setTextAlignment(Qt::AlignCenter);
+        }
     }
     if(vci->ID == (PGN58624 << 8) + board6->readAddr) //读取FPGA数据
     {
@@ -387,6 +502,29 @@ void MainWindow::displayMonitor(VCI_CAN_OBJ *vci, DWORD dwRel)
         fpga_data += (unsigned int)vci[0].Data[6] << 8;
         fpga_data += (unsigned int)vci[0].Data[7] ;
         ui->lineEditTestDataBoard6->setText(QString::number(fpga_data,16));
+
+        int row = 0;
+        while(ui->tableWidgetTest->item(row,0) != 0)
+        {
+            row++;
+            if(ui->tableWidgetTest->rowCount() < row + 1)
+            {
+                ui->tableWidgetTest->setRowCount(ui->tableWidgetTest->rowCount() + 1);
+                ui->tableWidgetTest->scrollToBottom();
+            }
+        }
+
+        ui->tableWidgetTest->setItem(row,0,new QTableWidgetItem(QTime::currentTime().toString("HH:mm:ss zzz")));  //系统时间
+        ui->tableWidgetTest->setItem(row,1,new QTableWidgetItem("R"));
+        ui->tableWidgetTest->setItem(row,2,new QTableWidgetItem(QString::number(vci->ID,16)));
+        ui->tableWidgetTest->item(row,0)->setTextAlignment(Qt::AlignCenter);
+        ui->tableWidgetTest->item(row,1)->setTextAlignment(Qt::AlignCenter);
+        ui->tableWidgetTest->item(row,2)->setTextAlignment(Qt::AlignCenter);
+        for(int i = 0; i < 8; i++)
+        {
+            ui->tableWidgetTest->setItem(row,3 + i,new QTableWidgetItem(QString::number(vci[0].Data[i],16)));
+            ui->tableWidgetTest->item(row, 3 + i)->setTextAlignment(Qt::AlignCenter);
+        }
     }
     if(vci->ID == (PGN58624 << 8) + board7->readAddr) //读取FPGA数据
     {
@@ -395,6 +533,29 @@ void MainWindow::displayMonitor(VCI_CAN_OBJ *vci, DWORD dwRel)
         fpga_data += (unsigned int)vci[0].Data[6] << 8;
         fpga_data += (unsigned int)vci[0].Data[7] ;
         ui->lineEditTestDataBoard7->setText(QString::number(fpga_data,16));
+
+        int row = 0;
+        while(ui->tableWidgetTest->item(row,0) != 0)
+        {
+            row++;
+            if(ui->tableWidgetTest->rowCount() < row + 1)
+            {
+                ui->tableWidgetTest->setRowCount(ui->tableWidgetTest->rowCount() + 1);
+                ui->tableWidgetTest->scrollToBottom();
+            }
+        }
+
+        ui->tableWidgetTest->setItem(row,0,new QTableWidgetItem(QTime::currentTime().toString("HH:mm:ss zzz")));  //系统时间
+        ui->tableWidgetTest->setItem(row,1,new QTableWidgetItem("R"));
+        ui->tableWidgetTest->setItem(row,2,new QTableWidgetItem(QString::number(vci->ID,16)));
+        ui->tableWidgetTest->item(row,0)->setTextAlignment(Qt::AlignCenter);
+        ui->tableWidgetTest->item(row,1)->setTextAlignment(Qt::AlignCenter);
+        ui->tableWidgetTest->item(row,2)->setTextAlignment(Qt::AlignCenter);
+        for(int i = 0; i < 8; i++)
+        {
+            ui->tableWidgetTest->setItem(row,3 + i,new QTableWidgetItem(QString::number(vci[0].Data[i],16)));
+            ui->tableWidgetTest->item(row, 3 + i)->setTextAlignment(Qt::AlignCenter);
+        }
     }
     if(vci->ID == (PGN58624 << 8) + board8->readAddr) //读取FPGA数据
     {
@@ -403,6 +564,29 @@ void MainWindow::displayMonitor(VCI_CAN_OBJ *vci, DWORD dwRel)
         fpga_data += (unsigned int)vci[0].Data[6] << 8;
         fpga_data += (unsigned int)vci[0].Data[7] ;
         ui->lineEditTestDataBoard8->setText(QString::number(fpga_data,16));
+
+        int row = 0;
+        while(ui->tableWidgetTest->item(row,0) != 0)
+        {
+            row++;
+            if(ui->tableWidgetTest->rowCount() < row + 1)
+            {
+                ui->tableWidgetTest->setRowCount(ui->tableWidgetTest->rowCount() + 1);
+                ui->tableWidgetTest->scrollToBottom();
+            }
+        }
+
+        ui->tableWidgetTest->setItem(row,0,new QTableWidgetItem(QTime::currentTime().toString("HH:mm:ss zzz")));  //系统时间
+        ui->tableWidgetTest->setItem(row,1,new QTableWidgetItem("R"));
+        ui->tableWidgetTest->setItem(row,2,new QTableWidgetItem(QString::number(vci->ID,16)));
+        ui->tableWidgetTest->item(row,0)->setTextAlignment(Qt::AlignCenter);
+        ui->tableWidgetTest->item(row,1)->setTextAlignment(Qt::AlignCenter);
+        ui->tableWidgetTest->item(row,2)->setTextAlignment(Qt::AlignCenter);
+        for(int i = 0; i < 8; i++)
+        {
+            ui->tableWidgetTest->setItem(row,3 + i,new QTableWidgetItem(QString::number(vci[0].Data[i],16)));
+            ui->tableWidgetTest->item(row, 3 + i)->setTextAlignment(Qt::AlignCenter);
+        }
     }
 
 
@@ -411,6 +595,17 @@ void MainWindow::displayMonitor(VCI_CAN_OBJ *vci, DWORD dwRel)
 void MainWindow::initUi()
 {
     this->setWindowTitle("MDSP-CAN Tool V1.0");
+
+
+    ui->tableWidgetTest->setColumnWidth(0,90);
+    ui->tableWidgetTest->setColumnWidth(1,60);
+    ui->tableWidgetTest->setColumnWidth(2,76);
+    for(int i = 3; i <= 10; i++)
+    {
+        ui->tableWidgetTest->setColumnWidth(i,28);
+        ui->tableWidgetTest->setHorizontalHeaderItem(i,new QTableWidgetItem(QString::number(i - 3)));
+    }
+
     ui->tabWidget->setCurrentIndex(0);//设置选中第一个标签
     ui->tabWidget->tabBar()->setStyle(new CustomTabStyle);
     ui->tabWidget_2->setCurrentIndex(0);//设置选中第一个标签
@@ -510,7 +705,7 @@ void MainWindow::on_pushButton3GINBoard1_clicked()
 {
     bool ok;
     this->board1->writerAddr = ui->lineEditDevAddrBoard1->text().toULongLong(&ok,10);
-    this->board1->readAddr = this->board1->writerAddr | 0x10;
+    this->board1->readAddr = this->board1->writerAddr << 4;
     this->board1->IN1_3G_NUM = ui->lineEdit3GIN1Board1->text().toULongLong(&ok,10);
     this->board1->IN2_3G_NUM = ui->lineEdit3GIN2Board1->text().toULongLong(&ok,10);
 
@@ -527,7 +722,7 @@ void MainWindow::on_pushButton3GINBoard2_clicked()
 {
     bool ok;
     this->board2->writerAddr = ui->lineEditDevAddrBoard2->text().toULongLong(&ok,10);
-    this->board2->readAddr = this->board2->writerAddr | 0x10;
+    this->board2->readAddr = this->board2->writerAddr << 4;
     this->board2->IN1_3G_NUM = ui->lineEdit3GIN1Board2->text().toULongLong(&ok,10);
     this->board2->IN2_3G_NUM = ui->lineEdit3GIN2Board2->text().toULongLong(&ok,10);
 }
@@ -543,7 +738,7 @@ void MainWindow::on_pushButton3GINBoard3_clicked()
 {
     bool ok;
     this->board3->writerAddr = ui->lineEditDevAddrBoard3->text().toULongLong(&ok,10);
-    this->board3->readAddr = this->board3->writerAddr | 0x10;
+    this->board3->readAddr = this->board3->writerAddr << 4;
     this->board3->IN1_3G_NUM = ui->lineEdit3GIN1Board3->text().toULongLong(&ok,10);
     this->board3->IN2_3G_NUM = ui->lineEdit3GIN2Board3->text().toULongLong(&ok,10);
 }
@@ -560,7 +755,7 @@ void MainWindow::on_pushButton3GINBoard4_clicked()
 {
     bool ok;
     this->board4->writerAddr = ui->lineEditDevAddrBoard4->text().toULongLong(&ok,10);
-    this->board4->readAddr = this->board4->writerAddr | 0x10;
+    this->board4->readAddr = this->board4->writerAddr << 4;
     this->board4->IN1_3G_NUM = ui->lineEdit3GIN1Board4->text().toULongLong(&ok,10);
     this->board4->IN2_3G_NUM = ui->lineEdit3GIN2Board4->text().toULongLong(&ok,10);
 }
@@ -576,7 +771,7 @@ void MainWindow::on_pushButton3GINBoard5_clicked()
 {
     bool ok;
     this->board5->writerAddr = ui->lineEditDevAddrBoard5->text().toULongLong(&ok,10);
-    this->board5->readAddr = this->board5->writerAddr | 0x10;
+    this->board5->readAddr = this->board5->writerAddr << 4;
     this->board5->IN1_3G_NUM = ui->lineEdit3GIN1Board5->text().toULongLong(&ok,10);
     this->board5->IN2_3G_NUM = ui->lineEdit3GIN2Board5->text().toULongLong(&ok,10);
 }
@@ -592,7 +787,7 @@ void MainWindow::on_pushButton3GINBoard6_clicked()
 {
     bool ok;
     this->board6->writerAddr = ui->lineEditDevAddrBoard6->text().toULongLong(&ok,10);
-    this->board6->readAddr = this->board6->writerAddr | 0x10;
+    this->board6->readAddr = this->board6->writerAddr << 4;
     this->board6->IN1_3G_NUM = ui->lineEdit3GIN1Board6->text().toULongLong(&ok,10);
     this->board6->IN2_3G_NUM = ui->lineEdit3GIN2Board6->text().toULongLong(&ok,10);
 }
@@ -608,7 +803,7 @@ void MainWindow::on_pushButton3GINBoard7_clicked()
 {
     bool ok;
     this->board7->writerAddr = ui->lineEditDevAddrBoard7->text().toULongLong(&ok,10);
-    this->board7->readAddr = this->board7->writerAddr | 0x10;
+    this->board7->readAddr = this->board7->writerAddr << 4;
     this->board7->IN1_3G_NUM = ui->lineEdit3GIN1Board7->text().toULongLong(&ok,10);
     this->board7->IN2_3G_NUM = ui->lineEdit3GIN2Board7->text().toULongLong(&ok,10);
 }
@@ -625,7 +820,7 @@ void MainWindow::on_pushButton3GINBoard8_clicked()
 {
     bool ok;
     this->board8->writerAddr = ui->lineEditDevAddrBoard8->text().toULongLong(&ok,10);
-    this->board8->readAddr = this->board8->writerAddr | 0x10;
+    this->board8->readAddr = this->board8->writerAddr << 4;
     this->board8->IN1_3G_NUM = ui->lineEdit3GIN1Board8->text().toULongLong(&ok,10);
     this->board8->IN2_3G_NUM = ui->lineEdit3GIN2Board8->text().toULongLong(&ok,10);
 //    qDebug()<<"board1 "<<board1->readAddr<<" "<<board1->writerAddr<<" "<<board1->IN1_3G_NUM<<" "<<board1->IN2_3G_NUM;
@@ -1021,6 +1216,31 @@ void MainWindow::on_pushButtonTestWBoard1_clicked()
         qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
     }
     canthread->sendData(ID,(unsigned char*)send_str);
+
+    int row = 0;
+    while(ui->tableWidgetTest->item(row,0) != 0)
+    {
+        row++;
+        if(ui->tableWidgetTest->rowCount() < row + 1)
+        {
+            ui->tableWidgetTest->setRowCount(ui->tableWidgetTest->rowCount() + 1);
+            ui->tableWidgetTest->scrollToBottom();
+        }
+    }
+
+    ui->tableWidgetTest->setItem(row,0,new QTableWidgetItem(QTime::currentTime().toString("HH:mm:ss zzz")));  //系统时间
+    ui->tableWidgetTest->setItem(row,1,new QTableWidgetItem("W"));
+    ui->tableWidgetTest->setItem(row,2,new QTableWidgetItem(QString::number(ID,16)));
+    ui->tableWidgetTest->item(row,0)->setTextAlignment(Qt::AlignCenter);
+    ui->tableWidgetTest->item(row,1)->setTextAlignment(Qt::AlignCenter);
+    ui->tableWidgetTest->item(row,2)->setTextAlignment(Qt::AlignCenter);
+    for(int i = 0; i < 8; i++)
+    {
+        ui->tableWidgetTest->setItem(row,3 + i,new QTableWidgetItem(QString::number(send_str[i],16)));
+        ui->tableWidgetTest->item(row, 3 + i)->setTextAlignment(Qt::AlignCenter);
+    }
+
+
 }
 
 void MainWindow::on_pushButtonTestRBoard1_clicked()
@@ -1037,6 +1257,29 @@ void MainWindow::on_pushButtonTestRBoard1_clicked()
         qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
     }
     canthread->sendData(ID,(unsigned char*)send_str);
+
+    int row = 0;
+    while(ui->tableWidgetTest->item(row,0) != 0)
+    {
+        row++;
+        if(ui->tableWidgetTest->rowCount() < row + 1)
+        {
+            ui->tableWidgetTest->setRowCount(ui->tableWidgetTest->rowCount() + 1);
+            ui->tableWidgetTest->scrollToBottom();
+        }
+    }
+
+    ui->tableWidgetTest->setItem(row,0,new QTableWidgetItem(QTime::currentTime().toString("HH:mm:ss zzz")));  //系统时间
+    ui->tableWidgetTest->setItem(row,1,new QTableWidgetItem("W"));
+    ui->tableWidgetTest->setItem(row,2,new QTableWidgetItem(QString::number(ID,16)));
+    ui->tableWidgetTest->item(row,0)->setTextAlignment(Qt::AlignCenter);
+    ui->tableWidgetTest->item(row,1)->setTextAlignment(Qt::AlignCenter);
+    ui->tableWidgetTest->item(row,2)->setTextAlignment(Qt::AlignCenter);
+    for(int i = 0; i < 8; i++)
+    {
+        ui->tableWidgetTest->setItem(row,3 + i,new QTableWidgetItem(QString::number(send_str[i],16)));
+        ui->tableWidgetTest->item(row, 3 + i)->setTextAlignment(Qt::AlignCenter);
+    }
 }
 
 void MainWindow::on_pushButtonTestWBoard2_clicked()
@@ -1055,6 +1298,29 @@ void MainWindow::on_pushButtonTestWBoard2_clicked()
         qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
     }
     canthread->sendData(ID,(unsigned char*)send_str);
+
+    int row = 0;
+    while(ui->tableWidgetTest->item(row,0) != 0)
+    {
+        row++;
+        if(ui->tableWidgetTest->rowCount() < row + 1)
+        {
+            ui->tableWidgetTest->setRowCount(ui->tableWidgetTest->rowCount() + 1);
+            ui->tableWidgetTest->scrollToBottom();
+        }
+    }
+
+    ui->tableWidgetTest->setItem(row,0,new QTableWidgetItem(QTime::currentTime().toString("HH:mm:ss zzz")));  //系统时间
+    ui->tableWidgetTest->setItem(row,1,new QTableWidgetItem("W"));
+    ui->tableWidgetTest->setItem(row,2,new QTableWidgetItem(QString::number(ID,16)));
+    ui->tableWidgetTest->item(row,0)->setTextAlignment(Qt::AlignCenter);
+    ui->tableWidgetTest->item(row,1)->setTextAlignment(Qt::AlignCenter);
+    ui->tableWidgetTest->item(row,2)->setTextAlignment(Qt::AlignCenter);
+    for(int i = 0; i < 8; i++)
+    {
+        ui->tableWidgetTest->setItem(row,3 + i,new QTableWidgetItem(QString::number(send_str[i],16)));
+        ui->tableWidgetTest->item(row, 3 + i)->setTextAlignment(Qt::AlignCenter);
+    }
 }
 
 void MainWindow::on_pushButtonTestRBoard2_clicked()
@@ -1071,6 +1337,29 @@ void MainWindow::on_pushButtonTestRBoard2_clicked()
         qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
     }
     canthread->sendData(ID,(unsigned char*)send_str);
+
+    int row = 0;
+    while(ui->tableWidgetTest->item(row,0) != 0)
+    {
+        row++;
+        if(ui->tableWidgetTest->rowCount() < row + 1)
+        {
+            ui->tableWidgetTest->setRowCount(ui->tableWidgetTest->rowCount() + 1);
+            ui->tableWidgetTest->scrollToBottom();
+        }
+    }
+
+    ui->tableWidgetTest->setItem(row,0,new QTableWidgetItem(QTime::currentTime().toString("HH:mm:ss zzz")));  //系统时间
+    ui->tableWidgetTest->setItem(row,1,new QTableWidgetItem("W"));
+    ui->tableWidgetTest->setItem(row,2,new QTableWidgetItem(QString::number(ID,16)));
+    ui->tableWidgetTest->item(row,0)->setTextAlignment(Qt::AlignCenter);
+    ui->tableWidgetTest->item(row,1)->setTextAlignment(Qt::AlignCenter);
+    ui->tableWidgetTest->item(row,2)->setTextAlignment(Qt::AlignCenter);
+    for(int i = 0; i < 8; i++)
+    {
+        ui->tableWidgetTest->setItem(row,3 + i,new QTableWidgetItem(QString::number(send_str[i],16)));
+        ui->tableWidgetTest->item(row, 3 + i)->setTextAlignment(Qt::AlignCenter);
+    }
 }
 
 void MainWindow::on_pushButtonTestWBoard3_clicked()
@@ -1089,6 +1378,29 @@ void MainWindow::on_pushButtonTestWBoard3_clicked()
         qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
     }
     canthread->sendData(ID,(unsigned char*)send_str);
+
+    int row = 0;
+    while(ui->tableWidgetTest->item(row,0) != 0)
+    {
+        row++;
+        if(ui->tableWidgetTest->rowCount() < row + 1)
+        {
+            ui->tableWidgetTest->setRowCount(ui->tableWidgetTest->rowCount() + 1);
+            ui->tableWidgetTest->scrollToBottom();
+        }
+    }
+
+    ui->tableWidgetTest->setItem(row,0,new QTableWidgetItem(QTime::currentTime().toString("HH:mm:ss zzz")));  //系统时间
+    ui->tableWidgetTest->setItem(row,1,new QTableWidgetItem("W"));
+    ui->tableWidgetTest->setItem(row,2,new QTableWidgetItem(QString::number(ID,16)));
+    ui->tableWidgetTest->item(row,0)->setTextAlignment(Qt::AlignCenter);
+    ui->tableWidgetTest->item(row,1)->setTextAlignment(Qt::AlignCenter);
+    ui->tableWidgetTest->item(row,2)->setTextAlignment(Qt::AlignCenter);
+    for(int i = 0; i < 8; i++)
+    {
+        ui->tableWidgetTest->setItem(row,3 + i,new QTableWidgetItem(QString::number(send_str[i],16)));
+        ui->tableWidgetTest->item(row, 3 + i)->setTextAlignment(Qt::AlignCenter);
+    }
 }
 
 void MainWindow::on_pushButtonTestRBoard3_clicked()
@@ -1105,6 +1417,29 @@ void MainWindow::on_pushButtonTestRBoard3_clicked()
         qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
     }
     canthread->sendData(ID,(unsigned char*)send_str);
+
+    int row = 0;
+    while(ui->tableWidgetTest->item(row,0) != 0)
+    {
+        row++;
+        if(ui->tableWidgetTest->rowCount() < row + 1)
+        {
+            ui->tableWidgetTest->setRowCount(ui->tableWidgetTest->rowCount() + 1);
+            ui->tableWidgetTest->scrollToBottom();
+        }
+    }
+
+    ui->tableWidgetTest->setItem(row,0,new QTableWidgetItem(QTime::currentTime().toString("HH:mm:ss zzz")));  //系统时间
+    ui->tableWidgetTest->setItem(row,1,new QTableWidgetItem("W"));
+    ui->tableWidgetTest->setItem(row,2,new QTableWidgetItem(QString::number(ID,16)));
+    ui->tableWidgetTest->item(row,0)->setTextAlignment(Qt::AlignCenter);
+    ui->tableWidgetTest->item(row,1)->setTextAlignment(Qt::AlignCenter);
+    ui->tableWidgetTest->item(row,2)->setTextAlignment(Qt::AlignCenter);
+    for(int i = 0; i < 8; i++)
+    {
+        ui->tableWidgetTest->setItem(row,3 + i,new QTableWidgetItem(QString::number(send_str[i],16)));
+        ui->tableWidgetTest->item(row, 3 + i)->setTextAlignment(Qt::AlignCenter);
+    }
 }
 
 void MainWindow::on_pushButtonTestWBoard4_clicked()
@@ -1123,6 +1458,29 @@ void MainWindow::on_pushButtonTestWBoard4_clicked()
         qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
     }
     canthread->sendData(ID,(unsigned char*)send_str);
+
+    int row = 0;
+    while(ui->tableWidgetTest->item(row,0) != 0)
+    {
+        row++;
+        if(ui->tableWidgetTest->rowCount() < row + 1)
+        {
+            ui->tableWidgetTest->setRowCount(ui->tableWidgetTest->rowCount() + 1);
+            ui->tableWidgetTest->scrollToBottom();
+        }
+    }
+
+    ui->tableWidgetTest->setItem(row,0,new QTableWidgetItem(QTime::currentTime().toString("HH:mm:ss zzz")));  //系统时间
+    ui->tableWidgetTest->setItem(row,1,new QTableWidgetItem("W"));
+    ui->tableWidgetTest->setItem(row,2,new QTableWidgetItem(QString::number(ID,16)));
+    ui->tableWidgetTest->item(row,0)->setTextAlignment(Qt::AlignCenter);
+    ui->tableWidgetTest->item(row,1)->setTextAlignment(Qt::AlignCenter);
+    ui->tableWidgetTest->item(row,2)->setTextAlignment(Qt::AlignCenter);
+    for(int i = 0; i < 8; i++)
+    {
+        ui->tableWidgetTest->setItem(row,3 + i,new QTableWidgetItem(QString::number(send_str[i],16)));
+        ui->tableWidgetTest->item(row, 3 + i)->setTextAlignment(Qt::AlignCenter);
+    }
 }
 
 void MainWindow::on_pushButtonTestRBoard4_clicked()
@@ -1139,6 +1497,29 @@ void MainWindow::on_pushButtonTestRBoard4_clicked()
         qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
     }
     canthread->sendData(ID,(unsigned char*)send_str);
+
+    int row = 0;
+    while(ui->tableWidgetTest->item(row,0) != 0)
+    {
+        row++;
+        if(ui->tableWidgetTest->rowCount() < row + 1)
+        {
+            ui->tableWidgetTest->setRowCount(ui->tableWidgetTest->rowCount() + 1);
+            ui->tableWidgetTest->scrollToBottom();
+        }
+    }
+
+    ui->tableWidgetTest->setItem(row,0,new QTableWidgetItem(QTime::currentTime().toString("HH:mm:ss zzz")));  //系统时间
+    ui->tableWidgetTest->setItem(row,1,new QTableWidgetItem("W"));
+    ui->tableWidgetTest->setItem(row,2,new QTableWidgetItem(QString::number(ID,16)));
+    ui->tableWidgetTest->item(row,0)->setTextAlignment(Qt::AlignCenter);
+    ui->tableWidgetTest->item(row,1)->setTextAlignment(Qt::AlignCenter);
+    ui->tableWidgetTest->item(row,2)->setTextAlignment(Qt::AlignCenter);
+    for(int i = 0; i < 8; i++)
+    {
+        ui->tableWidgetTest->setItem(row,3 + i,new QTableWidgetItem(QString::number(send_str[i],16)));
+        ui->tableWidgetTest->item(row, 3 + i)->setTextAlignment(Qt::AlignCenter);
+    }
 }
 
 void MainWindow::on_pushButtonTestWBoard5_clicked()
@@ -1157,6 +1538,29 @@ void MainWindow::on_pushButtonTestWBoard5_clicked()
         qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
     }
     canthread->sendData(ID,(unsigned char*)send_str);
+
+    int row = 0;
+    while(ui->tableWidgetTest->item(row,0) != 0)
+    {
+        row++;
+        if(ui->tableWidgetTest->rowCount() < row + 1)
+        {
+            ui->tableWidgetTest->setRowCount(ui->tableWidgetTest->rowCount() + 1);
+            ui->tableWidgetTest->scrollToBottom();
+        }
+    }
+
+    ui->tableWidgetTest->setItem(row,0,new QTableWidgetItem(QTime::currentTime().toString("HH:mm:ss zzz")));  //系统时间
+    ui->tableWidgetTest->setItem(row,1,new QTableWidgetItem("W"));
+    ui->tableWidgetTest->setItem(row,2,new QTableWidgetItem(QString::number(ID,16)));
+    ui->tableWidgetTest->item(row,0)->setTextAlignment(Qt::AlignCenter);
+    ui->tableWidgetTest->item(row,1)->setTextAlignment(Qt::AlignCenter);
+    ui->tableWidgetTest->item(row,2)->setTextAlignment(Qt::AlignCenter);
+    for(int i = 0; i < 8; i++)
+    {
+        ui->tableWidgetTest->setItem(row,3 + i,new QTableWidgetItem(QString::number(send_str[i],16)));
+        ui->tableWidgetTest->item(row, 3 + i)->setTextAlignment(Qt::AlignCenter);
+    }
 }
 
 void MainWindow::on_pushButtonTestRBoard5_clicked()
@@ -1173,6 +1577,29 @@ void MainWindow::on_pushButtonTestRBoard5_clicked()
         qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
     }
     canthread->sendData(ID,(unsigned char*)send_str);
+
+    int row = 0;
+    while(ui->tableWidgetTest->item(row,0) != 0)
+    {
+        row++;
+        if(ui->tableWidgetTest->rowCount() < row + 1)
+        {
+            ui->tableWidgetTest->setRowCount(ui->tableWidgetTest->rowCount() + 1);
+            ui->tableWidgetTest->scrollToBottom();
+        }
+    }
+
+    ui->tableWidgetTest->setItem(row,0,new QTableWidgetItem(QTime::currentTime().toString("HH:mm:ss zzz")));  //系统时间
+    ui->tableWidgetTest->setItem(row,1,new QTableWidgetItem("W"));
+    ui->tableWidgetTest->setItem(row,2,new QTableWidgetItem(QString::number(ID,16)));
+    ui->tableWidgetTest->item(row,0)->setTextAlignment(Qt::AlignCenter);
+    ui->tableWidgetTest->item(row,1)->setTextAlignment(Qt::AlignCenter);
+    ui->tableWidgetTest->item(row,2)->setTextAlignment(Qt::AlignCenter);
+    for(int i = 0; i < 8; i++)
+    {
+        ui->tableWidgetTest->setItem(row,3 + i,new QTableWidgetItem(QString::number(send_str[i],16)));
+        ui->tableWidgetTest->item(row, 3 + i)->setTextAlignment(Qt::AlignCenter);
+    }
 }
 
 void MainWindow::on_pushButtonTestWBoard6_clicked()
@@ -1191,6 +1618,29 @@ void MainWindow::on_pushButtonTestWBoard6_clicked()
         qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
     }
     canthread->sendData(ID,(unsigned char*)send_str);
+
+    int row = 0;
+    while(ui->tableWidgetTest->item(row,0) != 0)
+    {
+        row++;
+        if(ui->tableWidgetTest->rowCount() < row + 1)
+        {
+            ui->tableWidgetTest->setRowCount(ui->tableWidgetTest->rowCount() + 1);
+            ui->tableWidgetTest->scrollToBottom();
+        }
+    }
+
+    ui->tableWidgetTest->setItem(row,0,new QTableWidgetItem(QTime::currentTime().toString("HH:mm:ss zzz")));  //系统时间
+    ui->tableWidgetTest->setItem(row,1,new QTableWidgetItem("W"));
+    ui->tableWidgetTest->setItem(row,2,new QTableWidgetItem(QString::number(ID,16)));
+    ui->tableWidgetTest->item(row,0)->setTextAlignment(Qt::AlignCenter);
+    ui->tableWidgetTest->item(row,1)->setTextAlignment(Qt::AlignCenter);
+    ui->tableWidgetTest->item(row,2)->setTextAlignment(Qt::AlignCenter);
+    for(int i = 0; i < 8; i++)
+    {
+        ui->tableWidgetTest->setItem(row,3 + i,new QTableWidgetItem(QString::number(send_str[i],16)));
+        ui->tableWidgetTest->item(row, 3 + i)->setTextAlignment(Qt::AlignCenter);
+    }
 }
 
 void MainWindow::on_pushButtonTestRBoard6_clicked()
@@ -1207,6 +1657,29 @@ void MainWindow::on_pushButtonTestRBoard6_clicked()
         qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
     }
     canthread->sendData(ID,(unsigned char*)send_str);
+
+    int row = 0;
+    while(ui->tableWidgetTest->item(row,0) != 0)
+    {
+        row++;
+        if(ui->tableWidgetTest->rowCount() < row + 1)
+        {
+            ui->tableWidgetTest->setRowCount(ui->tableWidgetTest->rowCount() + 1);
+            ui->tableWidgetTest->scrollToBottom();
+        }
+    }
+
+    ui->tableWidgetTest->setItem(row,0,new QTableWidgetItem(QTime::currentTime().toString("HH:mm:ss zzz")));  //系统时间
+    ui->tableWidgetTest->setItem(row,1,new QTableWidgetItem("W"));
+    ui->tableWidgetTest->setItem(row,2,new QTableWidgetItem(QString::number(ID,16)));
+    ui->tableWidgetTest->item(row,0)->setTextAlignment(Qt::AlignCenter);
+    ui->tableWidgetTest->item(row,1)->setTextAlignment(Qt::AlignCenter);
+    ui->tableWidgetTest->item(row,2)->setTextAlignment(Qt::AlignCenter);
+    for(int i = 0; i < 8; i++)
+    {
+        ui->tableWidgetTest->setItem(row,3 + i,new QTableWidgetItem(QString::number(send_str[i],16)));
+        ui->tableWidgetTest->item(row, 3 + i)->setTextAlignment(Qt::AlignCenter);
+    }
 }
 
 void MainWindow::on_pushButtonTestWBoard7_clicked()
@@ -1225,6 +1698,29 @@ void MainWindow::on_pushButtonTestWBoard7_clicked()
         qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
     }
     canthread->sendData(ID,(unsigned char*)send_str);
+
+    int row = 0;
+    while(ui->tableWidgetTest->item(row,0) != 0)
+    {
+        row++;
+        if(ui->tableWidgetTest->rowCount() < row + 1)
+        {
+            ui->tableWidgetTest->setRowCount(ui->tableWidgetTest->rowCount() + 1);
+            ui->tableWidgetTest->scrollToBottom();
+        }
+    }
+
+    ui->tableWidgetTest->setItem(row,0,new QTableWidgetItem(QTime::currentTime().toString("HH:mm:ss zzz")));  //系统时间
+    ui->tableWidgetTest->setItem(row,1,new QTableWidgetItem("W"));
+    ui->tableWidgetTest->setItem(row,2,new QTableWidgetItem(QString::number(ID,16)));
+    ui->tableWidgetTest->item(row,0)->setTextAlignment(Qt::AlignCenter);
+    ui->tableWidgetTest->item(row,1)->setTextAlignment(Qt::AlignCenter);
+    ui->tableWidgetTest->item(row,2)->setTextAlignment(Qt::AlignCenter);
+    for(int i = 0; i < 8; i++)
+    {
+        ui->tableWidgetTest->setItem(row,3 + i,new QTableWidgetItem(QString::number(send_str[i],16)));
+        ui->tableWidgetTest->item(row, 3 + i)->setTextAlignment(Qt::AlignCenter);
+    }
 }
 
 void MainWindow::on_pushButtonTestRBoard7_clicked()
@@ -1241,6 +1737,29 @@ void MainWindow::on_pushButtonTestRBoard7_clicked()
         qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
     }
     canthread->sendData(ID,(unsigned char*)send_str);
+
+    int row = 0;
+    while(ui->tableWidgetTest->item(row,0) != 0)
+    {
+        row++;
+        if(ui->tableWidgetTest->rowCount() < row + 1)
+        {
+            ui->tableWidgetTest->setRowCount(ui->tableWidgetTest->rowCount() + 1);
+            ui->tableWidgetTest->scrollToBottom();
+        }
+    }
+
+    ui->tableWidgetTest->setItem(row,0,new QTableWidgetItem(QTime::currentTime().toString("HH:mm:ss zzz")));  //系统时间
+    ui->tableWidgetTest->setItem(row,1,new QTableWidgetItem("W"));
+    ui->tableWidgetTest->setItem(row,2,new QTableWidgetItem(QString::number(ID,16)));
+    ui->tableWidgetTest->item(row,0)->setTextAlignment(Qt::AlignCenter);
+    ui->tableWidgetTest->item(row,1)->setTextAlignment(Qt::AlignCenter);
+    ui->tableWidgetTest->item(row,2)->setTextAlignment(Qt::AlignCenter);
+    for(int i = 0; i < 8; i++)
+    {
+        ui->tableWidgetTest->setItem(row,3 + i,new QTableWidgetItem(QString::number(send_str[i],16)));
+        ui->tableWidgetTest->item(row, 3 + i)->setTextAlignment(Qt::AlignCenter);
+    }
 }
 
 void MainWindow::on_pushButtonTestWBoard8_clicked()
@@ -1259,6 +1778,29 @@ void MainWindow::on_pushButtonTestWBoard8_clicked()
         qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
     }
     canthread->sendData(ID,(unsigned char*)send_str);
+
+    int row = 0;
+    while(ui->tableWidgetTest->item(row,0) != 0)
+    {
+        row++;
+        if(ui->tableWidgetTest->rowCount() < row + 1)
+        {
+            ui->tableWidgetTest->setRowCount(ui->tableWidgetTest->rowCount() + 1);
+            ui->tableWidgetTest->scrollToBottom();
+        }
+    }
+
+    ui->tableWidgetTest->setItem(row,0,new QTableWidgetItem(QTime::currentTime().toString("HH:mm:ss zzz")));  //系统时间
+    ui->tableWidgetTest->setItem(row,1,new QTableWidgetItem("W"));
+    ui->tableWidgetTest->setItem(row,2,new QTableWidgetItem(QString::number(ID,16)));
+    ui->tableWidgetTest->item(row,0)->setTextAlignment(Qt::AlignCenter);
+    ui->tableWidgetTest->item(row,1)->setTextAlignment(Qt::AlignCenter);
+    ui->tableWidgetTest->item(row,2)->setTextAlignment(Qt::AlignCenter);
+    for(int i = 0; i < 8; i++)
+    {
+        ui->tableWidgetTest->setItem(row,3 + i,new QTableWidgetItem(QString::number(send_str[i],16)));
+        ui->tableWidgetTest->item(row, 3 + i)->setTextAlignment(Qt::AlignCenter);
+    }
 }
 
 void MainWindow::on_pushButtonTestRBoard8_clicked()
@@ -1275,4 +1817,27 @@ void MainWindow::on_pushButtonTestRBoard8_clicked()
         qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
     }
     canthread->sendData(ID,(unsigned char*)send_str);
+
+    int row = 0;
+    while(ui->tableWidgetTest->item(row,0) != 0)
+    {
+        row++;
+        if(ui->tableWidgetTest->rowCount() < row + 1)
+        {
+            ui->tableWidgetTest->setRowCount(ui->tableWidgetTest->rowCount() + 1);
+            ui->tableWidgetTest->scrollToBottom();
+        }
+    }
+
+    ui->tableWidgetTest->setItem(row,0,new QTableWidgetItem(QTime::currentTime().toString("HH:mm:ss zzz")));  //系统时间
+    ui->tableWidgetTest->setItem(row,1,new QTableWidgetItem("W"));
+    ui->tableWidgetTest->setItem(row,2,new QTableWidgetItem(QString::number(ID,16)));
+    ui->tableWidgetTest->item(row,0)->setTextAlignment(Qt::AlignCenter);
+    ui->tableWidgetTest->item(row,1)->setTextAlignment(Qt::AlignCenter);
+    ui->tableWidgetTest->item(row,2)->setTextAlignment(Qt::AlignCenter);
+    for(int i = 0; i < 8; i++)
+    {
+        ui->tableWidgetTest->setItem(row,3 + i,new QTableWidgetItem(QString::number(send_str[i],16)));
+        ui->tableWidgetTest->item(row, 3 + i)->setTextAlignment(Qt::AlignCenter);
+    }
 }
