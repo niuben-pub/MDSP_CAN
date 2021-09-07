@@ -605,7 +605,6 @@ void MainWindow::initUi()
         ui->tableWidgetTest->setColumnWidth(i,28);
         ui->tableWidgetTest->setHorizontalHeaderItem(i,new QTableWidgetItem(QString::number(i - 3)));
     }
-
     ui->tabWidget->setCurrentIndex(0);//设置选中第一个标签
     ui->tabWidget->tabBar()->setStyle(new CustomTabStyle);
     ui->tabWidget_2->setCurrentIndex(0);//设置选中第一个标签
