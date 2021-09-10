@@ -6,20 +6,20 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1200</width>
-    <height>800</height>
+    <width>1400</width>
+    <height>900</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>1200</width>
-    <height>800</height>
+    <width>1400</width>
+    <height>900</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>1200</width>
-    <height>800</height>
+    <width>1400</width>
+    <height>900</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -31,9 +31,18 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>1200</width>
-      <height>800</height>
+      <width>1400</width>
+      <height>900</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>13</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
     </property>
     <property name="styleSheet">
      <string notr="true">font: 13pt &quot;微软雅黑&quot;;</string>
@@ -705,8 +714,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>1200</width>
-        <height>800</height>
+        <width>1400</width>
+        <height>911</height>
        </rect>
       </property>
       <property name="tabPosition">
@@ -719,161 +728,1401 @@
        <attribute name="title">
         <string>Control</string>
        </attribute>
-       <widget class="ImgLabel" name="labelImg">
+       <widget class="QGroupBox" name="groupBoxImgBorad1">
         <property name="geometry">
          <rect>
-          <x>190</x>
-          <y>90</y>
-          <width>482</width>
-          <height>272</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
-       <widget class="QComboBox" name="comboBox3Gin1Size">
-        <property name="geometry">
-         <rect>
-          <x>110</x>
-          <y>420</y>
-          <width>69</width>
-          <height>22</height>
+          <x>30</x>
+          <y>400</y>
+          <width>251</width>
+          <height>230</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         <string notr="true">font: 10pt &quot;Arial&quot;;</string>
         </property>
-        <item>
-         <property name="text">
-          <string>1080P</string>
+        <property name="title">
+         <string>Board1</string>
+        </property>
+        <widget class="ImgLabel" name="labelImgBoard1">
+         <property name="geometry">
+          <rect>
+           <x>5</x>
+           <y>20</y>
+           <width>245</width>
+           <height>140</height>
+          </rect>
          </property>
-        </item>
-        <item>
          <property name="text">
-          <string>540P</string>
+          <string/>
          </property>
-        </item>
-       </widget>
-       <widget class="QComboBox" name="comboBox3Gin2Size">
-        <property name="geometry">
-         <rect>
-          <x>110</x>
-          <y>450</y>
-          <width>69</width>
-          <height>22</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">font: 9pt &quot;Arial&quot;;</string>
-        </property>
-        <item>
+        </widget>
+        <widget class="QLabel" name="label3Gin2Board1">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>200</y>
+           <width>54</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
          <property name="text">
-          <string>1080P</string>
+          <string>3G IN2</string>
          </property>
-        </item>
-        <item>
+        </widget>
+        <widget class="QLabel" name="label3Gin1Board1">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>170</y>
+           <width>54</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
          <property name="text">
-          <string>540P</string>
+          <string>3G IN1</string>
          </property>
-        </item>
-       </widget>
-       <widget class="QLabel" name="label_2">
-        <property name="geometry">
-         <rect>
-          <x>50</x>
-          <y>425</y>
-          <width>54</width>
-          <height>12</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">font: 9pt &quot;Arial&quot;;</string>
-        </property>
-        <property name="text">
-         <string>3G IN1</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_3">
-        <property name="geometry">
-         <rect>
-          <x>50</x>
-          <y>450</y>
-          <width>54</width>
-          <height>12</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">font: 9pt &quot;Arial&quot;;</string>
-        </property>
-        <property name="text">
-         <string>3G IN2</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_4">
-        <property name="geometry">
-         <rect>
-          <x>50</x>
-          <y>490</y>
-          <width>61</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">
+        </widget>
+        <widget class="QComboBox" name="comboBoxImgBoard1">
+         <property name="geometry">
+          <rect>
+           <x>170</x>
+           <y>169</y>
+           <width>70</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>3G IN 1</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>3G IN 2</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Detection</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Color</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QComboBox" name="comboBox3Gin2SizeBoard1">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>199</y>
+           <width>70</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>1080P</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>540P</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QComboBox" name="comboBox3Gin1SizeBoard1">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>169</y>
+           <width>70</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>1080P</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>540P</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QPushButton" name="pushButtonImgClearBoard1">
+         <property name="geometry">
+          <rect>
+           <x>169</x>
+           <y>198</y>
+           <width>72</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="text">
+          <string>ClearAll</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="labelImgNumBoard1">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>171</y>
+           <width>41</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
 font: 10pt &quot;Arial&quot;;</string>
-        </property>
-        <property name="text">
-         <string>image</string>
-        </property>
+         </property>
+         <property name="text">
+          <string>image</string>
+         </property>
+        </widget>
        </widget>
-       <widget class="QComboBox" name="comboBoxImg">
+       <widget class="QGroupBox" name="groupBoxImgBorad2">
         <property name="geometry">
          <rect>
-          <x>110</x>
-          <y>490</y>
-          <width>69</width>
-          <height>22</height>
+          <x>290</x>
+          <y>400</y>
+          <width>251</width>
+          <height>230</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         <string notr="true">font: 10pt &quot;Arial&quot;;</string>
         </property>
-        <item>
-         <property name="text">
-          <string>3G IN 1</string>
+        <property name="title">
+         <string>Board2</string>
+        </property>
+        <widget class="ImgLabel" name="labelImgBoard2">
+         <property name="geometry">
+          <rect>
+           <x>5</x>
+           <y>20</y>
+           <width>245</width>
+           <height>140</height>
+          </rect>
          </property>
-        </item>
-        <item>
          <property name="text">
-          <string>3G IN 2</string>
+          <string/>
          </property>
-        </item>
-        <item>
+        </widget>
+        <widget class="QLabel" name="label3Gin2Board2">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>200</y>
+           <width>54</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
          <property name="text">
-          <string>Detection</string>
+          <string>3G IN2</string>
          </property>
-        </item>
-        <item>
+        </widget>
+        <widget class="QLabel" name="label3Gin1Board2">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>170</y>
+           <width>54</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
          <property name="text">
-          <string>Color</string>
+          <string>3G IN1</string>
          </property>
-        </item>
+        </widget>
+        <widget class="QComboBox" name="comboBoxImgBoard2">
+         <property name="geometry">
+          <rect>
+           <x>170</x>
+           <y>169</y>
+           <width>70</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>3G IN 1</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>3G IN 2</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Detection</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Color</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QComboBox" name="comboBox3Gin2SizeBoard2">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>199</y>
+           <width>70</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>1080P</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>540P</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QComboBox" name="comboBox3Gin1SizeBoard2">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>169</y>
+           <width>70</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>1080P</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>540P</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QPushButton" name="pushButtonImgClearBoard2">
+         <property name="geometry">
+          <rect>
+           <x>169</x>
+           <y>198</y>
+           <width>72</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="text">
+          <string>ClearAll</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="labelImgNumBoard2">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>171</y>
+           <width>41</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+font: 10pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="text">
+          <string>image</string>
+         </property>
+        </widget>
        </widget>
-       <widget class="QPushButton" name="pushButton">
+       <widget class="QGroupBox" name="groupBoxImgBorad3">
         <property name="geometry">
          <rect>
-          <x>70</x>
-          <y>530</y>
-          <width>75</width>
-          <height>23</height>
+          <x>550</x>
+          <y>400</y>
+          <width>251</width>
+          <height>230</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         <string notr="true">font: 10pt &quot;Arial&quot;;</string>
+        </property>
+        <property name="title">
+         <string>Board3</string>
+        </property>
+        <widget class="ImgLabel" name="labelImgBoard3">
+         <property name="geometry">
+          <rect>
+           <x>5</x>
+           <y>20</y>
+           <width>245</width>
+           <height>140</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label3Gin2Board3">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>200</y>
+           <width>54</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="text">
+          <string>3G IN2</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label3Gin1Board3">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>170</y>
+           <width>54</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="text">
+          <string>3G IN1</string>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="comboBoxImgBoard3">
+         <property name="geometry">
+          <rect>
+           <x>170</x>
+           <y>169</y>
+           <width>70</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>3G IN 1</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>3G IN 2</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Detection</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Color</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QComboBox" name="comboBox3Gin2SizeBoard3">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>199</y>
+           <width>70</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>1080P</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>540P</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QComboBox" name="comboBox3Gin1SizeBoard3">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>169</y>
+           <width>70</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>1080P</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>540P</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QPushButton" name="pushButtonImgClearBoard3">
+         <property name="geometry">
+          <rect>
+           <x>169</x>
+           <y>198</y>
+           <width>72</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="text">
+          <string>ClearAll</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="labelImgNumBoard3">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>171</y>
+           <width>41</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+font: 10pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="text">
+          <string>image</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBoxImgBorad4">
+        <property name="geometry">
+         <rect>
+          <x>810</x>
+          <y>400</y>
+          <width>251</width>
+          <height>230</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 10pt &quot;Arial&quot;;</string>
+        </property>
+        <property name="title">
+         <string>Board4</string>
+        </property>
+        <widget class="ImgLabel" name="labelImgBoard4">
+         <property name="geometry">
+          <rect>
+           <x>5</x>
+           <y>20</y>
+           <width>245</width>
+           <height>140</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label3Gin2Board4">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>200</y>
+           <width>54</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="text">
+          <string>3G IN2</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label3Gin1Board4">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>170</y>
+           <width>54</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="text">
+          <string>3G IN1</string>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="comboBoxImgBoard4">
+         <property name="geometry">
+          <rect>
+           <x>170</x>
+           <y>169</y>
+           <width>70</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>3G IN 1</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>3G IN 2</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Detection</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Color</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QComboBox" name="comboBox3Gin2SizeBoard4">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>199</y>
+           <width>70</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>1080P</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>540P</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QComboBox" name="comboBox3Gin1SizeBoard4">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>169</y>
+           <width>70</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>1080P</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>540P</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QPushButton" name="pushButtonImgClearBoard4">
+         <property name="geometry">
+          <rect>
+           <x>169</x>
+           <y>198</y>
+           <width>72</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="text">
+          <string>ClearAll</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="labelImgNumBoard4">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>171</y>
+           <width>41</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+font: 10pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="text">
+          <string>image</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBoxImgBorad5">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>650</y>
+          <width>251</width>
+          <height>230</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 10pt &quot;Arial&quot;;</string>
+        </property>
+        <property name="title">
+         <string>Board5</string>
+        </property>
+        <widget class="ImgLabel" name="labelImgBoard5">
+         <property name="geometry">
+          <rect>
+           <x>5</x>
+           <y>20</y>
+           <width>245</width>
+           <height>140</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label3Gin2Board5">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>200</y>
+           <width>54</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="text">
+          <string>3G IN2</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label3Gin1Board5">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>170</y>
+           <width>54</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="text">
+          <string>3G IN1</string>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="comboBoxImgBoard5">
+         <property name="geometry">
+          <rect>
+           <x>170</x>
+           <y>169</y>
+           <width>70</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>3G IN 1</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>3G IN 2</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Detection</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Color</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QComboBox" name="comboBox3Gin2SizeBoard5">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>199</y>
+           <width>70</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>1080P</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>540P</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QComboBox" name="comboBox3Gin1SizeBoard5">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>169</y>
+           <width>70</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>1080P</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>540P</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QPushButton" name="pushButtonImgClearBoard5">
+         <property name="geometry">
+          <rect>
+           <x>169</x>
+           <y>198</y>
+           <width>72</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="text">
+          <string>ClearAll</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="labelImgNumBoard5">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>171</y>
+           <width>41</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+font: 10pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="text">
+          <string>image</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBoxImgBorad6">
+        <property name="geometry">
+         <rect>
+          <x>290</x>
+          <y>650</y>
+          <width>251</width>
+          <height>230</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 10pt &quot;Arial&quot;;</string>
+        </property>
+        <property name="title">
+         <string>Board6</string>
+        </property>
+        <widget class="ImgLabel" name="labelImgBoard6">
+         <property name="geometry">
+          <rect>
+           <x>5</x>
+           <y>20</y>
+           <width>245</width>
+           <height>140</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label3Gin2Board6">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>200</y>
+           <width>54</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="text">
+          <string>3G IN2</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label3Gin1Board6">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>170</y>
+           <width>54</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="text">
+          <string>3G IN1</string>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="comboBoxImgBoard6">
+         <property name="geometry">
+          <rect>
+           <x>170</x>
+           <y>169</y>
+           <width>70</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>3G IN 1</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>3G IN 2</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Detection</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Color</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QComboBox" name="comboBox3Gin2SizeBoard6">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>199</y>
+           <width>70</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>1080P</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>540P</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QComboBox" name="comboBox3Gin1SizeBoard6">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>169</y>
+           <width>70</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>1080P</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>540P</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QPushButton" name="pushButtonImgClearBoard6">
+         <property name="geometry">
+          <rect>
+           <x>169</x>
+           <y>198</y>
+           <width>72</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="text">
+          <string>ClearAll</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="labelImgNumBoard6">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>171</y>
+           <width>41</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+font: 10pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="text">
+          <string>image</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBoxImgBorad7">
+        <property name="geometry">
+         <rect>
+          <x>550</x>
+          <y>650</y>
+          <width>251</width>
+          <height>230</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 10pt &quot;Arial&quot;;</string>
+        </property>
+        <property name="title">
+         <string>Board7</string>
+        </property>
+        <widget class="ImgLabel" name="labelImgBoard7">
+         <property name="geometry">
+          <rect>
+           <x>5</x>
+           <y>20</y>
+           <width>245</width>
+           <height>140</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label3Gin2Board7">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>200</y>
+           <width>54</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="text">
+          <string>3G IN2</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label3Gin1Board7">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>170</y>
+           <width>54</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="text">
+          <string>3G IN1</string>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="comboBoxImgBoard7">
+         <property name="geometry">
+          <rect>
+           <x>170</x>
+           <y>169</y>
+           <width>70</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>3G IN 1</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>3G IN 2</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Detection</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Color</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QComboBox" name="comboBox3Gin2SizeBoard7">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>199</y>
+           <width>70</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>1080P</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>540P</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QComboBox" name="comboBox3Gin1SizeBoard7">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>169</y>
+           <width>70</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>1080P</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>540P</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QPushButton" name="pushButtonImgClearBoard7">
+         <property name="geometry">
+          <rect>
+           <x>169</x>
+           <y>198</y>
+           <width>72</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="text">
+          <string>ClearAll</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="labelImgNumBoard7">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>171</y>
+           <width>41</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+font: 10pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="text">
+          <string>image</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBoxImgBorad8">
+        <property name="geometry">
+         <rect>
+          <x>810</x>
+          <y>650</y>
+          <width>251</width>
+          <height>230</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 10pt &quot;Arial&quot;;</string>
+        </property>
+        <property name="title">
+         <string>Board8</string>
+        </property>
+        <widget class="ImgLabel" name="labelImgBoard8">
+         <property name="geometry">
+          <rect>
+           <x>5</x>
+           <y>20</y>
+           <width>245</width>
+           <height>140</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label3Gin2Board8">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>200</y>
+           <width>54</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="text">
+          <string>3G IN2</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label3Gin1Board8">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>170</y>
+           <width>54</width>
+           <height>21</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="text">
+          <string>3G IN1</string>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="comboBoxImgBoard8">
+         <property name="geometry">
+          <rect>
+           <x>170</x>
+           <y>169</y>
+           <width>70</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>3G IN 1</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>3G IN 2</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Detection</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Color</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QComboBox" name="comboBox3Gin2SizeBoard8">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>199</y>
+           <width>70</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>1080P</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>540P</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QComboBox" name="comboBox3Gin1SizeBoard8">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>169</y>
+           <width>70</width>
+           <height>22</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>1080P</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>540P</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QPushButton" name="pushButtonImgClearBoard8">
+         <property name="geometry">
+          <rect>
+           <x>169</x>
+           <y>198</y>
+           <width>72</width>
+           <height>24</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="text">
+          <string>ClearAll</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="labelImgNumBoard8">
+         <property name="geometry">
+          <rect>
+           <x>130</x>
+           <y>171</y>
+           <width>41</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+font: 10pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="text">
+          <string>image</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="imgoverlayLabel" name="labelOverly">
+        <property name="geometry">
+         <rect>
+          <x>300</x>
+          <y>80</y>
+          <width>485</width>
+          <height>275</height>
+         </rect>
         </property>
         <property name="text">
-         <string>ClearAll</string>
+         <string>TextLabel</string>
         </property>
        </widget>
       </widget>
@@ -2908,7 +4157,12 @@ font: 10pt &quot;Arial&quot;;</string>
   <customwidget>
    <class>ImgLabel</class>
    <extends>QLabel</extends>
-   <header location="global">imglabel.h</header>
+   <header>imglabel.h</header>
+  </customwidget>
+  <customwidget>
+   <class>imgoverlayLabel</class>
+   <extends>QLabel</extends>
+   <header location="global">imgoverlaylabel.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

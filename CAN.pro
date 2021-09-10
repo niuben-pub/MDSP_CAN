@@ -26,6 +26,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     boardinfo.cpp \
     imglabel.cpp \
+    imgoverlaylabel.cpp \
     j1939_msg.cpp \
         main.cpp \
         mainwindow.cpp \
@@ -35,6 +36,7 @@ SOURCES += \
 HEADERS += \
     boardinfo.h \
     imglabel.h \
+    imgoverlaylabel.h \
     j1939_msg.h \
         mainwindow.h \
     ControlCAN.h \

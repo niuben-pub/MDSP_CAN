@@ -1,5 +1,6 @@
 release/boardinfo.o
 release/imglabel.o
+release/imgoverlaylabel.o
 release/j1939_msg.o
 release/main.o
 release/mainwindow.o
@@ -7,6 +8,7 @@ release/canthread.o
 release/protocolthrend.o
 release/qrc_resonrces.o
 release/moc_imglabel.o
+release/moc_imgoverlaylabel.o
 release/moc_mainwindow.o
 release/moc_canthread.o
 release/moc_protocolthrend.o

@@ -624,6 +624,93 @@ void MainWindow::initUi()
 
 }
 
+void MainWindow::initImaLabel()
+{
+    ui->labelImgBoard1->pixBlank.load(":/images/0.png");
+    ui->labelImgBoard1->pix3GIN1.load(":/images/1.png");
+    ui->labelImgBoard1->pix3GIN2.load(":/images/2.png");
+    ui->labelImgBoard1->pixDetection.load(":/images/a1.png");
+    ui->labelImgBoard1->pixColor.load(":/images/col1.png");
+    ui->labelImgBoard2->pixBlank.load(":/images/0.png");
+    ui->labelImgBoard2->pix3GIN1.load(":/images/3.png");
+    ui->labelImgBoard2->pix3GIN2.load(":/images/4.png");
+    ui->labelImgBoard2->pixDetection.load(":/images/a2.png");
+    ui->labelImgBoard2->pixColor.load(":/images/col2.png");
+    ui->labelImgBoard3->pixBlank.load(":/images/0.png");
+    ui->labelImgBoard3->pix3GIN1.load(":/images/5.png");
+    ui->labelImgBoard3->pix3GIN2.load(":/images/6.png");
+    ui->labelImgBoard3->pixDetection.load(":/images/a3.png");
+    ui->labelImgBoard3->pixColor.load(":/images/col3.png");
+    ui->labelImgBoard4->pixBlank.load(":/images/0.png");
+    ui->labelImgBoard4->pix3GIN1.load(":/images/7.png");
+    ui->labelImgBoard4->pix3GIN2.load(":/images/8.png");
+    ui->labelImgBoard4->pixDetection.load(":/images/a4.png");
+    ui->labelImgBoard4->pixColor.load(":/images/col4.png");
+    ui->labelImgBoard5->pixBlank.load(":/images/0.png");
+    ui->labelImgBoard5->pix3GIN1.load(":/images/9.png");
+    ui->labelImgBoard5->pix3GIN2.load(":/images/10.png");
+    ui->labelImgBoard5->pixDetection.load(":/images/a5.png");
+    ui->labelImgBoard5->pixColor.load(":/images/col5.png");
+    ui->labelImgBoard6->pixBlank.load(":/images/0.png");
+    ui->labelImgBoard6->pix3GIN1.load(":/images/11.png");
+    ui->labelImgBoard6->pix3GIN2.load(":/images/12.png");
+    ui->labelImgBoard6->pixDetection.load(":/images/a6.png");
+    ui->labelImgBoard6->pixColor.load(":/images/col6.png");
+    ui->labelImgBoard7->pixBlank.load(":/images/0.png");
+    ui->labelImgBoard7->pix3GIN1.load(":/images/13.png");
+    ui->labelImgBoard7->pix3GIN2.load(":/images/14.png");
+    ui->labelImgBoard7->pixDetection.load(":/images/a7.png");
+    ui->labelImgBoard7->pixColor.load(":/images/col7.png");
+    ui->labelImgBoard8->pixBlank.load(":/images/0.png");
+    ui->labelImgBoard8->pix3GIN1.load(":/images/15.png");
+    ui->labelImgBoard8->pix3GIN2.load(":/images/16.png");
+    ui->labelImgBoard8->pixDetection.load(":/images/a8.png");
+    ui->labelImgBoard8->pixColor.load(":/images/col8.png");
+
+    ui->labelOverly->pixBlank.load(":/images/0.png");
+
+    ui->labelOverly->pix3GIN1Board[0].load(":/images/1.png");
+    ui->labelOverly->pix3GIN2Board[0].load(":/images/2.png");
+    ui->labelOverly->pixDetectionBoard[0].load(":/images/a1.png");
+    ui->labelOverly->pixColorBoard[0].load(":/images/col1.png");
+
+    ui->labelOverly->pix3GIN1Board[1].load(":/images/3.png");
+    ui->labelOverly->pix3GIN2Board[1].load(":/images/4.png");
+    ui->labelOverly->pixDetectionBoard[1].load(":/images/a2.png");
+    ui->labelOverly->pixColorBoard[1].load(":/images/col2.png");
+
+    ui->labelOverly->pix3GIN1Board[2].load(":/images/5.png");
+    ui->labelOverly->pix3GIN2Board[2].load(":/images/6.png");
+    ui->labelOverly->pixDetectionBoard[2].load(":/images/a3.png");
+    ui->labelOverly->pixColorBoard[2].load(":/images/col3.png");
+;
+    ui->labelOverly->pix3GIN1Board[3].load(":/images/7.png");
+    ui->labelOverly->pix3GIN2Board[3].load(":/images/8.png");
+    ui->labelOverly->pixDetectionBoard[3].load(":/images/a4.png");
+    ui->labelOverly->pixColorBoard[3].load(":/images/col4.png");
+
+    ui->labelOverly->pix3GIN1Board[4].load(":/images/9.png");
+    ui->labelOverly->pix3GIN2Board[4].load(":/images/10.png");
+    ui->labelOverly->pixDetectionBoard[4].load(":/images/a5.png");
+    ui->labelOverly->pixColorBoard4.load(":/images/col5.png");
+
+    ui->labelOverly->pix3GIN1Board[5].load(":/images/11.png");
+    ui->labelOverly->pix3GIN2Board[5].load(":/images/12.png");
+    ui->labelOverly->pixDetectionBoard[5].load(":/images/a6.png");
+    ui->labelOverly->pixColorBoard[5].load(":/images/col6.png");
+
+    ui->labelOverly->pix3GIN1Board[6].load(":/images/13.png");
+    ui->labelOverly->pix3GIN2Board[6].load(":/images/14.png");
+    ui->labelOverly->pixDetectionBoard[6].load(":/images/a7.png");
+    ui->labelOverly->pixColorBoard[6].load(":/images/col7.png");
+
+    ui->labelOverly->pix3GIN1Board[7].load(":/images/15.png");
+    ui->labelOverly->pix3GIN2Board[7].load(":/images/16.png");
+    ui->labelOverly->pixDetectionBoard[7].load(":/images/a8.png");
+    ui->labelOverly->pixColorBoard[7].load(":/images/col8.png");
+
+}
+
 void MainWindow::initSignalslots()
 {
     //接收到canthread线程接收到的数据 并显示
@@ -632,7 +719,24 @@ void MainWindow::initSignalslots()
     connect(canthread,&CANThread::getProtocolData,protocolHand,&ProtocolThrend::protocolHand);
     //Flash写入计时
     connect(FlashWriteTimer,SIGNAL(timeout()),this,SLOT(updataFlashTime()));
-    connect(ui->labelImg,SIGNAL(regChange(unsigned int *)),this,SLOT(writeFpgaImgconfigReg(unsigned int *)));
+
+    connect(ui->labelImgBoard1,SIGNAL(regChange(unsigned int *)),this,SLOT(writeBoard1FpgaImgconfigReg(unsigned int *)));
+    connect(ui->labelImgBoard2,SIGNAL(regChange(unsigned int *)),this,SLOT(writeBoard2FpgaImgconfigReg(unsigned int *)));
+    connect(ui->labelImgBoard3,SIGNAL(regChange(unsigned int *)),this,SLOT(writeBoard3FpgaImgconfigReg(unsigned int *)));
+    connect(ui->labelImgBoard4,SIGNAL(regChange(unsigned int *)),this,SLOT(writeBoard4FpgaImgconfigReg(unsigned int *)));
+    connect(ui->labelImgBoard5,SIGNAL(regChange(unsigned int *)),this,SLOT(writeBoard5FpgaImgconfigReg(unsigned int *)));
+    connect(ui->labelImgBoard6,SIGNAL(regChange(unsigned int *)),this,SLOT(writeBoard6FpgaImgconfigReg(unsigned int *)));
+    connect(ui->labelImgBoard7,SIGNAL(regChange(unsigned int *)),this,SLOT(writeBoard7FpgaImgconfigReg(unsigned int *)));
+    connect(ui->labelImgBoard8,SIGNAL(regChange(unsigned int *)),this,SLOT(writeBoard8FpgaImgconfigReg(unsigned int *)));
+
+    connect(ui->labelImgBoard1,SIGNAL(imgoverlayupdataImg()),this,SLOT(updateOverlyImgRegArray()));
+    connect(ui->labelImgBoard2,SIGNAL(imgoverlayupdataImg()),this,SLOT(updateOverlyImgRegArray()));
+    connect(ui->labelImgBoard3,SIGNAL(imgoverlayupdataImg()),this,SLOT(updateOverlyImgRegArray()));
+    connect(ui->labelImgBoard4,SIGNAL(imgoverlayupdataImg()),this,SLOT(updateOverlyImgRegArray()));
+    connect(ui->labelImgBoard5,SIGNAL(imgoverlayupdataImg()),this,SLOT(updateOverlyImgRegArray()));
+    connect(ui->labelImgBoard6,SIGNAL(imgoverlayupdataImg()),this,SLOT(updateOverlyImgRegArray()));
+    connect(ui->labelImgBoard7,SIGNAL(imgoverlayupdataImg()),this,SLOT(updateOverlyImgRegArray()));
+    connect(ui->labelImgBoard8,SIGNAL(imgoverlayupdataImg()),this,SLOT(updateOverlyImgRegArray()));
 }
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -640,6 +744,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    initImaLabel();
+   // ui->labelOverly->regTableBoard1 = (const unsigned int **)ui->labelImgBoard1->regTable;
     canthread = new CANThread();
     protocolHand = new ProtocolThrend();
     board1 = new boardinfo();
@@ -663,7 +769,27 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::writeFpgaImgconfigReg(unsigned int *regTable)
+void MainWindow::updateOverlyImgRegArray()
+{
+    for(int i = 0; i < 4; i++)
+    {
+        for(int j = 0; j < 4; j++)
+        {
+            ui->labelOverly->regTableBoard[0][i][j] = ui->labelImgBoard1->regTable[i][j];
+            ui->labelOverly->regTableBoard[1][i][j] = ui->labelImgBoard2->regTable[i][j];
+            ui->labelOverly->regTableBoard[2][i][j] = ui->labelImgBoard3->regTable[i][j];
+            ui->labelOverly->regTableBoard[3][i][j] = ui->labelImgBoard4->regTable[i][j];
+            ui->labelOverly->regTableBoard[4][i][j] = ui->labelImgBoard5->regTable[i][j];
+            ui->labelOverly->regTableBoard[5][i][j] = ui->labelImgBoard6->regTable[i][j];
+            ui->labelOverly->regTableBoard[6][i][j] = ui->labelImgBoard7->regTable[i][j];
+            ui->labelOverly->regTableBoard[7][i][j] = ui->labelImgBoard8->regTable[i][j];
+        }
+    }
+    ui->labelOverly->update();
+
+}
+
+void MainWindow::writeBoard1FpgaImgconfigReg(unsigned int *regTable)
 {
 
     for (int i = 0; i < 16; i++)
@@ -684,6 +810,163 @@ void MainWindow::writeFpgaImgconfigReg(unsigned int *regTable)
         sleep(30);
     }
 }
+
+void MainWindow::writeBoard2FpgaImgconfigReg(unsigned int *regTable)
+{
+
+    for (int i = 0; i < 16; i++)
+    {
+        qDebug()<<"["<<regTable[i]<<"]"<<endl;
+        unsigned char send_str[8] = {0};
+        int ID = (PGN57856 << 8) + this->board2->writerAddr;  //写FPGA命令
+        quint64 regaddr = 0x10 + i;
+        quint64 regdata = regTable[i];
+        quint64 data = (regaddr<<16) + regdata;
+        char *p = (char *)(&data);
+        for(int i = 0; i < 8; i++)
+        {
+            send_str[i] = p[7 - i];
+            qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+        }
+        canthread->sendData(ID,(unsigned char*)send_str);
+        sleep(30);
+    }
+}
+
+void MainWindow::writeBoard3FpgaImgconfigReg(unsigned int *regTable)
+{
+
+    for (int i = 0; i < 16; i++)
+    {
+        qDebug()<<"["<<regTable[i]<<"]"<<endl;
+        unsigned char send_str[8] = {0};
+        int ID = (PGN57856 << 8) + this->board3->writerAddr;  //写FPGA命令
+        quint64 regaddr = 0x10 + i;
+        quint64 regdata = regTable[i];
+        quint64 data = (regaddr<<16) + regdata;
+        char *p = (char *)(&data);
+        for(int i = 0; i < 8; i++)
+        {
+            send_str[i] = p[7 - i];
+            qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+        }
+        canthread->sendData(ID,(unsigned char*)send_str);
+        sleep(30);
+    }
+}
+
+
+void MainWindow::writeBoard4FpgaImgconfigReg(unsigned int *regTable)
+{
+
+    for (int i = 0; i < 16; i++)
+    {
+        qDebug()<<"["<<regTable[i]<<"]"<<endl;
+        unsigned char send_str[8] = {0};
+        int ID = (PGN57856 << 8) + this->board4->writerAddr;  //写FPGA命令
+        quint64 regaddr = 0x10 + i;
+        quint64 regdata = regTable[i];
+        quint64 data = (regaddr<<16) + regdata;
+        char *p = (char *)(&data);
+        for(int i = 0; i < 8; i++)
+        {
+            send_str[i] = p[7 - i];
+            qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+        }
+        canthread->sendData(ID,(unsigned char*)send_str);
+        sleep(30);
+    }
+}
+
+
+void MainWindow::writeBoard5FpgaImgconfigReg(unsigned int *regTable)
+{
+
+    for (int i = 0; i < 16; i++)
+    {
+        qDebug()<<"["<<regTable[i]<<"]"<<endl;
+        unsigned char send_str[8] = {0};
+        int ID = (PGN57856 << 8) + this->board5->writerAddr;  //写FPGA命令
+        quint64 regaddr = 0x10 + i;
+        quint64 regdata = regTable[i];
+        quint64 data = (regaddr<<16) + regdata;
+        char *p = (char *)(&data);
+        for(int i = 0; i < 8; i++)
+        {
+            send_str[i] = p[7 - i];
+            qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+        }
+        canthread->sendData(ID,(unsigned char*)send_str);
+        sleep(30);
+    }
+}
+
+void MainWindow::writeBoard6FpgaImgconfigReg(unsigned int *regTable)
+{
+
+    for (int i = 0; i < 16; i++)
+    {
+        qDebug()<<"["<<regTable[i]<<"]"<<endl;
+        unsigned char send_str[8] = {0};
+        int ID = (PGN57856 << 8) + this->board6->writerAddr;  //写FPGA命令
+        quint64 regaddr = 0x10 + i;
+        quint64 regdata = regTable[i];
+        quint64 data = (regaddr<<16) + regdata;
+        char *p = (char *)(&data);
+        for(int i = 0; i < 8; i++)
+        {
+            send_str[i] = p[7 - i];
+            qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+        }
+        canthread->sendData(ID,(unsigned char*)send_str);
+        sleep(30);
+    }
+}
+
+void MainWindow::writeBoard7FpgaImgconfigReg(unsigned int *regTable)
+{
+
+    for (int i = 0; i < 16; i++)
+    {
+        qDebug()<<"["<<regTable[i]<<"]"<<endl;
+        unsigned char send_str[8] = {0};
+        int ID = (PGN57856 << 8) + this->board7->writerAddr;  //写FPGA命令
+        quint64 regaddr = 0x10 + i;
+        quint64 regdata = regTable[i];
+        quint64 data = (regaddr<<16) + regdata;
+        char *p = (char *)(&data);
+        for(int i = 0; i < 8; i++)
+        {
+            send_str[i] = p[7 - i];
+            qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+        }
+        canthread->sendData(ID,(unsigned char*)send_str);
+        sleep(30);
+    }
+}
+
+void MainWindow::writeBoard8FpgaImgconfigReg(unsigned int *regTable)
+{
+
+    for (int i = 0; i < 16; i++)
+    {
+        qDebug()<<"["<<regTable[i]<<"]"<<endl;
+        unsigned char send_str[8] = {0};
+        int ID = (PGN57856 << 8) + this->board8->writerAddr;  //写FPGA命令
+        quint64 regaddr = 0x10 + i;
+        quint64 regdata = regTable[i];
+        quint64 data = (regaddr<<16) + regdata;
+        char *p = (char *)(&data);
+        for(int i = 0; i < 8; i++)
+        {
+            send_str[i] = p[7 - i];
+            qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+        }
+        canthread->sendData(ID,(unsigned char*)send_str);
+        sleep(30);
+    }
+}
+
 
 void MainWindow::on_btnDefParam_clicked()
 {
@@ -1772,73 +2055,566 @@ void MainWindow::on_pushButtonAddrOk_clicked()
 //    qDebug()<<"board8->readAddr"<<board8->readAddr<<"  "<<board8->writerAddr<<endl;
 }
 
-void MainWindow::on_comboBox3Gin1Size_currentIndexChanged(int index)
+void MainWindow::on_comboBox3Gin1SizeBoard1_currentIndexChanged(int index)
 {
     if(index == 0)
     {
-        ui->labelImg->Img3GIn1Size = INPUT_SIZE_1920X1080;
+        ui->labelImgBoard1->Img3GIn1Size = INPUT_SIZE_1920X1080;
     }
     else if (index == 1)
     {
-        ui->labelImg->Img3GIn1Size = INPUT_SIZE_960X540;
+        ui->labelImgBoard1->Img3GIn1Size = INPUT_SIZE_960X540;
     }
     else
     {
-        ui->labelImg->Img3GIn1Size = INPUT_SIZE_1920X1080;
+        ui->labelImgBoard1->Img3GIn1Size = INPUT_SIZE_1920X1080;
     }
 
 }
 
-void MainWindow::on_comboBox3Gin2Size_currentIndexChanged(int index)
+void MainWindow::on_comboBox3Gin2SizeBoard1_currentIndexChanged(int index)
 {
     if(index == 0)
     {
-        ui->labelImg->Img3GIn2Size = INPUT_SIZE_1920X1080;
+        ui->labelImgBoard1->Img3GIn2Size = INPUT_SIZE_1920X1080;
     }
     else if (index == 1)
     {
-        ui->labelImg->Img3GIn2Size = INPUT_SIZE_960X540;
+        ui->labelImgBoard1->Img3GIn2Size = INPUT_SIZE_960X540;
     }
     else
     {
-        ui->labelImg->Img3GIn2Size = INPUT_SIZE_1920X1080;
+        ui->labelImgBoard1->Img3GIn2Size = INPUT_SIZE_1920X1080;
     }
 }
 
-void MainWindow::on_comboBoxImg_currentIndexChanged(int index)
+void MainWindow::on_comboBoxImgBoard1_currentIndexChanged(int index)
 {
     if(index == 0)
     {
-        ui->labelImg->ImgType = IMG_IN1_3G;
+        ui->labelImgBoard1->ImgType = IMG_IN1_3G;
     }
     else if (index == 1)
     {
-        ui->labelImg->ImgType = IMG_IN2_3G;
+        ui->labelImgBoard1->ImgType = IMG_IN2_3G;
     }
     else if (index == 2)
     {
-        ui->labelImg->ImgType = IMG_AI;
+        ui->labelImgBoard1->ImgType = IMG_AI;
     }
     else if (index == 3)
     {
-        ui->labelImg->ImgType = IMG_COLOR;
+        ui->labelImgBoard1->ImgType = IMG_COLOR;
     }
     else
     {
-        ui->labelImg->ImgType = INPUT_SIZE_1920X1080;
+        ui->labelImgBoard1->ImgType = INPUT_SIZE_1920X1080;
     }
 }
 
-void MainWindow::on_pushButton_clicked()
+
+void MainWindow::on_pushButtonImgClearBoard1_clicked()
 {
     for(int i = 0 ; i < 4; i++)
     {
         for (int j = 0; j < 4; j++)
         {
-            ui->labelImg->regTable[i][j] = j + i * 4;
+            ui->labelImgBoard1->regTable[i][j] = j + i * 4;
         }
     }
-    emit ui->labelImg->regChange((unsigned int *) ui->labelImg->regTable);
-    emit ui->labelImg->mousePaint();
+    emit ui->labelImgBoard1->regChange((unsigned int *) ui->labelImgBoard1->regTable);
+    emit ui->labelImgBoard1->mousePaint();
+}
 
+
+
+void MainWindow::on_comboBox3Gin1SizeBoard2_currentIndexChanged(int index)
+{
+    if(index == 0)
+    {
+        ui->labelImgBoard2->Img3GIn1Size = INPUT_SIZE_1920X1080;
+    }
+    else if (index == 1)
+    {
+        ui->labelImgBoard2->Img3GIn1Size = INPUT_SIZE_960X540;
+    }
+    else
+    {
+        ui->labelImgBoard2->Img3GIn1Size = INPUT_SIZE_1920X1080;
+    }
+}
+
+void MainWindow::on_comboBox3Gin2SizeBoard2_currentIndexChanged(int index)
+{
+    if(index == 0)
+    {
+        ui->labelImgBoard2->Img3GIn2Size = INPUT_SIZE_1920X1080;
+    }
+    else if (index == 1)
+    {
+        ui->labelImgBoard2->Img3GIn2Size = INPUT_SIZE_960X540;
+    }
+    else
+    {
+        ui->labelImgBoard2->Img3GIn2Size = INPUT_SIZE_1920X1080;
+    }
+}
+
+void MainWindow::on_comboBoxImgBoard2_currentIndexChanged(int index)
+{
+    if(index == 0)
+    {
+        ui->labelImgBoard2->ImgType = IMG_IN1_3G;
+    }
+    else if (index == 1)
+    {
+        ui->labelImgBoard2->ImgType = IMG_IN2_3G;
+    }
+    else if (index == 2)
+    {
+        ui->labelImgBoard2->ImgType = IMG_AI;
+    }
+    else if (index == 3)
+    {
+        ui->labelImgBoard2->ImgType = IMG_COLOR;
+    }
+    else
+    {
+        ui->labelImgBoard2->ImgType = INPUT_SIZE_1920X1080;
+    }
+}
+
+void MainWindow::on_pushButtonImgClearBoard2_clicked()
+{
+    for(int i = 0 ; i < 4; i++)
+    {
+        for (int j = 0; j < 4; j++)
+        {
+            ui->labelImgBoard2->regTable[i][j] = j + i * 4;
+        }
+    }
+    emit ui->labelImgBoard2->regChange((unsigned int *) ui->labelImgBoard2->regTable);
+    emit ui->labelImgBoard2->mousePaint();
+}
+
+
+void MainWindow::on_comboBox3Gin1SizeBoard3_currentIndexChanged(int index)
+{
+    if(index == 0)
+    {
+        ui->labelImgBoard3->Img3GIn1Size = INPUT_SIZE_1920X1080;
+    }
+    else if (index == 1)
+    {
+        ui->labelImgBoard3->Img3GIn1Size = INPUT_SIZE_960X540;
+    }
+    else
+    {
+        ui->labelImgBoard3->Img3GIn1Size = INPUT_SIZE_1920X1080;
+    }
+}
+
+void MainWindow::on_comboBox3Gin2SizeBoard3_currentIndexChanged(int index)
+{
+    if(index == 0)
+    {
+        ui->labelImgBoard3->Img3GIn2Size = INPUT_SIZE_1920X1080;
+    }
+    else if (index == 1)
+    {
+        ui->labelImgBoard3->Img3GIn2Size = INPUT_SIZE_960X540;
+    }
+    else
+    {
+        ui->labelImgBoard3->Img3GIn2Size = INPUT_SIZE_1920X1080;
+    }
+}
+
+void MainWindow::on_comboBoxImgBoard3_currentIndexChanged(int index)
+{
+    if(index == 0)
+    {
+        ui->labelImgBoard3->ImgType = IMG_IN1_3G;
+    }
+    else if (index == 1)
+    {
+        ui->labelImgBoard3->ImgType = IMG_IN2_3G;
+    }
+    else if (index == 2)
+    {
+        ui->labelImgBoard3->ImgType = IMG_AI;
+    }
+    else if (index == 3)
+    {
+        ui->labelImgBoard3->ImgType = IMG_COLOR;
+    }
+    else
+    {
+        ui->labelImgBoard3->ImgType = INPUT_SIZE_1920X1080;
+    }
+}
+
+void MainWindow::on_pushButtonImgClearBoard3_clicked()
+{
+    for(int i = 0 ; i < 4; i++)
+    {
+        for (int j = 0; j < 4; j++)
+        {
+            ui->labelImgBoard3->regTable[i][j] = j + i * 4;
+        }
+    }
+    emit ui->labelImgBoard3->regChange((unsigned int *) ui->labelImgBoard3->regTable);
+    emit ui->labelImgBoard3->mousePaint();
+}
+
+
+void MainWindow::on_comboBox3Gin1SizeBoard4_currentIndexChanged(int index)
+{
+    if(index == 0)
+    {
+        ui->labelImgBoard4->Img3GIn1Size = INPUT_SIZE_1920X1080;
+    }
+    else if (index == 1)
+    {
+        ui->labelImgBoard4->Img3GIn1Size = INPUT_SIZE_960X540;
+    }
+    else
+    {
+        ui->labelImgBoard4->Img3GIn1Size = INPUT_SIZE_1920X1080;
+    }
+}
+
+void MainWindow::on_comboBox3Gin2SizeBoard4_currentIndexChanged(int index)
+{
+    if(index == 0)
+    {
+        ui->labelImgBoard4->Img3GIn2Size = INPUT_SIZE_1920X1080;
+    }
+    else if (index == 1)
+    {
+        ui->labelImgBoard4->Img3GIn2Size = INPUT_SIZE_960X540;
+    }
+    else
+    {
+        ui->labelImgBoard4->Img3GIn2Size = INPUT_SIZE_1920X1080;
+    }
+}
+
+void MainWindow::on_comboBoxImgBoard4_currentIndexChanged(int index)
+{
+    if(index == 0)
+    {
+        ui->labelImgBoard4->ImgType = IMG_IN1_3G;
+    }
+    else if (index == 1)
+    {
+        ui->labelImgBoard4->ImgType = IMG_IN2_3G;
+    }
+    else if (index == 2)
+    {
+        ui->labelImgBoard4->ImgType = IMG_AI;
+    }
+    else if (index == 3)
+    {
+        ui->labelImgBoard4->ImgType = IMG_COLOR;
+    }
+    else
+    {
+        ui->labelImgBoard4->ImgType = INPUT_SIZE_1920X1080;
+    }
+}
+
+void MainWindow::on_pushButtonImgClearBoard4_clicked()
+{
+    for(int i = 0 ; i < 4; i++)
+    {
+        for (int j = 0; j < 4; j++)
+        {
+            ui->labelImgBoard4->regTable[i][j] = j + i * 4;
+        }
+    }
+    emit ui->labelImgBoard4->regChange((unsigned int *) ui->labelImgBoard4->regTable);
+    emit ui->labelImgBoard4->mousePaint();
+}
+
+
+void MainWindow::on_comboBox3Gin1SizeBoard5_currentIndexChanged(int index)
+{
+    if(index == 0)
+    {
+        ui->labelImgBoard5->Img3GIn1Size = INPUT_SIZE_1920X1080;
+    }
+    else if (index == 1)
+    {
+        ui->labelImgBoard5->Img3GIn1Size = INPUT_SIZE_960X540;
+    }
+    else
+    {
+        ui->labelImgBoard5->Img3GIn1Size = INPUT_SIZE_1920X1080;
+    }
+}
+
+void MainWindow::on_comboBox3Gin2SizeBoard5_currentIndexChanged(int index)
+{
+    if(index == 0)
+    {
+        ui->labelImgBoard5->Img3GIn2Size = INPUT_SIZE_1920X1080;
+    }
+    else if (index == 1)
+    {
+        ui->labelImgBoard5->Img3GIn2Size = INPUT_SIZE_960X540;
+    }
+    else
+    {
+        ui->labelImgBoard5->Img3GIn2Size = INPUT_SIZE_1920X1080;
+    }
+}
+
+void MainWindow::on_comboBoxImgBoard5_currentIndexChanged(int index)
+{
+    if(index == 0)
+    {
+        ui->labelImgBoard5->ImgType = IMG_IN1_3G;
+    }
+    else if (index == 1)
+    {
+        ui->labelImgBoard5->ImgType = IMG_IN2_3G;
+    }
+    else if (index == 2)
+    {
+        ui->labelImgBoard5->ImgType = IMG_AI;
+    }
+    else if (index == 3)
+    {
+        ui->labelImgBoard5->ImgType = IMG_COLOR;
+    }
+    else
+    {
+        ui->labelImgBoard5->ImgType = INPUT_SIZE_1920X1080;
+    }
+}
+
+void MainWindow::on_pushButtonImgClearBoard5_clicked()
+{
+    for(int i = 0 ; i < 4; i++)
+    {
+        for (int j = 0; j < 4; j++)
+        {
+            ui->labelImgBoard5->regTable[i][j] = j + i * 4;
+        }
+    }
+    emit ui->labelImgBoard5->regChange((unsigned int *) ui->labelImgBoard5->regTable);
+    emit ui->labelImgBoard5->mousePaint();
+}
+
+
+
+void MainWindow::on_comboBox3Gin1SizeBoard6_currentIndexChanged(int index)
+{
+    if(index == 0)
+    {
+        ui->labelImgBoard6->Img3GIn1Size = INPUT_SIZE_1920X1080;
+    }
+    else if (index == 1)
+    {
+        ui->labelImgBoard6->Img3GIn1Size = INPUT_SIZE_960X540;
+    }
+    else
+    {
+        ui->labelImgBoard6->Img3GIn1Size = INPUT_SIZE_1920X1080;
+    }
+}
+
+void MainWindow::on_comboBox3Gin2SizeBoard6_currentIndexChanged(int index)
+{
+    if(index == 0)
+    {
+        ui->labelImgBoard6->Img3GIn2Size = INPUT_SIZE_1920X1080;
+    }
+    else if (index == 1)
+    {
+        ui->labelImgBoard6->Img3GIn2Size = INPUT_SIZE_960X540;
+    }
+    else
+    {
+        ui->labelImgBoard6->Img3GIn2Size = INPUT_SIZE_1920X1080;
+    }
+}
+
+void MainWindow::on_comboBoxImgBoard6_currentIndexChanged(int index)
+{
+    if(index == 0)
+    {
+        ui->labelImgBoard6->ImgType = IMG_IN1_3G;
+    }
+    else if (index == 1)
+    {
+        ui->labelImgBoard6->ImgType = IMG_IN2_3G;
+    }
+    else if (index == 2)
+    {
+        ui->labelImgBoard6->ImgType = IMG_AI;
+    }
+    else if (index == 3)
+    {
+        ui->labelImgBoard6->ImgType = IMG_COLOR;
+    }
+    else
+    {
+        ui->labelImgBoard6->ImgType = INPUT_SIZE_1920X1080;
+    }
+}
+
+void MainWindow::on_pushButtonImgClearBoard6_clicked()
+{
+    for(int i = 0 ; i < 4; i++)
+    {
+        for (int j = 0; j < 4; j++)
+        {
+            ui->labelImgBoard6->regTable[i][j] = j + i * 4;
+        }
+    }
+    emit ui->labelImgBoard6->regChange((unsigned int *) ui->labelImgBoard6->regTable);
+    emit ui->labelImgBoard6->mousePaint();
+}
+
+
+
+void MainWindow::on_comboBox3Gin1SizeBoard7_currentIndexChanged(int index)
+{
+    if(index == 0)
+    {
+        ui->labelImgBoard7->Img3GIn1Size = INPUT_SIZE_1920X1080;
+    }
+    else if (index == 1)
+    {
+        ui->labelImgBoard7->Img3GIn1Size = INPUT_SIZE_960X540;
+    }
+    else
+    {
+        ui->labelImgBoard7->Img3GIn1Size = INPUT_SIZE_1920X1080;
+    }
+}
+
+void MainWindow::on_comboBox3Gin2SizeBoard7_currentIndexChanged(int index)
+{
+    if(index == 0)
+    {
+        ui->labelImgBoard7->Img3GIn2Size = INPUT_SIZE_1920X1080;
+    }
+    else if (index == 1)
+    {
+        ui->labelImgBoard7->Img3GIn2Size = INPUT_SIZE_960X540;
+    }
+    else
+    {
+        ui->labelImgBoard7->Img3GIn2Size = INPUT_SIZE_1920X1080;
+    }
+}
+
+void MainWindow::on_comboBoxImgBoard7_currentIndexChanged(int index)
+{
+    if(index == 0)
+    {
+        ui->labelImgBoard7->ImgType = IMG_IN1_3G;
+    }
+    else if (index == 1)
+    {
+        ui->labelImgBoard7->ImgType = IMG_IN2_3G;
+    }
+    else if (index == 2)
+    {
+        ui->labelImgBoard7->ImgType = IMG_AI;
+    }
+    else if (index == 3)
+    {
+        ui->labelImgBoard7->ImgType = IMG_COLOR;
+    }
+    else
+    {
+        ui->labelImgBoard7->ImgType = INPUT_SIZE_1920X1080;
+    }
+}
+
+void MainWindow::on_pushButtonImgClearBoard7_clicked()
+{
+    for(int i = 0 ; i < 4; i++)
+    {
+        for (int j = 0; j < 4; j++)
+        {
+            ui->labelImgBoard7->regTable[i][j] = j + i * 4;
+        }
+    }
+    emit ui->labelImgBoard7->regChange((unsigned int *) ui->labelImgBoard7->regTable);
+    emit ui->labelImgBoard7->mousePaint();
+}
+
+
+void MainWindow::on_comboBox3Gin1SizeBoard8_currentIndexChanged(int index)
+{
+    if(index == 0)
+    {
+        ui->labelImgBoard8->Img3GIn1Size = INPUT_SIZE_1920X1080;
+    }
+    else if (index == 1)
+    {
+        ui->labelImgBoard8->Img3GIn1Size = INPUT_SIZE_960X540;
+    }
+    else
+    {
+        ui->labelImgBoard8->Img3GIn1Size = INPUT_SIZE_1920X1080;
+    }
+}
+
+void MainWindow::on_comboBox3Gin2SizeBoard8_currentIndexChanged(int index)
+{
+    if(index == 0)
+    {
+        ui->labelImgBoard8->Img3GIn2Size = INPUT_SIZE_1920X1080;
+    }
+    else if (index == 1)
+    {
+        ui->labelImgBoard8->Img3GIn2Size = INPUT_SIZE_960X540;
+    }
+    else
+    {
+        ui->labelImgBoard8->Img3GIn2Size = INPUT_SIZE_1920X1080;
+    }
+}
+
+void MainWindow::on_comboBoxImgBoard8_currentIndexChanged(int index)
+{
+    if(index == 0)
+    {
+        ui->labelImgBoard8->ImgType = IMG_IN1_3G;
+    }
+    else if (index == 1)
+    {
+        ui->labelImgBoard8->ImgType = IMG_IN2_3G;
+    }
+    else if (index == 2)
+    {
+        ui->labelImgBoard8->ImgType = IMG_AI;
+    }
+    else if (index == 3)
+    {
+        ui->labelImgBoard8->ImgType = IMG_COLOR;
+    }
+    else
+    {
+        ui->labelImgBoard8->ImgType = INPUT_SIZE_1920X1080;
+    }
+}
+
+void MainWindow::on_pushButtonImgClearBoard8_clicked()
+{
+    for(int i = 0 ; i < 4; i++)
+    {
+        for (int j = 0; j < 4; j++)
+        {
+            ui->labelImgBoard8->regTable[i][j] = j + i * 4;
+        }
+    }
+    emit ui->labelImgBoard8->regChange((unsigned int *) ui->labelImgBoard8->regTable);
+    emit ui->labelImgBoard8->mousePaint();
 }

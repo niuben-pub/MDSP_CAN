@@ -1,14 +1,37 @@
 <RCC>
     <qresource prefix="/">
-        <file>images/OFF.bmp</file>
-        <file>images/ON.bmp</file>
-        <file>images/img1.png</file>
-        <file>images/img2.png</file>
+        <file>images/0.png</file>
+        <file>images/3.png</file>
+        <file>images/4.png</file>
+        <file>images/5.png</file>
+        <file>images/6.png</file>
+        <file>images/7.png</file>
+        <file>images/8.png</file>
+        <file>images/9.png</file>
+        <file>images/10.png</file>
+        <file>images/11.png</file>
+        <file>images/12.png</file>
+        <file>images/13.png</file>
+        <file>images/14.png</file>
+        <file>images/15.png</file>
+        <file>images/16.png</file>
+        <file>images/a1.png</file>
+        <file>images/a2.png</file>
+        <file>images/a3.png</file>
+        <file>images/a4.png</file>
+        <file>images/a5.png</file>
+        <file>images/a6.png</file>
+        <file>images/a7.png</file>
+        <file>images/a8.png</file>
+        <file>images/col1.png</file>
+        <file>images/col2.png</file>
+        <file>images/col3.png</file>
+        <file>images/col4.png</file>
+        <file>images/col5.png</file>
+        <file>images/col6.png</file>
+        <file>images/col7.png</file>
+        <file>images/col8.png</file>
         <file>images/1.png</file>
         <file>images/2.png</file>
-        <file>images/22.png</file>
-        <file>images/ai.png</file>
-        <file>images/col.png</file>
-        <file>images/0.png</file>
     </qresource>
 </RCC>

@@ -583,19 +583,19 @@ void ImgLabel::mousePressEvent(QMouseEvent *event)
         Pos_X = event->x();
         Pos_Y = event->y();
 
-        if(Pos_Y >= 0 && Pos_Y < 68)
+        if(Pos_Y >= 0 && Pos_Y < DrawWindowQuarHeight)
         {
             Zone_Y = 0;
         }
-        else if (Pos_Y >= 68 && Pos_Y < 136)
+        else if (Pos_Y >= DrawWindowQuarHeight && Pos_Y < (DrawWindowQuarHeight * 2))
         {
             Zone_Y = 1;
         }
-        else if (Pos_Y >= 136 && Pos_Y < 204)
+        else if (Pos_Y >= (DrawWindowQuarHeight * 2) && Pos_Y < (DrawWindowQuarHeight * 3))
         {
             Zone_Y = 2;
         }
-        else if (Pos_Y >= 204 && Pos_Y < 270)
+        else if (Pos_Y >= (DrawWindowQuarHeight * 3) && Pos_Y < DrawWindowHeight)
         {
             Zone_Y = 3;
         }
@@ -604,19 +604,19 @@ void ImgLabel::mousePressEvent(QMouseEvent *event)
             Zone_Y = 0;
         }
 
-        if(Pos_X >= 0 && Pos_X < 120)
+        if(Pos_X >= 0 && Pos_X < DrawWindowQuarWidth)
         {
             Zone_X = 0;
         }
-        else if (Pos_X >= 120 && Pos_X < 240)
+        else if (Pos_X >= DrawWindowQuarWidth && Pos_X < (DrawWindowQuarWidth * 2))
         {
             Zone_X = 1;
         }
-        else if (Pos_X >= 240 && Pos_X < 360)
+        else if (Pos_X >= (DrawWindowQuarWidth * 2) && Pos_X < (DrawWindowQuarWidth * 3))
         {
             Zone_X = 2;
         }
-        else if (Pos_X >= 360 && Pos_X < 480)
+        else if (Pos_X >= (DrawWindowQuarWidth * 3) && Pos_X < DrawWindowWidth)
         {
             Zone_X = 3;
         }
@@ -638,10 +638,10 @@ void ImgLabel::mousePressEvent(QMouseEvent *event)
 
 void ImgLabel::paintEvent(QPaintEvent *event)
 {
-    qDebug()<<"paintEvent"<<endl;
+    qDebug()<<"SUBpaintEvent"<<endl;
     QPainter *painter = new QPainter(this);
-    QPixmap pix;
 
+    painter->drawPixmap(0,0,DrawWindowWidth,DrawWindowHeight,this->pixBlank);
 
     for(int i = 0 ; i <= 2; i+=2)
     {
@@ -649,67 +649,57 @@ void ImgLabel::paintEvent(QPaintEvent *event)
         {
             if(this->regTable[i][j] == IN1_3G_1920x1080)
             {
-                pix.load(":/images/1.png");
-                painter->drawPixmap(j*120,i*68,120*2,68*2,pix);
+                painter->drawPixmap(j*DrawWindowQuarWidth,i*DrawWindowQuarHeight,DrawWindowQuarWidth*2,DrawWindowQuarHeight*2,this->pix3GIN1);
             }
             if(this->regTable[i][j] == IN2_3G_1920x1080)
             {
-                pix.load(":/images/22.png");
-                painter->drawPixmap(j*120,i*68,120*2,68*2,pix);
+                painter->drawPixmap(j*DrawWindowQuarWidth,i*DrawWindowQuarHeight,DrawWindowQuarWidth*2,DrawWindowQuarHeight*2,this->pix3GIN2);
             }
         }
     }
-
 
     for(int i = 0 ; i <= 3; i++)
     {
         for(int j = 0; j <= 3; j++)
         {
-            if(this->regTable[i][j] <= 15)
-            {
-                pix.load(":/images/0.png");
-                painter->drawPixmap(j*120,i*68,120,68,pix);
-            }
             if(this->regTable[i][j] == IN1_3G_960x540)
             {
-                pix.load(":/images/1.png");
-                painter->drawPixmap(j*120,i*68,120,68,pix);
+                painter->drawPixmap(j*DrawWindowQuarWidth,i*DrawWindowQuarHeight,DrawWindowQuarWidth,DrawWindowQuarHeight,this->pix3GIN1);
             }
             if(this->regTable[i][j] == IN2_3G_960x540)
             {
-                pix.load(":/images/22.png");
-                painter->drawPixmap(j*120,i*68,120,68,pix);
+                painter->drawPixmap(j*DrawWindowQuarWidth,i*DrawWindowQuarHeight,DrawWindowQuarWidth,DrawWindowQuarHeight,this->pix3GIN2);
             }
             if(this->regTable[i][j] == COLOR_960x540)
             {
-                pix.load(":/images/col.png");
-                painter->drawPixmap(j*120,i*68,120,68,pix);
+                painter->drawPixmap(j*DrawWindowQuarWidth,i*DrawWindowQuarHeight,DrawWindowQuarWidth,DrawWindowQuarHeight,this->pixColor);
             }
             if(this->regTable[i][j] == DETECTION_960x540)
             {
-                pix.load(":/images/ai.png");
-                painter->drawPixmap(j*120,i*68,120,68,pix);
+                painter->drawPixmap(j*DrawWindowQuarWidth,i*DrawWindowQuarHeight,DrawWindowQuarWidth,DrawWindowQuarHeight,this->pixDetection);
             }
 
         }
     }
 
     painter->setPen(0x010101);
-    painter->drawRect(0,0,480,270);
+    painter->drawRect(0,0,DrawWindowWidth,DrawWindowHeight);
 
-    painter->drawLine(120,0,120,270);
-    painter->drawLine(240,0,240,270);
-    painter->drawLine(360,0,360,270);
+    painter->drawLine(DrawWindowQuarWidth,0,DrawWindowQuarWidth,DrawWindowHeight);
+    painter->drawLine(DrawWindowQuarWidth * 2,0,DrawWindowQuarWidth * 2,DrawWindowHeight);
+    painter->drawLine(DrawWindowQuarWidth * 3,0,DrawWindowQuarWidth * 3,DrawWindowHeight);
 
-    painter->drawLine(0,68,480,68);
-    painter->drawLine(0,136,480,136);
-    painter->drawLine(0,204,480,204);
+    painter->drawLine(0, DrawWindowQuarHeight, DrawWindowWidth, DrawWindowQuarHeight);
+    painter->drawLine(0, DrawWindowQuarHeight * 2,DrawWindowWidth, DrawWindowQuarHeight * 2);
+    painter->drawLine(0, DrawWindowQuarHeight * 3,DrawWindowWidth, DrawWindowQuarHeight * 3);
 
     delete painter;
+
+    emit this->imgoverlayupdataImg();
 }
 
 void ImgLabel::updataImg()
 {
-    qDebug()<<"this->update();"<<endl;
-    this->update();
+    qDebug()<<"SUBupdate();"<<endl;
+    this->update();  //更新会调用绘图事件
 }

@@ -20,6 +20,7 @@ class MainWindow : public QMainWindow
 
 private:
     void initUi();
+    void initImaLabel();
     void initSignalslots();
 
 
@@ -28,8 +29,15 @@ public:
     ~MainWindow();
 
 private slots:
-
-    void writeFpgaImgconfigReg(unsigned int *regTable);
+    void updateOverlyImgRegArray(void);
+    void writeBoard1FpgaImgconfigReg(unsigned int *regTable);
+    void writeBoard2FpgaImgconfigReg(unsigned int *regTable);
+    void writeBoard3FpgaImgconfigReg(unsigned int *regTable);
+    void writeBoard4FpgaImgconfigReg(unsigned int *regTable);
+    void writeBoard5FpgaImgconfigReg(unsigned int *regTable);
+    void writeBoard6FpgaImgconfigReg(unsigned int *regTable);
+    void writeBoard7FpgaImgconfigReg(unsigned int *regTable);
+    void writeBoard8FpgaImgconfigReg(unsigned int *regTable);
 
     void on_btnDefParam_clicked();
 
@@ -88,13 +96,70 @@ private slots:
 
     void on_pushButtonAddrOk_clicked();
 
-    void on_comboBox3Gin1Size_currentIndexChanged(int index);
+    void on_pushButtonImgClearBoard1_clicked();
 
-    void on_comboBox3Gin2Size_currentIndexChanged(int index);
+    void on_comboBoxImgBoard1_currentIndexChanged(int index);
 
-    void on_comboBoxImg_currentIndexChanged(int index);
+    void on_comboBox3Gin1SizeBoard1_currentIndexChanged(int index);
 
-    void on_pushButton_clicked();
+    void on_comboBox3Gin2SizeBoard1_currentIndexChanged(int index);
+
+    void on_comboBox3Gin1SizeBoard2_currentIndexChanged(int index);
+
+    void on_comboBox3Gin2SizeBoard2_currentIndexChanged(int index);
+
+    void on_comboBoxImgBoard2_currentIndexChanged(int index);
+
+    void on_pushButtonImgClearBoard2_clicked();
+
+    void on_comboBox3Gin1SizeBoard3_currentIndexChanged(int index);
+
+    void on_comboBox3Gin2SizeBoard3_currentIndexChanged(int index);
+
+    void on_comboBoxImgBoard3_currentIndexChanged(int index);
+
+    void on_pushButtonImgClearBoard3_clicked();
+
+    void on_comboBox3Gin1SizeBoard4_currentIndexChanged(int index);
+
+    void on_comboBox3Gin2SizeBoard4_currentIndexChanged(int index);
+
+    void on_comboBoxImgBoard4_currentIndexChanged(int index);
+
+    void on_pushButtonImgClearBoard4_clicked();
+
+    void on_comboBox3Gin1SizeBoard5_currentIndexChanged(int index);
+
+    void on_comboBox3Gin2SizeBoard5_currentIndexChanged(int index);
+
+    void on_comboBoxImgBoard5_currentIndexChanged(int index);
+
+    void on_pushButtonImgClearBoard5_clicked();
+
+    void on_comboBox3Gin1SizeBoard6_currentIndexChanged(int index);
+
+    void on_comboBox3Gin2SizeBoard6_currentIndexChanged(int index);
+
+    void on_comboBoxImgBoard6_currentIndexChanged(int index);
+
+    void on_pushButtonImgClearBoard6_clicked();
+
+    void on_comboBox3Gin1SizeBoard7_currentIndexChanged(int index);
+
+    void on_comboBox3Gin2SizeBoard7_currentIndexChanged(int index);
+
+    void on_comboBoxImgBoard7_currentIndexChanged(int index);
+
+    void on_pushButtonImgClearBoard7_clicked();
+
+    void on_comboBox3Gin1SizeBoard8_currentIndexChanged(int index);
+
+    void on_comboBox3Gin2SizeBoard8_currentIndexChanged(int index);
+
+    void on_comboBoxImgBoard8_currentIndexChanged(int index);
+
+    void on_pushButtonImgClearBoard8_clicked();
+
 
 
 private:
