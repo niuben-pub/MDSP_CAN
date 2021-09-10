@@ -600,11 +600,15 @@ void MainWindow::initUi()
     ui->tableWidgetTest->setColumnWidth(0,90);
     ui->tableWidgetTest->setColumnWidth(1,60);
     ui->tableWidgetTest->setColumnWidth(2,76);
+    ui->tableWidgetTest->setHorizontalHeaderItem(0,new QTableWidgetItem("SYS time"));
+    ui->tableWidgetTest->setHorizontalHeaderItem(1,new QTableWidgetItem("DIR"));
+    ui->tableWidgetTest->setHorizontalHeaderItem(2,new QTableWidgetItem("ID(hex)"));
     for(int i = 3; i <= 10; i++)
     {
         ui->tableWidgetTest->setColumnWidth(i,28);
         ui->tableWidgetTest->setHorizontalHeaderItem(i,new QTableWidgetItem(QString::number(i - 3)));
     }
+
     ui->tabWidget->setCurrentIndex(0);//设置选中第一个标签
     ui->tabWidget->tabBar()->setStyle(new CustomTabStyle);
     ui->tabWidget_2->setCurrentIndex(0);//设置选中第一个标签
@@ -628,6 +632,7 @@ void MainWindow::initSignalslots()
     connect(canthread,&CANThread::getProtocolData,protocolHand,&ProtocolThrend::protocolHand);
     //Flash写入计时
     connect(FlashWriteTimer,SIGNAL(timeout()),this,SLOT(updataFlashTime()));
+    connect(ui->labelImg,SIGNAL(regChange(unsigned int *)),this,SLOT(writeFpgaImgconfigReg(unsigned int *)));
 }
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -656,6 +661,28 @@ MainWindow::MainWindow(QWidget *parent) :
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::writeFpgaImgconfigReg(unsigned int *regTable)
+{
+
+    for (int i = 0; i < 16; i++)
+    {
+        qDebug()<<"["<<regTable[i]<<"]"<<endl;
+        unsigned char send_str[8] = {0};
+        int ID = (PGN57856 << 8) + this->board1->writerAddr;  //写FPGA命令
+        quint64 regaddr = 0x10 + i;
+        quint64 regdata = regTable[i];
+        quint64 data = (regaddr<<16) + regdata;
+        char *p = (char *)(&data);
+        for(int i = 0; i < 8; i++)
+        {
+            send_str[i] = p[7 - i];
+            qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+        }
+        canthread->sendData(ID,(unsigned char*)send_str);
+        sleep(30);
+    }
 }
 
 void MainWindow::on_btnDefParam_clicked()
@@ -700,144 +727,7 @@ void MainWindow::on_btnFinish_clicked()
     }
 }
 
-void MainWindow::on_pushButton3GINBoard1_clicked()
-{
-    bool ok;
-    this->board1->writerAddr = ui->lineEditDevAddrBoard1->text().toULongLong(&ok,10);
-    this->board1->readAddr = this->board1->writerAddr << 4;
-    this->board1->IN1_3G_NUM = ui->lineEdit3GIN1Board1->text().toULongLong(&ok,10);
-    this->board1->IN2_3G_NUM = ui->lineEdit3GIN2Board1->text().toULongLong(&ok,10);
 
-}
-
-void MainWindow::on_pushButton3GINClearBoard1_clicked()
-{
-    ui->lineEditDevAddrBoard1->clear();
-    ui->lineEdit3GIN1Board1->clear();
-    ui->lineEdit3GIN2Board1->clear();
-}
-
-void MainWindow::on_pushButton3GINBoard2_clicked()
-{
-    bool ok;
-    this->board2->writerAddr = ui->lineEditDevAddrBoard2->text().toULongLong(&ok,10);
-    this->board2->readAddr = this->board2->writerAddr << 4;
-    this->board2->IN1_3G_NUM = ui->lineEdit3GIN1Board2->text().toULongLong(&ok,10);
-    this->board2->IN2_3G_NUM = ui->lineEdit3GIN2Board2->text().toULongLong(&ok,10);
-}
-
-void MainWindow::on_pushButton3GINClearBoard2_clicked()
-{
-    ui->lineEditDevAddrBoard2->clear();
-    ui->lineEdit3GIN1Board2->clear();
-    ui->lineEdit3GIN2Board2->clear();
-}
-
-void MainWindow::on_pushButton3GINBoard3_clicked()
-{
-    bool ok;
-    this->board3->writerAddr = ui->lineEditDevAddrBoard3->text().toULongLong(&ok,10);
-    this->board3->readAddr = this->board3->writerAddr << 4;
-    this->board3->IN1_3G_NUM = ui->lineEdit3GIN1Board3->text().toULongLong(&ok,10);
-    this->board3->IN2_3G_NUM = ui->lineEdit3GIN2Board3->text().toULongLong(&ok,10);
-}
-
-void MainWindow::on_pushButton3GINClearBoard3_clicked()
-{
-    ui->lineEditDevAddrBoard3->clear();
-    ui->lineEdit3GIN1Board3->clear();
-    ui->lineEdit3GIN2Board3->clear();
-}
-
-
-void MainWindow::on_pushButton3GINBoard4_clicked()
-{
-    bool ok;
-    this->board4->writerAddr = ui->lineEditDevAddrBoard4->text().toULongLong(&ok,10);
-    this->board4->readAddr = this->board4->writerAddr << 4;
-    this->board4->IN1_3G_NUM = ui->lineEdit3GIN1Board4->text().toULongLong(&ok,10);
-    this->board4->IN2_3G_NUM = ui->lineEdit3GIN2Board4->text().toULongLong(&ok,10);
-}
-
-void MainWindow::on_pushButton3GINClearBoard4_clicked()
-{
-    ui->lineEditDevAddrBoard4->clear();
-    ui->lineEdit3GIN1Board4->clear();
-    ui->lineEdit3GIN2Board4->clear();
-}
-
-void MainWindow::on_pushButton3GINBoard5_clicked()
-{
-    bool ok;
-    this->board5->writerAddr = ui->lineEditDevAddrBoard5->text().toULongLong(&ok,10);
-    this->board5->readAddr = this->board5->writerAddr << 4;
-    this->board5->IN1_3G_NUM = ui->lineEdit3GIN1Board5->text().toULongLong(&ok,10);
-    this->board5->IN2_3G_NUM = ui->lineEdit3GIN2Board5->text().toULongLong(&ok,10);
-}
-
-void MainWindow::on_pushButton3GINClearBoard5_clicked()
-{
-    ui->lineEditDevAddrBoard5->clear();
-    ui->lineEdit3GIN1Board5->clear();
-    ui->lineEdit3GIN2Board5->clear();
-}
-
-void MainWindow::on_pushButton3GINBoard6_clicked()
-{
-    bool ok;
-    this->board6->writerAddr = ui->lineEditDevAddrBoard6->text().toULongLong(&ok,10);
-    this->board6->readAddr = this->board6->writerAddr << 4;
-    this->board6->IN1_3G_NUM = ui->lineEdit3GIN1Board6->text().toULongLong(&ok,10);
-    this->board6->IN2_3G_NUM = ui->lineEdit3GIN2Board6->text().toULongLong(&ok,10);
-}
-
-void MainWindow::on_pushButton3GINClearBoard6_clicked()
-{
-    ui->lineEditDevAddrBoard6->clear();
-    ui->lineEdit3GIN1Board6->clear();
-    ui->lineEdit3GIN2Board6->clear();
-}
-
-void MainWindow::on_pushButton3GINBoard7_clicked()
-{
-    bool ok;
-    this->board7->writerAddr = ui->lineEditDevAddrBoard7->text().toULongLong(&ok,10);
-    this->board7->readAddr = this->board7->writerAddr << 4;
-    this->board7->IN1_3G_NUM = ui->lineEdit3GIN1Board7->text().toULongLong(&ok,10);
-    this->board7->IN2_3G_NUM = ui->lineEdit3GIN2Board7->text().toULongLong(&ok,10);
-}
-
-void MainWindow::on_pushButton3GINClearBoard7_clicked()
-{
-    ui->lineEditDevAddrBoard7->clear();
-    ui->lineEdit3GIN1Board7->clear();
-    ui->lineEdit3GIN2Board7->clear();
-}
-
-
-void MainWindow::on_pushButton3GINBoard8_clicked()
-{
-    bool ok;
-    this->board8->writerAddr = ui->lineEditDevAddrBoard8->text().toULongLong(&ok,10);
-    this->board8->readAddr = this->board8->writerAddr << 4;
-    this->board8->IN1_3G_NUM = ui->lineEdit3GIN1Board8->text().toULongLong(&ok,10);
-    this->board8->IN2_3G_NUM = ui->lineEdit3GIN2Board8->text().toULongLong(&ok,10);
-//    qDebug()<<"board1 "<<board1->readAddr<<" "<<board1->writerAddr<<" "<<board1->IN1_3G_NUM<<" "<<board1->IN2_3G_NUM;
-//    qDebug()<<"board2 "<<board2->readAddr<<" "<<board2->writerAddr<<" "<<board2->IN1_3G_NUM<<" "<<board2->IN2_3G_NUM;
-//    qDebug()<<"board3 "<<board3->readAddr<<" "<<board3->writerAddr<<" "<<board3->IN1_3G_NUM<<" "<<board3->IN2_3G_NUM;
-//    qDebug()<<"board4 "<<board4->readAddr<<" "<<board4->writerAddr<<" "<<board4->IN1_3G_NUM<<" "<<board4->IN2_3G_NUM;
-//    qDebug()<<"board5 "<<board5->readAddr<<" "<<board5->writerAddr<<" "<<board5->IN1_3G_NUM<<" "<<board5->IN2_3G_NUM;
-//    qDebug()<<"board6 "<<board6->readAddr<<" "<<board6->writerAddr<<" "<<board6->IN1_3G_NUM<<" "<<board6->IN2_3G_NUM;
-//    qDebug()<<"board7 "<<board7->readAddr<<" "<<board7->writerAddr<<" "<<board7->IN1_3G_NUM<<" "<<board7->IN2_3G_NUM;
-//    qDebug()<<"board8 "<<board8->readAddr<<" "<<board8->writerAddr<<" "<<board8->IN1_3G_NUM<<" "<<board8->IN2_3G_NUM;
-}
-
-void MainWindow::on_pushButton3GINClearBoard8_clicked()
-{
-    ui->lineEditDevAddrBoard8->clear();
-    ui->lineEdit3GIN1Board8->clear();
-    ui->lineEdit3GIN2Board8->clear();
-}
 
 void MainWindow::on_btnStatusBoard1_clicked()
 {
@@ -1839,4 +1729,116 @@ void MainWindow::on_pushButtonTestRBoard8_clicked()
         ui->tableWidgetTest->setItem(row,3 + i,new QTableWidgetItem(QString::number(send_str[i],16)));
         ui->tableWidgetTest->item(row, 3 + i)->setTextAlignment(Qt::AlignCenter);
     }
+}
+
+void MainWindow::on_pushButtonAddrClear_clicked()
+{
+    ui->lineEditDevAddrBoard1->clear();
+    ui->lineEditDevAddrBoard2->clear();
+    ui->lineEditDevAddrBoard3->clear();
+    ui->lineEditDevAddrBoard4->clear();
+    ui->lineEditDevAddrBoard5->clear();
+    ui->lineEditDevAddrBoard6->clear();
+    ui->lineEditDevAddrBoard7->clear();
+    ui->lineEditDevAddrBoard8->clear();
+}
+
+void MainWindow::on_pushButtonAddrOk_clicked()
+{
+    bool ok;
+    this->board1->writerAddr = ui->lineEditDevAddrBoard1->text().toULongLong(&ok,10);
+    this->board1->readAddr = this->board1->writerAddr << 4;
+    this->board2->writerAddr = ui->lineEditDevAddrBoard2->text().toULongLong(&ok,10);
+    this->board2->readAddr = this->board2->writerAddr << 4;
+    this->board3->writerAddr = ui->lineEditDevAddrBoard3->text().toULongLong(&ok,10);
+    this->board3->readAddr = this->board3->writerAddr << 4;
+    this->board4->writerAddr = ui->lineEditDevAddrBoard4->text().toULongLong(&ok,10);
+    this->board4->readAddr = this->board4->writerAddr << 4;
+    this->board5->writerAddr = ui->lineEditDevAddrBoard5->text().toULongLong(&ok,10);
+    this->board5->readAddr = this->board5->writerAddr << 4;
+    this->board6->writerAddr = ui->lineEditDevAddrBoard6->text().toULongLong(&ok,10);
+    this->board6->readAddr = this->board6->writerAddr << 4;
+    this->board7->writerAddr = ui->lineEditDevAddrBoard7->text().toULongLong(&ok,10);
+    this->board7->readAddr = this->board7->writerAddr << 4;
+    this->board8->writerAddr = ui->lineEditDevAddrBoard8->text().toULongLong(&ok,10);
+    this->board8->readAddr = this->board8->writerAddr << 4;
+//    qDebug()<<"board1->readAddr"<<board1->readAddr<<"  "<<board1->writerAddr<<endl;
+//    qDebug()<<"board2->readAddr"<<board2->readAddr<<"  "<<board2->writerAddr<<endl;
+//    qDebug()<<"board3->readAddr"<<board3->readAddr<<"  "<<board3->writerAddr<<endl;
+//    qDebug()<<"board4->readAddr"<<board4->readAddr<<"  "<<board4->writerAddr<<endl;
+//    qDebug()<<"board5->readAddr"<<board5->readAddr<<"  "<<board5->writerAddr<<endl;
+//    qDebug()<<"board6->readAddr"<<board6->readAddr<<"  "<<board6->writerAddr<<endl;
+//    qDebug()<<"board7->readAddr"<<board7->readAddr<<"  "<<board7->writerAddr<<endl;
+//    qDebug()<<"board8->readAddr"<<board8->readAddr<<"  "<<board8->writerAddr<<endl;
+}
+
+void MainWindow::on_comboBox3Gin1Size_currentIndexChanged(int index)
+{
+    if(index == 0)
+    {
+        ui->labelImg->Img3GIn1Size = INPUT_SIZE_1920X1080;
+    }
+    else if (index == 1)
+    {
+        ui->labelImg->Img3GIn1Size = INPUT_SIZE_960X540;
+    }
+    else
+    {
+        ui->labelImg->Img3GIn1Size = INPUT_SIZE_1920X1080;
+    }
+
+}
+
+void MainWindow::on_comboBox3Gin2Size_currentIndexChanged(int index)
+{
+    if(index == 0)
+    {
+        ui->labelImg->Img3GIn2Size = INPUT_SIZE_1920X1080;
+    }
+    else if (index == 1)
+    {
+        ui->labelImg->Img3GIn2Size = INPUT_SIZE_960X540;
+    }
+    else
+    {
+        ui->labelImg->Img3GIn2Size = INPUT_SIZE_1920X1080;
+    }
+}
+
+void MainWindow::on_comboBoxImg_currentIndexChanged(int index)
+{
+    if(index == 0)
+    {
+        ui->labelImg->ImgType = IMG_IN1_3G;
+    }
+    else if (index == 1)
+    {
+        ui->labelImg->ImgType = IMG_IN2_3G;
+    }
+    else if (index == 2)
+    {
+        ui->labelImg->ImgType = IMG_AI;
+    }
+    else if (index == 3)
+    {
+        ui->labelImg->ImgType = IMG_COLOR;
+    }
+    else
+    {
+        ui->labelImg->ImgType = INPUT_SIZE_1920X1080;
+    }
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+    for(int i = 0 ; i < 4; i++)
+    {
+        for (int j = 0; j < 4; j++)
+        {
+            ui->labelImg->regTable[i][j] = j + i * 4;
+        }
+    }
+    emit ui->labelImg->regChange((unsigned int *) ui->labelImg->regTable);
+    emit ui->labelImg->mousePaint();
+
 }

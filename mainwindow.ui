@@ -6,20 +6,20 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>860</width>
-    <height>530</height>
+    <width>1200</width>
+    <height>800</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>860</width>
-    <height>530</height>
+    <width>1200</width>
+    <height>800</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>860</width>
-    <height>530</height>
+    <width>1200</width>
+    <height>800</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -31,8 +31,8 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>860</width>
-      <height>530</height>
+      <width>1200</width>
+      <height>800</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -42,7 +42,7 @@
      <enum>QTabWidget::West</enum>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="tabCanParam">
      <attribute name="title">
@@ -53,15 +53,15 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>830</width>
-        <height>530</height>
+        <width>1200</width>
+        <height>800</height>
        </rect>
       </property>
       <property name="tabPosition">
        <enum>QTabWidget::West</enum>
       </property>
       <property name="currentIndex">
-       <number>8</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab_9">
        <attribute name="title">
@@ -433,59 +433,23 @@
       </widget>
       <widget class="QWidget" name="tab_32">
        <attribute name="title">
-        <string>Board1</string>
+        <string>SysInit</string>
        </attribute>
-       <widget class="QLabel" name="lab3GIN1Board1">
-        <property name="geometry">
-         <rect>
-          <x>150</x>
-          <y>200</y>
-          <width>120</width>
-          <height>30</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">font: 13pt &quot;微软雅黑&quot;;</string>
-        </property>
-        <property name="text">
-         <string>3G-IN1 Num</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit3GIN1Board1">
-        <property name="geometry">
-         <rect>
-          <x>351</x>
-          <y>200</y>
-          <width>100</width>
-          <height>30</height>
-         </rect>
-        </property>
-       </widget>
        <widget class="QLineEdit" name="lineEditDevAddrBoard1">
         <property name="geometry">
          <rect>
-          <x>351</x>
-          <y>140</y>
+          <x>160</x>
+          <y>110</y>
           <width>100</width>
           <height>30</height>
          </rect>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit3GIN2Board1">
+       <widget class="QPushButton" name="pushButtonAddrOk">
         <property name="geometry">
          <rect>
-          <x>351</x>
-          <y>260</y>
-          <width>100</width>
-          <height>30</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton3GINBoard1">
-        <property name="geometry">
-         <rect>
-          <x>351</x>
-          <y>320</y>
+          <x>390</x>
+          <y>360</y>
           <width>100</width>
           <height>30</height>
          </rect>
@@ -494,27 +458,11 @@
          <string>OK</string>
         </property>
        </widget>
-       <widget class="QLabel" name="lab3GIN2Board1">
+       <widget class="QPushButton" name="pushButtonAddrClear">
         <property name="geometry">
          <rect>
-          <x>151</x>
-          <y>260</y>
-          <width>120</width>
-          <height>30</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">font: 13pt &quot;微软雅黑&quot;;</string>
-        </property>
-        <property name="text">
-         <string>3G-IN2 Num</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton3GINClearBoard1">
-        <property name="geometry">
-         <rect>
-          <x>151</x>
-          <y>320</y>
+          <x>100</x>
+          <y>360</y>
           <width>100</width>
           <height>30</height>
          </rect>
@@ -526,8 +474,8 @@
        <widget class="QLabel" name="labDevAddrBoard1">
         <property name="geometry">
          <rect>
-          <x>150</x>
-          <y>140</y>
+          <x>30</x>
+          <y>110</y>
           <width>120</width>
           <height>30</height>
          </rect>
@@ -536,110 +484,17 @@
          <string notr="true">font: 13pt &quot;微软雅黑&quot;;</string>
         </property>
         <property name="text">
-         <string>Dev Addr</string>
+         <string>Board1 Addr</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-        </property>
-       </widget>
-      </widget>
-      <widget class="QWidget" name="tab_33">
-       <attribute name="title">
-        <string>Board2</string>
-       </attribute>
-       <widget class="QLabel" name="lab3GIN1Board2">
-        <property name="geometry">
-         <rect>
-          <x>150</x>
-          <y>200</y>
-          <width>120</width>
-          <height>30</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">font: 13pt &quot;微软雅黑&quot;;</string>
-        </property>
-        <property name="text">
-         <string>3G-IN1 Num</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit3GIN1Board2">
-        <property name="geometry">
-         <rect>
-          <x>351</x>
-          <y>200</y>
-          <width>100</width>
-          <height>30</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEditDevAddrBoard2">
-        <property name="geometry">
-         <rect>
-          <x>351</x>
-          <y>140</y>
-          <width>100</width>
-          <height>30</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit3GIN2Board2">
-        <property name="geometry">
-         <rect>
-          <x>351</x>
-          <y>260</y>
-          <width>100</width>
-          <height>30</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton3GINBoard2">
-        <property name="geometry">
-         <rect>
-          <x>351</x>
-          <y>320</y>
-          <width>100</width>
-          <height>30</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>OK</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="lab3GIN2Board2">
-        <property name="geometry">
-         <rect>
-          <x>151</x>
-          <y>260</y>
-          <width>120</width>
-          <height>30</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">font: 13pt &quot;微软雅黑&quot;;</string>
-        </property>
-        <property name="text">
-         <string>3G-IN2 Num</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton3GINClearBoard2">
-        <property name="geometry">
-         <rect>
-          <x>151</x>
-          <y>320</y>
-          <width>100</width>
-          <height>30</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Clear</string>
         </property>
        </widget>
        <widget class="QLabel" name="labDevAddrBoard2">
         <property name="geometry">
          <rect>
-          <x>150</x>
-          <y>140</y>
+          <x>30</x>
+          <y>170</y>
           <width>120</width>
           <height>30</height>
          </rect>
@@ -648,110 +503,27 @@
          <string notr="true">font: 13pt &quot;微软雅黑&quot;;</string>
         </property>
         <property name="text">
-         <string>Dev Addr</string>
+         <string>Board2 Addr</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
         </property>
        </widget>
-      </widget>
-      <widget class="QWidget" name="tab_34">
-       <attribute name="title">
-        <string>Board3</string>
-       </attribute>
-       <widget class="QLabel" name="lab3GIN1Board3">
+       <widget class="QLineEdit" name="lineEditDevAddrBoard2">
         <property name="geometry">
          <rect>
-          <x>150</x>
-          <y>200</y>
-          <width>120</width>
-          <height>30</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">font: 13pt &quot;微软雅黑&quot;;</string>
-        </property>
-        <property name="text">
-         <string>3G-IN1 Num</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit3GIN1Board3">
-        <property name="geometry">
-         <rect>
-          <x>351</x>
-          <y>200</y>
+          <x>160</x>
+          <y>170</y>
           <width>100</width>
           <height>30</height>
          </rect>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEditDevAddrBoard3">
-        <property name="geometry">
-         <rect>
-          <x>351</x>
-          <y>140</y>
-          <width>100</width>
-          <height>30</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit3GIN2Board3">
-        <property name="geometry">
-         <rect>
-          <x>351</x>
-          <y>260</y>
-          <width>100</width>
-          <height>30</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton3GINBoard3">
-        <property name="geometry">
-         <rect>
-          <x>351</x>
-          <y>320</y>
-          <width>100</width>
-          <height>30</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>OK</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="lab3GIN2Board3">
-        <property name="geometry">
-         <rect>
-          <x>151</x>
-          <y>260</y>
-          <width>120</width>
-          <height>30</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">font: 13pt &quot;微软雅黑&quot;;</string>
-        </property>
-        <property name="text">
-         <string>3G-IN2 Num</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton3GINClearBoard3">
-        <property name="geometry">
-         <rect>
-          <x>151</x>
-          <y>320</y>
-          <width>100</width>
-          <height>30</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Clear</string>
         </property>
        </widget>
        <widget class="QLabel" name="labDevAddrBoard3">
         <property name="geometry">
          <rect>
-          <x>150</x>
-          <y>140</y>
+          <x>30</x>
+          <y>230</y>
           <width>120</width>
           <height>30</height>
          </rect>
@@ -760,38 +532,17 @@
          <string notr="true">font: 13pt &quot;微软雅黑&quot;;</string>
         </property>
         <property name="text">
-         <string>Dev Addr</string>
+         <string>Board3 Addr</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
         </property>
        </widget>
-      </widget>
-      <widget class="QWidget" name="tab_35">
-       <attribute name="title">
-        <string>Board4</string>
-       </attribute>
-       <widget class="QLabel" name="lab3GIN1Board4">
+       <widget class="QLineEdit" name="lineEditDevAddrBoard3">
         <property name="geometry">
          <rect>
-          <x>150</x>
-          <y>200</y>
-          <width>120</width>
-          <height>30</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">font: 13pt &quot;微软雅黑&quot;;</string>
-        </property>
-        <property name="text">
-         <string>3G-IN1 Num</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit3GIN1Board4">
-        <property name="geometry">
-         <rect>
-          <x>351</x>
-          <y>200</y>
+          <x>160</x>
+          <y>230</y>
           <width>100</width>
           <height>30</height>
          </rect>
@@ -800,70 +551,18 @@
        <widget class="QLineEdit" name="lineEditDevAddrBoard4">
         <property name="geometry">
          <rect>
-          <x>351</x>
-          <y>140</y>
+          <x>160</x>
+          <y>290</y>
           <width>100</width>
           <height>30</height>
          </rect>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit3GIN2Board4">
-        <property name="geometry">
-         <rect>
-          <x>351</x>
-          <y>260</y>
-          <width>100</width>
-          <height>30</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton3GINBoard4">
-        <property name="geometry">
-         <rect>
-          <x>351</x>
-          <y>320</y>
-          <width>100</width>
-          <height>30</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>OK</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="lab3GIN2Board4">
-        <property name="geometry">
-         <rect>
-          <x>151</x>
-          <y>260</y>
-          <width>120</width>
-          <height>30</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">font: 13pt &quot;微软雅黑&quot;;</string>
-        </property>
-        <property name="text">
-         <string>3G-IN2 Num</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton3GINClearBoard4">
-        <property name="geometry">
-         <rect>
-          <x>151</x>
-          <y>320</y>
-          <width>100</width>
-          <height>30</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Clear</string>
         </property>
        </widget>
        <widget class="QLabel" name="labDevAddrBoard4">
         <property name="geometry">
          <rect>
-          <x>150</x>
-          <y>140</y>
+          <x>30</x>
+          <y>290</y>
           <width>120</width>
           <height>30</height>
          </rect>
@@ -872,110 +571,17 @@
          <string notr="true">font: 13pt &quot;微软雅黑&quot;;</string>
         </property>
         <property name="text">
-         <string>Dev Addr</string>
+         <string>Board4 Addr</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-        </property>
-       </widget>
-      </widget>
-      <widget class="QWidget" name="tab_36">
-       <attribute name="title">
-        <string>Board5</string>
-       </attribute>
-       <widget class="QLabel" name="lab3GIN1Board5">
-        <property name="geometry">
-         <rect>
-          <x>150</x>
-          <y>200</y>
-          <width>120</width>
-          <height>30</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">font: 13pt &quot;微软雅黑&quot;;</string>
-        </property>
-        <property name="text">
-         <string>3G-IN1 Num</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit3GIN1Board5">
-        <property name="geometry">
-         <rect>
-          <x>351</x>
-          <y>200</y>
-          <width>100</width>
-          <height>30</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEditDevAddrBoard5">
-        <property name="geometry">
-         <rect>
-          <x>351</x>
-          <y>140</y>
-          <width>100</width>
-          <height>30</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit3GIN2Board5">
-        <property name="geometry">
-         <rect>
-          <x>351</x>
-          <y>260</y>
-          <width>100</width>
-          <height>30</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton3GINBoard5">
-        <property name="geometry">
-         <rect>
-          <x>351</x>
-          <y>320</y>
-          <width>100</width>
-          <height>30</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>OK</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="lab3GIN2Board5">
-        <property name="geometry">
-         <rect>
-          <x>151</x>
-          <y>260</y>
-          <width>120</width>
-          <height>30</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">font: 13pt &quot;微软雅黑&quot;;</string>
-        </property>
-        <property name="text">
-         <string>3G-IN2 Num</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton3GINClearBoard5">
-        <property name="geometry">
-         <rect>
-          <x>151</x>
-          <y>320</y>
-          <width>100</width>
-          <height>30</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Clear</string>
         </property>
        </widget>
        <widget class="QLabel" name="labDevAddrBoard5">
         <property name="geometry">
          <rect>
-          <x>150</x>
-          <y>140</y>
+          <x>320</x>
+          <y>110</y>
           <width>120</width>
           <height>30</height>
          </rect>
@@ -984,38 +590,17 @@
          <string notr="true">font: 13pt &quot;微软雅黑&quot;;</string>
         </property>
         <property name="text">
-         <string>Dev Addr</string>
+         <string>Board5 Addr</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
         </property>
        </widget>
-      </widget>
-      <widget class="QWidget" name="tab_37">
-       <attribute name="title">
-        <string>Board6</string>
-       </attribute>
-       <widget class="QLabel" name="lab3GIN1Board6">
+       <widget class="QLineEdit" name="lineEditDevAddrBoard5">
         <property name="geometry">
          <rect>
-          <x>150</x>
-          <y>200</y>
-          <width>120</width>
-          <height>30</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">font: 13pt &quot;微软雅黑&quot;;</string>
-        </property>
-        <property name="text">
-         <string>3G-IN1 Num</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit3GIN1Board6">
-        <property name="geometry">
-         <rect>
-          <x>351</x>
-          <y>200</y>
+          <x>450</x>
+          <y>110</y>
           <width>100</width>
           <height>30</height>
          </rect>
@@ -1024,70 +609,18 @@
        <widget class="QLineEdit" name="lineEditDevAddrBoard6">
         <property name="geometry">
          <rect>
-          <x>351</x>
-          <y>140</y>
+          <x>450</x>
+          <y>170</y>
           <width>100</width>
           <height>30</height>
          </rect>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit3GIN2Board6">
-        <property name="geometry">
-         <rect>
-          <x>351</x>
-          <y>260</y>
-          <width>100</width>
-          <height>30</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton3GINBoard6">
-        <property name="geometry">
-         <rect>
-          <x>351</x>
-          <y>320</y>
-          <width>100</width>
-          <height>30</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>OK</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="lab3GIN2Board6">
-        <property name="geometry">
-         <rect>
-          <x>151</x>
-          <y>260</y>
-          <width>120</width>
-          <height>30</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">font: 13pt &quot;微软雅黑&quot;;</string>
-        </property>
-        <property name="text">
-         <string>3G-IN2 Num</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton3GINClearBoard6">
-        <property name="geometry">
-         <rect>
-          <x>151</x>
-          <y>320</y>
-          <width>100</width>
-          <height>30</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Clear</string>
         </property>
        </widget>
        <widget class="QLabel" name="labDevAddrBoard6">
         <property name="geometry">
          <rect>
-          <x>150</x>
-          <y>140</y>
+          <x>320</x>
+          <y>170</y>
           <width>120</width>
           <height>30</height>
          </rect>
@@ -1096,110 +629,17 @@
          <string notr="true">font: 13pt &quot;微软雅黑&quot;;</string>
         </property>
         <property name="text">
-         <string>Dev Addr</string>
+         <string>Board6 Addr</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-        </property>
-       </widget>
-      </widget>
-      <widget class="QWidget" name="tab_38">
-       <attribute name="title">
-        <string>Board7</string>
-       </attribute>
-       <widget class="QLabel" name="lab3GIN1Board7">
-        <property name="geometry">
-         <rect>
-          <x>150</x>
-          <y>200</y>
-          <width>120</width>
-          <height>30</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">font: 13pt &quot;微软雅黑&quot;;</string>
-        </property>
-        <property name="text">
-         <string>3G-IN1 Num</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit3GIN1Board7">
-        <property name="geometry">
-         <rect>
-          <x>351</x>
-          <y>200</y>
-          <width>100</width>
-          <height>30</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEditDevAddrBoard7">
-        <property name="geometry">
-         <rect>
-          <x>351</x>
-          <y>140</y>
-          <width>100</width>
-          <height>30</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit3GIN2Board7">
-        <property name="geometry">
-         <rect>
-          <x>351</x>
-          <y>260</y>
-          <width>100</width>
-          <height>30</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton3GINBoard7">
-        <property name="geometry">
-         <rect>
-          <x>351</x>
-          <y>320</y>
-          <width>100</width>
-          <height>30</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>OK</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="lab3GIN2Board7">
-        <property name="geometry">
-         <rect>
-          <x>151</x>
-          <y>260</y>
-          <width>120</width>
-          <height>30</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">font: 13pt &quot;微软雅黑&quot;;</string>
-        </property>
-        <property name="text">
-         <string>3G-IN2 Num</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton3GINClearBoard7">
-        <property name="geometry">
-         <rect>
-          <x>151</x>
-          <y>320</y>
-          <width>100</width>
-          <height>30</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Clear</string>
         </property>
        </widget>
        <widget class="QLabel" name="labDevAddrBoard7">
         <property name="geometry">
          <rect>
-          <x>150</x>
-          <y>140</y>
+          <x>320</x>
+          <y>230</y>
           <width>120</width>
           <height>30</height>
          </rect>
@@ -1208,38 +648,17 @@
          <string notr="true">font: 13pt &quot;微软雅黑&quot;;</string>
         </property>
         <property name="text">
-         <string>Dev Addr</string>
+         <string>Board7 Addr</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
         </property>
        </widget>
-      </widget>
-      <widget class="QWidget" name="tab_39">
-       <attribute name="title">
-        <string>Board8</string>
-       </attribute>
-       <widget class="QLabel" name="lab3GIN1Board8">
+       <widget class="QLineEdit" name="lineEditDevAddrBoard7">
         <property name="geometry">
          <rect>
-          <x>150</x>
-          <y>200</y>
-          <width>120</width>
-          <height>30</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">font: 13pt &quot;微软雅黑&quot;;</string>
-        </property>
-        <property name="text">
-         <string>3G-IN1 Num</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit3GIN1Board8">
-        <property name="geometry">
-         <rect>
-          <x>351</x>
-          <y>200</y>
+          <x>450</x>
+          <y>230</y>
           <width>100</width>
           <height>30</height>
          </rect>
@@ -1248,70 +667,18 @@
        <widget class="QLineEdit" name="lineEditDevAddrBoard8">
         <property name="geometry">
          <rect>
-          <x>351</x>
-          <y>140</y>
+          <x>450</x>
+          <y>290</y>
           <width>100</width>
           <height>30</height>
          </rect>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit3GIN2Board8">
-        <property name="geometry">
-         <rect>
-          <x>351</x>
-          <y>260</y>
-          <width>100</width>
-          <height>30</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton3GINBoard8">
-        <property name="geometry">
-         <rect>
-          <x>351</x>
-          <y>320</y>
-          <width>100</width>
-          <height>30</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>OK</string>
-        </property>
-       </widget>
-       <widget class="QLabel" name="lab3GIN2Board8">
-        <property name="geometry">
-         <rect>
-          <x>151</x>
-          <y>260</y>
-          <width>120</width>
-          <height>30</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">font: 13pt &quot;微软雅黑&quot;;</string>
-        </property>
-        <property name="text">
-         <string>3G-IN2 Num</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton3GINClearBoard8">
-        <property name="geometry">
-         <rect>
-          <x>151</x>
-          <y>320</y>
-          <width>100</width>
-          <height>30</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Clear</string>
         </property>
        </widget>
        <widget class="QLabel" name="labDevAddrBoard8">
         <property name="geometry">
          <rect>
-          <x>150</x>
-          <y>140</y>
+          <x>320</x>
+          <y>290</y>
           <width>120</width>
           <height>30</height>
          </rect>
@@ -1320,7 +687,7 @@
          <string notr="true">font: 13pt &quot;微软雅黑&quot;;</string>
         </property>
         <property name="text">
-         <string>Dev Addr</string>
+         <string>Board8 Addr</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -1338,8 +705,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>830</width>
-        <height>530</height>
+        <width>1200</width>
+        <height>800</height>
        </rect>
       </property>
       <property name="tabPosition">
@@ -1348,349 +715,165 @@
       <property name="currentIndex">
        <number>0</number>
       </property>
-      <widget class="QWidget" name="tab_11">
+      <widget class="QWidget" name="tab_10">
        <attribute name="title">
-        <string>Image</string>
+        <string>Control</string>
        </attribute>
-       <widget class="QPushButton" name="pushButton_10">
+       <widget class="ImgLabel" name="labelImg">
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>170</y>
-          <width>111</width>
-          <height>31</height>
+          <x>190</x>
+          <y>90</y>
+          <width>482</width>
+          <height>272</height>
          </rect>
         </property>
         <property name="text">
-         <string>Img 5</string>
+         <string/>
         </property>
        </widget>
-       <widget class="QLineEdit" name="lineEdit">
+       <widget class="QComboBox" name="comboBox3Gin1Size">
         <property name="geometry">
          <rect>
           <x>110</x>
-          <y>380</y>
-          <width>91</width>
-          <height>30</height>
+          <y>420</y>
+          <width>69</width>
+          <height>22</height>
          </rect>
         </property>
+        <property name="styleSheet">
+         <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>1080P</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>540P</string>
+         </property>
+        </item>
        </widget>
-       <widget class="QPushButton" name="pushButton_12">
+       <widget class="QComboBox" name="comboBox3Gin2Size">
         <property name="geometry">
          <rect>
-          <x>300</x>
-          <y>170</y>
-          <width>111</width>
-          <height>31</height>
+          <x>110</x>
+          <y>450</y>
+          <width>69</width>
+          <height>22</height>
          </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>1080P</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>540P</string>
+         </property>
+        </item>
+       </widget>
+       <widget class="QLabel" name="label_2">
+        <property name="geometry">
+         <rect>
+          <x>50</x>
+          <y>425</y>
+          <width>54</width>
+          <height>12</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 9pt &quot;Arial&quot;;</string>
         </property>
         <property name="text">
-         <string>Img 7</string>
+         <string>3G IN1</string>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButton_3">
+       <widget class="QLabel" name="label_3">
         <property name="geometry">
          <rect>
-          <x>430</x>
-          <y>110</y>
-          <width>111</width>
-          <height>31</height>
+          <x>50</x>
+          <y>450</y>
+          <width>54</width>
+          <height>12</height>
          </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 9pt &quot;Arial&quot;;</string>
         </property>
         <property name="text">
-         <string>Img 4</string>
+         <string>3G IN2</string>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButton_16">
+       <widget class="QLabel" name="label_4">
         <property name="geometry">
          <rect>
-          <x>300</x>
-          <y>230</y>
-          <width>111</width>
-          <height>31</height>
+          <x>50</x>
+          <y>490</y>
+          <width>61</width>
+          <height>21</height>
          </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">
+font: 10pt &quot;Arial&quot;;</string>
         </property>
         <property name="text">
-         <string>Img 11</string>
+         <string>image</string>
         </property>
        </widget>
-       <widget class="QPushButton" name="pushButton_9">
+       <widget class="QComboBox" name="comboBoxImg">
         <property name="geometry">
          <rect>
-          <x>170</x>
-          <y>170</y>
-          <width>111</width>
-          <height>31</height>
+          <x>110</x>
+          <y>490</y>
+          <width>69</width>
+          <height>22</height>
          </rect>
         </property>
-        <property name="text">
-         <string>Img 6</string>
+        <property name="styleSheet">
+         <string notr="true">font: 9pt &quot;Arial&quot;;</string>
         </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_13">
-        <property name="geometry">
-         <rect>
-          <x>170</x>
-          <y>230</y>
-          <width>111</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Img 10</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_11">
-        <property name="geometry">
-         <rect>
-          <x>430</x>
-          <y>170</y>
-          <width>111</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Img 8</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_15">
-        <property name="geometry">
-         <rect>
-          <x>430</x>
-          <y>230</y>
-          <width>111</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Img 12</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_19">
-        <property name="geometry">
-         <rect>
-          <x>430</x>
-          <y>290</y>
-          <width>111</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Img 16</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_20">
-        <property name="geometry">
-         <rect>
-          <x>300</x>
-          <y>290</y>
-          <width>111</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Img 15</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_2">
-        <property name="geometry">
-         <rect>
-          <x>170</x>
-          <y>110</y>
-          <width>111</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Img 2</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_4">
-        <property name="geometry">
-         <rect>
-          <x>300</x>
-          <y>110</y>
-          <width>111</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Img 3</string>
-        </property>
-       </widget>
-       <widget class="QLineEdit" name="lineEdit_2">
-        <property name="geometry">
-         <rect>
-          <x>390</x>
-          <y>380</y>
-          <width>91</width>
-          <height>30</height>
-         </rect>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_14">
-        <property name="geometry">
-         <rect>
-          <x>40</x>
-          <y>230</y>
-          <width>111</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Img 9</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_17">
-        <property name="geometry">
-         <rect>
-          <x>170</x>
-          <y>290</y>
-          <width>111</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Img 14</string>
-        </property>
+        <item>
+         <property name="text">
+          <string>3G IN 1</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>3G IN 2</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Detection</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Color</string>
+         </property>
+        </item>
        </widget>
        <widget class="QPushButton" name="pushButton">
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>110</y>
-          <width>111</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Img 1</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_18">
-        <property name="geometry">
-         <rect>
-          <x>40</x>
-          <y>290</y>
-          <width>111</width>
-          <height>31</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Img 13</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="pushButton_21">
-        <property name="geometry">
-         <rect>
-          <x>250</x>
-          <y>380</y>
-          <width>91</width>
-          <height>30</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>Swap</string>
-        </property>
-       </widget>
-      </widget>
-      <widget class="QWidget" name="tab_13">
-       <attribute name="title">
-        <string>Control</string>
-       </attribute>
-       <widget class="QPushButton" name="btnOSD_3">
-        <property name="enabled">
-         <bool>true</bool>
-        </property>
-        <property name="geometry">
-         <rect>
-          <x>200</x>
-          <y>230</y>
-          <width>192</width>
-          <height>30</height>
+          <x>70</x>
+          <y>530</y>
+          <width>75</width>
+          <height>23</height>
          </rect>
         </property>
         <property name="styleSheet">
-         <string notr="true"/>
+         <string notr="true">font: 9pt &quot;Arial&quot;;</string>
         </property>
         <property name="text">
-         <string>Scaling UP</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="btnOSD_2">
-        <property name="enabled">
-         <bool>true</bool>
-        </property>
-        <property name="geometry">
-         <rect>
-          <x>200</x>
-          <y>170</y>
-          <width>192</width>
-          <height>30</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true"/>
-        </property>
-        <property name="text">
-         <string>Scaling Down</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="btnOSD_5">
-        <property name="enabled">
-         <bool>true</bool>
-        </property>
-        <property name="geometry">
-         <rect>
-          <x>200</x>
-          <y>350</y>
-          <width>192</width>
-          <height>30</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true"/>
-        </property>
-        <property name="text">
-         <string>AI Open</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="btnOSD">
-        <property name="enabled">
-         <bool>true</bool>
-        </property>
-        <property name="geometry">
-         <rect>
-          <x>200</x>
-          <y>110</y>
-          <width>192</width>
-          <height>30</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true"/>
-        </property>
-        <property name="text">
-         <string>OSD Open</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="btnOSD_4">
-        <property name="enabled">
-         <bool>true</bool>
-        </property>
-        <property name="geometry">
-         <rect>
-          <x>200</x>
-          <y>290</y>
-          <width>192</width>
-          <height>30</height>
-         </rect>
-        </property>
-        <property name="styleSheet">
-         <string notr="true"/>
-        </property>
-        <property name="text">
-         <string>PIP</string>
+         <string>ClearAll</string>
         </property>
        </widget>
       </widget>
@@ -2279,8 +1462,8 @@
          <rect>
           <x>50</x>
           <y>380</y>
-          <width>471</width>
-          <height>131</height>
+          <width>481</width>
+          <height>251</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -2308,7 +1491,7 @@
          <bool>true</bool>
         </property>
         <property name="rowCount">
-         <number>5</number>
+         <number>10</number>
         </property>
         <property name="columnCount">
          <number>11</number>
@@ -2348,6 +1531,11 @@
         <row/>
         <row/>
         <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
+        <row/>
         <column/>
         <column/>
         <column/>
@@ -2359,19 +1547,6 @@
         <column/>
         <column/>
         <column/>
-       </widget>
-       <widget class="QLabel" name="label">
-        <property name="geometry">
-         <rect>
-          <x>50</x>
-          <y>360</y>
-          <width>471</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="text">
-         <string>        Time         Dir         ID                           Data</string>
-        </property>
        </widget>
       </widget>
      </widget>
@@ -2380,44 +1555,6 @@
      <attribute name="title">
       <string>Status</string>
      </attribute>
-     <widget class="QPushButton" name="btnMonitorMode">
-      <property name="enabled">
-       <bool>true</bool>
-      </property>
-      <property name="geometry">
-       <rect>
-        <x>180</x>
-        <y>550</y>
-        <width>192</width>
-        <height>30</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true"/>
-      </property>
-      <property name="text">
-       <string>Monitor Mode</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="btnMonitor">
-      <property name="enabled">
-       <bool>true</bool>
-      </property>
-      <property name="geometry">
-       <rect>
-        <x>700</x>
-        <y>550</y>
-        <width>192</width>
-        <height>30</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true"/>
-      </property>
-      <property name="text">
-       <string>Open</string>
-      </property>
-     </widget>
      <widget class="QTabWidget" name="tabWidget_2">
       <property name="geometry">
        <rect>
@@ -2431,7 +1568,7 @@
        <enum>QTabWidget::West</enum>
       </property>
       <property name="currentIndex">
-       <number>5</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
@@ -3437,9 +2574,9 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>0</y>
-        <width>830</width>
-        <height>530</height>
+        <y>-1</y>
+        <width>841</width>
+        <height>541</height>
        </rect>
       </property>
       <property name="tabPosition">
@@ -3767,6 +2904,13 @@
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>ImgLabel</class>
+   <extends>QLabel</extends>
+   <header location="global">imglabel.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

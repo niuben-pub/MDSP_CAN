@@ -2,5 +2,13 @@
     <qresource prefix="/">
         <file>images/OFF.bmp</file>
         <file>images/ON.bmp</file>
+        <file>images/img1.png</file>
+        <file>images/img2.png</file>
+        <file>images/1.png</file>
+        <file>images/2.png</file>
+        <file>images/22.png</file>
+        <file>images/ai.png</file>
+        <file>images/col.png</file>
+        <file>images/0.png</file>
     </qresource>
 </RCC>

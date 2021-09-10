@@ -7,6 +7,7 @@
 #include "protocolthrend.h"
 #include "canthread.h"
 #include "boardinfo.h"
+#include "imglabel.h"
 #include <QTimer>
 namespace Ui {
 class MainWindow;
@@ -28,6 +29,7 @@ public:
 
 private slots:
 
+    void writeFpgaImgconfigReg(unsigned int *regTable);
 
     void on_btnDefParam_clicked();
 
@@ -36,38 +38,6 @@ private slots:
     void updataFlashTime(void);
 
     void displayMonitor(VCI_CAN_OBJ *vci,DWORD dwRel);
-
-    void on_pushButton3GINBoard1_clicked();
-
-    void on_pushButton3GINClearBoard1_clicked();
-
-    void on_pushButton3GINBoard2_clicked();
-
-    void on_pushButton3GINClearBoard2_clicked();
-
-    void on_pushButton3GINBoard3_clicked();
-
-    void on_pushButton3GINClearBoard3_clicked();
-
-    void on_pushButton3GINBoard4_clicked();
-
-    void on_pushButton3GINClearBoard4_clicked();
-
-    void on_pushButton3GINBoard5_clicked();
-
-    void on_pushButton3GINClearBoard5_clicked();
-
-    void on_pushButton3GINBoard6_clicked();
-
-    void on_pushButton3GINClearBoard6_clicked();
-
-    void on_pushButton3GINBoard7_clicked();
-
-    void on_pushButton3GINClearBoard7_clicked();
-
-    void on_pushButton3GINBoard8_clicked();
-
-    void on_pushButton3GINClearBoard8_clicked();
 
     void on_btnStatusBoard1_clicked();
 
@@ -113,6 +83,19 @@ private slots:
     void on_pushButtonTestWBoard8_clicked();
 
     void on_pushButtonTestRBoard8_clicked();
+
+    void on_pushButtonAddrClear_clicked();
+
+    void on_pushButtonAddrOk_clicked();
+
+    void on_comboBox3Gin1Size_currentIndexChanged(int index);
+
+    void on_comboBox3Gin2Size_currentIndexChanged(int index);
+
+    void on_comboBoxImg_currentIndexChanged(int index);
+
+    void on_pushButton_clicked();
+
 
 private:
     Ui::MainWindow *ui;
