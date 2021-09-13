@@ -596,6 +596,34 @@ void MainWindow::initUi()
 {
     this->setWindowTitle("MDSP-CAN Tool V1.0");
 
+    setLED(ui->labMCULEDBoard1, 2, 16);
+    setLED(ui->labMCULEDBoard2, 2, 16);
+    setLED(ui->labMCULEDBoard3, 2, 16);
+    setLED(ui->labMCULEDBoard4, 2, 16);
+    setLED(ui->labMCULEDBoard5, 2, 16);
+    setLED(ui->labMCULEDBoard6, 2, 16);
+    setLED(ui->labMCULEDBoard7, 2, 16);
+    setLED(ui->labMCULEDBoard8, 2, 16);
+
+    setLED(ui->labFPGALEDBoard1, 2, 16);
+    setLED(ui->labFPGALEDBoard2, 2, 16);
+    setLED(ui->labFPGALEDBoard3, 2, 16);
+    setLED(ui->labFPGALEDBoard4, 2, 16);
+    setLED(ui->labFPGALEDBoard5, 2, 16);
+    setLED(ui->labFPGALEDBoard6, 2, 16);
+    setLED(ui->labFPGALEDBoard7, 2, 16);
+    setLED(ui->labFPGALEDBoard8, 2, 16);
+
+
+    setLED(ui->labDSPLEDBoard1, 2, 16);
+    setLED(ui->labDSPLEDBoard2, 2, 16);
+    setLED(ui->labDSPLEDBoard3, 2, 16);
+    setLED(ui->labDSPLEDBoard4, 2, 16);
+    setLED(ui->labDSPLEDBoard5, 2, 16);
+    setLED(ui->labDSPLEDBoard6, 2, 16);
+    setLED(ui->labDSPLEDBoard7, 2, 16);
+    setLED(ui->labDSPLEDBoard8, 2, 16);
+
 
     ui->tableWidgetTest->setColumnWidth(0,90);
     ui->tableWidgetTest->setColumnWidth(1,60);
@@ -737,6 +765,47 @@ void MainWindow::initSignalslots()
     connect(ui->labelImgBoard6,SIGNAL(imgoverlayupdataImg()),this,SLOT(updateOverlyImgRegArray()));
     connect(ui->labelImgBoard7,SIGNAL(imgoverlayupdataImg()),this,SLOT(updateOverlyImgRegArray()));
     connect(ui->labelImgBoard8,SIGNAL(imgoverlayupdataImg()),this,SLOT(updateOverlyImgRegArray()));
+}
+
+void MainWindow::setLED(QLabel *label, int color, int size)
+{
+    // 将label中的文字清空
+    label->setText("");
+    // 先设置矩形大小
+    // 如果ui界面设置的label大小比最小宽度和高度小，矩形将被设置为最小宽度和最小高度；
+    // 如果ui界面设置的label大小比最小宽度和高度大，矩形将被设置为最大宽度和最大高度；
+    QString min_width = QString("min-width: %1px;").arg(size);              // 最小宽度：size
+    QString min_height = QString("min-height: %1px;").arg(size);            // 最小高度：size
+    QString max_width = QString("max-width: %1px;").arg(size);              // 最小宽度：size
+    QString max_height = QString("max-height: %1px;").arg(size);            // 最小高度：size
+    // 再设置边界形状及边框
+    QString border_radius = QString("border-radius: %1px;").arg(size/2);    // 边框是圆角，半径为size/2
+    QString border = QString("border:1px solid black;");                    // 边框为1px黑色
+    // 最后设置背景颜色
+    QString background = "background-color:";
+    switch (color) {
+    case 0:
+        // 灰色
+        background += "rgb(190,190,190)";
+        break;
+    case 1:
+        // 红色
+        background += "rgb(255,0,0)";
+        break;
+    case 2:
+        // 绿色
+        background += "rgb(0,255,0)";
+        break;
+    case 3:
+        // 黄色
+        background += "rgb(255,255,0)";
+        break;
+    default:
+        break;
+    }
+
+    const QString SheetStyle = min_width + min_height + max_width + max_height + border_radius + border + background;
+    label->setStyleSheet(SheetStyle);
 }
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -2045,6 +2114,32 @@ void MainWindow::on_pushButtonAddrOk_clicked()
     this->board7->readAddr = this->board7->writerAddr << 4;
     this->board8->writerAddr = ui->lineEditDevAddrBoard8->text().toULongLong(&ok,10);
     this->board8->readAddr = this->board8->writerAddr << 4;
+    ui->groupBox->setTitle("Board1  addr : " + ui->lineEditDevAddrBoard1->text());
+    ui->groupBox_2->setTitle("Board2  addr : " + ui->lineEditDevAddrBoard2->text());
+    ui->groupBox_3->setTitle("Board3  addr : " + ui->lineEditDevAddrBoard3->text());
+    ui->groupBox_4->setTitle("Board4  addr : " + ui->lineEditDevAddrBoard4->text());
+    ui->groupBox_5->setTitle("Board5  addr : " + ui->lineEditDevAddrBoard5->text());
+    ui->groupBox_6->setTitle("Board6  addr : " + ui->lineEditDevAddrBoard6->text());
+    ui->groupBox_7->setTitle("Board7  addr : " + ui->lineEditDevAddrBoard7->text());
+    ui->groupBox_8->setTitle("Board8  addr : " + ui->lineEditDevAddrBoard8->text());
+
+    ui->groupBox_11->setTitle("Board1  addr : " + ui->lineEditDevAddrBoard1->text());
+    ui->groupBox_12->setTitle("Board2  addr : " + ui->lineEditDevAddrBoard2->text());
+    ui->groupBox_13->setTitle("Board3  addr : " + ui->lineEditDevAddrBoard3->text());
+    ui->groupBox_14->setTitle("Board4  addr : " + ui->lineEditDevAddrBoard4->text());
+    ui->groupBox_15->setTitle("Board5  addr : " + ui->lineEditDevAddrBoard5->text());
+    ui->groupBox_16->setTitle("Board6  addr : " + ui->lineEditDevAddrBoard6->text());
+    ui->groupBox_17->setTitle("Board7  addr : " + ui->lineEditDevAddrBoard7->text());
+    ui->groupBox_18->setTitle("Board8  addr : " + ui->lineEditDevAddrBoard8->text());
+
+    ui->groupBoxImgBorad1->setTitle("Board1  addr : " + ui->lineEditDevAddrBoard1->text());
+    ui->groupBoxImgBorad2->setTitle("Board2  addr : " + ui->lineEditDevAddrBoard2->text());
+    ui->groupBoxImgBorad3->setTitle("Board3  addr : " + ui->lineEditDevAddrBoard3->text());
+    ui->groupBoxImgBorad4->setTitle("Board4  addr : " + ui->lineEditDevAddrBoard4->text());
+    ui->groupBoxImgBorad5->setTitle("Board5  addr : " + ui->lineEditDevAddrBoard5->text());
+    ui->groupBoxImgBorad6->setTitle("Board6  addr : " + ui->lineEditDevAddrBoard6->text());
+    ui->groupBoxImgBorad7->setTitle("Board7  addr : " + ui->lineEditDevAddrBoard7->text());
+    ui->groupBoxImgBorad8->setTitle("Board8  addr : " + ui->lineEditDevAddrBoard8->text());
 //    qDebug()<<"board1->readAddr"<<board1->readAddr<<"  "<<board1->writerAddr<<endl;
 //    qDebug()<<"board2->readAddr"<<board2->readAddr<<"  "<<board2->writerAddr<<endl;
 //    qDebug()<<"board3->readAddr"<<board3->readAddr<<"  "<<board3->writerAddr<<endl;

@@ -22,7 +22,7 @@ private:
     void initUi();
     void initImaLabel();
     void initSignalslots();
-
+    void setLED(QLabel* label, int color, int size);
 
 public:
     explicit MainWindow(QWidget *parent = 0);
