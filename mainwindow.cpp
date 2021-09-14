@@ -595,6 +595,51 @@ void MainWindow::displayMonitor(VCI_CAN_OBJ *vci, DWORD dwRel)
 void MainWindow::initUi()
 {
     this->setWindowTitle("MDSP-CAN Tool V1.0");
+    this->statusBar()->showMessage("CAN host is not started");
+    QIntValidator* aIntValidator = new QIntValidator;
+    aIntValidator->setRange(1, 8);
+    ui->lineEditDevAddrBoard1->setValidator(aIntValidator);  //设置设备地址只能输入 0 - 8
+    ui->lineEditDevAddrBoard2->setValidator(aIntValidator);  //设置设备地址只能输入 0 - 8
+    ui->lineEditDevAddrBoard3->setValidator(aIntValidator);  //设置设备地址只能输入 0 - 8
+    ui->lineEditDevAddrBoard4->setValidator(aIntValidator);  //设置设备地址只能输入 0 - 8
+    ui->lineEditDevAddrBoard5->setValidator(aIntValidator);  //设置设备地址只能输入 0 - 8
+    ui->lineEditDevAddrBoard6->setValidator(aIntValidator);  //设置设备地址只能输入 0 - 8
+    ui->lineEditDevAddrBoard7->setValidator(aIntValidator);  //设置设备地址只能输入 0 - 8
+    ui->lineEditDevAddrBoard8->setValidator(aIntValidator);  //设置设备地址只能输入 0 - 8
+
+
+    ui->labelImgBoard1->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+    ui->labelImgBoard2->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+    ui->labelImgBoard3->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+    ui->labelImgBoard4->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+    ui->labelImgBoard5->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+    ui->labelImgBoard6->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+    ui->labelImgBoard7->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+    ui->labelImgBoard8->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+
+    ui->pushButtonTestRBoard1->setEnabled(false);  //关闭寄存器读按钮
+    ui->pushButtonTestRBoard2->setEnabled(false);  //关闭寄存器读按钮
+    ui->pushButtonTestRBoard3->setEnabled(false);  //关闭寄存器读按钮
+    ui->pushButtonTestRBoard4->setEnabled(false);  //关闭寄存器读按钮
+    ui->pushButtonTestRBoard5->setEnabled(false);  //关闭寄存器读按钮
+    ui->pushButtonTestRBoard6->setEnabled(false);  //关闭寄存器读按钮
+    ui->pushButtonTestRBoard7->setEnabled(false);  //关闭寄存器读按钮
+    ui->pushButtonTestRBoard8->setEnabled(false);  //关闭寄存器读按钮
+
+    ui->pushButtonTestWBoard1->setEnabled(false);   //关闭寄存器写按钮
+    ui->pushButtonTestWBoard2->setEnabled(false);   //关闭寄存器写按钮
+    ui->pushButtonTestWBoard3->setEnabled(false);   //关闭寄存器写按钮
+    ui->pushButtonTestWBoard4->setEnabled(false);   //关闭寄存器写按钮
+    ui->pushButtonTestWBoard5->setEnabled(false);   //关闭寄存器写按钮
+    ui->pushButtonTestWBoard6->setEnabled(false);   //关闭寄存器写按钮
+    ui->pushButtonTestWBoard7->setEnabled(false);   //关闭寄存器写按钮
+    ui->pushButtonTestWBoard8->setEnabled(false);   //关闭寄存器写按钮
+
+    ui->btnWorkControlLoad->setEnabled(false);//关闭加载按钮
+    ui->btnWorkControlSave->setEnabled(false);//关闭保存按钮
+
+    ui->btnUpdate_2->setEnabled(false);  //关闭升级按钮
+    ui->btnUpdate_3->setEnabled(false);  //关闭升级按钮
 
     setLED(ui->labMCULEDBoard1, 2, 16);
     setLED(ui->labMCULEDBoard2, 2, 16);
@@ -625,12 +670,19 @@ void MainWindow::initUi()
     setLED(ui->labDSPLEDBoard8, 2, 16);
 
 
+//    ui->tabWidget->setTabEnabled(1,false);
+//    ui->tabWidget->setTabEnabled(2,false);
+//    ui->tabWidget->setTabEnabled(3,false);
+//    ui->tabWidget->setTabEnabled(4,false);
+
+
     ui->tableWidgetTest->setColumnWidth(0,90);
     ui->tableWidgetTest->setColumnWidth(1,60);
     ui->tableWidgetTest->setColumnWidth(2,76);
     ui->tableWidgetTest->setHorizontalHeaderItem(0,new QTableWidgetItem("SYS time"));
     ui->tableWidgetTest->setHorizontalHeaderItem(1,new QTableWidgetItem("DIR"));
     ui->tableWidgetTest->setHorizontalHeaderItem(2,new QTableWidgetItem("ID(hex)"));
+
     for(int i = 3; i <= 10; i++)
     {
         ui->tableWidgetTest->setColumnWidth(i,28);
@@ -825,6 +877,23 @@ MainWindow::MainWindow(QWidget *parent) :
     board6 = new boardinfo();
     board7 = new boardinfo();
     board8 = new boardinfo();
+    this->board1->writerAddr = 1;
+    this->board1->readAddr = this->board1->writerAddr << 4;
+    this->board2->writerAddr = 2;
+    this->board2->readAddr = this->board2->writerAddr << 4;
+    this->board3->writerAddr = 3;
+    this->board3->readAddr = this->board3->writerAddr << 4;
+    this->board4->writerAddr = 4;
+    this->board4->readAddr = this->board4->writerAddr << 4;
+    this->board5->writerAddr = 5;
+    this->board5->readAddr = this->board5->writerAddr << 4;
+    this->board6->writerAddr = 6;
+    this->board6->readAddr = this->board6->writerAddr << 4;
+    this->board7->writerAddr = 7;
+    this->board7->readAddr = this->board7->writerAddr << 4;
+    this->board8->writerAddr = 8;
+    this->board8->readAddr = this->board8->writerAddr << 4;
+
     FlashWriteTimer = new QTimer(this);
     FlashWriteTimer->stop();
     FlashWriteTimer->setInterval(1000); //设置定时周期  单位ms
@@ -863,7 +932,7 @@ void MainWindow::writeBoard1FpgaImgconfigReg(unsigned int *regTable)
 
     for (int i = 0; i < 16; i++)
     {
-        qDebug()<<"["<<regTable[i]<<"]"<<endl;
+        //qDebug()<<"["<<regTable[i]<<"]"<<endl;
         unsigned char send_str[8] = {0};
         int ID = (PGN57856 << 8) + this->board1->writerAddr;  //写FPGA命令
         quint64 regaddr = 0x10 + i;
@@ -873,10 +942,10 @@ void MainWindow::writeBoard1FpgaImgconfigReg(unsigned int *regTable)
         for(int i = 0; i < 8; i++)
         {
             send_str[i] = p[7 - i];
-            qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+            //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
         }
         canthread->sendData(ID,(unsigned char*)send_str);
-        sleep(30);
+        sleep(10);
     }
 }
 
@@ -885,7 +954,7 @@ void MainWindow::writeBoard2FpgaImgconfigReg(unsigned int *regTable)
 
     for (int i = 0; i < 16; i++)
     {
-        qDebug()<<"["<<regTable[i]<<"]"<<endl;
+        //qDebug()<<"["<<regTable[i]<<"]"<<endl;
         unsigned char send_str[8] = {0};
         int ID = (PGN57856 << 8) + this->board2->writerAddr;  //写FPGA命令
         quint64 regaddr = 0x10 + i;
@@ -895,10 +964,10 @@ void MainWindow::writeBoard2FpgaImgconfigReg(unsigned int *regTable)
         for(int i = 0; i < 8; i++)
         {
             send_str[i] = p[7 - i];
-            qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+            //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
         }
         canthread->sendData(ID,(unsigned char*)send_str);
-        sleep(30);
+        sleep(10);
     }
 }
 
@@ -907,7 +976,7 @@ void MainWindow::writeBoard3FpgaImgconfigReg(unsigned int *regTable)
 
     for (int i = 0; i < 16; i++)
     {
-        qDebug()<<"["<<regTable[i]<<"]"<<endl;
+        //qDebug()<<"["<<regTable[i]<<"]"<<endl;
         unsigned char send_str[8] = {0};
         int ID = (PGN57856 << 8) + this->board3->writerAddr;  //写FPGA命令
         quint64 regaddr = 0x10 + i;
@@ -917,10 +986,10 @@ void MainWindow::writeBoard3FpgaImgconfigReg(unsigned int *regTable)
         for(int i = 0; i < 8; i++)
         {
             send_str[i] = p[7 - i];
-            qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+            //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
         }
         canthread->sendData(ID,(unsigned char*)send_str);
-        sleep(30);
+        sleep(10);
     }
 }
 
@@ -930,7 +999,7 @@ void MainWindow::writeBoard4FpgaImgconfigReg(unsigned int *regTable)
 
     for (int i = 0; i < 16; i++)
     {
-        qDebug()<<"["<<regTable[i]<<"]"<<endl;
+        //qDebug()<<"["<<regTable[i]<<"]"<<endl;
         unsigned char send_str[8] = {0};
         int ID = (PGN57856 << 8) + this->board4->writerAddr;  //写FPGA命令
         quint64 regaddr = 0x10 + i;
@@ -940,10 +1009,10 @@ void MainWindow::writeBoard4FpgaImgconfigReg(unsigned int *regTable)
         for(int i = 0; i < 8; i++)
         {
             send_str[i] = p[7 - i];
-            qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+            //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
         }
         canthread->sendData(ID,(unsigned char*)send_str);
-        sleep(30);
+        sleep(10);
     }
 }
 
@@ -953,7 +1022,7 @@ void MainWindow::writeBoard5FpgaImgconfigReg(unsigned int *regTable)
 
     for (int i = 0; i < 16; i++)
     {
-        qDebug()<<"["<<regTable[i]<<"]"<<endl;
+        //qDebug()<<"["<<regTable[i]<<"]"<<endl;
         unsigned char send_str[8] = {0};
         int ID = (PGN57856 << 8) + this->board5->writerAddr;  //写FPGA命令
         quint64 regaddr = 0x10 + i;
@@ -963,10 +1032,10 @@ void MainWindow::writeBoard5FpgaImgconfigReg(unsigned int *regTable)
         for(int i = 0; i < 8; i++)
         {
             send_str[i] = p[7 - i];
-            qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+            //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
         }
         canthread->sendData(ID,(unsigned char*)send_str);
-        sleep(30);
+        sleep(10);
     }
 }
 
@@ -975,7 +1044,7 @@ void MainWindow::writeBoard6FpgaImgconfigReg(unsigned int *regTable)
 
     for (int i = 0; i < 16; i++)
     {
-        qDebug()<<"["<<regTable[i]<<"]"<<endl;
+        //qDebug()<<"["<<regTable[i]<<"]"<<endl;
         unsigned char send_str[8] = {0};
         int ID = (PGN57856 << 8) + this->board6->writerAddr;  //写FPGA命令
         quint64 regaddr = 0x10 + i;
@@ -985,10 +1054,10 @@ void MainWindow::writeBoard6FpgaImgconfigReg(unsigned int *regTable)
         for(int i = 0; i < 8; i++)
         {
             send_str[i] = p[7 - i];
-            qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+            //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
         }
         canthread->sendData(ID,(unsigned char*)send_str);
-        sleep(30);
+        sleep(10);
     }
 }
 
@@ -997,7 +1066,7 @@ void MainWindow::writeBoard7FpgaImgconfigReg(unsigned int *regTable)
 
     for (int i = 0; i < 16; i++)
     {
-        qDebug()<<"["<<regTable[i]<<"]"<<endl;
+        //qDebug()<<"["<<regTable[i]<<"]"<<endl;
         unsigned char send_str[8] = {0};
         int ID = (PGN57856 << 8) + this->board7->writerAddr;  //写FPGA命令
         quint64 regaddr = 0x10 + i;
@@ -1007,10 +1076,10 @@ void MainWindow::writeBoard7FpgaImgconfigReg(unsigned int *regTable)
         for(int i = 0; i < 8; i++)
         {
             send_str[i] = p[7 - i];
-            qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+            //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
         }
         canthread->sendData(ID,(unsigned char*)send_str);
-        sleep(30);
+        sleep(10);
     }
 }
 
@@ -1019,7 +1088,7 @@ void MainWindow::writeBoard8FpgaImgconfigReg(unsigned int *regTable)
 
     for (int i = 0; i < 16; i++)
     {
-        qDebug()<<"["<<regTable[i]<<"]"<<endl;
+        //qDebug()<<"["<<regTable[i]<<"]"<<endl;
         unsigned char send_str[8] = {0};
         int ID = (PGN57856 << 8) + this->board8->writerAddr;  //写FPGA命令
         quint64 regaddr = 0x10 + i;
@@ -1029,10 +1098,10 @@ void MainWindow::writeBoard8FpgaImgconfigReg(unsigned int *regTable)
         for(int i = 0; i < 8; i++)
         {
             send_str[i] = p[7 - i];
-            qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+            //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
         }
         canthread->sendData(ID,(unsigned char*)send_str);
-        sleep(30);
+        sleep(10);
     }
 }
 
@@ -1055,11 +1124,17 @@ void MainWindow::on_btnFinish_clicked()
         canthread->debicCom = ui->CANCom->currentIndex();
 
         bool dev = canthread->openCAN();
-        this->sleep(3500); //等待设备启动完成
+       // this->sleep(3500); //等待设备启动完成
         if(dev == true)
         {
             canthread->start();
             protocolHand->start();
+            this->statusBar()->showMessage("CAN host startup succeeded");
+
+//            ui->tabWidget->setTabEnabled(1,true);
+//            ui->tabWidget->setTabEnabled(2,true);
+//            ui->tabWidget->setTabEnabled(3,true);
+//            ui->tabWidget->setTabEnabled(4,true);
         }
         else
         {
@@ -1073,6 +1148,10 @@ void MainWindow::on_btnFinish_clicked()
     }
     else if(ui->btnFinish->text() == tr("Close"))
     {
+//        ui->tabWidget->setTabEnabled(1,false);
+//        ui->tabWidget->setTabEnabled(2,false);
+//        ui->tabWidget->setTabEnabled(3,false);
+//        ui->tabWidget->setTabEnabled(4,false);
         ui->btnFinish->setText(tr("Open"));
         canthread->stop();
         canthread->closeCAN();
@@ -1086,16 +1165,19 @@ void MainWindow::on_btnStatusBoard1_clicked()
     if(ui->btnStatusBoard1->text() == tr("Open"))
     {
         ui->btnStatusBoard1->setText(tr("Close"));
+
         //this->canthread->Adc_flag = true;
         this->canthread->canThreadTimer->start();
-
+        this->statusBar()->showMessage("Mode: Status - Realtime | Monitor: Open");
 
     }
     else if(ui->btnStatusBoard1->text() == tr("Close"))
     {
         ui->btnStatusBoard1->setText(tr("Open"));
+        qDebug()<<"canThreadTimer Close";
         //this->canthread->Adc_flag = false;
         this->canthread->canThreadTimer->stop();
+        this->statusBar()->showMessage("Mode: Status - Realtime | Monitor: Colse");
     }
 }
 
@@ -1210,6 +1292,110 @@ void MainWindow::on_btnUpdate_2_clicked()
     file.close();
 }
 
+
+
+void MainWindow::on_btnWorkTestMode_clicked()
+{
+
+    if(ui->btnStatusBoard1->text() == tr("Close"))  //关闭监控
+    {
+        ui->btnStatusBoard1->setText(tr("Open"));
+        //this->canthread->Adc_flag = false;
+        this->canthread->canThreadTimer->stop();
+    }
+
+    ui->btnStatusBoard1->setEnabled(false); //关闭该按钮
+
+
+    ui->pushButtonTestRBoard1->setEnabled(true);
+    ui->pushButtonTestRBoard2->setEnabled(true);
+    ui->pushButtonTestRBoard3->setEnabled(true);
+    ui->pushButtonTestRBoard4->setEnabled(true);
+    ui->pushButtonTestRBoard5->setEnabled(true);
+    ui->pushButtonTestRBoard6->setEnabled(true);
+    ui->pushButtonTestRBoard7->setEnabled(true);
+    ui->pushButtonTestRBoard8->setEnabled(true);
+
+    ui->pushButtonTestWBoard1->setEnabled(true);
+    ui->pushButtonTestWBoard2->setEnabled(true);
+    ui->pushButtonTestWBoard3->setEnabled(true);
+    ui->pushButtonTestWBoard4->setEnabled(true);
+    ui->pushButtonTestWBoard5->setEnabled(true);
+    ui->pushButtonTestWBoard6->setEnabled(true);
+    ui->pushButtonTestWBoard7->setEnabled(true);
+    ui->pushButtonTestWBoard8->setEnabled(true);
+
+    ui->labelImgBoard1->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+    ui->labelImgBoard2->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+    ui->labelImgBoard3->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+    ui->labelImgBoard4->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+    ui->labelImgBoard5->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+    ui->labelImgBoard6->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+    ui->labelImgBoard7->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+    ui->labelImgBoard8->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+
+    ui->btnUpdate_2->setEnabled(false);  //关闭升级按钮
+    ui->btnUpdate_3->setEnabled(false);  //关闭升级按钮
+
+    ui->btnWorkControlLoad->setEnabled(false);//关闭加载按钮
+    ui->btnWorkControlSave->setEnabled(false);//关闭保存按钮
+
+    this->statusBar()->showMessage("Mode : Work - Test");
+
+}
+
+
+void MainWindow::on_btnWorkControlMode_clicked()
+{
+
+    if(ui->btnStatusBoard1->text() == tr("Close"))  //关闭监控
+    {
+        ui->btnStatusBoard1->setText(tr("Open"));
+        //this->canthread->Adc_flag = false;
+        this->canthread->canThreadTimer->stop();
+    }
+
+    ui->btnStatusBoard1->setEnabled(false); //关闭开启监控该按钮
+
+    ui->pushButtonTestRBoard1->setEnabled(false);
+    ui->pushButtonTestRBoard2->setEnabled(false);
+    ui->pushButtonTestRBoard3->setEnabled(false);
+    ui->pushButtonTestRBoard4->setEnabled(false);
+    ui->pushButtonTestRBoard5->setEnabled(false);
+    ui->pushButtonTestRBoard6->setEnabled(false);
+    ui->pushButtonTestRBoard7->setEnabled(false);
+    ui->pushButtonTestRBoard8->setEnabled(false);
+
+    ui->pushButtonTestWBoard1->setEnabled(false);
+    ui->pushButtonTestWBoard2->setEnabled(false);
+    ui->pushButtonTestWBoard3->setEnabled(false);
+    ui->pushButtonTestWBoard4->setEnabled(false);
+    ui->pushButtonTestWBoard5->setEnabled(false);
+    ui->pushButtonTestWBoard6->setEnabled(false);
+    ui->pushButtonTestWBoard7->setEnabled(false);
+    ui->pushButtonTestWBoard8->setEnabled(false);
+
+    ui->btnUpdate_2->setEnabled(false);  //关闭升级按钮
+    ui->btnUpdate_3->setEnabled(false);  //关闭升级按钮
+
+    ui->labelImgBoard1->setAttribute(Qt::WA_TransparentForMouseEvents, false); //取消屏蔽鼠标点击事件
+    ui->labelImgBoard2->setAttribute(Qt::WA_TransparentForMouseEvents, false); //取消屏蔽鼠标点击事件
+    ui->labelImgBoard3->setAttribute(Qt::WA_TransparentForMouseEvents, false); //取消屏蔽鼠标点击事件
+    ui->labelImgBoard4->setAttribute(Qt::WA_TransparentForMouseEvents, false); //取消屏蔽鼠标点击事件
+    ui->labelImgBoard5->setAttribute(Qt::WA_TransparentForMouseEvents, false); //取消屏蔽鼠标点击事件
+    ui->labelImgBoard6->setAttribute(Qt::WA_TransparentForMouseEvents, false); //取消屏蔽鼠标点击事件
+    ui->labelImgBoard7->setAttribute(Qt::WA_TransparentForMouseEvents, false); //取消屏蔽鼠标点击事件
+    ui->labelImgBoard8->setAttribute(Qt::WA_TransparentForMouseEvents, false); //取消屏蔽鼠标点击事件
+
+    ui->btnWorkControlLoad->setEnabled(true);//打开加载按钮
+    ui->btnWorkControlSave->setEnabled(true);//打开保存按钮
+
+
+
+    this->statusBar()->showMessage("Mode : Work - Control");
+
+}
+
 void MainWindow::on_btnUpdateMode_2_clicked()
 {
 
@@ -1221,6 +1407,40 @@ void MainWindow::on_btnUpdateMode_2_clicked()
     }
 
     ui->btnStatusBoard1->setEnabled(false); //关闭该按钮
+
+
+    ui->pushButtonTestRBoard1->setEnabled(false);
+    ui->pushButtonTestRBoard2->setEnabled(false);
+    ui->pushButtonTestRBoard3->setEnabled(false);
+    ui->pushButtonTestRBoard4->setEnabled(false);
+    ui->pushButtonTestRBoard5->setEnabled(false);
+    ui->pushButtonTestRBoard6->setEnabled(false);
+    ui->pushButtonTestRBoard7->setEnabled(false);
+    ui->pushButtonTestRBoard8->setEnabled(false);
+
+    ui->pushButtonTestWBoard1->setEnabled(false);
+    ui->pushButtonTestWBoard2->setEnabled(false);
+    ui->pushButtonTestWBoard3->setEnabled(false);
+    ui->pushButtonTestWBoard4->setEnabled(false);
+    ui->pushButtonTestWBoard5->setEnabled(false);
+    ui->pushButtonTestWBoard6->setEnabled(false);
+    ui->pushButtonTestWBoard7->setEnabled(false);
+    ui->pushButtonTestWBoard8->setEnabled(false);
+
+    ui->labelImgBoard1->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+    ui->labelImgBoard2->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+    ui->labelImgBoard3->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+    ui->labelImgBoard4->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+    ui->labelImgBoard5->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+    ui->labelImgBoard6->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+    ui->labelImgBoard7->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+    ui->labelImgBoard8->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+
+    ui->btnWorkControlLoad->setEnabled(false);//关闭加载按钮
+    ui->btnWorkControlSave->setEnabled(false);//关闭保存按钮
+
+    ui->btnUpdate_2->setEnabled(true);  //使能升级按钮
+    ui->btnUpdate_3->setEnabled(false);  //关闭升级按钮
 
     qDebug()<<"设置工作模式";
     int ID = 0;
@@ -1252,6 +1472,7 @@ void MainWindow::on_btnUpdateMode_2_clicked()
     ID = (PGN56468 << 8) + this->board8->writerAddr;  //工作模式切换命令
     canthread->sendData(ID,(unsigned char*)send_str);
     sleep(50);
+    this->statusBar()->showMessage("Mode: Upgrade - AI File");
 
 }
 
@@ -1288,6 +1509,43 @@ void MainWindow::on_btnStatusBoard1_2_clicked()
     canthread->sendData(ID,(unsigned char*)send_str);
     sleep(50);
     ui->btnStatusBoard1->setEnabled(true);
+
+
+    ui->pushButtonTestRBoard1->setEnabled(false);
+    ui->pushButtonTestRBoard2->setEnabled(false);
+    ui->pushButtonTestRBoard3->setEnabled(false);
+    ui->pushButtonTestRBoard4->setEnabled(false);
+    ui->pushButtonTestRBoard5->setEnabled(false);
+    ui->pushButtonTestRBoard6->setEnabled(false);
+    ui->pushButtonTestRBoard7->setEnabled(false);
+    ui->pushButtonTestRBoard8->setEnabled(false);
+
+    ui->pushButtonTestWBoard1->setEnabled(false);
+    ui->pushButtonTestWBoard2->setEnabled(false);
+    ui->pushButtonTestWBoard3->setEnabled(false);
+    ui->pushButtonTestWBoard4->setEnabled(false);
+    ui->pushButtonTestWBoard5->setEnabled(false);
+    ui->pushButtonTestWBoard6->setEnabled(false);
+    ui->pushButtonTestWBoard7->setEnabled(false);
+    ui->pushButtonTestWBoard8->setEnabled(false);
+
+    ui->labelImgBoard1->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+    ui->labelImgBoard2->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+    ui->labelImgBoard3->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+    ui->labelImgBoard4->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+    ui->labelImgBoard5->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+    ui->labelImgBoard6->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+    ui->labelImgBoard7->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+    ui->labelImgBoard8->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+
+
+    ui->btnUpdate_2->setEnabled(false);  //关闭升级按钮
+    ui->btnUpdate_3->setEnabled(false);  //关闭升级按钮
+
+    ui->btnWorkControlLoad->setEnabled(false);//关闭加载按钮
+    ui->btnWorkControlSave->setEnabled(false);//关闭保存按钮
+
+    this->statusBar()->showMessage("Mode: Status - Realtime | Monitor: Colse");
 }
 
 void MainWindow::on_btnUpdateMode_3_clicked()
@@ -1300,6 +1558,40 @@ void MainWindow::on_btnUpdateMode_3_clicked()
     }
 
     ui->btnStatusBoard1->setEnabled(false); //关闭该按钮
+
+    ui->pushButtonTestRBoard1->setEnabled(false);
+    ui->pushButtonTestRBoard2->setEnabled(false);
+    ui->pushButtonTestRBoard3->setEnabled(false);
+    ui->pushButtonTestRBoard4->setEnabled(false);
+    ui->pushButtonTestRBoard5->setEnabled(false);
+    ui->pushButtonTestRBoard6->setEnabled(false);
+    ui->pushButtonTestRBoard7->setEnabled(false);
+    ui->pushButtonTestRBoard8->setEnabled(false);
+
+    ui->pushButtonTestWBoard1->setEnabled(false);
+    ui->pushButtonTestWBoard2->setEnabled(false);
+    ui->pushButtonTestWBoard3->setEnabled(false);
+    ui->pushButtonTestWBoard4->setEnabled(false);
+    ui->pushButtonTestWBoard5->setEnabled(false);
+    ui->pushButtonTestWBoard6->setEnabled(false);
+    ui->pushButtonTestWBoard7->setEnabled(false);
+    ui->pushButtonTestWBoard8->setEnabled(false);
+
+
+    ui->labelImgBoard1->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+    ui->labelImgBoard2->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+    ui->labelImgBoard3->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+    ui->labelImgBoard4->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+    ui->labelImgBoard5->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+    ui->labelImgBoard6->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+    ui->labelImgBoard7->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+    ui->labelImgBoard8->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+
+    ui->btnWorkControlLoad->setEnabled(false);//关闭加载按钮
+    ui->btnWorkControlSave->setEnabled(false);//关闭保存按钮
+
+    ui->btnUpdate_2->setEnabled(false);  //关闭升级按钮
+    ui->btnUpdate_3->setEnabled(true);  //使能升级按钮
 
     qDebug()<<"设置工作模式";
     int ID = 0;
@@ -1331,6 +1623,7 @@ void MainWindow::on_btnUpdateMode_3_clicked()
     ID = (PGN56468 << 8) + this->board8->writerAddr;  //工作模式切换命令
     canthread->sendData(ID,(unsigned char*)send_str);
     sleep(50);
+    this->statusBar()->showMessage("Mode: Upgrade - Firmware");
 }
 
 void MainWindow::on_btnUpdate_3_clicked()
@@ -1454,7 +1747,7 @@ void MainWindow::on_pushButtonTestWBoard1_clicked()
     for(int i = 0; i < 8; i++)
     {
         send_str[i] = p[7 - i];
-        qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
     }
     canthread->sendData(ID,(unsigned char*)send_str);
 
@@ -1495,7 +1788,7 @@ void MainWindow::on_pushButtonTestRBoard1_clicked()
     for(int i = 0; i < 8; i++)
     {
         send_str[i] = p[7 - i];
-        qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
     }
     canthread->sendData(ID,(unsigned char*)send_str);
 
@@ -1536,7 +1829,7 @@ void MainWindow::on_pushButtonTestWBoard2_clicked()
     for(int i = 0; i < 8; i++)
     {
         send_str[i] = p[7 - i];
-        qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
     }
     canthread->sendData(ID,(unsigned char*)send_str);
 
@@ -1575,7 +1868,7 @@ void MainWindow::on_pushButtonTestRBoard2_clicked()
     for(int i = 0; i < 8; i++)
     {
         send_str[i] = p[7 - i];
-        qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
     }
     canthread->sendData(ID,(unsigned char*)send_str);
 
@@ -1616,7 +1909,7 @@ void MainWindow::on_pushButtonTestWBoard3_clicked()
     for(int i = 0; i < 8; i++)
     {
         send_str[i] = p[7 - i];
-        qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
     }
     canthread->sendData(ID,(unsigned char*)send_str);
 
@@ -1655,7 +1948,7 @@ void MainWindow::on_pushButtonTestRBoard3_clicked()
     for(int i = 0; i < 8; i++)
     {
         send_str[i] = p[7 - i];
-        qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
     }
     canthread->sendData(ID,(unsigned char*)send_str);
 
@@ -1696,7 +1989,7 @@ void MainWindow::on_pushButtonTestWBoard4_clicked()
     for(int i = 0; i < 8; i++)
     {
         send_str[i] = p[7 - i];
-        qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
     }
     canthread->sendData(ID,(unsigned char*)send_str);
 
@@ -1735,7 +2028,7 @@ void MainWindow::on_pushButtonTestRBoard4_clicked()
     for(int i = 0; i < 8; i++)
     {
         send_str[i] = p[7 - i];
-        qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
     }
     canthread->sendData(ID,(unsigned char*)send_str);
 
@@ -1776,7 +2069,7 @@ void MainWindow::on_pushButtonTestWBoard5_clicked()
     for(int i = 0; i < 8; i++)
     {
         send_str[i] = p[7 - i];
-        qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
     }
     canthread->sendData(ID,(unsigned char*)send_str);
 
@@ -1815,7 +2108,7 @@ void MainWindow::on_pushButtonTestRBoard5_clicked()
     for(int i = 0; i < 8; i++)
     {
         send_str[i] = p[7 - i];
-        qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
     }
     canthread->sendData(ID,(unsigned char*)send_str);
 
@@ -1856,7 +2149,7 @@ void MainWindow::on_pushButtonTestWBoard6_clicked()
     for(int i = 0; i < 8; i++)
     {
         send_str[i] = p[7 - i];
-        qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
     }
     canthread->sendData(ID,(unsigned char*)send_str);
 
@@ -1895,7 +2188,7 @@ void MainWindow::on_pushButtonTestRBoard6_clicked()
     for(int i = 0; i < 8; i++)
     {
         send_str[i] = p[7 - i];
-        qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
     }
     canthread->sendData(ID,(unsigned char*)send_str);
 
@@ -1936,7 +2229,7 @@ void MainWindow::on_pushButtonTestWBoard7_clicked()
     for(int i = 0; i < 8; i++)
     {
         send_str[i] = p[7 - i];
-        qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
     }
     canthread->sendData(ID,(unsigned char*)send_str);
 
@@ -1975,7 +2268,7 @@ void MainWindow::on_pushButtonTestRBoard7_clicked()
     for(int i = 0; i < 8; i++)
     {
         send_str[i] = p[7 - i];
-        qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
     }
     canthread->sendData(ID,(unsigned char*)send_str);
 
@@ -2016,7 +2309,7 @@ void MainWindow::on_pushButtonTestWBoard8_clicked()
     for(int i = 0; i < 8; i++)
     {
         send_str[i] = p[7 - i];
-        qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
     }
     canthread->sendData(ID,(unsigned char*)send_str);
 
@@ -2055,7 +2348,7 @@ void MainWindow::on_pushButtonTestRBoard8_clicked()
     for(int i = 0; i < 8; i++)
     {
         send_str[i] = p[7 - i];
-        qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
     }
     canthread->sendData(ID,(unsigned char*)send_str);
 
@@ -2098,48 +2391,84 @@ void MainWindow::on_pushButtonAddrClear_clicked()
 void MainWindow::on_pushButtonAddrOk_clicked()
 {
     bool ok;
-    this->board1->writerAddr = ui->lineEditDevAddrBoard1->text().toULongLong(&ok,10);
-    this->board1->readAddr = this->board1->writerAddr << 4;
-    this->board2->writerAddr = ui->lineEditDevAddrBoard2->text().toULongLong(&ok,10);
-    this->board2->readAddr = this->board2->writerAddr << 4;
-    this->board3->writerAddr = ui->lineEditDevAddrBoard3->text().toULongLong(&ok,10);
-    this->board3->readAddr = this->board3->writerAddr << 4;
-    this->board4->writerAddr = ui->lineEditDevAddrBoard4->text().toULongLong(&ok,10);
-    this->board4->readAddr = this->board4->writerAddr << 4;
-    this->board5->writerAddr = ui->lineEditDevAddrBoard5->text().toULongLong(&ok,10);
-    this->board5->readAddr = this->board5->writerAddr << 4;
-    this->board6->writerAddr = ui->lineEditDevAddrBoard6->text().toULongLong(&ok,10);
-    this->board6->readAddr = this->board6->writerAddr << 4;
-    this->board7->writerAddr = ui->lineEditDevAddrBoard7->text().toULongLong(&ok,10);
-    this->board7->readAddr = this->board7->writerAddr << 4;
-    this->board8->writerAddr = ui->lineEditDevAddrBoard8->text().toULongLong(&ok,10);
-    this->board8->readAddr = this->board8->writerAddr << 4;
-    ui->groupBox->setTitle("Board1  addr : " + ui->lineEditDevAddrBoard1->text());
-    ui->groupBox_2->setTitle("Board2  addr : " + ui->lineEditDevAddrBoard2->text());
-    ui->groupBox_3->setTitle("Board3  addr : " + ui->lineEditDevAddrBoard3->text());
-    ui->groupBox_4->setTitle("Board4  addr : " + ui->lineEditDevAddrBoard4->text());
-    ui->groupBox_5->setTitle("Board5  addr : " + ui->lineEditDevAddrBoard5->text());
-    ui->groupBox_6->setTitle("Board6  addr : " + ui->lineEditDevAddrBoard6->text());
-    ui->groupBox_7->setTitle("Board7  addr : " + ui->lineEditDevAddrBoard7->text());
-    ui->groupBox_8->setTitle("Board8  addr : " + ui->lineEditDevAddrBoard8->text());
+    if(ui->lineEditDevAddrBoard1->text() != "")
+    {
+        this->board1->writerAddr = ui->lineEditDevAddrBoard1->text().toULongLong(&ok,10);
+        this->board1->readAddr = this->board1->writerAddr << 4;
+    }
+    if(ui->lineEditDevAddrBoard2->text() != "")
+    {
+        this->board2->writerAddr = ui->lineEditDevAddrBoard2->text().toULongLong(&ok,10);
+        this->board2->readAddr = this->board2->writerAddr << 4;
+    }
 
-    ui->groupBox_11->setTitle("Board1  addr : " + ui->lineEditDevAddrBoard1->text());
-    ui->groupBox_12->setTitle("Board2  addr : " + ui->lineEditDevAddrBoard2->text());
-    ui->groupBox_13->setTitle("Board3  addr : " + ui->lineEditDevAddrBoard3->text());
-    ui->groupBox_14->setTitle("Board4  addr : " + ui->lineEditDevAddrBoard4->text());
-    ui->groupBox_15->setTitle("Board5  addr : " + ui->lineEditDevAddrBoard5->text());
-    ui->groupBox_16->setTitle("Board6  addr : " + ui->lineEditDevAddrBoard6->text());
-    ui->groupBox_17->setTitle("Board7  addr : " + ui->lineEditDevAddrBoard7->text());
-    ui->groupBox_18->setTitle("Board8  addr : " + ui->lineEditDevAddrBoard8->text());
+    if(ui->lineEditDevAddrBoard3->text() != "")
+    {
+        this->board3->writerAddr = ui->lineEditDevAddrBoard3->text().toULongLong(&ok,10);
+        this->board3->readAddr = this->board3->writerAddr << 4;
+    }
+    if(ui->lineEditDevAddrBoard4->text() != "")
+    {
+        this->board4->writerAddr = ui->lineEditDevAddrBoard4->text().toULongLong(&ok,10);
+        this->board4->readAddr = this->board4->writerAddr << 4;
+    }
+    if(ui->lineEditDevAddrBoard5->text() != "")
+    {
+        this->board5->writerAddr = ui->lineEditDevAddrBoard5->text().toULongLong(&ok,10);
+        this->board5->readAddr = this->board5->writerAddr << 4;
+    }
+    if(ui->lineEditDevAddrBoard6->text() != "")
+    {
+        this->board6->writerAddr = ui->lineEditDevAddrBoard6->text().toULongLong(&ok,10);
+        this->board6->readAddr = this->board6->writerAddr << 4;
+    }
+    if(ui->lineEditDevAddrBoard7->text() != "")
+    {
+        this->board7->writerAddr = ui->lineEditDevAddrBoard7->text().toULongLong(&ok,10);
+        this->board7->readAddr = this->board7->writerAddr << 4;
+    }
+    if(ui->lineEditDevAddrBoard8->text() != "")
+    {
+        this->board8->writerAddr = ui->lineEditDevAddrBoard8->text().toULongLong(&ok,10);
+        this->board8->readAddr = this->board8->writerAddr << 4;
+    }
+    ui->groupBox->setTitle(  "Board1  addr : " + QString::number(this->board1->writerAddr,10));
+    ui->groupBox_2->setTitle("Board2  addr : " + QString::number(this->board2->writerAddr,10));
+    ui->groupBox_3->setTitle("Board3  addr : " + QString::number(this->board3->writerAddr,10));
+    ui->groupBox_4->setTitle("Board4  addr : " + QString::number(this->board4->writerAddr,10));
+    ui->groupBox_5->setTitle("Board5  addr : " + QString::number(this->board5->writerAddr,10));
+    ui->groupBox_6->setTitle("Board6  addr : " + QString::number(this->board6->writerAddr,10));
+    ui->groupBox_7->setTitle("Board7  addr : " + QString::number(this->board7->writerAddr,10));
+    ui->groupBox_8->setTitle("Board8  addr : " + QString::number(this->board8->writerAddr,10));
 
-    ui->groupBoxImgBorad1->setTitle("Board1  addr : " + ui->lineEditDevAddrBoard1->text());
-    ui->groupBoxImgBorad2->setTitle("Board2  addr : " + ui->lineEditDevAddrBoard2->text());
-    ui->groupBoxImgBorad3->setTitle("Board3  addr : " + ui->lineEditDevAddrBoard3->text());
-    ui->groupBoxImgBorad4->setTitle("Board4  addr : " + ui->lineEditDevAddrBoard4->text());
-    ui->groupBoxImgBorad5->setTitle("Board5  addr : " + ui->lineEditDevAddrBoard5->text());
-    ui->groupBoxImgBorad6->setTitle("Board6  addr : " + ui->lineEditDevAddrBoard6->text());
-    ui->groupBoxImgBorad7->setTitle("Board7  addr : " + ui->lineEditDevAddrBoard7->text());
-    ui->groupBoxImgBorad8->setTitle("Board8  addr : " + ui->lineEditDevAddrBoard8->text());
+    ui->groupBox_11->setTitle("Board1  addr : " + QString::number(this->board1->writerAddr,10));
+    ui->groupBox_12->setTitle("Board2  addr : " + QString::number(this->board2->writerAddr,10));
+    ui->groupBox_13->setTitle("Board3  addr : " + QString::number(this->board3->writerAddr,10));
+    ui->groupBox_14->setTitle("Board4  addr : " + QString::number(this->board4->writerAddr,10));
+    ui->groupBox_15->setTitle("Board5  addr : " + QString::number(this->board5->writerAddr,10));
+    ui->groupBox_16->setTitle("Board6  addr : " + QString::number(this->board6->writerAddr,10));
+    ui->groupBox_17->setTitle("Board7  addr : " + QString::number(this->board7->writerAddr,10));
+    ui->groupBox_18->setTitle("Board8  addr : " + QString::number(this->board8->writerAddr,10));
+
+    ui->groupBoxImgBorad1->setTitle("Board1  addr : " + QString::number(this->board1->writerAddr,10));
+    ui->groupBoxImgBorad2->setTitle("Board2  addr : " + QString::number(this->board2->writerAddr,10));
+    ui->groupBoxImgBorad3->setTitle("Board3  addr : " + QString::number(this->board3->writerAddr,10));
+    ui->groupBoxImgBorad4->setTitle("Board4  addr : " + QString::number(this->board4->writerAddr,10));
+    ui->groupBoxImgBorad5->setTitle("Board5  addr : " + QString::number(this->board5->writerAddr,10));
+    ui->groupBoxImgBorad6->setTitle("Board6  addr : " + QString::number(this->board6->writerAddr,10));
+    ui->groupBoxImgBorad7->setTitle("Board7  addr : " + QString::number(this->board7->writerAddr,10));
+    ui->groupBoxImgBorad8->setTitle("Board8  addr : " + QString::number(this->board8->writerAddr,10));
+
+    this->statusBar()->showMessage(  "Board1 addr: " + QString::number(this->board1->writerAddr,10) + " | "
+                                   + "Board2 addr: " + QString::number(this->board2->writerAddr,10) + " | "
+                                   + "Board3 addr: " + QString::number(this->board3->writerAddr,10) + " | "
+                                   + "Board4 addr: " + QString::number(this->board4->writerAddr,10) + " | "
+                                   + "Board5 addr: " + QString::number(this->board5->writerAddr,10) + " | "
+                                   + "Board6 addr: " + QString::number(this->board6->writerAddr,10) + " | "
+                                   + "Board7 addr: " + QString::number(this->board7->writerAddr,10) + " | "
+                                   + "Board8 addr: " + QString::number(this->board8->writerAddr,10) + " | "
+                                   );
+
 //    qDebug()<<"board1->readAddr"<<board1->readAddr<<"  "<<board1->writerAddr<<endl;
 //    qDebug()<<"board2->readAddr"<<board2->readAddr<<"  "<<board2->writerAddr<<endl;
 //    qDebug()<<"board3->readAddr"<<board3->readAddr<<"  "<<board3->writerAddr<<endl;
@@ -2712,4 +3041,297 @@ void MainWindow::on_pushButtonImgClearBoard8_clicked()
     }
     emit ui->labelImgBoard8->regChange((unsigned int *) ui->labelImgBoard8->regTable);
     emit ui->labelImgBoard8->mousePaint();
+}
+
+
+
+
+
+
+void MainWindow::on_btnWorkControlLoad_clicked()
+{
+    QString file_name = QFileDialog::getOpenFileName(this,tr("./"),"",tr("txt(*.txt)"));
+
+    if(file_name.isEmpty())
+    {
+        return;
+    }
+    QFile file(file_name);
+
+
+    if(!file.open(QIODevice::ReadOnly))
+    {
+        qDebug()<<"open file false";
+        return;
+    }
+
+    for(int i = 0 ; i < 8; i++)
+    {
+
+
+        QByteArray line = file.readLine();
+        if(line[0] == 'B' && line[1] == 'o' && line[2] == 'a' && line[3] == 'r' && line[4] == 'd')  //确定文件正确
+        {
+            if(line[5] == '1')
+            {
+                unsigned int arr[4][4];
+                char *chline = line.data();
+                sscanf(chline,"Board1 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                       &arr[0][0], &arr[0][1], &arr[0][2], &arr[0][3],
+                       &arr[1][0], &arr[1][1], &arr[1][2], &arr[1][3],
+                       &arr[2][0], &arr[2][1], &arr[2][2], &arr[2][3],
+                       &arr[3][0], &arr[3][1], &arr[3][2], &arr[3][3]
+                        );
+
+                for(int table_i = 0; table_i < 4; table_i++)
+                {
+                    for(int table_j = 0; table_j < 4; table_j++)
+                    {
+                       //qDebug()<<"Board1"<<arr[table_i][table_j];
+                       ui->labelImgBoard1->regTable[table_i][table_j] = arr[table_i][table_j];
+                    }
+                }
+                emit ui->labelImgBoard1->regChange((unsigned int *)ui->labelImgBoard1->regTable);
+                emit ui->labelImgBoard1->mousePaint();
+
+            }
+            if(line[5] == '2')
+            {
+                unsigned int arr[4][4];
+                char *chline = line.data();
+                sscanf(chline,"Board2 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                       &arr[0][0], &arr[0][1], &arr[0][2], &arr[0][3],
+                       &arr[1][0], &arr[1][1], &arr[1][2], &arr[1][3],
+                       &arr[2][0], &arr[2][1], &arr[2][2], &arr[2][3],
+                       &arr[3][0], &arr[3][1], &arr[3][2], &arr[3][3]
+                        );
+
+                for(int table_i = 0; table_i < 4; table_i++)
+                {
+                    for(int table_j = 0; table_j < 4; table_j++)
+                    {
+                       //qDebug()<<"Board2"<<arr[table_i][table_j];
+                       ui->labelImgBoard2->regTable[table_i][table_j] = arr[table_i][table_j];
+                    }
+                }
+                emit ui->labelImgBoard2->regChange((unsigned int *)ui->labelImgBoard2->regTable);
+                emit ui->labelImgBoard2->mousePaint();
+            }
+            if(line[5] == '3')
+            {
+                unsigned int arr[4][4];
+                char *chline = line.data();
+                sscanf(chline,"Board3 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                       &arr[0][0], &arr[0][1], &arr[0][2], &arr[0][3],
+                       &arr[1][0], &arr[1][1], &arr[1][2], &arr[1][3],
+                       &arr[2][0], &arr[2][1], &arr[2][2], &arr[2][3],
+                       &arr[3][0], &arr[3][1], &arr[3][2], &arr[3][3]
+                        );
+
+                for(int table_i = 0; table_i < 4; table_i++)
+                {
+                    for(int table_j = 0; table_j < 4; table_j++)
+                    {
+                       //qDebug()<<"Board3"<<arr[table_i][table_j];
+                       ui->labelImgBoard3->regTable[table_i][table_j] = arr[table_i][table_j];
+                    }
+                }
+                emit ui->labelImgBoard3->regChange((unsigned int *)ui->labelImgBoard3->regTable);
+                emit ui->labelImgBoard3->mousePaint();
+            }
+            if(line[5] == '4')
+            {
+                unsigned int arr[4][4];
+                char *chline = line.data();
+                sscanf(chline,"Board4 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                       &arr[0][0], &arr[0][1], &arr[0][2], &arr[0][3],
+                       &arr[1][0], &arr[1][1], &arr[1][2], &arr[1][3],
+                       &arr[2][0], &arr[2][1], &arr[2][2], &arr[2][3],
+                       &arr[3][0], &arr[3][1], &arr[3][2], &arr[3][3]
+                        );
+
+                for(int table_i = 0; table_i < 4; table_i++)
+                {
+                    for(int table_j = 0; table_j < 4; table_j++)
+                    {
+                       //qDebug()<<"Board4"<<arr[table_i][table_j];
+                       ui->labelImgBoard4->regTable[table_i][table_j] = arr[table_i][table_j];
+                    }
+                }
+                emit ui->labelImgBoard4->regChange((unsigned int *)ui->labelImgBoard4->regTable);
+                emit ui->labelImgBoard4->mousePaint();
+            }
+            if(line[5] == '5')
+            {
+                unsigned int arr[4][4];
+                char *chline = line.data();
+                sscanf(chline,"Board5 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                       &arr[0][0], &arr[0][1], &arr[0][2], &arr[0][3],
+                       &arr[1][0], &arr[1][1], &arr[1][2], &arr[1][3],
+                       &arr[2][0], &arr[2][1], &arr[2][2], &arr[2][3],
+                       &arr[3][0], &arr[3][1], &arr[3][2], &arr[3][3]
+                        );
+
+                for(int table_i = 0; table_i < 4; table_i++)
+                {
+                    for(int table_j = 0; table_j < 4; table_j++)
+                    {
+                       //qDebug()<<"Board5"<<arr[table_i][table_j];
+                       ui->labelImgBoard5->regTable[table_i][table_j] = arr[table_i][table_j];
+                    }
+                }
+                emit ui->labelImgBoard5->regChange((unsigned int *)ui->labelImgBoard5->regTable);
+                emit ui->labelImgBoard5->mousePaint();
+            }
+            if(line[5] == '6')
+            {
+                unsigned int arr[4][4];
+                char *chline = line.data();
+                sscanf(chline,"Board6 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                       &arr[0][0], &arr[0][1], &arr[0][2], &arr[0][3],
+                       &arr[1][0], &arr[1][1], &arr[1][2], &arr[1][3],
+                       &arr[2][0], &arr[2][1], &arr[2][2], &arr[2][3],
+                       &arr[3][0], &arr[3][1], &arr[3][2], &arr[3][3]
+                        );
+
+                for(int table_i = 0; table_i < 4; table_i++)
+                {
+                    for(int table_j = 0; table_j < 4; table_j++)
+                    {
+                       //qDebug()<<"Board6"<<arr[table_i][table_j];
+                       ui->labelImgBoard6->regTable[table_i][table_j] = arr[table_i][table_j];
+                    }
+                }
+                emit ui->labelImgBoard6->regChange((unsigned int *)ui->labelImgBoard6->regTable);
+                emit ui->labelImgBoard6->mousePaint();
+            }
+            if(line[5] == '7')
+            {
+                unsigned int arr[4][4];
+                char *chline = line.data();
+                sscanf(chline,"Board7 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                       &arr[0][0], &arr[0][1], &arr[0][2], &arr[0][3],
+                       &arr[1][0], &arr[1][1], &arr[1][2], &arr[1][3],
+                       &arr[2][0], &arr[2][1], &arr[2][2], &arr[2][3],
+                       &arr[3][0], &arr[3][1], &arr[3][2], &arr[3][3]
+                        );
+
+                for(int table_i = 0; table_i < 4; table_i++)
+                {
+                    for(int table_j = 0; table_j < 4; table_j++)
+                    {
+                       //qDebug()<<"Board7"<<arr[table_i][table_j];
+                       ui->labelImgBoard7->regTable[table_i][table_j] = arr[table_i][table_j];
+                    }
+                }
+                emit ui->labelImgBoard7->regChange((unsigned int *)ui->labelImgBoard7->regTable);
+                emit ui->labelImgBoard7->mousePaint();
+
+            }
+            if(line[5] == '8')
+            {
+                unsigned int arr[4][4];
+                char *chline = line.data();
+                sscanf(chline,"Board8 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                       &arr[0][0], &arr[0][1], &arr[0][2], &arr[0][3],
+                       &arr[1][0], &arr[1][1], &arr[1][2], &arr[1][3],
+                       &arr[2][0], &arr[2][1], &arr[2][2], &arr[2][3],
+                       &arr[3][0], &arr[3][1], &arr[3][2], &arr[3][3]
+                        );
+
+                for(int table_i = 0; table_i < 4; table_i++)
+                {
+                    for(int table_j = 0; table_j < 4; table_j++)
+                    {
+                       //qDebug()<<"Board8"<<arr[table_i][table_j];
+                       ui->labelImgBoard8->regTable[table_i][table_j] = arr[table_i][table_j];
+                    }
+                }
+                emit ui->labelImgBoard8->regChange((unsigned int *)ui->labelImgBoard8->regTable);
+                emit ui->labelImgBoard8->mousePaint();
+
+            }
+
+        }
+
+    }
+
+
+    file.close();
+}
+
+void MainWindow::on_btnWorkControlSave_clicked()
+{
+    QString fileName = QFileDialog::getSaveFileName(this, tr("Save As"), "", tr("Normal text File (*.txt)"));
+    if (fileName.isEmpty())
+    {
+        return;
+    }
+    QFile file(fileName);
+
+    if(!file.open(QIODevice::WriteOnly))
+    {
+        qDebug()<<"open file false";
+        return;
+    }
+    file.flush();
+    char str[64] = "";
+
+    sprintf(str,"Board1 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+            ui->labelImgBoard1->regTable[0][0], ui->labelImgBoard1->regTable[0][1], ui->labelImgBoard1->regTable[0][2], ui->labelImgBoard1->regTable[0][3],
+            ui->labelImgBoard1->regTable[1][0], ui->labelImgBoard1->regTable[1][1], ui->labelImgBoard1->regTable[1][2], ui->labelImgBoard1->regTable[1][3],
+            ui->labelImgBoard1->regTable[2][0], ui->labelImgBoard1->regTable[2][1], ui->labelImgBoard1->regTable[2][2], ui->labelImgBoard1->regTable[2][3],
+            ui->labelImgBoard1->regTable[3][0], ui->labelImgBoard1->regTable[3][1], ui->labelImgBoard1->regTable[3][2], ui->labelImgBoard1->regTable[3][3]);
+    file.write(str);
+
+    sprintf(str,"Board2 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+            ui->labelImgBoard2->regTable[0][0], ui->labelImgBoard2->regTable[0][1], ui->labelImgBoard2->regTable[0][2], ui->labelImgBoard2->regTable[0][3],
+            ui->labelImgBoard2->regTable[1][0], ui->labelImgBoard2->regTable[1][1], ui->labelImgBoard2->regTable[1][2], ui->labelImgBoard2->regTable[1][3],
+            ui->labelImgBoard2->regTable[2][0], ui->labelImgBoard2->regTable[2][1], ui->labelImgBoard2->regTable[2][2], ui->labelImgBoard2->regTable[2][3],
+            ui->labelImgBoard2->regTable[3][0], ui->labelImgBoard2->regTable[3][1], ui->labelImgBoard2->regTable[3][2], ui->labelImgBoard2->regTable[3][3]);
+    file.write(str);
+
+    sprintf(str,"Board3 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+            ui->labelImgBoard3->regTable[0][0], ui->labelImgBoard3->regTable[0][1], ui->labelImgBoard3->regTable[0][2], ui->labelImgBoard3->regTable[0][3],
+            ui->labelImgBoard3->regTable[1][0], ui->labelImgBoard3->regTable[1][1], ui->labelImgBoard3->regTable[1][2], ui->labelImgBoard3->regTable[1][3],
+            ui->labelImgBoard3->regTable[2][0], ui->labelImgBoard3->regTable[2][1], ui->labelImgBoard3->regTable[2][2], ui->labelImgBoard3->regTable[2][3],
+            ui->labelImgBoard3->regTable[3][0], ui->labelImgBoard3->regTable[3][1], ui->labelImgBoard3->regTable[3][2], ui->labelImgBoard3->regTable[3][3]);
+    file.write(str);
+
+
+    sprintf(str,"Board4 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+            ui->labelImgBoard4->regTable[0][0], ui->labelImgBoard4->regTable[0][1], ui->labelImgBoard4->regTable[0][2], ui->labelImgBoard4->regTable[0][3],
+            ui->labelImgBoard4->regTable[1][0], ui->labelImgBoard4->regTable[1][1], ui->labelImgBoard4->regTable[1][2], ui->labelImgBoard4->regTable[1][3],
+            ui->labelImgBoard4->regTable[2][0], ui->labelImgBoard4->regTable[2][1], ui->labelImgBoard4->regTable[2][2], ui->labelImgBoard4->regTable[2][3],
+            ui->labelImgBoard4->regTable[3][0], ui->labelImgBoard4->regTable[3][1], ui->labelImgBoard4->regTable[3][2], ui->labelImgBoard4->regTable[3][3]);
+    file.write(str);
+
+    sprintf(str,"Board5 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+            ui->labelImgBoard5->regTable[0][0], ui->labelImgBoard5->regTable[0][1], ui->labelImgBoard5->regTable[0][2], ui->labelImgBoard5->regTable[0][3],
+            ui->labelImgBoard5->regTable[1][0], ui->labelImgBoard5->regTable[1][1], ui->labelImgBoard5->regTable[1][2], ui->labelImgBoard5->regTable[1][3],
+            ui->labelImgBoard5->regTable[2][0], ui->labelImgBoard5->regTable[2][1], ui->labelImgBoard5->regTable[2][2], ui->labelImgBoard5->regTable[2][3],
+            ui->labelImgBoard5->regTable[3][0], ui->labelImgBoard5->regTable[3][1], ui->labelImgBoard5->regTable[3][2], ui->labelImgBoard5->regTable[3][3]);
+    file.write(str);
+
+    sprintf(str,"Board6 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+            ui->labelImgBoard6->regTable[0][0], ui->labelImgBoard6->regTable[0][1], ui->labelImgBoard6->regTable[0][2], ui->labelImgBoard6->regTable[0][3],
+            ui->labelImgBoard6->regTable[1][0], ui->labelImgBoard6->regTable[1][1], ui->labelImgBoard6->regTable[1][2], ui->labelImgBoard6->regTable[1][3],
+            ui->labelImgBoard6->regTable[2][0], ui->labelImgBoard6->regTable[2][1], ui->labelImgBoard6->regTable[2][2], ui->labelImgBoard6->regTable[2][3],
+            ui->labelImgBoard6->regTable[3][0], ui->labelImgBoard6->regTable[3][1], ui->labelImgBoard6->regTable[3][2], ui->labelImgBoard6->regTable[3][3]);
+    file.write(str);
+
+    sprintf(str,"Board7 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+            ui->labelImgBoard7->regTable[0][0], ui->labelImgBoard7->regTable[0][1], ui->labelImgBoard7->regTable[0][2], ui->labelImgBoard7->regTable[0][3],
+            ui->labelImgBoard7->regTable[1][0], ui->labelImgBoard7->regTable[1][1], ui->labelImgBoard7->regTable[1][2], ui->labelImgBoard7->regTable[1][3],
+            ui->labelImgBoard7->regTable[2][0], ui->labelImgBoard7->regTable[2][1], ui->labelImgBoard7->regTable[2][2], ui->labelImgBoard7->regTable[2][3],
+            ui->labelImgBoard7->regTable[3][0], ui->labelImgBoard7->regTable[3][1], ui->labelImgBoard7->regTable[3][2], ui->labelImgBoard7->regTable[3][3]);
+    file.write(str);
+
+    sprintf(str,"Board8 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+            ui->labelImgBoard8->regTable[0][0], ui->labelImgBoard8->regTable[0][1], ui->labelImgBoard8->regTable[0][2], ui->labelImgBoard8->regTable[0][3],
+            ui->labelImgBoard8->regTable[1][0], ui->labelImgBoard8->regTable[1][1], ui->labelImgBoard8->regTable[1][2], ui->labelImgBoard8->regTable[1][3],
+            ui->labelImgBoard8->regTable[2][0], ui->labelImgBoard8->regTable[2][1], ui->labelImgBoard8->regTable[2][2], ui->labelImgBoard8->regTable[2][3],
+            ui->labelImgBoard8->regTable[3][0], ui->labelImgBoard8->regTable[3][1], ui->labelImgBoard8->regTable[3][2], ui->labelImgBoard8->regTable[3][3]);
+    file.write(str);
+    file.close();
 }

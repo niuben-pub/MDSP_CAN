@@ -7,7 +7,7 @@ imgoverlayLabel::imgoverlayLabel(QWidget *parent) : QLabel(parent)
 
 void imgoverlayLabel::paintEvent(QPaintEvent *event)
 {
-    qDebug()<<"SUMpaintEvent"<<endl;
+   // qDebug()<<"SUMpaintEvent"<<endl;
     QPainter *painter = new QPainter(this);
 
     painter->drawPixmap(0,0,DrawWindowWidth,DrawWindowHeight,this->pixBlank);
@@ -73,6 +73,6 @@ void imgoverlayLabel::paintEvent(QPaintEvent *event)
 
 void imgoverlayLabel::updataImg()
 {
-    qDebug()<<"SUMupdate();"<<endl;
+    //qDebug()<<"SUMupdate();"<<endl;
     this->update();  //更新会调用绘图事件
 }

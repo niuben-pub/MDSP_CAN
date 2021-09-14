@@ -1452,21 +1452,63 @@ debug/mainwindow.o: mainwindow.cpp mainwindow.h \
 		H:/QT/5.12.9/mingw73_32/include/QtGui/qpen.h \
 		H:/QT/5.12.9/mingw73_32/include/QtGui/QPixmap \
 		ui_mainwindow.h \
-		H:/QT/5.12.9/mingw73_32/include/QtWidgets/QProxyStyle \
-		H:/QT/5.12.9/mingw73_32/include/QtWidgets/qproxystyle.h \
-		H:/QT/5.12.9/mingw73_32/include/QtWidgets/QCommonStyle \
-		H:/QT/5.12.9/mingw73_32/include/QtWidgets/qcommonstyle.h \
-		H:/QT/5.12.9/mingw73_32/include/QtWidgets/qstyle.h \
-		H:/QT/5.12.9/mingw73_32/include/QtWidgets/QStyleOptionTab \
+		H:/QT/5.12.9/mingw73_32/include/QtCore/QVariant \
+		H:/QT/5.12.9/mingw73_32/include/QtWidgets/QApplication \
+		H:/QT/5.12.9/mingw73_32/include/QtWidgets/qapplication.h \
+		H:/QT/5.12.9/mingw73_32/include/QtCore/qcoreapplication.h \
+		H:/QT/5.12.9/mingw73_32/include/QtCore/qeventloop.h \
+		H:/QT/5.12.9/mingw73_32/include/QtWidgets/qdesktopwidget.h \
+		H:/QT/5.12.9/mingw73_32/include/QtGui/qguiapplication.h \
+		H:/QT/5.12.9/mingw73_32/include/QtGui/qinputmethod.h \
+		H:/QT/5.12.9/mingw73_32/include/QtWidgets/QComboBox \
+		H:/QT/5.12.9/mingw73_32/include/QtWidgets/qcombobox.h \
+		H:/QT/5.12.9/mingw73_32/include/QtWidgets/qabstractitemdelegate.h \
 		H:/QT/5.12.9/mingw73_32/include/QtWidgets/qstyleoption.h \
 		H:/QT/5.12.9/mingw73_32/include/QtWidgets/qabstractspinbox.h \
 		H:/QT/5.12.9/mingw73_32/include/QtGui/qvalidator.h \
 		H:/QT/5.12.9/mingw73_32/include/QtCore/qregularexpression.h \
 		H:/QT/5.12.9/mingw73_32/include/QtWidgets/qslider.h \
 		H:/QT/5.12.9/mingw73_32/include/QtWidgets/qabstractslider.h \
+		H:/QT/5.12.9/mingw73_32/include/QtWidgets/qstyle.h \
 		H:/QT/5.12.9/mingw73_32/include/QtWidgets/qtabbar.h \
 		H:/QT/5.12.9/mingw73_32/include/QtWidgets/qrubberband.h \
 		H:/QT/5.12.9/mingw73_32/include/QtCore/qabstractitemmodel.h \
+		H:/QT/5.12.9/mingw73_32/include/QtWidgets/QGridLayout \
+		H:/QT/5.12.9/mingw73_32/include/QtWidgets/qgridlayout.h \
+		H:/QT/5.12.9/mingw73_32/include/QtWidgets/qlayout.h \
+		H:/QT/5.12.9/mingw73_32/include/QtWidgets/qlayoutitem.h \
+		H:/QT/5.12.9/mingw73_32/include/QtWidgets/qboxlayout.h \
+		H:/QT/5.12.9/mingw73_32/include/QtWidgets/QGroupBox \
+		H:/QT/5.12.9/mingw73_32/include/QtWidgets/qgroupbox.h \
+		H:/QT/5.12.9/mingw73_32/include/QtWidgets/QHeaderView \
+		H:/QT/5.12.9/mingw73_32/include/QtWidgets/qheaderview.h \
+		H:/QT/5.12.9/mingw73_32/include/QtWidgets/qabstractitemview.h \
+		H:/QT/5.12.9/mingw73_32/include/QtWidgets/qabstractscrollarea.h \
+		H:/QT/5.12.9/mingw73_32/include/QtCore/qitemselectionmodel.h \
+		H:/QT/5.12.9/mingw73_32/include/QtWidgets/QLCDNumber \
+		H:/QT/5.12.9/mingw73_32/include/QtWidgets/qlcdnumber.h \
+		H:/QT/5.12.9/mingw73_32/include/QtWidgets/QLineEdit \
+		H:/QT/5.12.9/mingw73_32/include/QtWidgets/qlineedit.h \
+		H:/QT/5.12.9/mingw73_32/include/QtGui/qtextcursor.h \
+		H:/QT/5.12.9/mingw73_32/include/QtGui/qtextformat.h \
+		H:/QT/5.12.9/mingw73_32/include/QtWidgets/QProgressBar \
+		H:/QT/5.12.9/mingw73_32/include/QtWidgets/qprogressbar.h \
+		H:/QT/5.12.9/mingw73_32/include/QtWidgets/QPushButton \
+		H:/QT/5.12.9/mingw73_32/include/QtWidgets/qpushbutton.h \
+		H:/QT/5.12.9/mingw73_32/include/QtWidgets/qabstractbutton.h \
+		H:/QT/5.12.9/mingw73_32/include/QtWidgets/QStatusBar \
+		H:/QT/5.12.9/mingw73_32/include/QtWidgets/qstatusbar.h \
+		H:/QT/5.12.9/mingw73_32/include/QtWidgets/QTabWidget \
+		H:/QT/5.12.9/mingw73_32/include/QtWidgets/QTableWidget \
+		H:/QT/5.12.9/mingw73_32/include/QtWidgets/qtablewidget.h \
+		H:/QT/5.12.9/mingw73_32/include/QtWidgets/qtableview.h \
+		H:/QT/5.12.9/mingw73_32/include/QtWidgets/QWidget \
+		imgoverlaylabel.h \
+		H:/QT/5.12.9/mingw73_32/include/QtWidgets/QProxyStyle \
+		H:/QT/5.12.9/mingw73_32/include/QtWidgets/qproxystyle.h \
+		H:/QT/5.12.9/mingw73_32/include/QtWidgets/QCommonStyle \
+		H:/QT/5.12.9/mingw73_32/include/QtWidgets/qcommonstyle.h \
+		H:/QT/5.12.9/mingw73_32/include/QtWidgets/QStyleOptionTab \
 		H:/QT/5.12.9/mingw73_32/include/QtWidgets/QFileDialog \
 		H:/QT/5.12.9/mingw73_32/include/QtWidgets/qfiledialog.h \
 		H:/QT/5.12.9/mingw73_32/include/QtCore/qdir.h \
@@ -1475,12 +1517,6 @@ debug/mainwindow.o: mainwindow.cpp mainwindow.h \
 		H:/QT/5.12.9/mingw73_32/include/QtCore/QString \
 		H:/QT/5.12.9/mingw73_32/include/QtCore/QFile \
 		H:/QT/5.12.9/mingw73_32/include/QtWidgets/QTableWidgetItem \
-		H:/QT/5.12.9/mingw73_32/include/QtWidgets/qtablewidget.h \
-		H:/QT/5.12.9/mingw73_32/include/QtWidgets/qtableview.h \
-		H:/QT/5.12.9/mingw73_32/include/QtWidgets/qabstractitemview.h \
-		H:/QT/5.12.9/mingw73_32/include/QtWidgets/qabstractscrollarea.h \
-		H:/QT/5.12.9/mingw73_32/include/QtCore/qitemselectionmodel.h \
-		H:/QT/5.12.9/mingw73_32/include/QtWidgets/qabstractitemdelegate.h \
 		H:/QT/5.12.9/mingw73_32/include/QtCore/QDateTime \
 		H:/QT/5.12.9/mingw73_32/include/QtGui/QPalette \
 		j1939_msg.h \

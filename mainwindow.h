@@ -160,7 +160,13 @@ private slots:
 
     void on_pushButtonImgClearBoard8_clicked();
 
+    void on_btnWorkTestMode_clicked();
 
+    void on_btnWorkControlMode_clicked();
+
+    void on_btnWorkControlLoad_clicked();
+
+    void on_btnWorkControlSave_clicked();
 
 private:
     Ui::MainWindow *ui;
