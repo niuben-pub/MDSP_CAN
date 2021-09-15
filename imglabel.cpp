@@ -20,10 +20,13 @@ void ImgLabel::PrintRegTable()
 void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
 {
     unsigned int regindex = zone_y * 4 + zone_x;
+    displayModeReg = SDI_4K_16;
+    qDebug()<<ImgType;
     if(ImgType == IMG_IN1_3G)
     {
         if(Img3GIn1Size == INPUT_SIZE_1920X1080)
         {
+            img3GIn1SizeReg = IN_3G_SIZE_1920X1080;
             if(regindex == 0 || regindex == 1 ||regindex == 4 || regindex == 5)
             {
                 this->regTable[0][0] = 0;
@@ -89,6 +92,7 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
         }
         else if(Img3GIn1Size == INPUT_SIZE_960X540)
         {
+            img3GIn1SizeReg = IN_3G_SIZE_960x540;
             if(regindex == 0 || regindex == 1 ||regindex == 4 || regindex == 5)
             {
                 if(regTable[0][0] == IN1_3G_1920x1080 || regTable[0][0] == IN2_3G_1920x1080)
@@ -187,11 +191,22 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
                 }
             }
         }
+        else if(Img3GIn1Size == INPUT_SIZE_FULL)
+        {
+            img3GIn1SizeReg = IN_3G_SIZE_1920X1080;   //全屏显示需要先将视频管道切到 1080P
+            if(regindex >= 0 && regindex <= 15)
+            {
+                displayModeReg = SDI_4K_FROM_IN1;
+            }
+            emit this->regChange((unsigned int *)regTable);
+
+        }
     }
     else if(ImgType == IMG_IN2_3G)
     {
         if(Img3GIn2Size == INPUT_SIZE_1920X1080)
         {
+            img3GIn2SizeReg = IN_3G_SIZE_1920X1080;
             if(regindex == 0 || regindex == 1 ||regindex == 4 || regindex == 5)
             {
                 this->regTable[0][0] = 0;
@@ -257,6 +272,7 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
         }
         else if(Img3GIn2Size == INPUT_SIZE_960X540)
         {
+            img3GIn2SizeReg = IN_3G_SIZE_960x540;
             if(regindex == 0 || regindex == 1 ||regindex == 4 || regindex == 5)
             {
                 if(regTable[0][0] == IN2_3G_1920x1080 || regTable[0][0] == IN1_3G_1920x1080)
@@ -354,6 +370,15 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
 
                 }
             }
+        }
+        else if(Img3GIn2Size == INPUT_SIZE_FULL)
+        {
+            img3GIn2SizeReg = IN_3G_SIZE_1920X1080;   //全屏显示需要先将视频管道切到 1080P
+            if(regindex >= 0 && regindex <= 15)
+            {
+                displayModeReg = SDI_4K_FROM_IN2;
+            }
+            emit this->regChange((unsigned int *)regTable);
         }
 
     }
@@ -632,7 +657,7 @@ void ImgLabel::mousePressEvent(QMouseEvent *event)
     if(event->button() == Qt::RightButton)
     {
         qDebug()<<"RightButton press"<<endl;
-
+        PrintRegTable();
     }
 
 }
@@ -681,6 +706,16 @@ void ImgLabel::paintEvent(QPaintEvent *event)
             }
 
         }
+    }
+
+    if(this->displayModeReg == SDI_4K_FROM_IN1)
+    {
+        painter->drawPixmap(0,0,DrawWindowQuarWidth * 4, DrawWindowQuarHeight * 4,this->pix3GIN1);
+    }
+
+    if(this->displayModeReg == SDI_4K_FROM_IN2)
+    {
+        painter->drawPixmap(0,0,DrawWindowQuarWidth * 4, DrawWindowQuarHeight * 4,this->pix3GIN2);
     }
 
     painter->setPen(0x010101);

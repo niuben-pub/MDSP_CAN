@@ -19,11 +19,17 @@
 #define OVERLY_DRAW_QUAR_WIDTH (120)
 #define OVERLY_DRAW_QUAR_HIGHT (68)
 
+
+#define OVERLY_SDI_4K_FROM_IN1      (0x0001) //将3G in1 的图像放大至4K
+#define OVERLY_SDI_4K_FROM_IN2      (0x0002) //将3G in2 的图像放大至4K
+#define OVERLY_SDI_4K_16            (0x0000) //图像显示为16画
+
 class imgoverlayLabel : public QLabel
 {
     Q_OBJECT
 public:
     unsigned int regTableBoard[8][4][4];
+    unsigned int displayModeRegBoard[8];
 
 
     unsigned int DrawWindowWidth = OVERLY_DRAW_WIDTH;

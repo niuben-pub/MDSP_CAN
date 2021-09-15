@@ -923,25 +923,82 @@ void MainWindow::updateOverlyImgRegArray()
             ui->labelOverly->regTableBoard[7][i][j] = ui->labelImgBoard8->regTable[i][j];
         }
     }
+
+    ui->labelOverly->displayModeRegBoard[0] = ui->labelImgBoard1->displayModeReg;
+    ui->labelOverly->displayModeRegBoard[1] = ui->labelImgBoard2->displayModeReg;
+    ui->labelOverly->displayModeRegBoard[2] = ui->labelImgBoard3->displayModeReg;
+    ui->labelOverly->displayModeRegBoard[3] = ui->labelImgBoard4->displayModeReg;
+    ui->labelOverly->displayModeRegBoard[4] = ui->labelImgBoard5->displayModeReg;
+    ui->labelOverly->displayModeRegBoard[5] = ui->labelImgBoard6->displayModeReg;
+    ui->labelOverly->displayModeRegBoard[6] = ui->labelImgBoard7->displayModeReg;
+    ui->labelOverly->displayModeRegBoard[7] = ui->labelImgBoard8->displayModeReg;
+
+
     ui->labelOverly->update();
 
 }
 
 void MainWindow::writeBoard1FpgaImgconfigReg(unsigned int *regTable)
 {
+    int ID = (PGN57856 << 8) + this->board1->writerAddr;  //写FPGA命令
 
+
+    //先发送显示格式  显示16画  或者IN1 4K 或者IN2 4K
+    unsigned char send_str[8] = {0};
+    quint64 regaddr = ui->labelImgBoard1->displayModeRegAddr;
+    quint64 regdata = ui->labelImgBoard1->displayModeReg;
+    quint64 data = (regaddr<<16) + regdata;
+    char *p = (char *)(&data);
+    for(int k = 0; k < 8; k++)
+    {
+        send_str[k] = p[7 - k];
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+
+    //再发送输入分辨率
+    regaddr = ui->labelImgBoard1->img3GIn1SizeRegAddr;
+    regdata = ui->labelImgBoard1->img3GIn1SizeReg;
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int k = 0; k < 8; k++)
+    {
+        send_str[k] = p[7 - k];
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+    //再发送输入分辨率
+    regaddr = ui->labelImgBoard1->img3GIn2SizeRegAddr;
+    regdata = ui->labelImgBoard1->img3GIn2SizeReg;
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int k = 0; k < 8; k++)
+    {
+        send_str[k] = p[7 - k];
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+
+    //再发送输入显示分辨率
     for (int i = 0; i < 16; i++)
     {
         //qDebug()<<"["<<regTable[i]<<"]"<<endl;
-        unsigned char send_str[8] = {0};
-        int ID = (PGN57856 << 8) + this->board1->writerAddr;  //写FPGA命令
-        quint64 regaddr = 0x10 + i;
-        quint64 regdata = regTable[i];
-        quint64 data = (regaddr<<16) + regdata;
-        char *p = (char *)(&data);
-        for(int i = 0; i < 8; i++)
+        regaddr = 0x10 + i;
+        regdata = regTable[i];
+        data = (regaddr<<16) + regdata;
+        p = (char *)(&data);
+        for(int j = 0; j < 8; j++)
         {
-            send_str[i] = p[7 - i];
+            send_str[j] = p[7 - j];
             //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
         }
         canthread->sendData(ID,(unsigned char*)send_str);
@@ -2489,9 +2546,9 @@ void MainWindow::on_comboBox3Gin1SizeBoard1_currentIndexChanged(int index)
     {
         ui->labelImgBoard1->Img3GIn1Size = INPUT_SIZE_960X540;
     }
-    else
+    else if (index == 2)
     {
-        ui->labelImgBoard1->Img3GIn1Size = INPUT_SIZE_1920X1080;
+        ui->labelImgBoard1->Img3GIn1Size = INPUT_SIZE_FULL;
     }
 
 }
@@ -2506,9 +2563,9 @@ void MainWindow::on_comboBox3Gin2SizeBoard1_currentIndexChanged(int index)
     {
         ui->labelImgBoard1->Img3GIn2Size = INPUT_SIZE_960X540;
     }
-    else
+    else if (index == 2)
     {
-        ui->labelImgBoard1->Img3GIn2Size = INPUT_SIZE_1920X1080;
+        ui->labelImgBoard1->Img3GIn2Size = INPUT_SIZE_FULL;
     }
 }
 
@@ -2562,9 +2619,9 @@ void MainWindow::on_comboBox3Gin1SizeBoard2_currentIndexChanged(int index)
     {
         ui->labelImgBoard2->Img3GIn1Size = INPUT_SIZE_960X540;
     }
-    else
+    else if (index == 2)
     {
-        ui->labelImgBoard2->Img3GIn1Size = INPUT_SIZE_1920X1080;
+        ui->labelImgBoard2->Img3GIn1Size = INPUT_SIZE_FULL;
     }
 }
 
@@ -2578,9 +2635,9 @@ void MainWindow::on_comboBox3Gin2SizeBoard2_currentIndexChanged(int index)
     {
         ui->labelImgBoard2->Img3GIn2Size = INPUT_SIZE_960X540;
     }
-    else
+    else if (index == 2)
     {
-        ui->labelImgBoard2->Img3GIn2Size = INPUT_SIZE_1920X1080;
+        ui->labelImgBoard2->Img3GIn2Size = INPUT_SIZE_FULL;
     }
 }
 
@@ -2632,9 +2689,9 @@ void MainWindow::on_comboBox3Gin1SizeBoard3_currentIndexChanged(int index)
     {
         ui->labelImgBoard3->Img3GIn1Size = INPUT_SIZE_960X540;
     }
-    else
+    else if (index == 2)
     {
-        ui->labelImgBoard3->Img3GIn1Size = INPUT_SIZE_1920X1080;
+        ui->labelImgBoard3->Img3GIn1Size = INPUT_SIZE_FULL;
     }
 }
 
@@ -2648,9 +2705,9 @@ void MainWindow::on_comboBox3Gin2SizeBoard3_currentIndexChanged(int index)
     {
         ui->labelImgBoard3->Img3GIn2Size = INPUT_SIZE_960X540;
     }
-    else
+    else if (index == 2)
     {
-        ui->labelImgBoard3->Img3GIn2Size = INPUT_SIZE_1920X1080;
+        ui->labelImgBoard3->Img3GIn2Size = INPUT_SIZE_FULL;
     }
 }
 
@@ -2702,9 +2759,9 @@ void MainWindow::on_comboBox3Gin1SizeBoard4_currentIndexChanged(int index)
     {
         ui->labelImgBoard4->Img3GIn1Size = INPUT_SIZE_960X540;
     }
-    else
+    else if (index == 2)
     {
-        ui->labelImgBoard4->Img3GIn1Size = INPUT_SIZE_1920X1080;
+        ui->labelImgBoard4->Img3GIn1Size = INPUT_SIZE_FULL;
     }
 }
 
@@ -2718,9 +2775,9 @@ void MainWindow::on_comboBox3Gin2SizeBoard4_currentIndexChanged(int index)
     {
         ui->labelImgBoard4->Img3GIn2Size = INPUT_SIZE_960X540;
     }
-    else
+    else if (index == 2)
     {
-        ui->labelImgBoard4->Img3GIn2Size = INPUT_SIZE_1920X1080;
+        ui->labelImgBoard4->Img3GIn2Size = INPUT_SIZE_FULL;
     }
 }
 
@@ -2772,9 +2829,9 @@ void MainWindow::on_comboBox3Gin1SizeBoard5_currentIndexChanged(int index)
     {
         ui->labelImgBoard5->Img3GIn1Size = INPUT_SIZE_960X540;
     }
-    else
+    else if (index == 2)
     {
-        ui->labelImgBoard5->Img3GIn1Size = INPUT_SIZE_1920X1080;
+        ui->labelImgBoard5->Img3GIn1Size = INPUT_SIZE_FULL;
     }
 }
 
@@ -2788,9 +2845,9 @@ void MainWindow::on_comboBox3Gin2SizeBoard5_currentIndexChanged(int index)
     {
         ui->labelImgBoard5->Img3GIn2Size = INPUT_SIZE_960X540;
     }
-    else
+    else if (index == 2)
     {
-        ui->labelImgBoard5->Img3GIn2Size = INPUT_SIZE_1920X1080;
+        ui->labelImgBoard5->Img3GIn2Size = INPUT_SIZE_FULL;
     }
 }
 
@@ -2843,9 +2900,9 @@ void MainWindow::on_comboBox3Gin1SizeBoard6_currentIndexChanged(int index)
     {
         ui->labelImgBoard6->Img3GIn1Size = INPUT_SIZE_960X540;
     }
-    else
+    else if (index == 2)
     {
-        ui->labelImgBoard6->Img3GIn1Size = INPUT_SIZE_1920X1080;
+        ui->labelImgBoard6->Img3GIn1Size = INPUT_SIZE_FULL;
     }
 }
 
@@ -2859,9 +2916,9 @@ void MainWindow::on_comboBox3Gin2SizeBoard6_currentIndexChanged(int index)
     {
         ui->labelImgBoard6->Img3GIn2Size = INPUT_SIZE_960X540;
     }
-    else
+    else if (index == 2)
     {
-        ui->labelImgBoard6->Img3GIn2Size = INPUT_SIZE_1920X1080;
+        ui->labelImgBoard6->Img3GIn2Size = INPUT_SIZE_FULL;
     }
 }
 
@@ -2914,9 +2971,9 @@ void MainWindow::on_comboBox3Gin1SizeBoard7_currentIndexChanged(int index)
     {
         ui->labelImgBoard7->Img3GIn1Size = INPUT_SIZE_960X540;
     }
-    else
+    else if (index == 2)
     {
-        ui->labelImgBoard7->Img3GIn1Size = INPUT_SIZE_1920X1080;
+        ui->labelImgBoard7->Img3GIn1Size = INPUT_SIZE_FULL;
     }
 }
 
@@ -2930,9 +2987,9 @@ void MainWindow::on_comboBox3Gin2SizeBoard7_currentIndexChanged(int index)
     {
         ui->labelImgBoard7->Img3GIn2Size = INPUT_SIZE_960X540;
     }
-    else
+    else if (index == 2)
     {
-        ui->labelImgBoard7->Img3GIn2Size = INPUT_SIZE_1920X1080;
+        ui->labelImgBoard7->Img3GIn2Size = INPUT_SIZE_FULL;
     }
 }
 
@@ -2984,9 +3041,9 @@ void MainWindow::on_comboBox3Gin1SizeBoard8_currentIndexChanged(int index)
     {
         ui->labelImgBoard8->Img3GIn1Size = INPUT_SIZE_960X540;
     }
-    else
+    else if (index == 2)
     {
-        ui->labelImgBoard8->Img3GIn1Size = INPUT_SIZE_1920X1080;
+        ui->labelImgBoard8->Img3GIn1Size = INPUT_SIZE_FULL;
     }
 }
 
@@ -3000,9 +3057,9 @@ void MainWindow::on_comboBox3Gin2SizeBoard8_currentIndexChanged(int index)
     {
         ui->labelImgBoard8->Img3GIn2Size = INPUT_SIZE_960X540;
     }
-    else
+    else if (index == 2)
     {
-        ui->labelImgBoard8->Img3GIn2Size = INPUT_SIZE_1920X1080;
+        ui->labelImgBoard8->Img3GIn2Size = INPUT_SIZE_FULL;
     }
 }
 

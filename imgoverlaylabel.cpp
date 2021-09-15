@@ -52,6 +52,23 @@ void imgoverlayLabel::paintEvent(QPaintEvent *event)
                 }
             }
         }
+
+
+        if(this->displayModeRegBoard[index] == OVERLY_SDI_4K_FROM_IN1)
+        {
+            painter->drawPixmap(0,0,DrawWindowQuarWidth * 4, DrawWindowQuarHeight * 4,this->pix3GIN1Board[index]);
+        }
+
+        if(this->displayModeRegBoard[index] == OVERLY_SDI_4K_FROM_IN2)
+        {
+            painter->drawPixmap(0,0,DrawWindowQuarWidth * 4, DrawWindowQuarHeight * 4,this->pix3GIN2Board[index]);
+        }
+
+
+
+
+
+
     }
 
 

@@ -51,7 +51,7 @@
      <enum>QTabWidget::West</enum>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="tabCanParam">
      <attribute name="title">
@@ -763,9 +763,9 @@
        <enum>QTabWidget::West</enum>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
-      <widget class="QWidget" name="tab_10">
+      <widget class="QWidget" name="tabControl">
        <attribute name="title">
         <string>Control</string>
        </attribute>
@@ -884,6 +884,11 @@
            <string>540P</string>
           </property>
          </item>
+         <item>
+          <property name="text">
+           <string>FULL</string>
+          </property>
+         </item>
         </widget>
         <widget class="QComboBox" name="comboBox3Gin1SizeBoard1">
          <property name="geometry">
@@ -905,6 +910,11 @@
          <item>
           <property name="text">
            <string>540P</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>FULL</string>
           </property>
          </item>
         </widget>
@@ -2215,7 +2225,7 @@ font: 10pt &quot;Arial&quot;;</string>
         </property>
        </widget>
       </widget>
-      <widget class="QWidget" name="tab_12">
+      <widget class="QWidget" name="tabTest">
        <attribute name="title">
         <string>Test</string>
        </attribute>
@@ -3072,7 +3082,7 @@ font: 10pt &quot;Arial&quot;;</string>
       <property name="currentIndex">
        <number>0</number>
       </property>
-      <widget class="QWidget" name="tab">
+      <widget class="QWidget" name="tabRealtime">
        <attribute name="title">
         <string>Realtime</string>
        </attribute>
@@ -4743,6 +4753,11 @@ font: 10pt &quot;Arial&quot;;</string>
          </layout>
         </widget>
        </widget>
+      </widget>
+      <widget class="QWidget" name="tabHistory">
+       <attribute name="title">
+        <string>History</string>
+       </attribute>
       </widget>
      </widget>
     </widget>

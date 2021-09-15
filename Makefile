@@ -247,6 +247,7 @@ Makefile: CAN.pro H:/QT/5.12.9/mingw73_32/mkspecs/win32-g++/qmake.conf H:/QT/5.1
 		H:/QT/5.12.9/mingw73_32/mkspecs/features/yacc.prf \
 		H:/QT/5.12.9/mingw73_32/mkspecs/features/lex.prf \
 		CAN.pro \
+		H:/QT/5.12.9/mingw73_32/lib/Qt5Charts.prl \
 		H:/QT/5.12.9/mingw73_32/lib/Qt5Widgets.prl \
 		H:/QT/5.12.9/mingw73_32/lib/Qt5Gui.prl \
 		H:/QT/5.12.9/mingw73_32/lib/Qt5Core.prl \
@@ -436,6 +437,7 @@ H:/QT/5.12.9/mingw73_32/mkspecs/features/exceptions.prf:
 H:/QT/5.12.9/mingw73_32/mkspecs/features/yacc.prf:
 H:/QT/5.12.9/mingw73_32/mkspecs/features/lex.prf:
 CAN.pro:
+H:/QT/5.12.9/mingw73_32/lib/Qt5Charts.prl:
 H:/QT/5.12.9/mingw73_32/lib/Qt5Widgets.prl:
 H:/QT/5.12.9/mingw73_32/lib/Qt5Gui.prl:
 H:/QT/5.12.9/mingw73_32/lib/Qt5Core.prl:
