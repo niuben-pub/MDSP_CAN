@@ -11,7 +11,7 @@
 #define PGN60416 (0xEC00)  // 长数据起始参数组
 #define PGN60160 (0xEB00)  // 长数据数据参数组
 
-#define PGN59940 (0xEA00)  // 保留
+#define PGN59940 (0xEA00)  // 读FPGA内部温度
 #define PGN56468 (0xE900)  // 工作模式切换
 #define PGN59392 (0xE800)  // IDOG信令
 #define PGN59136 (0xE700)  // 读MCU

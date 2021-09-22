@@ -190,9 +190,16 @@ void CANThread::sendData(int ID,unsigned char *ch)
 
 void CANThread::sendADCrequestData()
 {
-    for(int i = 0 ; i < 8; i++)
+    for(int boardAddr = 1 ; boardAddr <= 8; boardAddr++)
     {
-        int ID = (PGN57600 << 8) + i;  //请求ADC 命令
+
+        //读FPGA内部温度
+        int ID = (PGN59940 << 8) + boardAddr;;  //读FPGA内部温度命令  boardAddr是设备地址
+        unsigned char send_str[8] = {0};
+        this->sendData(ID,(unsigned char*)send_str);
+        sleep(10);  //
+
+        ID = (PGN57600 << 8) + boardAddr;  //请求ADC 命令  boardAddr是设备地址
         unsigned char arr[8] = {0};  //第[7]字节表示通道号
         arr[7] = 4;//ADC0  chn4
         this->sendData(ID,(unsigned char *)arr);
@@ -206,9 +213,10 @@ void CANThread::sendADCrequestData()
         arr[7] = 7;//ADC3  chn7
         this->sendData(ID,(unsigned char *)arr);
         sleep(10);
+
+
+
     }
-
-
 
 }
 void CANThread::run()

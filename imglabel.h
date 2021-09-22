@@ -113,6 +113,7 @@ private:
     void InitConnect(void);
 public:
     explicit ImgLabel(QWidget *parent = nullptr);
+    void resetRegData(void);
 
     void PrintRegTable(void);
     void handleImgControl(unsigned int zone_x, unsigned int zone_y);

@@ -9,6 +9,11 @@
 #include "boardinfo.h"
 #include "imglabel.h"
 #include <QTimer>
+
+#include <QtCharts>
+using namespace QtCharts;
+
+
 namespace Ui {
 class MainWindow;
 }
@@ -168,6 +173,8 @@ private slots:
 
     void on_btnWorkControlSave_clicked();
 
+
+
 private:
     Ui::MainWindow *ui;
     CANThread *canthread;
@@ -183,6 +190,15 @@ private:
     boardinfo *board6;
     boardinfo *board7;
     boardinfo *board8;
+
+
+///图表相关
+
+
+
+
+
+
 
 
 public:

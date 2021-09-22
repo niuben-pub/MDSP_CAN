@@ -6,6 +6,33 @@ ImgLabel::ImgLabel(QWidget *parent) : QLabel(parent)
     InitConnect();
 }
 
+void ImgLabel::resetRegData()
+{
+    //硬件版本号
+    hardwareVersionReg = 0;
+    //设备状态寄存器
+    deviceStateReg = 0;
+    //fpga内部温度寄存器
+    fpgaTempReg = 0;
+    //3g in1 图像尺寸寄存器  1 - 1080p  0 - 540p
+    img3GIn1SizeReg = IN_3G_SIZE_1920X1080;
+    //3g in2 图像尺寸寄存器  1 - 1080p  0 - 540p
+    img3GIn2SizeReg = IN_3G_SIZE_1920X1080;
+    //12g 输入开关
+    in12GSwitchReg = IN_12G_SWITCH_OFF;
+    //显示模式寄存器
+    displayModeReg = SDI_4K_16;
+    for(int i = 0 ; i < 4; i++)
+    {
+        for (int j = 0; j < 4; j++)
+        {
+            regTable[i][j] = j + i * 4;
+        }
+    }
+
+
+}
+
 void ImgLabel::PrintRegTable()
 {
     for (int i = 0; i < 4; i++)

@@ -51,7 +51,7 @@
      <enum>QTabWidget::West</enum>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="tabCanParam">
      <attribute name="title">
@@ -763,7 +763,7 @@
        <enum>QTabWidget::West</enum>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tabControl">
        <attribute name="title">
@@ -1067,6 +1067,11 @@ font: 10pt &quot;Arial&quot;;</string>
            <string>540P</string>
           </property>
          </item>
+         <item>
+          <property name="text">
+           <string>FULL</string>
+          </property>
+         </item>
         </widget>
         <widget class="QComboBox" name="comboBox3Gin1SizeBoard2">
          <property name="geometry">
@@ -1088,6 +1093,11 @@ font: 10pt &quot;Arial&quot;;</string>
          <item>
           <property name="text">
            <string>540P</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>FULL</string>
           </property>
          </item>
         </widget>
@@ -1240,6 +1250,11 @@ font: 10pt &quot;Arial&quot;;</string>
            <string>540P</string>
           </property>
          </item>
+         <item>
+          <property name="text">
+           <string>FULL</string>
+          </property>
+         </item>
         </widget>
         <widget class="QComboBox" name="comboBox3Gin1SizeBoard3">
          <property name="geometry">
@@ -1261,6 +1276,11 @@ font: 10pt &quot;Arial&quot;;</string>
          <item>
           <property name="text">
            <string>540P</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>FULL</string>
           </property>
          </item>
         </widget>
@@ -1413,6 +1433,11 @@ font: 10pt &quot;Arial&quot;;</string>
            <string>540P</string>
           </property>
          </item>
+         <item>
+          <property name="text">
+           <string>FULL</string>
+          </property>
+         </item>
         </widget>
         <widget class="QComboBox" name="comboBox3Gin1SizeBoard4">
          <property name="geometry">
@@ -1434,6 +1459,11 @@ font: 10pt &quot;Arial&quot;;</string>
          <item>
           <property name="text">
            <string>540P</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>FULL</string>
           </property>
          </item>
         </widget>
@@ -1586,6 +1616,11 @@ font: 10pt &quot;Arial&quot;;</string>
            <string>540P</string>
           </property>
          </item>
+         <item>
+          <property name="text">
+           <string>FULL</string>
+          </property>
+         </item>
         </widget>
         <widget class="QComboBox" name="comboBox3Gin1SizeBoard5">
          <property name="geometry">
@@ -1607,6 +1642,11 @@ font: 10pt &quot;Arial&quot;;</string>
          <item>
           <property name="text">
            <string>540P</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>FULL</string>
           </property>
          </item>
         </widget>
@@ -1759,6 +1799,11 @@ font: 10pt &quot;Arial&quot;;</string>
            <string>540P</string>
           </property>
          </item>
+         <item>
+          <property name="text">
+           <string>FULL</string>
+          </property>
+         </item>
         </widget>
         <widget class="QComboBox" name="comboBox3Gin1SizeBoard6">
          <property name="geometry">
@@ -1780,6 +1825,11 @@ font: 10pt &quot;Arial&quot;;</string>
          <item>
           <property name="text">
            <string>540P</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>FULL</string>
           </property>
          </item>
         </widget>
@@ -1932,6 +1982,11 @@ font: 10pt &quot;Arial&quot;;</string>
            <string>540P</string>
           </property>
          </item>
+         <item>
+          <property name="text">
+           <string>FULL</string>
+          </property>
+         </item>
         </widget>
         <widget class="QComboBox" name="comboBox3Gin1SizeBoard7">
          <property name="geometry">
@@ -1953,6 +2008,11 @@ font: 10pt &quot;Arial&quot;;</string>
          <item>
           <property name="text">
            <string>540P</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>FULL</string>
           </property>
          </item>
         </widget>
@@ -2105,6 +2165,11 @@ font: 10pt &quot;Arial&quot;;</string>
            <string>540P</string>
           </property>
          </item>
+         <item>
+          <property name="text">
+           <string>FULL</string>
+          </property>
+         </item>
         </widget>
         <widget class="QComboBox" name="comboBox3Gin1SizeBoard8">
          <property name="geometry">
@@ -2126,6 +2191,11 @@ font: 10pt &quot;Arial&quot;;</string>
          <item>
           <property name="text">
            <string>540P</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>FULL</string>
           </property>
          </item>
         </widget>
@@ -3080,7 +3150,7 @@ font: 10pt &quot;Arial&quot;;</string>
        <enum>QTabWidget::West</enum>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="tabRealtime">
        <attribute name="title">
@@ -3121,7 +3191,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>180</x>
-           <y>240</y>
+           <y>210</y>
            <width>71</width>
            <height>28</height>
           </rect>
@@ -3134,7 +3204,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>180</x>
-           <y>190</y>
+           <y>170</y>
            <width>71</width>
            <height>28</height>
           </rect>
@@ -3147,7 +3217,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>30</x>
-           <y>240</y>
+           <y>210</y>
            <width>150</width>
            <height>31</height>
           </rect>
@@ -3156,7 +3226,7 @@ font: 10pt &quot;Arial&quot;;</string>
           <string notr="true">font: 10pt &quot;Arial&quot;;</string>
          </property>
          <property name="text">
-          <string>Temperature</string>
+          <string>Cavity Temperature</string>
          </property>
         </widget>
         <widget class="QLCDNumber" name="lcdNumberCurrentBoard1">
@@ -3176,7 +3246,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>30</x>
-           <y>140</y>
+           <y>130</y>
            <width>141</width>
            <height>30</height>
           </rect>
@@ -3192,7 +3262,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>180</x>
-           <y>140</y>
+           <y>130</y>
            <width>71</width>
            <height>28</height>
           </rect>
@@ -3205,7 +3275,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>30</x>
-           <y>190</y>
+           <y>170</y>
            <width>170</width>
            <height>30</height>
           </rect>
@@ -3292,6 +3362,35 @@ font: 10pt &quot;Arial&quot;;</string>
           </item>
          </layout>
         </widget>
+        <widget class="QLCDNumber" name="lcdNumberFPGATempeBoard1">
+         <property name="geometry">
+          <rect>
+           <x>180</x>
+           <y>250</y>
+           <width>71</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="segmentStyle">
+          <enum>QLCDNumber::Flat</enum>
+         </property>
+        </widget>
+        <widget class="QLabel" name="labTempBoard1_2">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>250</y>
+           <width>150</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 10pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="text">
+          <string>FPGA Temperature</string>
+         </property>
+        </widget>
        </widget>
        <widget class="QPushButton" name="btnStatusBoard1_2">
         <property name="geometry">
@@ -3360,7 +3459,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>180</x>
-           <y>240</y>
+           <y>210</y>
            <width>71</width>
            <height>28</height>
           </rect>
@@ -3373,7 +3472,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>180</x>
-           <y>190</y>
+           <y>170</y>
            <width>71</width>
            <height>28</height>
           </rect>
@@ -3386,7 +3485,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>30</x>
-           <y>240</y>
+           <y>210</y>
            <width>150</width>
            <height>31</height>
           </rect>
@@ -3395,7 +3494,7 @@ font: 10pt &quot;Arial&quot;;</string>
           <string notr="true">font: 10pt &quot;Arial&quot;;</string>
          </property>
          <property name="text">
-          <string>Temperature</string>
+          <string>Cavity Temperature</string>
          </property>
         </widget>
         <widget class="QLCDNumber" name="lcdNumberCurrentBoard2">
@@ -3415,7 +3514,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>30</x>
-           <y>140</y>
+           <y>130</y>
            <width>141</width>
            <height>30</height>
           </rect>
@@ -3431,7 +3530,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>180</x>
-           <y>140</y>
+           <y>130</y>
            <width>71</width>
            <height>28</height>
           </rect>
@@ -3444,7 +3543,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>30</x>
-           <y>190</y>
+           <y>170</y>
            <width>170</width>
            <height>30</height>
           </rect>
@@ -3528,6 +3627,35 @@ font: 10pt &quot;Arial&quot;;</string>
           </item>
          </layout>
         </widget>
+        <widget class="QLabel" name="labTempBoard1_3">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>250</y>
+           <width>150</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 10pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="text">
+          <string>FPGA Temperature</string>
+         </property>
+        </widget>
+        <widget class="QLCDNumber" name="lcdNumberFPGATempeBoard2">
+         <property name="geometry">
+          <rect>
+           <x>180</x>
+           <y>250</y>
+           <width>71</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="segmentStyle">
+          <enum>QLCDNumber::Flat</enum>
+         </property>
+        </widget>
        </widget>
        <widget class="QGroupBox" name="groupBox_3">
         <property name="geometry">
@@ -3564,7 +3692,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>180</x>
-           <y>240</y>
+           <y>210</y>
            <width>71</width>
            <height>28</height>
           </rect>
@@ -3577,7 +3705,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>180</x>
-           <y>190</y>
+           <y>170</y>
            <width>71</width>
            <height>28</height>
           </rect>
@@ -3590,7 +3718,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>30</x>
-           <y>240</y>
+           <y>210</y>
            <width>150</width>
            <height>31</height>
           </rect>
@@ -3599,7 +3727,7 @@ font: 10pt &quot;Arial&quot;;</string>
           <string notr="true">font: 10pt &quot;Arial&quot;;</string>
          </property>
          <property name="text">
-          <string>Temperature</string>
+          <string>Cavity Temperature</string>
          </property>
         </widget>
         <widget class="QLCDNumber" name="lcdNumberCurrentBoard3">
@@ -3619,7 +3747,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>30</x>
-           <y>140</y>
+           <y>130</y>
            <width>141</width>
            <height>30</height>
           </rect>
@@ -3635,7 +3763,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>180</x>
-           <y>140</y>
+           <y>130</y>
            <width>71</width>
            <height>28</height>
           </rect>
@@ -3648,7 +3776,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>30</x>
-           <y>190</y>
+           <y>170</y>
            <width>170</width>
            <height>30</height>
           </rect>
@@ -3732,6 +3860,35 @@ font: 10pt &quot;Arial&quot;;</string>
           </item>
          </layout>
         </widget>
+        <widget class="QLabel" name="labTempBoard1_4">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>250</y>
+           <width>150</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 10pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="text">
+          <string>FPGA Temperature</string>
+         </property>
+        </widget>
+        <widget class="QLCDNumber" name="lcdNumberFPGATempeBoard3">
+         <property name="geometry">
+          <rect>
+           <x>180</x>
+           <y>250</y>
+           <width>71</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="segmentStyle">
+          <enum>QLCDNumber::Flat</enum>
+         </property>
+        </widget>
        </widget>
        <widget class="QGroupBox" name="groupBox_4">
         <property name="geometry">
@@ -3768,7 +3925,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>180</x>
-           <y>240</y>
+           <y>210</y>
            <width>71</width>
            <height>28</height>
           </rect>
@@ -3781,7 +3938,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>180</x>
-           <y>190</y>
+           <y>170</y>
            <width>71</width>
            <height>28</height>
           </rect>
@@ -3794,7 +3951,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>30</x>
-           <y>240</y>
+           <y>210</y>
            <width>150</width>
            <height>31</height>
           </rect>
@@ -3803,7 +3960,7 @@ font: 10pt &quot;Arial&quot;;</string>
           <string notr="true">font: 10pt &quot;Arial&quot;;</string>
          </property>
          <property name="text">
-          <string>Temperature</string>
+          <string>Cavity Temperature</string>
          </property>
         </widget>
         <widget class="QLCDNumber" name="lcdNumberCurrentBoard4">
@@ -3823,7 +3980,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>30</x>
-           <y>140</y>
+           <y>130</y>
            <width>141</width>
            <height>30</height>
           </rect>
@@ -3839,7 +3996,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>180</x>
-           <y>140</y>
+           <y>130</y>
            <width>71</width>
            <height>28</height>
           </rect>
@@ -3852,7 +4009,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>30</x>
-           <y>190</y>
+           <y>170</y>
            <width>170</width>
            <height>30</height>
           </rect>
@@ -3936,6 +4093,35 @@ font: 10pt &quot;Arial&quot;;</string>
           </item>
          </layout>
         </widget>
+        <widget class="QLabel" name="labTempBoard1_5">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>250</y>
+           <width>150</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 10pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="text">
+          <string>FPGA Temperature</string>
+         </property>
+        </widget>
+        <widget class="QLCDNumber" name="lcdNumberFPGATempeBoard4">
+         <property name="geometry">
+          <rect>
+           <x>180</x>
+           <y>250</y>
+           <width>71</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="segmentStyle">
+          <enum>QLCDNumber::Flat</enum>
+         </property>
+        </widget>
        </widget>
        <widget class="QGroupBox" name="groupBox_5">
         <property name="geometry">
@@ -3972,7 +4158,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>180</x>
-           <y>240</y>
+           <y>210</y>
            <width>71</width>
            <height>28</height>
           </rect>
@@ -3985,7 +4171,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>180</x>
-           <y>190</y>
+           <y>170</y>
            <width>71</width>
            <height>28</height>
           </rect>
@@ -3998,7 +4184,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>30</x>
-           <y>240</y>
+           <y>210</y>
            <width>150</width>
            <height>31</height>
           </rect>
@@ -4007,7 +4193,7 @@ font: 10pt &quot;Arial&quot;;</string>
           <string notr="true">font: 10pt &quot;Arial&quot;;</string>
          </property>
          <property name="text">
-          <string>Temperature</string>
+          <string>Cavity Temperature</string>
          </property>
         </widget>
         <widget class="QLCDNumber" name="lcdNumberCurrentBoard5">
@@ -4027,7 +4213,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>30</x>
-           <y>140</y>
+           <y>130</y>
            <width>141</width>
            <height>30</height>
           </rect>
@@ -4043,7 +4229,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>180</x>
-           <y>140</y>
+           <y>130</y>
            <width>71</width>
            <height>28</height>
           </rect>
@@ -4056,7 +4242,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>30</x>
-           <y>190</y>
+           <y>170</y>
            <width>170</width>
            <height>30</height>
           </rect>
@@ -4140,6 +4326,35 @@ font: 10pt &quot;Arial&quot;;</string>
           </item>
          </layout>
         </widget>
+        <widget class="QLabel" name="labTempBoard1_6">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>250</y>
+           <width>150</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 10pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="text">
+          <string>FPGA Temperature</string>
+         </property>
+        </widget>
+        <widget class="QLCDNumber" name="lcdNumberFPGATempeBoard5">
+         <property name="geometry">
+          <rect>
+           <x>180</x>
+           <y>250</y>
+           <width>71</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="segmentStyle">
+          <enum>QLCDNumber::Flat</enum>
+         </property>
+        </widget>
        </widget>
        <widget class="QGroupBox" name="groupBox_6">
         <property name="geometry">
@@ -4176,7 +4391,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>180</x>
-           <y>240</y>
+           <y>210</y>
            <width>71</width>
            <height>28</height>
           </rect>
@@ -4189,7 +4404,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>180</x>
-           <y>190</y>
+           <y>170</y>
            <width>71</width>
            <height>28</height>
           </rect>
@@ -4202,7 +4417,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>30</x>
-           <y>240</y>
+           <y>210</y>
            <width>150</width>
            <height>31</height>
           </rect>
@@ -4211,7 +4426,7 @@ font: 10pt &quot;Arial&quot;;</string>
           <string notr="true">font: 10pt &quot;Arial&quot;;</string>
          </property>
          <property name="text">
-          <string>Temperature</string>
+          <string>Cavity Temperature</string>
          </property>
         </widget>
         <widget class="QLCDNumber" name="lcdNumberCurrentBoard6">
@@ -4231,7 +4446,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>30</x>
-           <y>140</y>
+           <y>130</y>
            <width>141</width>
            <height>30</height>
           </rect>
@@ -4247,7 +4462,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>180</x>
-           <y>140</y>
+           <y>130</y>
            <width>71</width>
            <height>28</height>
           </rect>
@@ -4260,7 +4475,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>30</x>
-           <y>190</y>
+           <y>170</y>
            <width>170</width>
            <height>30</height>
           </rect>
@@ -4344,6 +4559,35 @@ font: 10pt &quot;Arial&quot;;</string>
           </item>
          </layout>
         </widget>
+        <widget class="QLabel" name="labTempBoard1_7">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>250</y>
+           <width>150</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 10pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="text">
+          <string>FPGA Temperature</string>
+         </property>
+        </widget>
+        <widget class="QLCDNumber" name="lcdNumberFPGATempeBoard6">
+         <property name="geometry">
+          <rect>
+           <x>180</x>
+           <y>250</y>
+           <width>71</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="segmentStyle">
+          <enum>QLCDNumber::Flat</enum>
+         </property>
+        </widget>
        </widget>
        <widget class="QGroupBox" name="groupBox_7">
         <property name="geometry">
@@ -4380,7 +4624,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>180</x>
-           <y>240</y>
+           <y>210</y>
            <width>71</width>
            <height>28</height>
           </rect>
@@ -4393,7 +4637,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>180</x>
-           <y>190</y>
+           <y>170</y>
            <width>71</width>
            <height>28</height>
           </rect>
@@ -4406,7 +4650,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>30</x>
-           <y>240</y>
+           <y>210</y>
            <width>150</width>
            <height>31</height>
           </rect>
@@ -4415,7 +4659,7 @@ font: 10pt &quot;Arial&quot;;</string>
           <string notr="true">font: 10pt &quot;Arial&quot;;</string>
          </property>
          <property name="text">
-          <string>Temperature</string>
+          <string>Cavity Temperature</string>
          </property>
         </widget>
         <widget class="QLCDNumber" name="lcdNumberCurrentBoard7">
@@ -4435,7 +4679,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>30</x>
-           <y>140</y>
+           <y>130</y>
            <width>141</width>
            <height>30</height>
           </rect>
@@ -4451,7 +4695,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>180</x>
-           <y>140</y>
+           <y>130</y>
            <width>71</width>
            <height>28</height>
           </rect>
@@ -4464,7 +4708,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>30</x>
-           <y>190</y>
+           <y>170</y>
            <width>170</width>
            <height>30</height>
           </rect>
@@ -4548,6 +4792,35 @@ font: 10pt &quot;Arial&quot;;</string>
           </item>
          </layout>
         </widget>
+        <widget class="QLabel" name="labTempBoard1_8">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>250</y>
+           <width>150</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 10pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="text">
+          <string>FPGA Temperature</string>
+         </property>
+        </widget>
+        <widget class="QLCDNumber" name="lcdNumberFPGATempeBoard7">
+         <property name="geometry">
+          <rect>
+           <x>180</x>
+           <y>250</y>
+           <width>71</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="segmentStyle">
+          <enum>QLCDNumber::Flat</enum>
+         </property>
+        </widget>
        </widget>
        <widget class="QGroupBox" name="groupBox_8">
         <property name="geometry">
@@ -4584,7 +4857,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>180</x>
-           <y>240</y>
+           <y>210</y>
            <width>71</width>
            <height>28</height>
           </rect>
@@ -4597,7 +4870,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>180</x>
-           <y>190</y>
+           <y>170</y>
            <width>71</width>
            <height>28</height>
           </rect>
@@ -4610,7 +4883,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>30</x>
-           <y>240</y>
+           <y>210</y>
            <width>150</width>
            <height>31</height>
           </rect>
@@ -4619,7 +4892,7 @@ font: 10pt &quot;Arial&quot;;</string>
           <string notr="true">font: 10pt &quot;Arial&quot;;</string>
          </property>
          <property name="text">
-          <string>Temperature</string>
+          <string>Cavity Temperature</string>
          </property>
         </widget>
         <widget class="QLCDNumber" name="lcdNumberCurrentBoard8">
@@ -4639,7 +4912,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>30</x>
-           <y>140</y>
+           <y>130</y>
            <width>141</width>
            <height>30</height>
           </rect>
@@ -4655,7 +4928,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>180</x>
-           <y>140</y>
+           <y>130</y>
            <width>71</width>
            <height>28</height>
           </rect>
@@ -4668,7 +4941,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>30</x>
-           <y>190</y>
+           <y>170</y>
            <width>170</width>
            <height>30</height>
           </rect>
@@ -4752,12 +5025,461 @@ font: 10pt &quot;Arial&quot;;</string>
           </item>
          </layout>
         </widget>
+        <widget class="QLabel" name="labTempBoard1_9">
+         <property name="geometry">
+          <rect>
+           <x>30</x>
+           <y>250</y>
+           <width>150</width>
+           <height>31</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 10pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="text">
+          <string>FPGA Temperature</string>
+         </property>
+        </widget>
+        <widget class="QLCDNumber" name="lcdNumberFPGATempeBoard8">
+         <property name="geometry">
+          <rect>
+           <x>180</x>
+           <y>250</y>
+           <width>71</width>
+           <height>28</height>
+          </rect>
+         </property>
+         <property name="segmentStyle">
+          <enum>QLCDNumber::Flat</enum>
+         </property>
+        </widget>
        </widget>
       </widget>
       <widget class="QWidget" name="tabHistory">
        <attribute name="title">
-        <string>History</string>
+        <string>Current</string>
        </attribute>
+       <widget class="Current_ChartView" name="chartViewCurrentBoard1">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>30</y>
+          <width>511</width>
+          <height>191</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="Current_ChartView" name="chartViewCurrentBoard2">
+        <property name="geometry">
+         <rect>
+          <x>580</x>
+          <y>30</y>
+          <width>511</width>
+          <height>191</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="Current_ChartView" name="chartViewCurrentBoard3">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>240</y>
+          <width>511</width>
+          <height>191</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="Current_ChartView" name="chartViewCurrentBoard4">
+        <property name="geometry">
+         <rect>
+          <x>580</x>
+          <y>240</y>
+          <width>511</width>
+          <height>191</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="Current_ChartView" name="chartViewCurrentBoard5">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>450</y>
+          <width>511</width>
+          <height>191</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="Current_ChartView" name="chartViewCurrentBoard6">
+        <property name="geometry">
+         <rect>
+          <x>580</x>
+          <y>450</y>
+          <width>511</width>
+          <height>191</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="Current_ChartView" name="chartViewCurrentBoard7">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>660</y>
+          <width>511</width>
+          <height>191</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="Current_ChartView" name="chartViewCurrentBoard8">
+        <property name="geometry">
+         <rect>
+          <x>580</x>
+          <y>660</y>
+          <width>511</width>
+          <height>191</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Voltage12</string>
+       </attribute>
+       <widget class="Current_ChartView" name="chartView12VBoard1">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>30</y>
+          <width>511</width>
+          <height>191</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="Current_ChartView" name="chartView12VBoard5">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>450</y>
+          <width>511</width>
+          <height>191</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="Current_ChartView" name="chartView12VBoard3">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>240</y>
+          <width>511</width>
+          <height>191</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="Current_ChartView" name="chartView12VBoard6">
+        <property name="geometry">
+         <rect>
+          <x>580</x>
+          <y>450</y>
+          <width>511</width>
+          <height>191</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="Current_ChartView" name="chartView12VBoard8">
+        <property name="geometry">
+         <rect>
+          <x>580</x>
+          <y>660</y>
+          <width>511</width>
+          <height>191</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="Current_ChartView" name="chartView12VBoard2">
+        <property name="geometry">
+         <rect>
+          <x>580</x>
+          <y>30</y>
+          <width>511</width>
+          <height>191</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="Current_ChartView" name="chartView12VBoard7">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>660</y>
+          <width>511</width>
+          <height>191</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="Current_ChartView" name="chartView12VBoard4">
+        <property name="geometry">
+         <rect>
+          <x>580</x>
+          <y>240</y>
+          <width>511</width>
+          <height>191</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Voltage5</string>
+       </attribute>
+       <widget class="Current_ChartView" name="chartView5VBoard1">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>30</y>
+          <width>511</width>
+          <height>191</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="Current_ChartView" name="chartView5VBoard5">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>450</y>
+          <width>511</width>
+          <height>191</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="Current_ChartView" name="chartView5VBoard3">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>240</y>
+          <width>511</width>
+          <height>191</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="Current_ChartView" name="chartView5VBoard6">
+        <property name="geometry">
+         <rect>
+          <x>580</x>
+          <y>450</y>
+          <width>511</width>
+          <height>191</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="Current_ChartView" name="chartView5VBoard8">
+        <property name="geometry">
+         <rect>
+          <x>580</x>
+          <y>660</y>
+          <width>511</width>
+          <height>191</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="Current_ChartView" name="chartView5VBoard2">
+        <property name="geometry">
+         <rect>
+          <x>580</x>
+          <y>30</y>
+          <width>511</width>
+          <height>191</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="Current_ChartView" name="chartView5VBoard7">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>660</y>
+          <width>511</width>
+          <height>191</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="Current_ChartView" name="chartView5VBoard4">
+        <property name="geometry">
+         <rect>
+          <x>580</x>
+          <y>240</y>
+          <width>511</width>
+          <height>191</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>Cavity Temp</string>
+       </attribute>
+       <widget class="Current_ChartView" name="chartViewCavityTempBoard1">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>30</y>
+          <width>511</width>
+          <height>191</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="Current_ChartView" name="chartViewCavityTempBoard5">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>450</y>
+          <width>511</width>
+          <height>191</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="Current_ChartView" name="chartViewCavityTempBoard3">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>240</y>
+          <width>511</width>
+          <height>191</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="Current_ChartView" name="chartViewCavityTempBoard6">
+        <property name="geometry">
+         <rect>
+          <x>580</x>
+          <y>450</y>
+          <width>511</width>
+          <height>191</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="Current_ChartView" name="chartViewCavityTempBoard8">
+        <property name="geometry">
+         <rect>
+          <x>580</x>
+          <y>660</y>
+          <width>511</width>
+          <height>191</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="Current_ChartView" name="chartViewCavityTempBoard2">
+        <property name="geometry">
+         <rect>
+          <x>580</x>
+          <y>30</y>
+          <width>511</width>
+          <height>191</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="Current_ChartView" name="chartViewCavityTempBoard7">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>660</y>
+          <width>511</width>
+          <height>191</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="Current_ChartView" name="chartViewCavityTempBoard4">
+        <property name="geometry">
+         <rect>
+          <x>580</x>
+          <y>240</y>
+          <width>511</width>
+          <height>191</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_4">
+       <attribute name="title">
+        <string>FPGA Temp</string>
+       </attribute>
+       <widget class="Current_ChartView" name="chartViewFpgaTempBoard8">
+        <property name="geometry">
+         <rect>
+          <x>580</x>
+          <y>660</y>
+          <width>511</width>
+          <height>191</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="Current_ChartView" name="chartViewFpgaTempBoard5">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>450</y>
+          <width>511</width>
+          <height>191</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="Current_ChartView" name="chartViewFpgaTempBoard6">
+        <property name="geometry">
+         <rect>
+          <x>580</x>
+          <y>450</y>
+          <width>511</width>
+          <height>191</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="Current_ChartView" name="chartViewFpgaTempBoard3">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>240</y>
+          <width>511</width>
+          <height>191</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="Current_ChartView" name="chartViewFpgaTempBoard4">
+        <property name="geometry">
+         <rect>
+          <x>580</x>
+          <y>240</y>
+          <width>511</width>
+          <height>191</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="Current_ChartView" name="chartViewFpgaTempBoard7">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>660</y>
+          <width>511</width>
+          <height>191</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="Current_ChartView" name="chartViewFpgaTempBoard1">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>30</y>
+          <width>511</width>
+          <height>191</height>
+         </rect>
+        </property>
+       </widget>
+       <widget class="Current_ChartView" name="chartViewFpgaTempBoard2">
+        <property name="geometry">
+         <rect>
+          <x>580</x>
+          <y>30</y>
+          <width>511</width>
+          <height>191</height>
+         </rect>
+        </property>
+       </widget>
       </widget>
      </widget>
     </widget>
@@ -5083,7 +5805,12 @@ font: 10pt &quot;Arial&quot;;</string>
   <customwidget>
    <class>imgoverlayLabel</class>
    <extends>QLabel</extends>
-   <header location="global">imgoverlaylabel.h</header>
+   <header>imgoverlaylabel.h</header>
+  </customwidget>
+  <customwidget>
+   <class>Current_ChartView</class>
+   <extends>QGraphicsView</extends>
+   <header location="global">current_chartview.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

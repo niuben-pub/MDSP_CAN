@@ -23,6 +23,7 @@ public:
     float MDSP_Board_HV;
     float MDSP_Board_LV;
     float MDSP_Board_temperature;
+    float MDSP_Board_FPGAtemperature;
     VCI_CAN_OBJ *CANdata;
 public slots:
     void protocolHand(VCI_CAN_OBJ *vci);

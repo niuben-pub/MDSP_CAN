@@ -154,6 +154,17 @@ void MainWindow::displayMonitor(VCI_CAN_OBJ *vci, DWORD dwRel)
              ui->lcdNumberVoltage12Board1->display(this->protocolHand->MDSP_Board_HV);
              ui->lcdNumberVoltage5Board1->display(this->protocolHand->MDSP_Board_LV);
              ui->lcdNumberTempeBoard1->display(this->protocolHand->MDSP_Board_temperature);
+             ui->lcdNumberFPGATempeBoard1->display(this->protocolHand->MDSP_Board_FPGAtemperature);
+
+             ui->chartViewCurrentBoard1->prepareData(this->protocolHand->MDSP_Board_currents);
+             ui->chartView12VBoard1->prepareData(this->protocolHand->MDSP_Board_HV);
+             ui->chartView5VBoard1->prepareData(this->protocolHand->MDSP_Board_LV);
+             ui->chartViewCavityTempBoard1->prepareData(this->protocolHand->MDSP_Board_temperature);
+             ui->chartViewFpgaTempBoard1->prepareData(this->protocolHand->MDSP_Board_FPGAtemperature);
+
+
+
+
          }
 
     }
@@ -180,6 +191,13 @@ void MainWindow::displayMonitor(VCI_CAN_OBJ *vci, DWORD dwRel)
              ui->lcdNumberVoltage12Board2->display(this->protocolHand->MDSP_Board_HV);
              ui->lcdNumberVoltage5Board2->display(this->protocolHand->MDSP_Board_LV);
              ui->lcdNumberTempeBoard2->display(this->protocolHand->MDSP_Board_temperature);
+             ui->lcdNumberFPGATempeBoard2->display(this->protocolHand->MDSP_Board_FPGAtemperature);
+
+             ui->chartViewCurrentBoard2->prepareData(this->protocolHand->MDSP_Board_currents);
+             ui->chartView12VBoard2->prepareData(this->protocolHand->MDSP_Board_HV);
+             ui->chartView5VBoard2->prepareData(this->protocolHand->MDSP_Board_LV);
+             ui->chartViewCavityTempBoard2->prepareData(this->protocolHand->MDSP_Board_temperature);
+             ui->chartViewFpgaTempBoard2->prepareData(this->protocolHand->MDSP_Board_FPGAtemperature);
          }
 
     }
@@ -206,6 +224,13 @@ void MainWindow::displayMonitor(VCI_CAN_OBJ *vci, DWORD dwRel)
              ui->lcdNumberVoltage12Board3->display(this->protocolHand->MDSP_Board_HV);
              ui->lcdNumberVoltage5Board3->display(this->protocolHand->MDSP_Board_LV);
              ui->lcdNumberTempeBoard3->display(this->protocolHand->MDSP_Board_temperature);
+             ui->lcdNumberFPGATempeBoard3->display(this->protocolHand->MDSP_Board_FPGAtemperature);
+
+             ui->chartViewCurrentBoard3->prepareData(this->protocolHand->MDSP_Board_currents);
+             ui->chartView12VBoard3->prepareData(this->protocolHand->MDSP_Board_HV);
+             ui->chartView5VBoard3->prepareData(this->protocolHand->MDSP_Board_LV);
+             ui->chartViewCavityTempBoard3->prepareData(this->protocolHand->MDSP_Board_temperature);
+             ui->chartViewFpgaTempBoard3->prepareData(this->protocolHand->MDSP_Board_FPGAtemperature);
          }
 
     }
@@ -232,6 +257,13 @@ void MainWindow::displayMonitor(VCI_CAN_OBJ *vci, DWORD dwRel)
              ui->lcdNumberVoltage12Board4->display(this->protocolHand->MDSP_Board_HV);
              ui->lcdNumberVoltage5Board4->display(this->protocolHand->MDSP_Board_LV);
              ui->lcdNumberTempeBoard4->display(this->protocolHand->MDSP_Board_temperature);
+             ui->lcdNumberFPGATempeBoard4->display(this->protocolHand->MDSP_Board_FPGAtemperature);
+
+             ui->chartViewCurrentBoard4->prepareData(this->protocolHand->MDSP_Board_currents);
+             ui->chartView12VBoard4->prepareData(this->protocolHand->MDSP_Board_HV);
+             ui->chartView5VBoard4->prepareData(this->protocolHand->MDSP_Board_LV);
+             ui->chartViewCavityTempBoard4->prepareData(this->protocolHand->MDSP_Board_temperature);
+             ui->chartViewFpgaTempBoard4->prepareData(this->protocolHand->MDSP_Board_FPGAtemperature);
          }
 
     }
@@ -258,6 +290,13 @@ void MainWindow::displayMonitor(VCI_CAN_OBJ *vci, DWORD dwRel)
              ui->lcdNumberVoltage12Board5->display(this->protocolHand->MDSP_Board_HV);
              ui->lcdNumberVoltage5Board5->display(this->protocolHand->MDSP_Board_LV);
              ui->lcdNumberTempeBoard5->display(this->protocolHand->MDSP_Board_temperature);
+             ui->lcdNumberFPGATempeBoard5->display(this->protocolHand->MDSP_Board_FPGAtemperature);
+
+             ui->chartViewCurrentBoard5->prepareData(this->protocolHand->MDSP_Board_currents);
+             ui->chartView12VBoard5->prepareData(this->protocolHand->MDSP_Board_HV);
+             ui->chartView5VBoard5->prepareData(this->protocolHand->MDSP_Board_LV);
+             ui->chartViewCavityTempBoard5->prepareData(this->protocolHand->MDSP_Board_temperature);
+             ui->chartViewFpgaTempBoard5->prepareData(this->protocolHand->MDSP_Board_FPGAtemperature);
          }
 
     }
@@ -284,6 +323,14 @@ void MainWindow::displayMonitor(VCI_CAN_OBJ *vci, DWORD dwRel)
              ui->lcdNumberVoltage12Board6->display(this->protocolHand->MDSP_Board_HV);
              ui->lcdNumberVoltage5Board6->display(this->protocolHand->MDSP_Board_LV);
              ui->lcdNumberTempeBoard6->display(this->protocolHand->MDSP_Board_temperature);
+             ui->lcdNumberFPGATempeBoard6->display(this->protocolHand->MDSP_Board_FPGAtemperature);
+
+
+             ui->chartViewCurrentBoard6->prepareData(this->protocolHand->MDSP_Board_currents);
+             ui->chartView12VBoard6->prepareData(this->protocolHand->MDSP_Board_HV);
+             ui->chartView5VBoard6->prepareData(this->protocolHand->MDSP_Board_LV);
+             ui->chartViewCavityTempBoard6->prepareData(this->protocolHand->MDSP_Board_temperature);
+             ui->chartViewFpgaTempBoard6->prepareData(this->protocolHand->MDSP_Board_FPGAtemperature);
          }
 
     }
@@ -310,6 +357,14 @@ void MainWindow::displayMonitor(VCI_CAN_OBJ *vci, DWORD dwRel)
              ui->lcdNumberVoltage12Board7->display(this->protocolHand->MDSP_Board_HV);
              ui->lcdNumberVoltage5Board7->display(this->protocolHand->MDSP_Board_LV);
              ui->lcdNumberTempeBoard7->display(this->protocolHand->MDSP_Board_temperature);
+             ui->lcdNumberFPGATempeBoard7->display(this->protocolHand->MDSP_Board_FPGAtemperature);
+
+
+             ui->chartViewCurrentBoard7->prepareData(this->protocolHand->MDSP_Board_currents);
+             ui->chartView12VBoard7->prepareData(this->protocolHand->MDSP_Board_HV);
+             ui->chartView5VBoard7->prepareData(this->protocolHand->MDSP_Board_LV);
+             ui->chartViewCavityTempBoard7->prepareData(this->protocolHand->MDSP_Board_temperature);
+             ui->chartViewFpgaTempBoard7->prepareData(this->protocolHand->MDSP_Board_FPGAtemperature);
          }
 
     }
@@ -336,6 +391,14 @@ void MainWindow::displayMonitor(VCI_CAN_OBJ *vci, DWORD dwRel)
              ui->lcdNumberVoltage12Board8->display(this->protocolHand->MDSP_Board_HV);
              ui->lcdNumberVoltage5Board8->display(this->protocolHand->MDSP_Board_LV);
              ui->lcdNumberTempeBoard8->display(this->protocolHand->MDSP_Board_temperature);
+             ui->lcdNumberFPGATempeBoard8->display(this->protocolHand->MDSP_Board_FPGAtemperature);
+
+
+             ui->chartViewCurrentBoard8->prepareData(this->protocolHand->MDSP_Board_currents);
+             ui->chartView12VBoard8->prepareData(this->protocolHand->MDSP_Board_HV);
+             ui->chartView5VBoard8->prepareData(this->protocolHand->MDSP_Board_LV);
+             ui->chartViewCavityTempBoard8->prepareData(this->protocolHand->MDSP_Board_temperature);
+             ui->chartViewFpgaTempBoard8->prepareData(this->protocolHand->MDSP_Board_FPGAtemperature);
          }
 
     }
@@ -589,6 +652,22 @@ void MainWindow::displayMonitor(VCI_CAN_OBJ *vci, DWORD dwRel)
         }
     }
 
+    if(vci->ID == (PGN59940 << 8) + board1->readAddr ||
+       vci->ID == (PGN59940 << 8) + board2->readAddr ||
+        vci->ID == (PGN59940 << 8) + board3->readAddr ||
+        vci->ID == (PGN59940 << 8) + board4->readAddr ||
+        vci->ID == (PGN59940 << 8) + board5->readAddr ||
+        vci->ID == (PGN59940 << 8) + board6->readAddr ||
+        vci->ID == (PGN59940 << 8) + board7->readAddr ||
+        vci->ID == (PGN59940 << 8) + board8->readAddr ) //读取FPGA数据
+    {
+        unsigned int fpga_temp = 0;
+        fpga_temp += (unsigned int)vci[0].Data[6] << 8;
+        fpga_temp += (unsigned int)vci[0].Data[7] ;
+
+        this->protocolHand->MDSP_Board_FPGAtemperature = (float)fpga_temp * 693 / 1024 - 265;  //FPGA温度计算公式
+    }
+
 
 }
 
@@ -596,6 +675,59 @@ void MainWindow::initUi()
 {
     this->setWindowTitle("MDSP-CAN Tool V1.0");
     this->statusBar()->showMessage("CAN host is not started");
+
+
+    ui->chartViewCurrentBoard1->chart->setTitle("Board1 Current (A)");
+    ui->chartViewCurrentBoard2->chart->setTitle("Board2 Current (A)");
+    ui->chartViewCurrentBoard3->chart->setTitle("Board3 Current (A)");
+    ui->chartViewCurrentBoard4->chart->setTitle("Board4 Current (A)");
+    ui->chartViewCurrentBoard5->chart->setTitle("Board5 Current (A)");
+    ui->chartViewCurrentBoard6->chart->setTitle("Board6 Current (A)");
+    ui->chartViewCurrentBoard7->chart->setTitle("Board7 Current (A)");
+    ui->chartViewCurrentBoard8->chart->setTitle("Board8 Current (A)");
+
+    ui->chartView12VBoard1->chart->setTitle("Board1 Voltage 12V (V)");
+    ui->chartView12VBoard2->chart->setTitle("Board2 Voltage 12V (V)");
+    ui->chartView12VBoard3->chart->setTitle("Board3 Voltage 12V (V)");
+    ui->chartView12VBoard4->chart->setTitle("Board4 Voltage 12V (V)");
+    ui->chartView12VBoard5->chart->setTitle("Board5 Voltage 12V (V)");
+    ui->chartView12VBoard6->chart->setTitle("Board6 Voltage 12V (V)");
+    ui->chartView12VBoard7->chart->setTitle("Board7 Voltage 12V (V)");
+    ui->chartView12VBoard8->chart->setTitle("Board8 Voltage 12V (V)");
+
+
+    ui->chartView5VBoard1->chart->setTitle("Board1 Voltage 5V (V)");
+    ui->chartView5VBoard2->chart->setTitle("Board2 Voltage 5V (V)");
+    ui->chartView5VBoard3->chart->setTitle("Board3 Voltage 5V (V)");
+    ui->chartView5VBoard4->chart->setTitle("Board4 Voltage 5V (V)");
+    ui->chartView5VBoard5->chart->setTitle("Board5 Voltage 5V (V)");
+    ui->chartView5VBoard6->chart->setTitle("Board6 Voltage 5V (V)");
+    ui->chartView5VBoard7->chart->setTitle("Board7 Voltage 5V (V)");
+    ui->chartView5VBoard8->chart->setTitle("Board8 Voltage 5V (V)");
+
+
+
+    ui->chartViewCavityTempBoard1->chart->setTitle("Board1 CavityTemp (℃)");
+    ui->chartViewCavityTempBoard2->chart->setTitle("Board2 CavityTemp (℃)");
+    ui->chartViewCavityTempBoard3->chart->setTitle("Board3 CavityTemp (℃)");
+    ui->chartViewCavityTempBoard4->chart->setTitle("Board4 CavityTemp (℃)");
+    ui->chartViewCavityTempBoard5->chart->setTitle("Board5 CavityTemp (℃)");
+    ui->chartViewCavityTempBoard6->chart->setTitle("Board6 CavityTemp (℃)");
+    ui->chartViewCavityTempBoard7->chart->setTitle("Board7 CavityTemp (℃)");
+    ui->chartViewCavityTempBoard8->chart->setTitle("Board8 CavityTemp (℃)");
+
+
+    ui->chartViewFpgaTempBoard1->chart->setTitle("Board1 FPGA Temp (℃)");
+    ui->chartViewFpgaTempBoard2->chart->setTitle("Board2 FPGA Temp (℃)");
+    ui->chartViewFpgaTempBoard3->chart->setTitle("Board3 FPGA Temp (℃)");
+    ui->chartViewFpgaTempBoard4->chart->setTitle("Board4 FPGA Temp (℃)");
+    ui->chartViewFpgaTempBoard5->chart->setTitle("Board5 FPGA Temp (℃)");
+    ui->chartViewFpgaTempBoard6->chart->setTitle("Board6 FPGA Temp (℃)");
+    ui->chartViewFpgaTempBoard7->chart->setTitle("Board7 FPGA Temp (℃)");
+    ui->chartViewFpgaTempBoard8->chart->setTitle("Board8 FPGA Temp (℃)");
+
+
+
     QIntValidator* aIntValidator = new QIntValidator;
     aIntValidator->setRange(1, 8);
     ui->lineEditDevAddrBoard1->setValidator(aIntValidator);  //设置设备地址只能输入 0 - 8
@@ -608,6 +740,8 @@ void MainWindow::initUi()
     ui->lineEditDevAddrBoard8->setValidator(aIntValidator);  //设置设备地址只能输入 0 - 8
 
 
+
+   // chart->setTitle("Current (A)");
     ui->labelImgBoard1->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
     ui->labelImgBoard2->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
     ui->labelImgBoard3->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
@@ -2596,13 +2730,8 @@ void MainWindow::on_comboBoxImgBoard1_currentIndexChanged(int index)
 
 void MainWindow::on_pushButtonImgClearBoard1_clicked()
 {
-    for(int i = 0 ; i < 4; i++)
-    {
-        for (int j = 0; j < 4; j++)
-        {
-            ui->labelImgBoard1->regTable[i][j] = j + i * 4;
-        }
-    }
+
+    ui->labelImgBoard1->resetRegData();
     emit ui->labelImgBoard1->regChange((unsigned int *) ui->labelImgBoard1->regTable);
     emit ui->labelImgBoard1->mousePaint();
 }
@@ -2667,13 +2796,7 @@ void MainWindow::on_comboBoxImgBoard2_currentIndexChanged(int index)
 
 void MainWindow::on_pushButtonImgClearBoard2_clicked()
 {
-    for(int i = 0 ; i < 4; i++)
-    {
-        for (int j = 0; j < 4; j++)
-        {
-            ui->labelImgBoard2->regTable[i][j] = j + i * 4;
-        }
-    }
+    ui->labelImgBoard2->resetRegData();
     emit ui->labelImgBoard2->regChange((unsigned int *) ui->labelImgBoard2->regTable);
     emit ui->labelImgBoard2->mousePaint();
 }
@@ -2737,13 +2860,7 @@ void MainWindow::on_comboBoxImgBoard3_currentIndexChanged(int index)
 
 void MainWindow::on_pushButtonImgClearBoard3_clicked()
 {
-    for(int i = 0 ; i < 4; i++)
-    {
-        for (int j = 0; j < 4; j++)
-        {
-            ui->labelImgBoard3->regTable[i][j] = j + i * 4;
-        }
-    }
+    ui->labelImgBoard3->resetRegData();
     emit ui->labelImgBoard3->regChange((unsigned int *) ui->labelImgBoard3->regTable);
     emit ui->labelImgBoard3->mousePaint();
 }
@@ -2807,13 +2924,7 @@ void MainWindow::on_comboBoxImgBoard4_currentIndexChanged(int index)
 
 void MainWindow::on_pushButtonImgClearBoard4_clicked()
 {
-    for(int i = 0 ; i < 4; i++)
-    {
-        for (int j = 0; j < 4; j++)
-        {
-            ui->labelImgBoard4->regTable[i][j] = j + i * 4;
-        }
-    }
+    ui->labelImgBoard4->resetRegData();
     emit ui->labelImgBoard4->regChange((unsigned int *) ui->labelImgBoard4->regTable);
     emit ui->labelImgBoard4->mousePaint();
 }
@@ -2877,13 +2988,7 @@ void MainWindow::on_comboBoxImgBoard5_currentIndexChanged(int index)
 
 void MainWindow::on_pushButtonImgClearBoard5_clicked()
 {
-    for(int i = 0 ; i < 4; i++)
-    {
-        for (int j = 0; j < 4; j++)
-        {
-            ui->labelImgBoard5->regTable[i][j] = j + i * 4;
-        }
-    }
+    ui->labelImgBoard5->resetRegData();
     emit ui->labelImgBoard5->regChange((unsigned int *) ui->labelImgBoard5->regTable);
     emit ui->labelImgBoard5->mousePaint();
 }
@@ -2948,13 +3053,7 @@ void MainWindow::on_comboBoxImgBoard6_currentIndexChanged(int index)
 
 void MainWindow::on_pushButtonImgClearBoard6_clicked()
 {
-    for(int i = 0 ; i < 4; i++)
-    {
-        for (int j = 0; j < 4; j++)
-        {
-            ui->labelImgBoard6->regTable[i][j] = j + i * 4;
-        }
-    }
+    ui->labelImgBoard6->resetRegData();
     emit ui->labelImgBoard6->regChange((unsigned int *) ui->labelImgBoard6->regTable);
     emit ui->labelImgBoard6->mousePaint();
 }
@@ -3019,13 +3118,7 @@ void MainWindow::on_comboBoxImgBoard7_currentIndexChanged(int index)
 
 void MainWindow::on_pushButtonImgClearBoard7_clicked()
 {
-    for(int i = 0 ; i < 4; i++)
-    {
-        for (int j = 0; j < 4; j++)
-        {
-            ui->labelImgBoard7->regTable[i][j] = j + i * 4;
-        }
-    }
+    ui->labelImgBoard7->resetRegData();
     emit ui->labelImgBoard7->regChange((unsigned int *) ui->labelImgBoard7->regTable);
     emit ui->labelImgBoard7->mousePaint();
 }
@@ -3089,13 +3182,7 @@ void MainWindow::on_comboBoxImgBoard8_currentIndexChanged(int index)
 
 void MainWindow::on_pushButtonImgClearBoard8_clicked()
 {
-    for(int i = 0 ; i < 4; i++)
-    {
-        for (int j = 0; j < 4; j++)
-        {
-            ui->labelImgBoard8->regTable[i][j] = j + i * 4;
-        }
-    }
+    ui->labelImgBoard8->resetRegData();
     emit ui->labelImgBoard8->regChange((unsigned int *) ui->labelImgBoard8->regTable);
     emit ui->labelImgBoard8->mousePaint();
 }
@@ -3392,3 +3479,10 @@ void MainWindow::on_btnWorkControlSave_clicked()
     file.write(str);
     file.close();
 }
+
+
+
+
+
+
+
