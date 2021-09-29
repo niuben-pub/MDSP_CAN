@@ -175,6 +175,12 @@ private slots:
 
 
 
+    void on_btnUpdateMode_4_clicked();
+
+    void on_pushButtonUpgradeAddrRead_clicked();
+
+    void on_pushButtonUpgradeAddrSet_clicked();
+
 private:
     Ui::MainWindow *ui;
     CANThread *canthread;

@@ -669,6 +669,18 @@ void MainWindow::displayMonitor(VCI_CAN_OBJ *vci, DWORD dwRel)
     }
 
 
+    if(vci->ID == (PGN60672 << 8) + board1->readAddr ||
+            vci->ID == (PGN60672 << 8) + board2->readAddr ||
+             vci->ID == (PGN60672 << 8) + board3->readAddr ||
+             vci->ID == (PGN60672 << 8) + board4->readAddr ||
+             vci->ID == (PGN60672 << 8) + board5->readAddr ||
+             vci->ID == (PGN60672 << 8) + board6->readAddr ||
+             vci->ID == (PGN60672 << 8) + board7->readAddr ||
+             vci->ID == (PGN60672 << 8) + board8->readAddr )
+    {
+        ui->lineEditUpgradeAddr->setText(QString::number((unsigned int)vci[0].Data[7],16));
+    }
+
 }
 
 void MainWindow::initUi()
@@ -739,6 +751,8 @@ void MainWindow::initUi()
     ui->lineEditDevAddrBoard7->setValidator(aIntValidator);  //设置设备地址只能输入 0 - 8
     ui->lineEditDevAddrBoard8->setValidator(aIntValidator);  //设置设备地址只能输入 0 - 8
 
+    ui->lineEditUpgradeAddr->setValidator(aIntValidator);  //更新设备地址只能输入 0 - 8
+
 
 
    // chart->setTitle("Current (A)");
@@ -771,6 +785,9 @@ void MainWindow::initUi()
 
     ui->btnWorkControlLoad->setEnabled(false);//关闭加载按钮
     ui->btnWorkControlSave->setEnabled(false);//关闭保存按钮
+
+    ui->pushButtonUpgradeAddrSet->setEnabled(false); // 关闭读地址功能
+    ui->pushButtonUpgradeAddrRead->setEnabled(false);// 关闭设置地址功能
 
     ui->btnUpdate_2->setEnabled(false);  //关闭升级按钮
     ui->btnUpdate_3->setEnabled(false);  //关闭升级按钮
@@ -885,42 +902,66 @@ void MainWindow::initImaLabel()
 
     ui->labelOverly->pix3GIN1Board[0].load(":/images/1.png");
     ui->labelOverly->pix3GIN2Board[0].load(":/images/2.png");
-    ui->labelOverly->pixDetectionBoard[0].load(":/images/a1.png");
+    ui->labelOverly->pixIN1DetectionBoard[0].load(":/images/a1.png");
+    ui->labelOverly->pixIN2DetectionBoard[0].load(":/images/a2.png");
+    ui->labelOverly->pixIN1LVDSinBoard[0].load(":/images/l1.png");
+    ui->labelOverly->pixIN2LVDSinBoard[0].load(":/images/l2.png");
     ui->labelOverly->pixColorBoard[0].load(":/images/col1.png");
 
     ui->labelOverly->pix3GIN1Board[1].load(":/images/3.png");
     ui->labelOverly->pix3GIN2Board[1].load(":/images/4.png");
-    ui->labelOverly->pixDetectionBoard[1].load(":/images/a2.png");
+    ui->labelOverly->pixIN1DetectionBoard[1].load(":/images/a3.png");
+    ui->labelOverly->pixIN2DetectionBoard[1].load(":/images/a4.png");
+    ui->labelOverly->pixIN1LVDSinBoard[1].load(":/images/l3.png");
+    ui->labelOverly->pixIN2LVDSinBoard[1].load(":/images/l4.png");
     ui->labelOverly->pixColorBoard[1].load(":/images/col2.png");
 
     ui->labelOverly->pix3GIN1Board[2].load(":/images/5.png");
     ui->labelOverly->pix3GIN2Board[2].load(":/images/6.png");
-    ui->labelOverly->pixDetectionBoard[2].load(":/images/a3.png");
+    ui->labelOverly->pixIN1DetectionBoard[2].load(":/images/a5.png");
+    ui->labelOverly->pixIN2DetectionBoard[2].load(":/images/a6.png");
+    ui->labelOverly->pixIN1LVDSinBoard[2].load(":/images/l5.png");
+    ui->labelOverly->pixIN2LVDSinBoard[2].load(":/images/l6.png");
     ui->labelOverly->pixColorBoard[2].load(":/images/col3.png");
 ;
     ui->labelOverly->pix3GIN1Board[3].load(":/images/7.png");
     ui->labelOverly->pix3GIN2Board[3].load(":/images/8.png");
-    ui->labelOverly->pixDetectionBoard[3].load(":/images/a4.png");
+    ui->labelOverly->pixIN1DetectionBoard[3].load(":/images/a7.png");
+    ui->labelOverly->pixIN2DetectionBoard[3].load(":/images/a8.png");
+    ui->labelOverly->pixIN1LVDSinBoard[3].load(":/images/l7.png");
+    ui->labelOverly->pixIN2LVDSinBoard[3].load(":/images/l8.png");
     ui->labelOverly->pixColorBoard[3].load(":/images/col4.png");
 
     ui->labelOverly->pix3GIN1Board[4].load(":/images/9.png");
     ui->labelOverly->pix3GIN2Board[4].load(":/images/10.png");
-    ui->labelOverly->pixDetectionBoard[4].load(":/images/a5.png");
+    ui->labelOverly->pixIN1DetectionBoard[4].load(":/images/a9.png");
+    ui->labelOverly->pixIN2DetectionBoard[4].load(":/images/a10.png");
+    ui->labelOverly->pixIN1LVDSinBoard[4].load(":/images/l9.png");
+    ui->labelOverly->pixIN2LVDSinBoard[4].load(":/images/l10.png");
     ui->labelOverly->pixColorBoard4.load(":/images/col5.png");
 
     ui->labelOverly->pix3GIN1Board[5].load(":/images/11.png");
     ui->labelOverly->pix3GIN2Board[5].load(":/images/12.png");
-    ui->labelOverly->pixDetectionBoard[5].load(":/images/a6.png");
+    ui->labelOverly->pixIN1DetectionBoard[5].load(":/images/a11.png");
+    ui->labelOverly->pixIN2DetectionBoard[5].load(":/images/a12.png");
+    ui->labelOverly->pixIN1LVDSinBoard[5].load(":/images/l11.png");
+    ui->labelOverly->pixIN2LVDSinBoard[5].load(":/images/l12.png");
     ui->labelOverly->pixColorBoard[5].load(":/images/col6.png");
 
     ui->labelOverly->pix3GIN1Board[6].load(":/images/13.png");
     ui->labelOverly->pix3GIN2Board[6].load(":/images/14.png");
-    ui->labelOverly->pixDetectionBoard[6].load(":/images/a7.png");
+    ui->labelOverly->pixIN1DetectionBoard[6].load(":/images/a13.png");
+    ui->labelOverly->pixIN2DetectionBoard[6].load(":/images/a14.png");
+    ui->labelOverly->pixIN1LVDSinBoard[6].load(":/images/l13.png");
+    ui->labelOverly->pixIN2LVDSinBoard[6].load(":/images/l14.png");
     ui->labelOverly->pixColorBoard[6].load(":/images/col7.png");
 
     ui->labelOverly->pix3GIN1Board[7].load(":/images/15.png");
     ui->labelOverly->pix3GIN2Board[7].load(":/images/16.png");
-    ui->labelOverly->pixDetectionBoard[7].load(":/images/a8.png");
+    ui->labelOverly->pixIN1DetectionBoard[7].load(":/images/a15.png");
+    ui->labelOverly->pixIN2DetectionBoard[7].load(":/images/a16.png");
+    ui->labelOverly->pixIN1LVDSinBoard[7].load(":/images/l15.png");
+    ui->labelOverly->pixIN2LVDSinBoard[7].load(":/images/l16.png");
     ui->labelOverly->pixColorBoard[7].load(":/images/col8.png");
 
 }
@@ -1143,18 +1184,65 @@ void MainWindow::writeBoard1FpgaImgconfigReg(unsigned int *regTable)
 void MainWindow::writeBoard2FpgaImgconfigReg(unsigned int *regTable)
 {
 
+    int ID = (PGN57856 << 8) + this->board2->writerAddr;  //写FPGA命令
+
+
+    //先发送显示格式  显示16画  或者IN1 4K 或者IN2 4K
+    unsigned char send_str[8] = {0};
+    quint64 regaddr = ui->labelImgBoard2->displayModeRegAddr;
+    quint64 regdata = ui->labelImgBoard2->displayModeReg;
+    quint64 data = (regaddr<<16) + regdata;
+    char *p = (char *)(&data);
+    for(int k = 0; k < 8; k++)
+    {
+        send_str[k] = p[7 - k];
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+
+    //再发送输入分辨率
+    regaddr = ui->labelImgBoard2->img3GIn1SizeRegAddr;
+    regdata = ui->labelImgBoard2->img3GIn1SizeReg;
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int k = 0; k < 8; k++)
+    {
+        send_str[k] = p[7 - k];
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+    //再发送输入分辨率
+    regaddr = ui->labelImgBoard2->img3GIn2SizeRegAddr;
+    regdata = ui->labelImgBoard2->img3GIn2SizeReg;
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int k = 0; k < 8; k++)
+    {
+        send_str[k] = p[7 - k];
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+
+    //再发送输入显示分辨率
     for (int i = 0; i < 16; i++)
     {
         //qDebug()<<"["<<regTable[i]<<"]"<<endl;
-        unsigned char send_str[8] = {0};
-        int ID = (PGN57856 << 8) + this->board2->writerAddr;  //写FPGA命令
-        quint64 regaddr = 0x10 + i;
-        quint64 regdata = regTable[i];
-        quint64 data = (regaddr<<16) + regdata;
-        char *p = (char *)(&data);
-        for(int i = 0; i < 8; i++)
+        regaddr = 0x10 + i;
+        regdata = regTable[i];
+        data = (regaddr<<16) + regdata;
+        p = (char *)(&data);
+        for(int j = 0; j < 8; j++)
         {
-            send_str[i] = p[7 - i];
+            send_str[j] = p[7 - j];
             //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
         }
         canthread->sendData(ID,(unsigned char*)send_str);
@@ -1527,6 +1615,8 @@ void MainWindow::on_btnWorkTestMode_clicked()
 
     ui->btnUpdate_2->setEnabled(false);  //关闭升级按钮
     ui->btnUpdate_3->setEnabled(false);  //关闭升级按钮
+    ui->pushButtonUpgradeAddrSet->setEnabled(false);
+    ui->pushButtonUpgradeAddrRead->setEnabled(false);
 
     ui->btnWorkControlLoad->setEnabled(false);//关闭加载按钮
     ui->btnWorkControlSave->setEnabled(false);//关闭保存按钮
@@ -1568,6 +1658,8 @@ void MainWindow::on_btnWorkControlMode_clicked()
 
     ui->btnUpdate_2->setEnabled(false);  //关闭升级按钮
     ui->btnUpdate_3->setEnabled(false);  //关闭升级按钮
+    ui->pushButtonUpgradeAddrSet->setEnabled(false);
+    ui->pushButtonUpgradeAddrRead->setEnabled(false);
 
     ui->labelImgBoard1->setAttribute(Qt::WA_TransparentForMouseEvents, false); //取消屏蔽鼠标点击事件
     ui->labelImgBoard2->setAttribute(Qt::WA_TransparentForMouseEvents, false); //取消屏蔽鼠标点击事件
@@ -1632,6 +1724,9 @@ void MainWindow::on_btnUpdateMode_2_clicked()
 
     ui->btnUpdate_2->setEnabled(true);  //使能升级按钮
     ui->btnUpdate_3->setEnabled(false);  //关闭升级按钮
+
+    ui->pushButtonUpgradeAddrSet->setEnabled(false);
+    ui->pushButtonUpgradeAddrRead->setEnabled(false);
 
     qDebug()<<"设置工作模式";
     int ID = 0;
@@ -1732,6 +1827,8 @@ void MainWindow::on_btnStatusBoard1_2_clicked()
 
     ui->btnUpdate_2->setEnabled(false);  //关闭升级按钮
     ui->btnUpdate_3->setEnabled(false);  //关闭升级按钮
+    ui->pushButtonUpgradeAddrSet->setEnabled(false);
+    ui->pushButtonUpgradeAddrRead->setEnabled(false);
 
     ui->btnWorkControlLoad->setEnabled(false);//关闭加载按钮
     ui->btnWorkControlSave->setEnabled(false);//关闭保存按钮
@@ -1783,6 +1880,8 @@ void MainWindow::on_btnUpdateMode_3_clicked()
 
     ui->btnUpdate_2->setEnabled(false);  //关闭升级按钮
     ui->btnUpdate_3->setEnabled(true);  //使能升级按钮
+    ui->pushButtonUpgradeAddrSet->setEnabled(false);
+    ui->pushButtonUpgradeAddrRead->setEnabled(false);
 
     qDebug()<<"设置工作模式";
     int ID = 0;
@@ -2721,6 +2820,10 @@ void MainWindow::on_comboBoxImgBoard1_currentIndexChanged(int index)
     {
         ui->labelImgBoard1->ImgType = IMG_COLOR;
     }
+    else if (index == 4)
+    {
+        ui->labelImgBoard1->ImgType = IMG_LVDS_IN;
+    }
     else
     {
         ui->labelImgBoard1->ImgType = INPUT_SIZE_1920X1080;
@@ -2731,7 +2834,7 @@ void MainWindow::on_comboBoxImgBoard1_currentIndexChanged(int index)
 void MainWindow::on_pushButtonImgClearBoard1_clicked()
 {
 
-    ui->labelImgBoard1->resetRegData();
+    ui->labelImgBoard1->resetRegData1();
     emit ui->labelImgBoard1->regChange((unsigned int *) ui->labelImgBoard1->regTable);
     emit ui->labelImgBoard1->mousePaint();
 }
@@ -3486,3 +3589,152 @@ void MainWindow::on_btnWorkControlSave_clicked()
 
 
 
+
+void MainWindow::on_btnUpdateMode_4_clicked()
+{
+    if(ui->btnStatusBoard1->text() == tr("Close"))  //关闭监控
+    {
+        ui->btnStatusBoard1->setText(tr("Open"));
+        //this->canthread->Adc_flag = false;
+        this->canthread->canThreadTimer->stop();
+    }
+
+    ui->btnStatusBoard1->setEnabled(false); //关闭该按钮
+
+    ui->pushButtonTestRBoard1->setEnabled(false);
+    ui->pushButtonTestRBoard2->setEnabled(false);
+    ui->pushButtonTestRBoard3->setEnabled(false);
+    ui->pushButtonTestRBoard4->setEnabled(false);
+    ui->pushButtonTestRBoard5->setEnabled(false);
+    ui->pushButtonTestRBoard6->setEnabled(false);
+    ui->pushButtonTestRBoard7->setEnabled(false);
+    ui->pushButtonTestRBoard8->setEnabled(false);
+
+    ui->pushButtonTestWBoard1->setEnabled(false);
+    ui->pushButtonTestWBoard2->setEnabled(false);
+    ui->pushButtonTestWBoard3->setEnabled(false);
+    ui->pushButtonTestWBoard4->setEnabled(false);
+    ui->pushButtonTestWBoard5->setEnabled(false);
+    ui->pushButtonTestWBoard6->setEnabled(false);
+    ui->pushButtonTestWBoard7->setEnabled(false);
+    ui->pushButtonTestWBoard8->setEnabled(false);
+
+
+    ui->labelImgBoard1->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+    ui->labelImgBoard2->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+    ui->labelImgBoard3->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+    ui->labelImgBoard4->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+    ui->labelImgBoard5->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+    ui->labelImgBoard6->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+    ui->labelImgBoard7->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+    ui->labelImgBoard8->setAttribute(Qt::WA_TransparentForMouseEvents, true); //屏蔽鼠标点击事件
+
+    ui->btnWorkControlLoad->setEnabled(false);//关闭加载按钮
+    ui->btnWorkControlSave->setEnabled(false);//关闭保存按钮
+
+    ui->btnUpdate_2->setEnabled(false);  //关闭升级按钮
+    ui->btnUpdate_3->setEnabled(false);  //关闭升级按钮
+    ui->pushButtonUpgradeAddrSet->setEnabled(true);
+    ui->pushButtonUpgradeAddrRead->setEnabled(true);
+
+    qDebug()<<"设置工作模式";
+    int ID = 0;
+    unsigned char send_str[8] = {0};
+    qDebug()<<"升级模式";
+    send_str[7] = UPGRADEMODE;
+
+    ID = (PGN56468 << 8) + this->board1->writerAddr;  //工作模式切换命令
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(50);
+    ID = (PGN56468 << 8) + this->board2->writerAddr;  //工作模式切换命令
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(50);
+    ID = (PGN56468 << 8) + this->board3->writerAddr;  //工作模式切换命令
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(50);
+    ID = (PGN56468 << 8) + this->board4->writerAddr;  //工作模式切换命令
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(50);
+    ID = (PGN56468 << 8) + this->board5->writerAddr;  //工作模式切换命令
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(50);
+    ID = (PGN56468 << 8) + this->board6->writerAddr;  //工作模式切换命令
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(50);
+    ID = (PGN56468 << 8) + this->board7->writerAddr;  //工作模式切换命令
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(50);
+    ID = (PGN56468 << 8) + this->board8->writerAddr;  //工作模式切换命令
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(50);
+    this->statusBar()->showMessage("Mode: Upgrade - Board Addr");
+}
+
+void MainWindow::on_pushButtonUpgradeAddrRead_clicked()
+{
+    int ID = 0;
+    unsigned char send_str[8] = {0};
+    send_str[6] = 0x00;  //读
+    send_str[7] = 0x00;  //
+
+
+    ID = (PGN60672 << 8) + this->board1->writerAddr;  //工作模式切换命令
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+    ID = (PGN60672 << 8) + this->board2->writerAddr;  //工作模式切换命令
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+    ID = (PGN60672 << 8) + this->board3->writerAddr;  //工作模式切换命令
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+    ID = (PGN60672 << 8) + this->board4->writerAddr;  //工作模式切换命令
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+    ID = (PGN60672 << 8) + this->board5->writerAddr;  //工作模式切换命令
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+    ID = (PGN60672 << 8) + this->board6->writerAddr;  //工作模式切换命令
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+    ID = (PGN60672 << 8) + this->board7->writerAddr;  //工作模式切换命令
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+    ID = (PGN60672 << 8) + this->board8->writerAddr;  //工作模式切换命令
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+}
+
+void MainWindow::on_pushButtonUpgradeAddrSet_clicked()
+{
+    int ID = 0;
+    unsigned char send_str[8] = {0};
+    send_str[6] = 0x01;  //写
+    bool ok;
+    quint64 boardaddr = ui->lineEditUpgradeAddr->text().toULongLong(&ok,16);
+    send_str[7] = boardaddr;
+
+    ID = (PGN60672 << 8) + this->board1->writerAddr;  //工作模式切换命令
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+    ID = (PGN60672 << 8) + this->board2->writerAddr;  //工作模式切换命令
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+    ID = (PGN60672 << 8) + this->board3->writerAddr;  //工作模式切换命令
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+    ID = (PGN60672 << 8) + this->board4->writerAddr;  //工作模式切换命令
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+    ID = (PGN60672 << 8) + this->board5->writerAddr;  //工作模式切换命令
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+    ID = (PGN60672 << 8) + this->board6->writerAddr;  //工作模式切换命令
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+    ID = (PGN60672 << 8) + this->board7->writerAddr;  //工作模式切换命令
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+    ID = (PGN60672 << 8) + this->board8->writerAddr;  //工作模式切换命令
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+}

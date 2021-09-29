@@ -19,18 +19,41 @@ void ImgLabel::resetRegData()
     //3g in2 图像尺寸寄存器  1 - 1080p  0 - 540p
     img3GIn2SizeReg = IN_3G_SIZE_1920X1080;
     //12g 输入开关
-    in12GSwitchReg = IN_12G_SWITCH_OFF;
+    in12GSwitchReg = IN_12G_SWITCH_ON;
     //显示模式寄存器
     displayModeReg = SDI_4K_16;
     for(int i = 0 ; i < 4; i++)
     {
         for (int j = 0; j < 4; j++)
         {
-            regTable[i][j] = j + i * 4;
+            regTable[i][j] = 0x00;
         }
     }
+}
 
-
+void ImgLabel::resetRegData1()
+{
+    //硬件版本号
+    hardwareVersionReg = 0;
+    //设备状态寄存器
+    deviceStateReg = 0;
+    //fpga内部温度寄存器
+    fpgaTempReg = 0;
+    //3g in1 图像尺寸寄存器  1 - 1080p  0 - 540p
+    img3GIn1SizeReg = IN_3G_SIZE_1920X1080;
+    //3g in2 图像尺寸寄存器  1 - 1080p  0 - 540p
+    img3GIn2SizeReg = IN_3G_SIZE_1920X1080;
+    //12g 输入开关
+    in12GSwitchReg = IN_12G_SWITCH_ON;
+    //显示模式寄存器
+    displayModeReg = SDI_4K_16;
+    for(int i = 0 ; i < 4; i++)
+    {
+        for (int j = 0; j < 4; j++)
+        {
+            regTable[i][j] = COLOR_960x540;
+        }
+    }
 }
 
 void ImgLabel::PrintRegTable()
@@ -57,9 +80,9 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             if(regindex == 0 || regindex == 1 ||regindex == 4 || regindex == 5)
             {
                 this->regTable[0][0] = 0;
-                this->regTable[0][1] = 1;
-                this->regTable[1][0] = 4;
-                this->regTable[1][1] = 5;
+                this->regTable[0][1] = 0;
+                this->regTable[1][0] = 0;
+                this->regTable[1][1] = 0;
                 emit this->regChange((unsigned int *)regTable);
 
                 this->regTable[0][0] = IN1_3G_1920x1080;
@@ -71,10 +94,10 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             }
             else if(regindex == 2 || regindex == 3 ||regindex == 6 || regindex == 7)
             {
-                this->regTable[0][2] = 2;
-                this->regTable[0][3] = 3;
-                this->regTable[1][2] = 6;
-                this->regTable[1][3] = 7;
+                this->regTable[0][2] = 0;
+                this->regTable[0][3] = 0;
+                this->regTable[1][2] = 0;
+                this->regTable[1][3] = 0;
                 emit this->regChange((unsigned int *)regTable);
 
                 this->regTable[0][2] = IN1_3G_1920x1080;
@@ -87,10 +110,10 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             }
             else if(regindex == 8 || regindex == 9 ||regindex == 12 || regindex == 13)
             {
-                this->regTable[2][0] = 8;
-                this->regTable[2][1] = 9;
-                this->regTable[3][0] = 12;
-                this->regTable[3][1] = 13;
+                this->regTable[2][0] = 0;
+                this->regTable[2][1] = 0;
+                this->regTable[3][0] = 0;
+                this->regTable[3][1] = 0;
                 emit this->regChange((unsigned int *)regTable);
 
                 this->regTable[2][0] = IN1_3G_1920x1080;
@@ -103,10 +126,10 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             }
             else if(regindex == 10 || regindex == 11 ||regindex == 14 || regindex == 15)
             {
-                this->regTable[2][2] = 10;
-                this->regTable[2][3] = 11;
-                this->regTable[3][2] = 14;
-                this->regTable[3][3] = 15;
+                this->regTable[2][2] = 0;
+                this->regTable[2][3] = 0;
+                this->regTable[3][2] = 0;
+                this->regTable[3][3] = 0;
                 emit this->regChange((unsigned int *)regTable);
 
                 this->regTable[2][2] = IN1_3G_1920x1080;
@@ -125,9 +148,9 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
                 if(regTable[0][0] == IN1_3G_1920x1080 || regTable[0][0] == IN2_3G_1920x1080)
                 {
                     this->regTable[0][0] = 0;
-                    this->regTable[0][1] = 1;
-                    this->regTable[1][0] = 4;
-                    this->regTable[1][1] = 5;
+                    this->regTable[0][1] = 0;
+                    this->regTable[1][0] = 0;
+                    this->regTable[1][1] = 0;
                     emit this->regChange((unsigned int *)regTable);
 
                     this->regTable[zone_y][zone_x] = IN1_3G_960x540;
@@ -148,10 +171,10 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             {
                 if(regTable[0][2] == IN1_3G_1920x1080 || regTable[0][2] == IN2_3G_1920x1080)
                 {
-                    this->regTable[0][2] = 2;
-                    this->regTable[0][3] = 3;
-                    this->regTable[1][2] = 6;
-                    this->regTable[1][3] = 7;
+                    this->regTable[0][2] = 0;
+                    this->regTable[0][3] = 0;
+                    this->regTable[1][2] = 0;
+                    this->regTable[1][3] = 0;
                     emit this->regChange((unsigned int *)regTable);
 
                     this->regTable[zone_y][zone_x] = IN1_3G_960x540;
@@ -172,10 +195,10 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             {
                 if(regTable[2][0] == IN1_3G_1920x1080 || regTable[2][0] == IN2_3G_1920x1080)
                 {
-                    this->regTable[2][0] = 8;
-                    this->regTable[2][1] = 9;
-                    this->regTable[3][0] = 12;
-                    this->regTable[3][1] = 13;
+                    this->regTable[2][0] = 0;
+                    this->regTable[2][1] = 0;
+                    this->regTable[3][0] = 0;
+                    this->regTable[3][1] = 0;
                     emit this->regChange((unsigned int *)regTable);
 
                     this->regTable[zone_y][zone_x] = IN1_3G_960x540;
@@ -197,10 +220,10 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             {
                 if(regTable[2][2] == IN1_3G_1920x1080 || regTable[2][2] == IN2_3G_1920x1080)
                 {
-                    this->regTable[2][2] = 10;
-                    this->regTable[2][3] = 11;
-                    this->regTable[3][2] = 14;
-                    this->regTable[3][3] = 15;
+                    this->regTable[2][2] = 0;
+                    this->regTable[2][3] = 0;
+                    this->regTable[3][2] = 0;
+                    this->regTable[3][3] = 0;
                     emit this->regChange((unsigned int *)regTable);
 
                     this->regTable[zone_y][zone_x] = IN1_3G_960x540;
@@ -237,9 +260,9 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             if(regindex == 0 || regindex == 1 ||regindex == 4 || regindex == 5)
             {
                 this->regTable[0][0] = 0;
-                this->regTable[0][1] = 1;
-                this->regTable[1][0] = 4;
-                this->regTable[1][1] = 5;
+                this->regTable[0][1] = 0;
+                this->regTable[1][0] = 0;
+                this->regTable[1][1] = 0;
                 emit this->regChange((unsigned int *)regTable);
 
                 this->regTable[0][0] = IN2_3G_1920x1080;
@@ -251,10 +274,10 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             }
             else if(regindex == 2 || regindex == 3 ||regindex == 6 || regindex == 7)
             {
-                this->regTable[0][2] = 2;
-                this->regTable[0][3] = 3;
-                this->regTable[1][2] = 6;
-                this->regTable[1][3] = 7;
+                this->regTable[0][2] = 0;
+                this->regTable[0][3] = 0;
+                this->regTable[1][2] = 0;
+                this->regTable[1][3] = 0;
                 emit this->regChange((unsigned int *)regTable);
 
                 this->regTable[0][2] = IN2_3G_1920x1080;
@@ -267,10 +290,10 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             }
             else if(regindex == 8 || regindex == 9 ||regindex == 12 || regindex == 13)
             {
-                this->regTable[2][0] = 8;
-                this->regTable[2][1] = 9;
-                this->regTable[3][0] = 12;
-                this->regTable[3][1] = 13;
+                this->regTable[2][0] = 0;
+                this->regTable[2][1] = 0;
+                this->regTable[3][0] = 0;
+                this->regTable[3][1] = 0;
                 emit this->regChange((unsigned int *)regTable);
 
                 this->regTable[2][0] = IN2_3G_1920x1080;
@@ -283,10 +306,10 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             }
             else if(regindex == 10 || regindex == 11 ||regindex == 14 || regindex == 15)
             {
-                this->regTable[2][2] = 10;
-                this->regTable[2][3] = 11;
-                this->regTable[3][2] = 14;
-                this->regTable[3][3] = 15;
+                this->regTable[2][2] = 0;
+                this->regTable[2][3] = 0;
+                this->regTable[3][2] = 0;
+                this->regTable[3][3] = 0;
                 emit this->regChange((unsigned int *)regTable);
 
                 this->regTable[2][2] = IN2_3G_1920x1080;
@@ -305,9 +328,9 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
                 if(regTable[0][0] == IN2_3G_1920x1080 || regTable[0][0] == IN1_3G_1920x1080)
                 {
                     this->regTable[0][0] = 0;
-                    this->regTable[0][1] = 1;
-                    this->regTable[1][0] = 4;
-                    this->regTable[1][1] = 5;
+                    this->regTable[0][1] = 0;
+                    this->regTable[1][0] = 0;
+                    this->regTable[1][1] = 0;
                     emit this->regChange((unsigned int *)regTable);
 
                     this->regTable[zone_y][zone_x] = IN2_3G_960x540;
@@ -328,10 +351,10 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             {
                 if(regTable[0][2] == IN2_3G_1920x1080 || regTable[0][2] == IN1_3G_1920x1080)
                 {
-                    this->regTable[0][2] = 2;
-                    this->regTable[0][3] = 3;
-                    this->regTable[1][2] = 6;
-                    this->regTable[1][3] = 7;
+                    this->regTable[0][2] = 0;
+                    this->regTable[0][3] = 0;
+                    this->regTable[1][2] = 0;
+                    this->regTable[1][3] = 0;
                     emit this->regChange((unsigned int *)regTable);
 
                     this->regTable[zone_y][zone_x] = IN2_3G_960x540;
@@ -352,10 +375,10 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             {
                 if(regTable[2][0] == IN2_3G_1920x1080 || regTable[2][0] == IN1_3G_1920x1080)
                 {
-                    this->regTable[2][0] = 8;
-                    this->regTable[2][1] = 9;
-                    this->regTable[3][0] = 12;
-                    this->regTable[3][1] = 13;
+                    this->regTable[2][0] = 0;
+                    this->regTable[2][1] = 0;
+                    this->regTable[3][0] = 0;
+                    this->regTable[3][1] = 0;
                     emit this->regChange((unsigned int *)regTable);
 
                     this->regTable[zone_y][zone_x] = IN2_3G_960x540;
@@ -377,10 +400,10 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             {
                 if(regTable[2][2] == IN2_3G_1920x1080 || regTable[2][2] == IN1_3G_1920x1080)
                 {
-                    this->regTable[2][2] = 10;
-                    this->regTable[2][3] = 11;
-                    this->regTable[3][2] = 14;
-                    this->regTable[3][3] = 15;
+                    this->regTable[2][2] = 0;
+                    this->regTable[2][3] = 0;
+                    this->regTable[3][2] = 0;
+                    this->regTable[3][3] = 0;
                     emit this->regChange((unsigned int *)regTable);
 
                     this->regTable[zone_y][zone_x] = IN2_3G_960x540;
@@ -415,10 +438,10 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
         {
             if(regTable[0][0] == IN2_3G_1920x1080 || regTable[0][0] == IN1_3G_1920x1080)
             {
-                this->regTable[0][0] = 0;
-                this->regTable[0][1] = 1;
-                this->regTable[1][0] = 4;
-                this->regTable[1][1] = 5;
+                this->regTable[0][0] =  0;
+                this->regTable[0][1] =  0;
+                this->regTable[1][0] =  0;
+                this->regTable[1][1] =  0;
                 emit this->regChange((unsigned int *)regTable);
 
                 this->regTable[zone_y][zone_x] = COLOR_960x540;
@@ -439,10 +462,10 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
         {
             if(regTable[0][2] == IN2_3G_1920x1080 || regTable[0][2] == IN1_3G_1920x1080)
             {
-                this->regTable[0][2] = 2;
-                this->regTable[0][3] = 3;
-                this->regTable[1][2] = 6;
-                this->regTable[1][3] = 7;
+                this->regTable[0][2] =  0;
+                this->regTable[0][3] =  0;
+                this->regTable[1][2] =  0;
+                this->regTable[1][3] =  0;
                 emit this->regChange((unsigned int *)regTable);
 
                 this->regTable[zone_y][zone_x] = COLOR_960x540;
@@ -463,10 +486,10 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
         {
             if(regTable[2][0] == IN2_3G_1920x1080 || regTable[2][0] == IN1_3G_1920x1080)
             {
-                this->regTable[2][0] = 8;
-                this->regTable[2][1] = 9;
-                this->regTable[3][0] = 12;
-                this->regTable[3][1] = 13;
+                this->regTable[2][0] =  0;
+                this->regTable[2][1] =  0;
+                this->regTable[3][0] =  0;
+                this->regTable[3][1] =  0;
                 emit this->regChange((unsigned int *)regTable);
 
                 this->regTable[zone_y][zone_x] = COLOR_960x540;
@@ -488,10 +511,10 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
         {
             if(regTable[2][2] == IN2_3G_1920x1080 || regTable[2][2] == IN1_3G_1920x1080)
             {
-                this->regTable[2][2] = 10;
-                this->regTable[2][3] = 11;
-                this->regTable[3][2] = 14;
-                this->regTable[3][3] = 15;
+                this->regTable[2][2] =  0;
+                this->regTable[2][3] =  0;
+                this->regTable[3][2] =  0;
+                this->regTable[3][3] =  0;
                 emit this->regChange((unsigned int *)regTable);
 
                 this->regTable[zone_y][zone_x] = COLOR_960x540;
@@ -516,10 +539,10 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
         {
             if(regTable[0][0] == IN2_3G_1920x1080 || regTable[0][0] == IN1_3G_1920x1080)
             {
-                this->regTable[0][0] = 0;
-                this->regTable[0][1] = 1;
-                this->regTable[1][0] = 4;
-                this->regTable[1][1] = 5;
+                this->regTable[0][0] =  0;
+                this->regTable[0][1] =  0;
+                this->regTable[1][0] =  0;
+                this->regTable[1][1] =  0;
                 emit this->regChange((unsigned int *)regTable);
 
                 this->regTable[zone_y][zone_x] = DETECTION_960x540;
@@ -540,10 +563,10 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
         {
             if(regTable[0][2] == IN2_3G_1920x1080 || regTable[0][2] == IN1_3G_1920x1080)
             {
-                this->regTable[0][2] = 2;
-                this->regTable[0][3] = 3;
-                this->regTable[1][2] = 6;
-                this->regTable[1][3] = 7;
+                this->regTable[0][2] =  0;
+                this->regTable[0][3] =  0;
+                this->regTable[1][2] =  0;
+                this->regTable[1][3] =  0;
                 emit this->regChange((unsigned int *)regTable);
 
                 this->regTable[zone_y][zone_x] = DETECTION_960x540;
@@ -564,10 +587,10 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
         {
             if(regTable[2][0] == IN2_3G_1920x1080 || regTable[2][0] == IN1_3G_1920x1080)
             {
-                this->regTable[2][0] = 8;
-                this->regTable[2][1] = 9;
-                this->regTable[3][0] = 12;
-                this->regTable[3][1] = 13;
+                this->regTable[2][0] =  0;
+                this->regTable[2][1] =  0;
+                this->regTable[3][0] =  0;
+                this->regTable[3][1] =  0;
                 emit this->regChange((unsigned int *)regTable);
 
                 this->regTable[zone_y][zone_x] = DETECTION_960x540;
@@ -589,10 +612,10 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
         {
             if(regTable[2][2] == IN2_3G_1920x1080 || regTable[2][2] == IN1_3G_1920x1080)
             {
-                this->regTable[2][2] = 10;
-                this->regTable[2][3] = 11;
-                this->regTable[3][2] = 14;
-                this->regTable[3][3] = 15;
+                this->regTable[2][2] =  0;
+                this->regTable[2][3] =  0;
+                this->regTable[3][2] =  0;
+                this->regTable[3][3] =  0;
                 emit this->regChange((unsigned int *)regTable);
 
                 this->regTable[zone_y][zone_x] = DETECTION_960x540;
@@ -611,7 +634,106 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
         }
 
     }
+    else if(ImgType == IMG_LVDS_IN)
+    {
+        if(regindex == 0 || regindex == 1 ||regindex == 4 || regindex == 5)
+        {
+            if(regTable[0][0] == IN2_3G_1920x1080 || regTable[0][0] == IN1_3G_1920x1080)
+            {
+                this->regTable[0][0] =  0;
+                this->regTable[0][1] =  0;
+                this->regTable[1][0] =  0;
+                this->regTable[1][1] =  0;
+                emit this->regChange((unsigned int *)regTable);
 
+                this->regTable[zone_y][zone_x] = LVDS_IN_960x540;
+                emit this->regChange((unsigned int *)regTable);
+
+            }
+            else
+            {
+                this->regTable[zone_y][zone_x] = regindex;
+                emit this->regChange((unsigned int *)regTable);
+
+                this->regTable[zone_y][zone_x] = LVDS_IN_960x540;
+                emit this->regChange((unsigned int *)regTable);
+
+            }
+        }
+        else if(regindex == 2 || regindex == 3 ||regindex == 6 || regindex == 7)
+        {
+            if(regTable[0][2] == IN2_3G_1920x1080 || regTable[0][2] == IN1_3G_1920x1080)
+            {
+                this->regTable[0][2] =  0;
+                this->regTable[0][3] =  0;
+                this->regTable[1][2] =  0;
+                this->regTable[1][3] =  0;
+                emit this->regChange((unsigned int *)regTable);
+
+                this->regTable[zone_y][zone_x] = LVDS_IN_960x540;
+                emit this->regChange((unsigned int *)regTable);
+
+            }
+            else
+            {
+                this->regTable[zone_y][zone_x] = regindex;
+                emit this->regChange((unsigned int *)regTable);
+
+                this->regTable[zone_y][zone_x] = LVDS_IN_960x540;
+                emit this->regChange((unsigned int *)regTable);
+
+            }
+        }
+        else if(regindex == 8 || regindex == 9 ||regindex == 12 || regindex == 13)
+        {
+            if(regTable[2][0] == IN2_3G_1920x1080 || regTable[2][0] == IN1_3G_1920x1080)
+            {
+                this->regTable[2][0] =  0;
+                this->regTable[2][1] =  0;
+                this->regTable[3][0] =  0;
+                this->regTable[3][1] =  0;
+                emit this->regChange((unsigned int *)regTable);
+
+                this->regTable[zone_y][zone_x] = LVDS_IN_960x540;
+                emit this->regChange((unsigned int *)regTable);
+
+            }
+            else
+            {
+                this->regTable[zone_y][zone_x] = regindex;
+                emit this->regChange((unsigned int *)regTable);
+
+                this->regTable[zone_y][zone_x] = LVDS_IN_960x540;
+                emit this->regChange((unsigned int *)regTable);
+
+            }
+
+        }
+        else if(regindex == 10 || regindex == 11 ||regindex == 14 || regindex == 15)
+        {
+            if(regTable[2][2] == IN2_3G_1920x1080 || regTable[2][2] == IN1_3G_1920x1080)
+            {
+                this->regTable[2][2] =  0;
+                this->regTable[2][3] =  0;
+                this->regTable[3][2] =  0;
+                this->regTable[3][3] =  0;
+                emit this->regChange((unsigned int *)regTable);
+
+                this->regTable[zone_y][zone_x] = LVDS_IN_960x540;
+                emit this->regChange((unsigned int *)regTable);
+
+            }
+            else
+            {
+                this->regTable[zone_y][zone_x] = regindex;
+                emit this->regChange((unsigned int *)regTable);
+
+                this->regTable[zone_y][zone_x] = LVDS_IN_960x540;
+                emit this->regChange((unsigned int *)regTable);
+
+            }
+        }
+    }
 }
 
 void ImgLabel::InitConnect()
@@ -628,6 +750,7 @@ void ImgLabel::mousePressEvent(QMouseEvent *event)
 {
     if(event->button() == Qt::LeftButton)
     {
+        qDebug()<<"LeftButton press"<<endl;
         unsigned int Pos_X = 0; //鼠标点击坐标
         unsigned int Pos_Y = 0;
         unsigned int Zone_X = 0;

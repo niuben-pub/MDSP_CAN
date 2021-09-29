@@ -70,16 +70,46 @@ public:
     QPixmap pixColorBoard7;
     QPixmap pixColorBoard8;
 
-    QPixmap pixDetectionBoard[8];
+    QPixmap pixIN1DetectionBoard[8];
+    QPixmap pixIN1DetectionBoard1;
+    QPixmap pixIN1DetectionBoard2;
+    QPixmap pixIN1DetectionBoard3;
+    QPixmap pixIN1DetectionBoard4;
+    QPixmap pixIN1DetectionBoard5;
+    QPixmap pixIN1DetectionBoard6;
+    QPixmap pixIN1DetectionBoard7;
+    QPixmap pixIN1DetectionBoard8;
 
-    QPixmap pixDetectionBoard1;
-    QPixmap pixDetectionBoard2;
-    QPixmap pixDetectionBoard3;
-    QPixmap pixDetectionBoard4;
-    QPixmap pixDetectionBoard5;
-    QPixmap pixDetectionBoard6;
-    QPixmap pixDetectionBoard7;
-    QPixmap pixDetectionBoard8;
+    QPixmap pixIN2DetectionBoard[8];
+    QPixmap pixIN2DetectionBoard1;
+    QPixmap pixIN2DetectionBoard2;
+    QPixmap pixIN2DetectionBoard3;
+    QPixmap pixIN2DetectionBoard4;
+    QPixmap pixIN2DetectionBoard5;
+    QPixmap pixIN2DetectionBoard6;
+    QPixmap pixIN2DetectionBoard7;
+    QPixmap pixIN2DetectionBoard8;
+
+    QPixmap pixIN1LVDSinBoard[8];
+    QPixmap pixIN1LVDSinBoard1;
+    QPixmap pixIN1LVDSinBoard2;
+    QPixmap pixIN1LVDSinBoard3;
+    QPixmap pixIN1LVDSinBoard4;
+    QPixmap pixIN1LVDSinBoard5;
+    QPixmap pixIN1LVDSinBoard6;
+    QPixmap pixIN1LVDSinBoard7;
+    QPixmap pixIN1LVDSinBoard8;
+
+    QPixmap pixIN2LVDSinBoard[8];
+    QPixmap pixIN2LVDSinBoard1;
+    QPixmap pixIN2LVDSinBoard2;
+    QPixmap pixIN2LVDSinBoard3;
+    QPixmap pixIN2LVDSinBoard4;
+    QPixmap pixIN2LVDSinBoard5;
+    QPixmap pixIN2LVDSinBoard6;
+    QPixmap pixIN2LVDSinBoard7;
+    QPixmap pixIN2LVDSinBoard8;
+
 public:
     explicit imgoverlayLabel(QWidget *parent = nullptr);
 

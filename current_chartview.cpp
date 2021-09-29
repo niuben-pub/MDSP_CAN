@@ -28,7 +28,7 @@ void Current_ChartView::createChart()
     this->axisY = new QValueAxis;
     axisY->setRange(0.75,1.25);
     //axisY->setTitleText("A");
-    axisY->setLabelFormat("%.3f");
+    axisY->setLabelFormat("%.2f");
     axisY->setTickCount(3);  // 主分隔数
     axisY->setMinorTickCount(4); // 子分隔数
 
@@ -69,8 +69,11 @@ void Current_ChartView::prepareData(double cur)
 
     if(Series->count() - timeRange > 0)
     {
+        this->nearestMaxData = -1000.0f;
+        this->nearestMinData = 1000.0f;
         for(int i = 0; i < timeRange; i++)
         {
+           // qDebug()<<"timeRange"<<Series->at(Series->count() - timeRange + i).y()<< this->nearestMaxData <<this->nearestMinData <<endl;
             if(Series->at(Series->count() - timeRange + i).y() > this->nearestMaxData)
             {
                 this->nearestMaxData = Series->at(Series->count() - timeRange + i).y();
@@ -81,26 +84,18 @@ void Current_ChartView::prepareData(double cur)
                 this->nearestMinData = Series->at(Series->count() - timeRange + i).y();
             }
         }
-
     }
     else
     {
         if(cur > this->nearestMaxData)
         {
             this->nearestMaxData = cur;
-
         }
-
         if(cur < this->nearestMinData)
         {
             this->nearestMinData = cur;
-
-
         }
-
-
     }
-
 
     if(ceil(this->historyMaxData) - this->historyMaxData > 0.75 )
     {
@@ -188,9 +183,7 @@ void Current_ChartView::prepareData(double cur)
         }
 
         //数据轴范围
-
         this->axisY->setRange(this->nearestaxisYMin,this->nearestaxisYMax);
-
 
     }
     else if(this->showMode == HistoryMode)
@@ -200,7 +193,7 @@ void Current_ChartView::prepareData(double cur)
 
         //数据轴范围
         this->axisY->setRange(this->historyaxisYMin, this->historyaxisYMax);
-         qDebug()<<"this->historyaxisYMin"<<this->historyMinData<< this->historyMaxData <<endl;
+       //  qDebug()<<"this->historyaxis"<<this->historyMinData<< this->historyMaxData <<endl;
 
     }
 

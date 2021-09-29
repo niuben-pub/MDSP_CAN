@@ -32,6 +32,7 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     canthread.cpp \
+    osdlabel.cpp \
     protocolthrend.cpp
 
 HEADERS += \
@@ -43,6 +44,7 @@ HEADERS += \
         mainwindow.h \
     ControlCAN.h \
     canthread.h \
+    osdlabel.h \
     protocolthrend.h
 
 FORMS += \

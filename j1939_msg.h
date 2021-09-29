@@ -8,9 +8,13 @@
 
 #define CAN_FLASH_ERASE (0x01);
 
+
+
+#define PGN61184 (0xEF00)  // 测试包
+
+#define PGN60672 (0xED00)  // 读写 CAN收发地址
 #define PGN60416 (0xEC00)  // 长数据起始参数组
 #define PGN60160 (0xEB00)  // 长数据数据参数组
-
 #define PGN59940 (0xEA00)  // 读FPGA内部温度
 #define PGN56468 (0xE900)  // 工作模式切换
 #define PGN59392 (0xE800)  // IDOG信令
@@ -22,6 +26,7 @@
 #define PGN57856 (0xE200)  // 设置FPGA
 #define PGN57600 (0xE100)  // 请求ADC数据
 #define PGN57344 (0xE000)  // 擦除flash命令
+
 
 #define MDSP_SOURCE_ADDR (0x01) // 从设备地址
 #define PC_SOURCE_ADDR (0x02) // 主设备地址

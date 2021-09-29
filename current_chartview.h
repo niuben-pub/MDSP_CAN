@@ -39,7 +39,7 @@ public:
     void createChart();      //创建图表
     void prepareData(double cur);     //创建数据
 
-    int timeRange = 60;
+    int timeRange = 60;  //显示的时间范围
     int showMode = ReadTimeMode;  //显示模式  实时或者历史
     int dataType = CURRENT;  //显示数据类型  电流电压温度等
 
@@ -47,8 +47,8 @@ public:
     double historyMaxData = -100.0f;  //历史最大值
     double historyMinData = 100.0f;  //历史最小值
 
-    double nearestMaxData = -100.0f;  //当前最大值
-    double nearestMinData = 100.0f;  //当前最小值
+    double nearestMaxData = -1000.0f;  //当前最大值
+    double nearestMinData = 1000.0f;  //当前最小值
 
 
     double historyaxisYMin = 0;    //历史最大值坐标

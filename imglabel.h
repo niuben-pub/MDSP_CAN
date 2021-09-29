@@ -25,6 +25,7 @@
 #define IN2_3G_960x540      (0x00c6)  //显示尺寸540P   3G in2
 #define COLOR_960x540       (0x00cc)  //显示尺寸540P   彩条
 #define DETECTION_960x540   (0x00cd)  //显示尺寸540P   目标识别
+#define LVDS_IN_960x540     (0x00d0)  //显示尺寸540P   lvds输入图像
 
 #define IN_3G_SIZE_1920X1080 (0x0001) //3g in的输入尺寸1080p
 #define IN_3G_SIZE_960x540   (0x0000) //3g in的输入尺寸540p
@@ -58,7 +59,8 @@ enum IMGTYPE
     IMG_IN1_3G = 0,
     IMG_IN2_3G = 1,
     IMG_AI= 2,
-    IMG_COLOR = 3
+    IMG_COLOR = 3,
+    IMG_LVDS_IN = 4
 };
 class ImgLabel : public QLabel
 {
@@ -83,16 +85,16 @@ public:
     unsigned int img3GIn2SizeReg = IN_3G_SIZE_1920X1080;
     //12g 输入开关
     const unsigned int in12GSwitchRegAddr = IN_12G_SWITCH_REG_ADDR;
-    unsigned int in12GSwitchReg = IN_12G_SWITCH_OFF;
+    unsigned int in12GSwitchReg = IN_12G_SWITCH_ON;
     //显示模式寄存器
     const unsigned int displayModeRegAddr = DISPLAY_MODE_REG_ADDR;
     unsigned int displayModeReg = SDI_4K_16;
 
     //显存地址寄存器
-    unsigned int regTable[4][4] = { {0, 1, 2, 3 },
-                                    {4, 5, 6, 7 },
-                                    {8, 9, 10,11},
-                                    {12,13,14,15}};
+    unsigned int regTable[4][4] = { {0, 0, 0, 0 },
+                                    {0, 0, 0, 0 },
+                                    {0, 0, 0, 0 },
+                                    {0, 0, 0, 0}};
 
 
 
@@ -113,8 +115,8 @@ private:
     void InitConnect(void);
 public:
     explicit ImgLabel(QWidget *parent = nullptr);
-    void resetRegData(void);
-
+    void resetRegData(void);  //清屏，显示的为12G in 的图像
+    void resetRegData1(void);  //清屏，显示的为彩条
     void PrintRegTable(void);
     void handleImgControl(unsigned int zone_x, unsigned int zone_y);
 

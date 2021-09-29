@@ -22,7 +22,7 @@ ProtocolThrend::ProtocolThrend()
 void ProtocolThrend::protocolHand(VCI_CAN_OBJ *vci)
 {
    // qDebug()<<"from thread slot:" <<QThread::currentThreadId();
-    qDebug()<<"protocol :"<<vci[0].ID;
+ //   qDebug()<<"protocol :"<<vci[0].ID;
     memcpy(this->CANdata,vci,sizeof (VCI_CAN_OBJ));
     data_update = true;  //数据更新
 }
@@ -35,17 +35,17 @@ void ProtocolThrend::run()
         if(data_update)
         {
             //qDebug()<<"from thread slot:" <<QThread::currentThreadId() << num++;
-            qDebug("data :0x%x,0x%x,0x%x,0x%x,0x%x,0x%x,0x%x,0x%x,0x%x",\
-                    this->CANdata->ID,\
-                    this->CANdata->Data[0],\
-                    this->CANdata->Data[1],\
-                    this->CANdata->Data[2],\
-                    this->CANdata->Data[3],\
-                    this->CANdata->Data[4],\
-                    this->CANdata->Data[5],\
-                    this->CANdata->Data[6],\
-                    this->CANdata->Data[7]\
-                    );
+//            qDebug("data :0x%x,0x%x,0x%x,0x%x,0x%x,0x%x,0x%x,0x%x,0x%x",\
+//                    this->CANdata->ID,\
+//                    this->CANdata->Data[0],\
+//                    this->CANdata->Data[1],\
+//                    this->CANdata->Data[2],\
+//                    this->CANdata->Data[3],\
+//                    this->CANdata->Data[4],\
+//                    this->CANdata->Data[5],\
+//                    this->CANdata->Data[6],\
+//                    this->CANdata->Data[7]\
+//                    );
 
 
             if(this->CANdata->ID == (PGN57344 << 8) + UpdateReadAddr)  //修改MCU flash 初始化标志
