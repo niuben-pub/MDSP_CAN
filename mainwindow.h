@@ -181,6 +181,60 @@ private slots:
 
     void on_pushButtonUpgradeAddrSet_clicked();
 
+    void on_pushButtonOpenOsdBoard1_clicked();
+    void on_pushButtonOpenOsdBoard2_clicked();
+    void on_pushButtonOpenOsdBoard3_clicked();
+    void on_pushButtonOpenOsdBoard4_clicked();
+    void on_pushButtonOpenOsdBoard5_clicked();
+    void on_pushButtonOpenOsdBoard6_clicked();
+    void on_pushButtonOpenOsdBoard7_clicked();
+    void on_pushButtonOpenOsdBoard8_clicked();
+
+    void on_horizontalSliderOsdStartXBoard1_sliderReleased();
+    void on_horizontalSliderOsdStartXBoard2_sliderReleased();
+    void on_horizontalSliderOsdStartXBoard3_sliderReleased();
+    void on_horizontalSliderOsdStartXBoard4_sliderReleased();
+    void on_horizontalSliderOsdStartXBoard5_sliderReleased();
+    void on_horizontalSliderOsdStartXBoard6_sliderReleased();
+    void on_horizontalSliderOsdStartXBoard7_sliderReleased();
+    void on_horizontalSliderOsdStartXBoard8_sliderReleased();
+
+    void on_horizontalSliderOsdStartYBoard1_sliderReleased();
+    void on_horizontalSliderOsdStartYBoard2_sliderReleased();
+    void on_horizontalSliderOsdStartYBoard3_sliderReleased();
+    void on_horizontalSliderOsdStartYBoard4_sliderReleased();
+    void on_horizontalSliderOsdStartYBoard5_sliderReleased();
+    void on_horizontalSliderOsdStartYBoard6_sliderReleased();
+    void on_horizontalSliderOsdStartYBoard7_sliderReleased();
+    void on_horizontalSliderOsdStartYBoard8_sliderReleased();
+
+    void on_horizontalSliderOsdWidthBoard1_sliderReleased();
+    void on_horizontalSliderOsdWidthBoard2_sliderReleased();
+    void on_horizontalSliderOsdWidthBoard3_sliderReleased();
+    void on_horizontalSliderOsdWidthBoard4_sliderReleased();
+    void on_horizontalSliderOsdWidthBoard5_sliderReleased();
+    void on_horizontalSliderOsdWidthBoard6_sliderReleased();
+    void on_horizontalSliderOsdWidthBoard7_sliderReleased();
+    void on_horizontalSliderOsdWidthBoard8_sliderReleased();
+
+    void on_horizontalSliderOsdHeightBoard1_sliderReleased();
+    void on_horizontalSliderOsdHeightBoard2_sliderReleased();
+    void on_horizontalSliderOsdHeightBoard3_sliderReleased();
+    void on_horizontalSliderOsdHeightBoard4_sliderReleased();
+    void on_horizontalSliderOsdHeightBoard5_sliderReleased();
+    void on_horizontalSliderOsdHeightBoard6_sliderReleased();
+    void on_horizontalSliderOsdHeightBoard7_sliderReleased();
+    void on_horizontalSliderOsdHeightBoard8_sliderReleased();
+
+    void on_horizontalSliderOsdAlphaBoard1_sliderReleased();
+    void on_horizontalSliderOsdAlphaBoard2_sliderReleased();
+    void on_horizontalSliderOsdAlphaBoard3_sliderReleased();
+    void on_horizontalSliderOsdAlphaBoard4_sliderReleased();
+    void on_horizontalSliderOsdAlphaBoard5_sliderReleased();
+    void on_horizontalSliderOsdAlphaBoard6_sliderReleased();
+    void on_horizontalSliderOsdAlphaBoard7_sliderReleased();
+    void on_horizontalSliderOsdAlphaBoard8_sliderReleased();
+
 private:
     Ui::MainWindow *ui;
     CANThread *canthread;

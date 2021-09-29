@@ -145,38 +145,62 @@ compiler_rcc_clean:
 release/qrc_resonrces.cpp: resonrces.qrc \
 		H:/QT/5.12.9/mingw73_32/bin/rcc.exe \
 		images/a2.png \
-		images/col3.png \
-		images/a3.png \
+		images/l13.png \
+		images/16.png \
+		images/3.png \
+		images/l5.png \
 		images/col4.png \
-		images/a4.png \
-		images/col5.png \
-		images/a5.png \
-		images/col6.png \
-		images/a6.png \
-		images/col7.png \
-		images/a7.png \
-		images/col8.png \
+		images/a1.png \
+		images/a16.png \
+		images/l12.png \
+		images/15.png \
+		images/2.png \
+		images/l4.png \
+		images/col3.png \
+		images/a15.png \
+		images/l11.png \
+		images/14.png \
+		images/a9.png \
+		images/1.png \
+		images/l3.png \
+		images/col2.png \
+		images/a14.png \
+		images/l10.png \
+		images/13.png \
 		images/a8.png \
 		images/0.png \
-		images/1.png \
-		images/10.png \
-		images/2.png \
-		images/3.png \
-		images/11.png \
-		images/4.png \
-		images/12.png \
-		images/5.png \
-		images/13.png \
-		images/6.png \
-		images/14.png \
-		images/15.png \
-		images/7.png \
-		images/8.png \
-		images/16.png \
-		images/9.png \
+		images/l2.png \
 		images/col1.png \
-		images/a1.png \
-		images/col2.png
+		images/a13.png \
+		images/9.png \
+		images/12.png \
+		images/a7.png \
+		images/l1.png \
+		images/a12.png \
+		images/8.png \
+		images/11.png \
+		images/a6.png \
+		images/a11.png \
+		images/7.png \
+		images/l9.png \
+		images/col8.png \
+		images/10.png \
+		images/a5.png \
+		images/l16.png \
+		images/a10.png \
+		images/6.png \
+		images/l8.png \
+		images/col7.png \
+		images/a4.png \
+		images/l15.png \
+		images/5.png \
+		images/l7.png \
+		images/col6.png \
+		images/a3.png \
+		images/l14.png \
+		images/4.png \
+		images/l6.png \
+		images/col5.png
 	'H:\QT\5.12.9\mingw73_32\bin\rcc.exe' -name resonrces resonrces.qrc -o release/qrc_resonrces.cpp
 
 compiler_qmlcache_make_all:
