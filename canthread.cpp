@@ -15,7 +15,7 @@ CANThread::CANThread()
     qRegisterMetaType<VCI_CAN_OBJ>("VCI_CAN_OBJ");
     qRegisterMetaType<DWORD>("DWORD");
     canThreadTimer->stop();
-    canThreadTimer->setInterval(1000); //设置定时周期  单位ms
+    canThreadTimer->setInterval(2000); //设置定时周期  单位ms
     connect(canThreadTimer,SIGNAL(timeout()),this,SLOT(sendADCrequestData()));
 
 }

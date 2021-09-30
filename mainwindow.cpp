@@ -1582,18 +1582,65 @@ void MainWindow::writeBoard2FpgaImgconfigReg(unsigned int *regTable)
 void MainWindow::writeBoard3FpgaImgconfigReg(unsigned int *regTable)
 {
 
+    int ID = (PGN57856 << 8) + this->board3->writerAddr;  //写FPGA命令
+
+
+    //先发送显示格式  显示16画  或者IN1 4K 或者IN2 4K
+    unsigned char send_str[8] = {0};
+    quint64 regaddr = ui->labelImgBoard3->displayModeRegAddr;
+    quint64 regdata = ui->labelImgBoard3->displayModeReg;
+    quint64 data = (regaddr<<16) + regdata;
+    char *p = (char *)(&data);
+    for(int k = 0; k < 8; k++)
+    {
+        send_str[k] = p[7 - k];
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+
+    //再发送输入分辨率
+    regaddr = ui->labelImgBoard3->img3GIn1SizeRegAddr;
+    regdata = ui->labelImgBoard3->img3GIn1SizeReg;
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int k = 0; k < 8; k++)
+    {
+        send_str[k] = p[7 - k];
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+    //再发送输入分辨率
+    regaddr = ui->labelImgBoard3->img3GIn2SizeRegAddr;
+    regdata = ui->labelImgBoard3->img3GIn2SizeReg;
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int k = 0; k < 8; k++)
+    {
+        send_str[k] = p[7 - k];
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+
+    //再发送输入显示分辨率
     for (int i = 0; i < 16; i++)
     {
         //qDebug()<<"["<<regTable[i]<<"]"<<endl;
-        unsigned char send_str[8] = {0};
-        int ID = (PGN57856 << 8) + this->board3->writerAddr;  //写FPGA命令
-        quint64 regaddr = 0x10 + i;
-        quint64 regdata = regTable[i];
-        quint64 data = (regaddr<<16) + regdata;
-        char *p = (char *)(&data);
-        for(int i = 0; i < 8; i++)
+        regaddr = 0x10 + i;
+        regdata = regTable[i];
+        data = (regaddr<<16) + regdata;
+        p = (char *)(&data);
+        for(int j = 0; j < 8; j++)
         {
-            send_str[i] = p[7 - i];
+            send_str[j] = p[7 - j];
             //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
         }
         canthread->sendData(ID,(unsigned char*)send_str);
@@ -1605,18 +1652,65 @@ void MainWindow::writeBoard3FpgaImgconfigReg(unsigned int *regTable)
 void MainWindow::writeBoard4FpgaImgconfigReg(unsigned int *regTable)
 {
 
+    int ID = (PGN57856 << 8) + this->board4->writerAddr;  //写FPGA命令
+
+
+    //先发送显示格式  显示16画  或者IN1 4K 或者IN2 4K
+    unsigned char send_str[8] = {0};
+    quint64 regaddr = ui->labelImgBoard4->displayModeRegAddr;
+    quint64 regdata = ui->labelImgBoard4->displayModeReg;
+    quint64 data = (regaddr<<16) + regdata;
+    char *p = (char *)(&data);
+    for(int k = 0; k < 8; k++)
+    {
+        send_str[k] = p[7 - k];
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+
+    //再发送输入分辨率
+    regaddr = ui->labelImgBoard4->img3GIn1SizeRegAddr;
+    regdata = ui->labelImgBoard4->img3GIn1SizeReg;
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int k = 0; k < 8; k++)
+    {
+        send_str[k] = p[7 - k];
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+    //再发送输入分辨率
+    regaddr = ui->labelImgBoard4->img3GIn2SizeRegAddr;
+    regdata = ui->labelImgBoard4->img3GIn2SizeReg;
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int k = 0; k < 8; k++)
+    {
+        send_str[k] = p[7 - k];
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+
+    //再发送输入显示分辨率
     for (int i = 0; i < 16; i++)
     {
         //qDebug()<<"["<<regTable[i]<<"]"<<endl;
-        unsigned char send_str[8] = {0};
-        int ID = (PGN57856 << 8) + this->board4->writerAddr;  //写FPGA命令
-        quint64 regaddr = 0x10 + i;
-        quint64 regdata = regTable[i];
-        quint64 data = (regaddr<<16) + regdata;
-        char *p = (char *)(&data);
-        for(int i = 0; i < 8; i++)
+        regaddr = 0x10 + i;
+        regdata = regTable[i];
+        data = (regaddr<<16) + regdata;
+        p = (char *)(&data);
+        for(int j = 0; j < 8; j++)
         {
-            send_str[i] = p[7 - i];
+            send_str[j] = p[7 - j];
             //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
         }
         canthread->sendData(ID,(unsigned char*)send_str);
@@ -1628,18 +1722,65 @@ void MainWindow::writeBoard4FpgaImgconfigReg(unsigned int *regTable)
 void MainWindow::writeBoard5FpgaImgconfigReg(unsigned int *regTable)
 {
 
+    int ID = (PGN57856 << 8) + this->board5->writerAddr;  //写FPGA命令
+
+
+    //先发送显示格式  显示16画  或者IN1 4K 或者IN2 4K
+    unsigned char send_str[8] = {0};
+    quint64 regaddr = ui->labelImgBoard5->displayModeRegAddr;
+    quint64 regdata = ui->labelImgBoard5->displayModeReg;
+    quint64 data = (regaddr<<16) + regdata;
+    char *p = (char *)(&data);
+    for(int k = 0; k < 8; k++)
+    {
+        send_str[k] = p[7 - k];
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+
+    //再发送输入分辨率
+    regaddr = ui->labelImgBoard5->img3GIn1SizeRegAddr;
+    regdata = ui->labelImgBoard5->img3GIn1SizeReg;
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int k = 0; k < 8; k++)
+    {
+        send_str[k] = p[7 - k];
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+    //再发送输入分辨率
+    regaddr = ui->labelImgBoard5->img3GIn2SizeRegAddr;
+    regdata = ui->labelImgBoard5->img3GIn2SizeReg;
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int k = 0; k < 8; k++)
+    {
+        send_str[k] = p[7 - k];
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+
+    //再发送输入显示分辨率
     for (int i = 0; i < 16; i++)
     {
         //qDebug()<<"["<<regTable[i]<<"]"<<endl;
-        unsigned char send_str[8] = {0};
-        int ID = (PGN57856 << 8) + this->board5->writerAddr;  //写FPGA命令
-        quint64 regaddr = 0x10 + i;
-        quint64 regdata = regTable[i];
-        quint64 data = (regaddr<<16) + regdata;
-        char *p = (char *)(&data);
-        for(int i = 0; i < 8; i++)
+        regaddr = 0x10 + i;
+        regdata = regTable[i];
+        data = (regaddr<<16) + regdata;
+        p = (char *)(&data);
+        for(int j = 0; j < 8; j++)
         {
-            send_str[i] = p[7 - i];
+            send_str[j] = p[7 - j];
             //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
         }
         canthread->sendData(ID,(unsigned char*)send_str);
@@ -1650,18 +1791,65 @@ void MainWindow::writeBoard5FpgaImgconfigReg(unsigned int *regTable)
 void MainWindow::writeBoard6FpgaImgconfigReg(unsigned int *regTable)
 {
 
+    int ID = (PGN57856 << 8) + this->board6->writerAddr;  //写FPGA命令
+
+
+    //先发送显示格式  显示16画  或者IN1 4K 或者IN2 4K
+    unsigned char send_str[8] = {0};
+    quint64 regaddr = ui->labelImgBoard6->displayModeRegAddr;
+    quint64 regdata = ui->labelImgBoard6->displayModeReg;
+    quint64 data = (regaddr<<16) + regdata;
+    char *p = (char *)(&data);
+    for(int k = 0; k < 8; k++)
+    {
+        send_str[k] = p[7 - k];
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+
+    //再发送输入分辨率
+    regaddr = ui->labelImgBoard6->img3GIn1SizeRegAddr;
+    regdata = ui->labelImgBoard6->img3GIn1SizeReg;
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int k = 0; k < 8; k++)
+    {
+        send_str[k] = p[7 - k];
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+    //再发送输入分辨率
+    regaddr = ui->labelImgBoard6->img3GIn2SizeRegAddr;
+    regdata = ui->labelImgBoard6->img3GIn2SizeReg;
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int k = 0; k < 8; k++)
+    {
+        send_str[k] = p[7 - k];
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+
+    //再发送输入显示分辨率
     for (int i = 0; i < 16; i++)
     {
         //qDebug()<<"["<<regTable[i]<<"]"<<endl;
-        unsigned char send_str[8] = {0};
-        int ID = (PGN57856 << 8) + this->board6->writerAddr;  //写FPGA命令
-        quint64 regaddr = 0x10 + i;
-        quint64 regdata = regTable[i];
-        quint64 data = (regaddr<<16) + regdata;
-        char *p = (char *)(&data);
-        for(int i = 0; i < 8; i++)
+        regaddr = 0x10 + i;
+        regdata = regTable[i];
+        data = (regaddr<<16) + regdata;
+        p = (char *)(&data);
+        for(int j = 0; j < 8; j++)
         {
-            send_str[i] = p[7 - i];
+            send_str[j] = p[7 - j];
             //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
         }
         canthread->sendData(ID,(unsigned char*)send_str);
@@ -1672,18 +1860,65 @@ void MainWindow::writeBoard6FpgaImgconfigReg(unsigned int *regTable)
 void MainWindow::writeBoard7FpgaImgconfigReg(unsigned int *regTable)
 {
 
+    int ID = (PGN57856 << 8) + this->board7->writerAddr;  //写FPGA命令
+
+
+    //先发送显示格式  显示16画  或者IN1 4K 或者IN2 4K
+    unsigned char send_str[8] = {0};
+    quint64 regaddr = ui->labelImgBoard7->displayModeRegAddr;
+    quint64 regdata = ui->labelImgBoard7->displayModeReg;
+    quint64 data = (regaddr<<16) + regdata;
+    char *p = (char *)(&data);
+    for(int k = 0; k < 8; k++)
+    {
+        send_str[k] = p[7 - k];
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+
+    //再发送输入分辨率
+    regaddr = ui->labelImgBoard7->img3GIn1SizeRegAddr;
+    regdata = ui->labelImgBoard7->img3GIn1SizeReg;
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int k = 0; k < 8; k++)
+    {
+        send_str[k] = p[7 - k];
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+    //再发送输入分辨率
+    regaddr = ui->labelImgBoard7->img3GIn2SizeRegAddr;
+    regdata = ui->labelImgBoard7->img3GIn2SizeReg;
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int k = 0; k < 8; k++)
+    {
+        send_str[k] = p[7 - k];
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+
+    //再发送输入显示分辨率
     for (int i = 0; i < 16; i++)
     {
         //qDebug()<<"["<<regTable[i]<<"]"<<endl;
-        unsigned char send_str[8] = {0};
-        int ID = (PGN57856 << 8) + this->board7->writerAddr;  //写FPGA命令
-        quint64 regaddr = 0x10 + i;
-        quint64 regdata = regTable[i];
-        quint64 data = (regaddr<<16) + regdata;
-        char *p = (char *)(&data);
-        for(int i = 0; i < 8; i++)
+        regaddr = 0x10 + i;
+        regdata = regTable[i];
+        data = (regaddr<<16) + regdata;
+        p = (char *)(&data);
+        for(int j = 0; j < 8; j++)
         {
-            send_str[i] = p[7 - i];
+            send_str[j] = p[7 - j];
             //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
         }
         canthread->sendData(ID,(unsigned char*)send_str);
@@ -1694,18 +1929,65 @@ void MainWindow::writeBoard7FpgaImgconfigReg(unsigned int *regTable)
 void MainWindow::writeBoard8FpgaImgconfigReg(unsigned int *regTable)
 {
 
+    int ID = (PGN57856 << 8) + this->board8->writerAddr;  //写FPGA命令
+
+
+    //先发送显示格式  显示16画  或者IN1 4K 或者IN2 4K
+    unsigned char send_str[8] = {0};
+    quint64 regaddr = ui->labelImgBoard8->displayModeRegAddr;
+    quint64 regdata = ui->labelImgBoard8->displayModeReg;
+    quint64 data = (regaddr<<16) + regdata;
+    char *p = (char *)(&data);
+    for(int k = 0; k < 8; k++)
+    {
+        send_str[k] = p[7 - k];
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+
+    //再发送输入分辨率
+    regaddr = ui->labelImgBoard8->img3GIn1SizeRegAddr;
+    regdata = ui->labelImgBoard8->img3GIn1SizeReg;
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int k = 0; k < 8; k++)
+    {
+        send_str[k] = p[7 - k];
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+    //再发送输入分辨率
+    regaddr = ui->labelImgBoard8->img3GIn2SizeRegAddr;
+    regdata = ui->labelImgBoard8->img3GIn2SizeReg;
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int k = 0; k < 8; k++)
+    {
+        send_str[k] = p[7 - k];
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+
+    //再发送输入显示分辨率
     for (int i = 0; i < 16; i++)
     {
         //qDebug()<<"["<<regTable[i]<<"]"<<endl;
-        unsigned char send_str[8] = {0};
-        int ID = (PGN57856 << 8) + this->board8->writerAddr;  //写FPGA命令
-        quint64 regaddr = 0x10 + i;
-        quint64 regdata = regTable[i];
-        quint64 data = (regaddr<<16) + regdata;
-        char *p = (char *)(&data);
-        for(int i = 0; i < 8; i++)
+        regaddr = 0x10 + i;
+        regdata = regTable[i];
+        data = (regaddr<<16) + regdata;
+        p = (char *)(&data);
+        for(int j = 0; j < 8; j++)
         {
-            send_str[i] = p[7 - i];
+            send_str[j] = p[7 - j];
             //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
         }
         canthread->sendData(ID,(unsigned char*)send_str);
