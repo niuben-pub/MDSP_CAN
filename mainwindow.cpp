@@ -681,6 +681,590 @@ void MainWindow::displayMonitor(VCI_CAN_OBJ *vci, DWORD dwRel)
         ui->lineEditUpgradeAddr->setText(QString::number((unsigned int)vci[0].Data[7],16));
     }
 
+
+    if(vci->ID == (PGN60928 << 8) + board1->readAddr) //IDOG 应答
+    {
+        QString currentTime =" Board 1  " + QTime::currentTime().toString("HH:mm:ss   ");
+        if(vci[0].Data[0] == 0x00)//MCU IDOG应答
+        {
+            if(vci[0].Data[6] == 0xf0 && vci[0].Data[7] == 0xf0)
+            {
+                setLED(ui->labMCULEDBoard1, 2, 16);
+            }
+            else
+            {
+
+                ui->textBrowsererrlog->append(currentTime + "Board1 MCU abnormal");
+                setLED(ui->labMCULEDBoard1, 3, 16);
+            }
+        }
+        if(vci[0].Data[0] == 0x01)//FPGA IDOG应答
+        {
+            if(vci[0].Data[6] == 0x80 && vci[0].Data[7] == 0x00)
+            {
+               // qDebug()<<"FPGA IDOG normal"<<endl;
+                setLED(ui->labFPGALEDBoard1, 2, 16);
+            }
+            else
+            {
+                if(vci[0].Data[6] != 0x80)  //离线
+                {
+                    setLED(ui->labFPGALEDBoard1, 0, 16);
+                }
+                else  //在线
+                {
+                    if(vci[0].Data[7] & 0x01)
+                    {
+                        ui->textBrowsererrlog->append(currentTime + "FPGA 3G-rx1-phy err");
+                        setLED(ui->labFPGALEDBoard1, 3, 16);
+                    }
+                    if(vci[0].Data[7] & 0x02)
+                    {
+                        ui->textBrowsererrlog->append(currentTime + "FPGA 3G-rx2-phy err");
+                        setLED(ui->labFPGALEDBoard1, 3, 16);
+
+                    }
+                    if(vci[0].Data[7] & 0x04)
+                    {
+                        //ui->textBrowsererrlog->append(currentTime + "FPGA 12G-rx-phy err");
+                        setLED(ui->labFPGALEDBoard1, 2, 16);  // Board1 12G-rx 默认无输入 可忽略错误
+                    }
+                    if(vci[0].Data[7] & 0x08)
+                    {
+                        ui->textBrowsererrlog->append(currentTime + "FPGA 12G-tx-phy err");
+                        setLED(ui->labFPGALEDBoard1, 3, 16);
+                    }
+                    if(vci[0].Data[7] & 0x10)
+                    {
+                        ui->textBrowsererrlog->append(currentTime + "FPGA addr-phy err");
+                        setLED(ui->labFPGALEDBoard1, 3, 16);
+                    }
+                    if(vci[0].Data[7] & 0x20)
+                    {
+                        ui->textBrowsererrlog->append(currentTime + "FPGA system err");
+                        setLED(ui->labFPGALEDBoard1, 3, 16);
+                    }
+                }
+
+            }
+        }
+        if(vci[0].Data[0] == 0x02)//DSP IDOG应答
+        {
+            qDebug()<<"DSP IDOG"<<endl;
+            setLED(ui->labDSPLEDBoard1, 2, 16);
+        }
+    }
+
+    if(vci->ID == (PGN60928 << 8) + board2->readAddr) //IDOG 应答
+    {
+        QString currentTime =" Board 2  " + QTime::currentTime().toString("HH:mm:ss   ");
+        if(vci[0].Data[0] == 0x00)//MCU IDOG应答
+        {
+            if(vci[0].Data[6] == 0xf0 && vci[0].Data[7] == 0xf0)
+            {
+                setLED(ui->labMCULEDBoard2, 2, 16);
+            }
+            else
+            {
+
+                ui->textBrowsererrlog->append(currentTime + "MCU abnormal");
+                setLED(ui->labMCULEDBoard2, 3, 16);
+            }
+        }
+        if(vci[0].Data[0] == 0x01)//FPGA IDOG应答
+        {
+            if(vci[0].Data[6] == 0x80 && vci[0].Data[7] == 0x00)
+            {
+               // qDebug()<<"FPGA IDOG normal"<<endl;
+                setLED(ui->labFPGALEDBoard2, 2, 16);
+            }
+            else
+            {
+                if(vci[0].Data[6] != 0x80)  //离线
+                {
+                    setLED(ui->labFPGALEDBoard2, 0, 16);
+                }
+                else  //在线
+                {
+                    if(vci[0].Data[7] & 0x01)
+                    {
+                        ui->textBrowsererrlog->append(currentTime + "FPGA 3G-rx1-phy err");
+                        setLED(ui->labFPGALEDBoard2, 3, 16);
+                    }
+                    if(vci[0].Data[7] & 0x02)
+                    {
+                        ui->textBrowsererrlog->append(currentTime + "FPGA 3G-rx2-phy err");
+                        setLED(ui->labFPGALEDBoard2, 3, 16);
+
+                    }
+                    if(vci[0].Data[7] & 0x04)
+                    {
+                        ui->textBrowsererrlog->append(currentTime + "FPGA 12G-rx-phy err");
+                        setLED(ui->labFPGALEDBoard2, 3, 16);
+                    }
+                    if(vci[0].Data[7] & 0x08)
+                    {
+                        ui->textBrowsererrlog->append(currentTime + "FPGA 12G-tx-phy err");
+                        setLED(ui->labFPGALEDBoard2, 3, 16);
+                    }
+                    if(vci[0].Data[7] & 0x10)
+                    {
+                        ui->textBrowsererrlog->append(currentTime + "FPGA addr-phy err");
+                        setLED(ui->labFPGALEDBoard2, 3, 16);
+                    }
+                    if(vci[0].Data[7] & 0x20)
+                    {
+                        ui->textBrowsererrlog->append(currentTime + "FPGA system err");
+                        setLED(ui->labFPGALEDBoard2, 3, 16);
+                    }
+                }
+
+            }
+        }
+        if(vci[0].Data[0] == 0x02)//DSP IDOG应答
+        {
+            qDebug()<<"DSP IDOG"<<endl;
+            setLED(ui->labDSPLEDBoard2, 2, 16);
+        }
+    }
+
+    if(vci->ID == (PGN60928 << 8) + board3->readAddr) //IDOG 应答
+    {
+        QString currentTime =" Board 3  " + QTime::currentTime().toString("HH:mm:ss   ");
+        if(vci[0].Data[0] == 0x00)//MCU IDOG应答
+        {
+            if(vci[0].Data[6] == 0xf0 && vci[0].Data[7] == 0xf0)
+            {
+                setLED(ui->labMCULEDBoard3, 2, 16);
+            }
+            else
+            {
+
+                ui->textBrowsererrlog->append(currentTime + "MCU abnormal");
+                setLED(ui->labMCULEDBoard3, 3, 16);
+            }
+        }
+        if(vci[0].Data[0] == 0x01)//FPGA IDOG应答
+        {
+            if(vci[0].Data[6] == 0x80 && vci[0].Data[7] == 0x00)
+            {
+               // qDebug()<<"FPGA IDOG normal"<<endl;
+                setLED(ui->labFPGALEDBoard3, 2, 16);
+            }
+            else
+            {
+                if(vci[0].Data[6] != 0x80)  //离线
+                {
+                    setLED(ui->labFPGALEDBoard3, 0, 16);
+                }
+                else  //在线
+                {
+                    if(vci[0].Data[7] & 0x01)
+                    {
+                        ui->textBrowsererrlog->append(currentTime + "FPGA 3G-rx1-phy err");
+                        setLED(ui->labFPGALEDBoard3, 3, 16);
+                    }
+                    if(vci[0].Data[7] & 0x02)
+                    {
+                        ui->textBrowsererrlog->append(currentTime + "FPGA 3G-rx2-phy err");
+                        setLED(ui->labFPGALEDBoard3, 3, 16);
+
+                    }
+                    if(vci[0].Data[7] & 0x04)
+                    {
+                        ui->textBrowsererrlog->append(currentTime + "FPGA 12G-rx-phy err");
+                        setLED(ui->labFPGALEDBoard3, 3, 16);
+                    }
+                    if(vci[0].Data[7] & 0x08)
+                    {
+                        ui->textBrowsererrlog->append(currentTime + "FPGA 12G-tx-phy err");
+                        setLED(ui->labFPGALEDBoard3, 3, 16);
+                    }
+                    if(vci[0].Data[7] & 0x10)
+                    {
+                        ui->textBrowsererrlog->append(currentTime + "FPGA addr-phy err");
+                        setLED(ui->labFPGALEDBoard3, 3, 16);
+                    }
+                    if(vci[0].Data[7] & 0x20)
+                    {
+                        ui->textBrowsererrlog->append(currentTime + "FPGA system err");
+                        setLED(ui->labFPGALEDBoard3, 3, 16);
+                    }
+                }
+
+            }
+        }
+        if(vci[0].Data[0] == 0x02)//DSP IDOG应答
+        {
+            qDebug()<<"DSP IDOG"<<endl;
+            setLED(ui->labDSPLEDBoard3, 2, 16);
+        }
+    }
+
+    if(vci->ID == (PGN60928 << 8) + board4->readAddr) //IDOG 应答
+    {
+        QString currentTime =" Board 4  " + QTime::currentTime().toString("HH:mm:ss   ");
+        if(vci[0].Data[0] == 0x00)//MCU IDOG应答
+        {
+            if(vci[0].Data[6] == 0xf0 && vci[0].Data[7] == 0xf0)
+            {
+                setLED(ui->labMCULEDBoard4, 2, 16);
+            }
+            else
+            {
+
+                ui->textBrowsererrlog->append(currentTime + "MCU abnormal");
+                setLED(ui->labMCULEDBoard4, 3, 16);
+            }
+        }
+        if(vci[0].Data[0] == 0x01)//FPGA IDOG应答
+        {
+            if(vci[0].Data[6] == 0x80 && vci[0].Data[7] == 0x00)
+            {
+               // qDebug()<<"FPGA IDOG normal"<<endl;
+                setLED(ui->labFPGALEDBoard4, 2, 16);
+            }
+            else
+            {
+                if(vci[0].Data[6] != 0x80)  //离线
+                {
+                    setLED(ui->labFPGALEDBoard4, 0, 16);
+                }
+                else  //在线
+                {
+                    if(vci[0].Data[7] & 0x01)
+                    {
+                        ui->textBrowsererrlog->append(currentTime + "FPGA 3G-rx1-phy err");
+                        setLED(ui->labFPGALEDBoard4, 3, 16);
+                    }
+                    if(vci[0].Data[7] & 0x02)
+                    {
+                        ui->textBrowsererrlog->append(currentTime + "FPGA 3G-rx2-phy err");
+                        setLED(ui->labFPGALEDBoard4, 3, 16);
+
+                    }
+                    if(vci[0].Data[7] & 0x04)
+                    {
+                        ui->textBrowsererrlog->append(currentTime + "FPGA 12G-rx-phy err");
+                        setLED(ui->labFPGALEDBoard4, 3, 16);
+                    }
+                    if(vci[0].Data[7] & 0x08)
+                    {
+                        ui->textBrowsererrlog->append(currentTime + "FPGA 12G-tx-phy err");
+                        setLED(ui->labFPGALEDBoard4, 3, 16);
+                    }
+                    if(vci[0].Data[7] & 0x10)
+                    {
+                        ui->textBrowsererrlog->append(currentTime + "FPGA addr-phy err");
+                        setLED(ui->labFPGALEDBoard4, 3, 16);
+                    }
+                    if(vci[0].Data[7] & 0x20)
+                    {
+                        ui->textBrowsererrlog->append(currentTime + "FPGA system err");
+                        setLED(ui->labFPGALEDBoard4, 3, 16);
+                    }
+                }
+
+            }
+        }
+        if(vci[0].Data[0] == 0x02)//DSP IDOG应答
+        {
+            qDebug()<<"DSP IDOG"<<endl;
+            setLED(ui->labDSPLEDBoard4, 2, 16);
+        }
+    }
+
+    if(vci->ID == (PGN60928 << 8) + board5->readAddr) //IDOG 应答
+    {
+        QString currentTime =" Board 5  " + QTime::currentTime().toString("HH:mm:ss   ");
+        if(vci[0].Data[0] == 0x00)//MCU IDOG应答
+        {
+            if(vci[0].Data[6] == 0xf0 && vci[0].Data[7] == 0xf0)
+            {
+                setLED(ui->labMCULEDBoard5, 2, 16);
+            }
+            else
+            {
+
+                ui->textBrowsererrlog->append(currentTime + "MCU abnormal");
+                setLED(ui->labMCULEDBoard5, 3, 16);
+            }
+        }
+        if(vci[0].Data[0] == 0x01)//FPGA IDOG应答
+        {
+            if(vci[0].Data[6] == 0x80 && vci[0].Data[7] == 0x00)
+            {
+               // qDebug()<<"FPGA IDOG normal"<<endl;
+                setLED(ui->labFPGALEDBoard5, 2, 16);
+            }
+            else
+            {
+                if(vci[0].Data[6] != 0x80)  //离线
+                {
+                    setLED(ui->labFPGALEDBoard5, 0, 16);
+                }
+                else  //在线
+                {
+                    if(vci[0].Data[7] & 0x01)
+                    {
+                        ui->textBrowsererrlog->append(currentTime + "FPGA 3G-rx1-phy err");
+                        setLED(ui->labFPGALEDBoard5, 3, 16);
+                    }
+                    if(vci[0].Data[7] & 0x02)
+                    {
+                        ui->textBrowsererrlog->append(currentTime + "FPGA 3G-rx2-phy err");
+                        setLED(ui->labFPGALEDBoard5, 3, 16);
+
+                    }
+                    if(vci[0].Data[7] & 0x04)
+                    {
+                        ui->textBrowsererrlog->append(currentTime + "FPGA 12G-rx-phy err");
+                        setLED(ui->labFPGALEDBoard5, 3, 16);
+                    }
+                    if(vci[0].Data[7] & 0x08)
+                    {
+                        ui->textBrowsererrlog->append(currentTime + "FPGA 12G-tx-phy err");
+                        setLED(ui->labFPGALEDBoard5, 3, 16);
+                    }
+                    if(vci[0].Data[7] & 0x10)
+                    {
+                        ui->textBrowsererrlog->append(currentTime + "FPGA addr-phy err");
+                        setLED(ui->labFPGALEDBoard5, 3, 16);
+                    }
+                    if(vci[0].Data[7] & 0x20)
+                    {
+                        ui->textBrowsererrlog->append(currentTime + "FPGA system err");
+                        setLED(ui->labFPGALEDBoard5, 3, 16);
+                    }
+                }
+
+            }
+        }
+        if(vci[0].Data[0] == 0x02)//DSP IDOG应答
+        {
+            qDebug()<<"DSP IDOG"<<endl;
+            setLED(ui->labDSPLEDBoard5, 2, 16);
+        }
+    }
+
+    if(vci->ID == (PGN60928 << 8) + board6->readAddr) //IDOG 应答
+    {
+        QString currentTime =" Board 6  " + QTime::currentTime().toString("HH:mm:ss   ");
+        if(vci[0].Data[0] == 0x00)//MCU IDOG应答
+        {
+            if(vci[0].Data[6] == 0xf0 && vci[0].Data[7] == 0xf0)
+            {
+                setLED(ui->labMCULEDBoard6, 2, 16);
+            }
+            else
+            {
+
+                ui->textBrowsererrlog->append(currentTime + "MCU abnormal");
+                setLED(ui->labMCULEDBoard6, 3, 16);
+            }
+        }
+        if(vci[0].Data[0] == 0x01)//FPGA IDOG应答
+        {
+            if(vci[0].Data[6] == 0x80 && vci[0].Data[7] == 0x00)
+            {
+               // qDebug()<<"FPGA IDOG normal"<<endl;
+                setLED(ui->labFPGALEDBoard6, 2, 16);
+            }
+            else
+            {
+                if(vci[0].Data[6] != 0x80)  //离线
+                {
+                    setLED(ui->labFPGALEDBoard6, 0, 16);
+                }
+                else  //在线
+                {
+                    if(vci[0].Data[7] & 0x01)
+                    {
+                        ui->textBrowsererrlog->append(currentTime + "FPGA 3G-rx1-phy err");
+                        setLED(ui->labFPGALEDBoard6, 3, 16);
+                    }
+                    if(vci[0].Data[7] & 0x02)
+                    {
+                        ui->textBrowsererrlog->append(currentTime + "FPGA 3G-rx2-phy err");
+                        setLED(ui->labFPGALEDBoard6, 3, 16);
+
+                    }
+                    if(vci[0].Data[7] & 0x04)
+                    {
+                        ui->textBrowsererrlog->append(currentTime + "FPGA 12G-rx-phy err");
+                        setLED(ui->labFPGALEDBoard6, 3, 16);
+                    }
+                    if(vci[0].Data[7] & 0x08)
+                    {
+                        ui->textBrowsererrlog->append(currentTime + "FPGA 12G-tx-phy err");
+                        setLED(ui->labFPGALEDBoard6, 3, 16);
+                    }
+                    if(vci[0].Data[7] & 0x10)
+                    {
+                        ui->textBrowsererrlog->append(currentTime + "FPGA addr-phy err");
+                        setLED(ui->labFPGALEDBoard6, 3, 16);
+                    }
+                    if(vci[0].Data[7] & 0x20)
+                    {
+                        ui->textBrowsererrlog->append(currentTime + "FPGA system err");
+                        setLED(ui->labFPGALEDBoard6, 3, 16);
+                    }
+                }
+
+            }
+        }
+        if(vci[0].Data[0] == 0x02)//DSP IDOG应答
+        {
+            qDebug()<<"DSP IDOG"<<endl;
+            setLED(ui->labDSPLEDBoard6, 2, 16);
+        }
+    }
+
+    if(vci->ID == (PGN60928 << 8) + board7->readAddr) //IDOG 应答
+    {
+        QString currentTime =" Board 7  " + QTime::currentTime().toString("HH:mm:ss   ");
+        if(vci[0].Data[0] == 0x00)//MCU IDOG应答
+        {
+            if(vci[0].Data[6] == 0xf0 && vci[0].Data[7] == 0xf0)
+            {
+                setLED(ui->labMCULEDBoard7, 2, 16);
+            }
+            else
+            {
+
+                ui->textBrowsererrlog->append(currentTime + "MCU abnormal");
+                setLED(ui->labMCULEDBoard7, 3, 16);
+            }
+        }
+        if(vci[0].Data[0] == 0x01)//FPGA IDOG应答
+        {
+            if(vci[0].Data[6] == 0x80 && vci[0].Data[7] == 0x00)
+            {
+               // qDebug()<<"FPGA IDOG normal"<<endl;
+                setLED(ui->labFPGALEDBoard7, 2, 16);
+            }
+            else
+            {
+                if(vci[0].Data[6] != 0x80)  //离线
+                {
+                    setLED(ui->labFPGALEDBoard7, 0, 16);
+                }
+                else  //在线
+                {
+                    if(vci[0].Data[7] & 0x01)
+                    {
+                        ui->textBrowsererrlog->append(currentTime + "FPGA 3G-rx1-phy err");
+                        setLED(ui->labFPGALEDBoard7, 3, 16);
+                    }
+                    if(vci[0].Data[7] & 0x02)
+                    {
+                        ui->textBrowsererrlog->append(currentTime + "FPGA 3G-rx2-phy err");
+                        setLED(ui->labFPGALEDBoard7, 3, 16);
+
+                    }
+                    if(vci[0].Data[7] & 0x04)
+                    {
+                        ui->textBrowsererrlog->append(currentTime + "FPGA 12G-rx-phy err");
+                        setLED(ui->labFPGALEDBoard7, 3, 16);
+                    }
+                    if(vci[0].Data[7] & 0x08)
+                    {
+                        ui->textBrowsererrlog->append(currentTime + "FPGA 12G-tx-phy err");
+                        setLED(ui->labFPGALEDBoard7, 3, 16);
+                    }
+                    if(vci[0].Data[7] & 0x10)
+                    {
+                        ui->textBrowsererrlog->append(currentTime + "FPGA addr-phy err");
+                        setLED(ui->labFPGALEDBoard7, 3, 16);
+                    }
+                    if(vci[0].Data[7] & 0x20)
+                    {
+                        ui->textBrowsererrlog->append(currentTime + "FPGA system err");
+                        setLED(ui->labFPGALEDBoard7, 3, 16);
+                    }
+                }
+
+            }
+        }
+        if(vci[0].Data[0] == 0x02)//DSP IDOG应答
+        {
+            qDebug()<<"DSP IDOG"<<endl;
+            setLED(ui->labDSPLEDBoard7, 2, 16);
+        }
+    }
+
+    if(vci->ID == (PGN60928 << 8) + board8->readAddr) //IDOG 应答
+    {
+        QString currentTime =" Board 8  " + QTime::currentTime().toString("HH:mm:ss   ");
+        if(vci[0].Data[0] == 0x00)//MCU IDOG应答
+        {
+            if(vci[0].Data[6] == 0xf0 && vci[0].Data[7] == 0xf0)
+            {
+                setLED(ui->labMCULEDBoard8, 2, 16);
+            }
+            else
+            {
+
+                ui->textBrowsererrlog->append(currentTime + "MCU abnormal");
+                setLED(ui->labMCULEDBoard8, 3, 16);
+            }
+        }
+        if(vci[0].Data[0] == 0x01)//FPGA IDOG应答
+        {
+            if(vci[0].Data[6] == 0x80 && vci[0].Data[7] == 0x00)
+            {
+               // qDebug()<<"FPGA IDOG normal"<<endl;
+                setLED(ui->labFPGALEDBoard8, 2, 16);
+            }
+            else
+            {
+                if(vci[0].Data[6] != 0x80)  //离线
+                {
+                    setLED(ui->labFPGALEDBoard8, 0, 16);
+                }
+                else  //在线
+                {
+                    if(vci[0].Data[7] & 0x01)
+                    {
+                        ui->textBrowsererrlog->append(currentTime + "FPGA 3G-rx1-phy err");
+                        setLED(ui->labFPGALEDBoard8, 3, 16);
+                    }
+                    if(vci[0].Data[7] & 0x02)
+                    {
+                        ui->textBrowsererrlog->append(currentTime + "FPGA 3G-rx2-phy err");
+                        setLED(ui->labFPGALEDBoard8, 3, 16);
+
+                    }
+                    if(vci[0].Data[7] & 0x04)
+                    {
+                        ui->textBrowsererrlog->append(currentTime + "FPGA 12G-rx-phy err");
+                        setLED(ui->labFPGALEDBoard8, 3, 16);
+                    }
+                    if(vci[0].Data[7] & 0x08)
+                    {
+                        ui->textBrowsererrlog->append(currentTime + "FPGA 12G-tx-phy err");
+                        setLED(ui->labFPGALEDBoard8, 3, 16);
+                    }
+                    if(vci[0].Data[7] & 0x10)
+                    {
+                        ui->textBrowsererrlog->append(currentTime + "FPGA addr-phy err");
+                        setLED(ui->labFPGALEDBoard8, 3, 16);
+                    }
+                    if(vci[0].Data[7] & 0x20)
+                    {
+                        ui->textBrowsererrlog->append(currentTime + "FPGA system err");
+                        setLED(ui->labFPGALEDBoard8, 3, 16);
+                    }
+                }
+
+            }
+        }
+        if(vci[0].Data[0] == 0x02)//DSP IDOG应答
+        {
+            qDebug()<<"DSP IDOG"<<endl;
+            setLED(ui->labDSPLEDBoard8, 2, 16);
+        }
+    }
 }
 
 void MainWindow::initUi()
@@ -1022,33 +1606,33 @@ void MainWindow::initUi()
     ui->btnUpdate_2->setEnabled(false);  //关闭升级按钮
     ui->btnUpdate_3->setEnabled(false);  //关闭升级按钮
 
-    setLED(ui->labMCULEDBoard1, 2, 16);
-    setLED(ui->labMCULEDBoard2, 2, 16);
-    setLED(ui->labMCULEDBoard3, 2, 16);
-    setLED(ui->labMCULEDBoard4, 2, 16);
-    setLED(ui->labMCULEDBoard5, 2, 16);
-    setLED(ui->labMCULEDBoard6, 2, 16);
-    setLED(ui->labMCULEDBoard7, 2, 16);
-    setLED(ui->labMCULEDBoard8, 2, 16);
+    setLED(ui->labMCULEDBoard1, 0, 16);
+    setLED(ui->labMCULEDBoard2, 0, 16);
+    setLED(ui->labMCULEDBoard3, 0, 16);
+    setLED(ui->labMCULEDBoard4, 0, 16);
+    setLED(ui->labMCULEDBoard5, 0, 16);
+    setLED(ui->labMCULEDBoard6, 0, 16);
+    setLED(ui->labMCULEDBoard7, 0, 16);
+    setLED(ui->labMCULEDBoard8, 0, 16);
 
-    setLED(ui->labFPGALEDBoard1, 2, 16);
-    setLED(ui->labFPGALEDBoard2, 2, 16);
-    setLED(ui->labFPGALEDBoard3, 2, 16);
-    setLED(ui->labFPGALEDBoard4, 2, 16);
-    setLED(ui->labFPGALEDBoard5, 2, 16);
-    setLED(ui->labFPGALEDBoard6, 2, 16);
-    setLED(ui->labFPGALEDBoard7, 2, 16);
-    setLED(ui->labFPGALEDBoard8, 2, 16);
+    setLED(ui->labFPGALEDBoard1, 0, 16);
+    setLED(ui->labFPGALEDBoard2, 0, 16);
+    setLED(ui->labFPGALEDBoard3, 0, 16);
+    setLED(ui->labFPGALEDBoard4, 0, 16);
+    setLED(ui->labFPGALEDBoard5, 0, 16);
+    setLED(ui->labFPGALEDBoard6, 0, 16);
+    setLED(ui->labFPGALEDBoard7, 0, 16);
+    setLED(ui->labFPGALEDBoard8, 0, 16);
 
 
-    setLED(ui->labDSPLEDBoard1, 2, 16);
-    setLED(ui->labDSPLEDBoard2, 2, 16);
-    setLED(ui->labDSPLEDBoard3, 2, 16);
-    setLED(ui->labDSPLEDBoard4, 2, 16);
-    setLED(ui->labDSPLEDBoard5, 2, 16);
-    setLED(ui->labDSPLEDBoard6, 2, 16);
-    setLED(ui->labDSPLEDBoard7, 2, 16);
-    setLED(ui->labDSPLEDBoard8, 2, 16);
+    setLED(ui->labDSPLEDBoard1, 0, 16);
+    setLED(ui->labDSPLEDBoard2, 0, 16);
+    setLED(ui->labDSPLEDBoard3, 0, 16);
+    setLED(ui->labDSPLEDBoard4, 0, 16);
+    setLED(ui->labDSPLEDBoard5, 0, 16);
+    setLED(ui->labDSPLEDBoard6, 0, 16);
+    setLED(ui->labDSPLEDBoard7, 0, 16);
+    setLED(ui->labDSPLEDBoard8, 0, 16);
 
 
 //    ui->tabWidget->setTabEnabled(1,false);

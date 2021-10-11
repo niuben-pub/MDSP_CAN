@@ -214,7 +214,24 @@ void CANThread::sendADCrequestData()
         this->sendData(ID,(unsigned char *)arr);
         sleep(10);
 
+        //获取IDOG状态
+        ID = (PGN60928 << 8) + boardAddr;
+        //iDogdata 第[0]字节表示设备
+        //0 读MCU工作状态
+        //1 读FPGA工作状态
+        //2 读dsp工作状态
+        unsigned char iDogdata[8] = {0};
+        iDogdata[0] = 0; //0 读MCU工作状态
+        this->sendData(ID,(unsigned char *)iDogdata);
+        sleep(10);
 
+        iDogdata[0] = 1; //1 读FPGA工作状态
+        this->sendData(ID,(unsigned char *)iDogdata);
+        sleep(10);
+
+        iDogdata[0] = 2; //2 读dsp工作状态
+        this->sendData(ID,(unsigned char *)iDogdata);
+        sleep(10);
 
     }
 

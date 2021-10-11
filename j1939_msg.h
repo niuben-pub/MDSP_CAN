@@ -12,6 +12,8 @@
 
 #define PGN61184 (0xEF00)  // 测试包
 
+
+#define PGN60928 (0xEE00)  // IDOG
 #define PGN60672 (0xED00)  // 读写 CAN收发地址
 #define PGN60416 (0xEC00)  // 长数据起始参数组
 #define PGN60160 (0xEB00)  // 长数据数据参数组
