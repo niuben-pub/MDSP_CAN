@@ -930,13 +930,8 @@ void ImgLabel::clearImg(unsigned int zone_x, unsigned int zone_y)
         }
         else if(Img3GIn1Size == INPUT_SIZE_FULL)
         {
-            img3GIn1SizeReg = IN_3G_SIZE_1920X1080;   //全屏显示需要先将视频管道切到 1080P
-            if(regindex >= 0 && regindex <= 15)
-            {
-                displayModeReg = SDI_4K_FROM_IN1;
-            }
+            this->resetRegData();
             emit this->regChange((unsigned int *)regTable);
-
         }
     }
     else if(ImgType == IMG_IN2_3G)
@@ -1087,11 +1082,7 @@ void ImgLabel::clearImg(unsigned int zone_x, unsigned int zone_y)
         }
         else if(Img3GIn2Size == INPUT_SIZE_FULL)
         {
-            img3GIn2SizeReg = IN_3G_SIZE_1920X1080;   //全屏显示需要先将视频管道切到 1080P
-            if(regindex >= 0 && regindex <= 15)
-            {
-                displayModeReg = SDI_4K_FROM_IN2;
-            }
+            this->resetRegData();
             emit this->regChange((unsigned int *)regTable);
         }
 
