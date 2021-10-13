@@ -5166,7 +5166,7 @@ void MainWindow::on_pushButtonOpenOsdBoard3_clicked()
     else if(ui->pushButtonOpenOsdBoard3->text() == tr("Close"))
     {
         regdata = 0;
-        ui->pushButtonOpenOsdBoard1->setText(tr("Open"));
+        ui->pushButtonOpenOsdBoard3->setText(tr("Open"));
     }
     quint64 data = (regaddr<<16) + regdata;
     char *p = (char *)(&data);
@@ -5485,7 +5485,7 @@ void MainWindow::on_horizontalSliderOsdAlphaBoard5_sliderReleased()
 void MainWindow::on_pushButtonOpenOsdBoard6_clicked()
 {
     unsigned char send_str[8] = {0};
-    int ID = (PGN57856 << 8) + this->board1->writerAddr;  //写FPGA命令
+    int ID = (PGN57856 << 8) + this->board6->writerAddr;  //写FPGA命令
     quint64 regaddr = 0x0030;
     quint64 regdata = 0;
     if(ui->pushButtonOpenOsdBoard6->text() == tr("Open"))
