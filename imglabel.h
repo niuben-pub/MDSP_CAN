@@ -119,7 +119,7 @@ public:
     void resetRegData1(void);  //清屏，显示的为彩条
     void PrintRegTable(void);
     void handleImgControl(unsigned int zone_x, unsigned int zone_y);
-
+    void clearImg(unsigned int zone_x, unsigned int zone_y);
     virtual void enterEvent(QEvent *event);
     virtual void mousePressEvent(QMouseEvent *event);
     virtual void paintEvent(QPaintEvent *event);
