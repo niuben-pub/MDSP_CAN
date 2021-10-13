@@ -235,6 +235,8 @@ private slots:
     void on_horizontalSliderOsdAlphaBoard7_sliderReleased();
     void on_horizontalSliderOsdAlphaBoard8_sliderReleased();
 
+    void on_btnWorkControlClearall_clicked();
+
 private:
     Ui::MainWindow *ui;
     CANThread *canthread;

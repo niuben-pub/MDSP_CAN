@@ -1605,6 +1605,15 @@ void MainWindow::initUi()
 
     ui->btnUpdate_2->setEnabled(false);  //关闭升级按钮
     ui->btnUpdate_3->setEnabled(false);  //关闭升级按钮
+    ui->btnWorkControlClearall->setEnabled(false);//关闭clear all按钮
+    ui->pushButtonImgClearBoard1->setEnabled(false);//关闭clear Board1按钮
+    ui->pushButtonImgClearBoard2->setEnabled(false);//关闭clear Board1按钮
+    ui->pushButtonImgClearBoard3->setEnabled(false);//关闭clear Board1按钮
+    ui->pushButtonImgClearBoard4->setEnabled(false);//关闭clear Board1按钮
+    ui->pushButtonImgClearBoard5->setEnabled(false);//关闭clear Board1按钮
+    ui->pushButtonImgClearBoard6->setEnabled(false);//关闭clear Board1按钮
+    ui->pushButtonImgClearBoard7->setEnabled(false);//关闭clear Board1按钮
+    ui->pushButtonImgClearBoard8->setEnabled(false);//关闭clear Board1按钮
 
     setLED(ui->labMCULEDBoard1, 0, 16);
     setLED(ui->labMCULEDBoard2, 0, 16);
@@ -2867,9 +2876,15 @@ void MainWindow::on_btnWorkControlMode_clicked()
 
     ui->btnWorkControlLoad->setEnabled(true);//打开加载按钮
     ui->btnWorkControlSave->setEnabled(true);//打开保存按钮
-
-
-
+    ui->btnWorkControlClearall->setEnabled(true);//打开clear all按钮
+    ui->pushButtonImgClearBoard1->setEnabled(true);//打开clear Board1按钮
+    ui->pushButtonImgClearBoard2->setEnabled(true);//打开clear Board1按钮
+    ui->pushButtonImgClearBoard3->setEnabled(true);//打开clear Board1按钮
+    ui->pushButtonImgClearBoard4->setEnabled(true);//打开clear Board1按钮
+    ui->pushButtonImgClearBoard5->setEnabled(true);//打开clear Board1按钮
+    ui->pushButtonImgClearBoard6->setEnabled(true);//打开clear Board1按钮
+    ui->pushButtonImgClearBoard7->setEnabled(true);//打开clear Board1按钮
+    ui->pushButtonImgClearBoard8->setEnabled(true);//打开clear Board1按钮
     this->statusBar()->showMessage("Mode : Work - Control");
 
 }
@@ -2922,6 +2937,15 @@ void MainWindow::on_btnUpdateMode_2_clicked()
 
     ui->pushButtonUpgradeAddrSet->setEnabled(false);
     ui->pushButtonUpgradeAddrRead->setEnabled(false);
+    ui->btnWorkControlClearall->setEnabled(false);//关闭clear all按钮
+    ui->pushButtonImgClearBoard1->setEnabled(false);//关闭clear Board1按钮
+    ui->pushButtonImgClearBoard2->setEnabled(false);//关闭clear Board1按钮
+    ui->pushButtonImgClearBoard3->setEnabled(false);//关闭clear Board1按钮
+    ui->pushButtonImgClearBoard4->setEnabled(false);//关闭clear Board1按钮
+    ui->pushButtonImgClearBoard5->setEnabled(false);//关闭clear Board1按钮
+    ui->pushButtonImgClearBoard6->setEnabled(false);//关闭clear Board1按钮
+    ui->pushButtonImgClearBoard7->setEnabled(false);//关闭clear Board1按钮
+    ui->pushButtonImgClearBoard8->setEnabled(false);//关闭clear Board1按钮
 
     qDebug()<<"设置工作模式";
     int ID = 0;
@@ -3027,6 +3051,15 @@ void MainWindow::on_btnStatusBoard1_2_clicked()
 
     ui->btnWorkControlLoad->setEnabled(false);//关闭加载按钮
     ui->btnWorkControlSave->setEnabled(false);//关闭保存按钮
+    ui->btnWorkControlClearall->setEnabled(false);//关闭clear all按钮
+    ui->pushButtonImgClearBoard1->setEnabled(false);//关闭clear Board1按钮
+    ui->pushButtonImgClearBoard2->setEnabled(false);//关闭clear Board1按钮
+    ui->pushButtonImgClearBoard3->setEnabled(false);//关闭clear Board1按钮
+    ui->pushButtonImgClearBoard4->setEnabled(false);//关闭clear Board1按钮
+    ui->pushButtonImgClearBoard5->setEnabled(false);//关闭clear Board1按钮
+    ui->pushButtonImgClearBoard6->setEnabled(false);//关闭clear Board1按钮
+    ui->pushButtonImgClearBoard7->setEnabled(false);//关闭clear Board1按钮
+    ui->pushButtonImgClearBoard8->setEnabled(false);//关闭clear Board1按钮
 
     this->statusBar()->showMessage("Mode: Status - Realtime | Monitor: Colse");
 }
@@ -3077,6 +3110,15 @@ void MainWindow::on_btnUpdateMode_3_clicked()
     ui->btnUpdate_3->setEnabled(true);  //使能升级按钮
     ui->pushButtonUpgradeAddrSet->setEnabled(false);
     ui->pushButtonUpgradeAddrRead->setEnabled(false);
+    ui->btnWorkControlClearall->setEnabled(false);//关闭clear all按钮
+    ui->pushButtonImgClearBoard1->setEnabled(false);//关闭clear Board1按钮
+    ui->pushButtonImgClearBoard2->setEnabled(false);//关闭clear Board1按钮
+    ui->pushButtonImgClearBoard3->setEnabled(false);//关闭clear Board1按钮
+    ui->pushButtonImgClearBoard4->setEnabled(false);//关闭clear Board1按钮
+    ui->pushButtonImgClearBoard5->setEnabled(false);//关闭clear Board1按钮
+    ui->pushButtonImgClearBoard6->setEnabled(false);//关闭clear Board1按钮
+    ui->pushButtonImgClearBoard7->setEnabled(false);//关闭clear Board1按钮
+    ui->pushButtonImgClearBoard8->setEnabled(false);//关闭clear Board1按钮
 
     qDebug()<<"设置工作模式";
     int ID = 0;
@@ -4518,7 +4560,10 @@ void MainWindow::on_btnWorkControlLoad_clicked()
             {
                 unsigned int arr[4][4];
                 char *chline = line.data();
-                sscanf(chline,"Board1 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                sscanf(chline,"Board1 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                       &ui->labelImgBoard1->displayModeReg,
+                       &ui->labelImgBoard1->img3GIn1SizeReg,
+                       &ui->labelImgBoard1->img3GIn2SizeReg,
                        &arr[0][0], &arr[0][1], &arr[0][2], &arr[0][3],
                        &arr[1][0], &arr[1][1], &arr[1][2], &arr[1][3],
                        &arr[2][0], &arr[2][1], &arr[2][2], &arr[2][3],
@@ -4541,7 +4586,10 @@ void MainWindow::on_btnWorkControlLoad_clicked()
             {
                 unsigned int arr[4][4];
                 char *chline = line.data();
-                sscanf(chline,"Board2 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                sscanf(chline,"Board2 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                       &ui->labelImgBoard2->displayModeReg,
+                       &ui->labelImgBoard2->img3GIn1SizeReg,
+                       &ui->labelImgBoard2->img3GIn2SizeReg,
                        &arr[0][0], &arr[0][1], &arr[0][2], &arr[0][3],
                        &arr[1][0], &arr[1][1], &arr[1][2], &arr[1][3],
                        &arr[2][0], &arr[2][1], &arr[2][2], &arr[2][3],
@@ -4563,7 +4611,10 @@ void MainWindow::on_btnWorkControlLoad_clicked()
             {
                 unsigned int arr[4][4];
                 char *chline = line.data();
-                sscanf(chline,"Board3 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                sscanf(chline,"Board3 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                       &ui->labelImgBoard3->displayModeReg,
+                       &ui->labelImgBoard3->img3GIn1SizeReg,
+                       &ui->labelImgBoard3->img3GIn2SizeReg,
                        &arr[0][0], &arr[0][1], &arr[0][2], &arr[0][3],
                        &arr[1][0], &arr[1][1], &arr[1][2], &arr[1][3],
                        &arr[2][0], &arr[2][1], &arr[2][2], &arr[2][3],
@@ -4585,7 +4636,10 @@ void MainWindow::on_btnWorkControlLoad_clicked()
             {
                 unsigned int arr[4][4];
                 char *chline = line.data();
-                sscanf(chline,"Board4 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                sscanf(chline,"Board4 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                       &ui->labelImgBoard4->displayModeReg,
+                       &ui->labelImgBoard4->img3GIn1SizeReg,
+                       &ui->labelImgBoard4->img3GIn2SizeReg,
                        &arr[0][0], &arr[0][1], &arr[0][2], &arr[0][3],
                        &arr[1][0], &arr[1][1], &arr[1][2], &arr[1][3],
                        &arr[2][0], &arr[2][1], &arr[2][2], &arr[2][3],
@@ -4607,7 +4661,10 @@ void MainWindow::on_btnWorkControlLoad_clicked()
             {
                 unsigned int arr[4][4];
                 char *chline = line.data();
-                sscanf(chline,"Board5 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                sscanf(chline,"Board5 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                       &ui->labelImgBoard5->displayModeReg,
+                       &ui->labelImgBoard5->img3GIn1SizeReg,
+                       &ui->labelImgBoard5->img3GIn2SizeReg,
                        &arr[0][0], &arr[0][1], &arr[0][2], &arr[0][3],
                        &arr[1][0], &arr[1][1], &arr[1][2], &arr[1][3],
                        &arr[2][0], &arr[2][1], &arr[2][2], &arr[2][3],
@@ -4629,7 +4686,10 @@ void MainWindow::on_btnWorkControlLoad_clicked()
             {
                 unsigned int arr[4][4];
                 char *chline = line.data();
-                sscanf(chline,"Board6 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                sscanf(chline,"Board6 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                       &ui->labelImgBoard6->displayModeReg,
+                       &ui->labelImgBoard6->img3GIn1SizeReg,
+                       &ui->labelImgBoard6->img3GIn2SizeReg,
                        &arr[0][0], &arr[0][1], &arr[0][2], &arr[0][3],
                        &arr[1][0], &arr[1][1], &arr[1][2], &arr[1][3],
                        &arr[2][0], &arr[2][1], &arr[2][2], &arr[2][3],
@@ -4651,7 +4711,10 @@ void MainWindow::on_btnWorkControlLoad_clicked()
             {
                 unsigned int arr[4][4];
                 char *chline = line.data();
-                sscanf(chline,"Board7 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                sscanf(chline,"Board7%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                       &ui->labelImgBoard7->displayModeReg,
+                       &ui->labelImgBoard7->img3GIn1SizeReg,
+                       &ui->labelImgBoard7->img3GIn2SizeReg,
                        &arr[0][0], &arr[0][1], &arr[0][2], &arr[0][3],
                        &arr[1][0], &arr[1][1], &arr[1][2], &arr[1][3],
                        &arr[2][0], &arr[2][1], &arr[2][2], &arr[2][3],
@@ -4674,7 +4737,10 @@ void MainWindow::on_btnWorkControlLoad_clicked()
             {
                 unsigned int arr[4][4];
                 char *chline = line.data();
-                sscanf(chline,"Board8 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                sscanf(chline,"Board8 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                       &ui->labelImgBoard8->displayModeReg,
+                       &ui->labelImgBoard8->img3GIn1SizeReg,
+                       &ui->labelImgBoard8->img3GIn2SizeReg,
                        &arr[0][0], &arr[0][1], &arr[0][2], &arr[0][3],
                        &arr[1][0], &arr[1][1], &arr[1][2], &arr[1][3],
                        &arr[2][0], &arr[2][1], &arr[2][2], &arr[2][3],
@@ -4719,21 +4785,30 @@ void MainWindow::on_btnWorkControlSave_clicked()
     file.flush();
     char str[64] = "";
 
-    sprintf(str,"Board1 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+    sprintf(str,"Board1 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+            ui->labelImgBoard1->displayModeReg,
+            ui->labelImgBoard1->img3GIn1SizeReg,
+            ui->labelImgBoard1->img3GIn2SizeReg,
             ui->labelImgBoard1->regTable[0][0], ui->labelImgBoard1->regTable[0][1], ui->labelImgBoard1->regTable[0][2], ui->labelImgBoard1->regTable[0][3],
             ui->labelImgBoard1->regTable[1][0], ui->labelImgBoard1->regTable[1][1], ui->labelImgBoard1->regTable[1][2], ui->labelImgBoard1->regTable[1][3],
             ui->labelImgBoard1->regTable[2][0], ui->labelImgBoard1->regTable[2][1], ui->labelImgBoard1->regTable[2][2], ui->labelImgBoard1->regTable[2][3],
             ui->labelImgBoard1->regTable[3][0], ui->labelImgBoard1->regTable[3][1], ui->labelImgBoard1->regTable[3][2], ui->labelImgBoard1->regTable[3][3]);
     file.write(str);
 
-    sprintf(str,"Board2 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+    sprintf(str,"Board2 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+            ui->labelImgBoard2->displayModeReg,
+            ui->labelImgBoard2->img3GIn1SizeReg,
+            ui->labelImgBoard2->img3GIn2SizeReg,
             ui->labelImgBoard2->regTable[0][0], ui->labelImgBoard2->regTable[0][1], ui->labelImgBoard2->regTable[0][2], ui->labelImgBoard2->regTable[0][3],
             ui->labelImgBoard2->regTable[1][0], ui->labelImgBoard2->regTable[1][1], ui->labelImgBoard2->regTable[1][2], ui->labelImgBoard2->regTable[1][3],
             ui->labelImgBoard2->regTable[2][0], ui->labelImgBoard2->regTable[2][1], ui->labelImgBoard2->regTable[2][2], ui->labelImgBoard2->regTable[2][3],
             ui->labelImgBoard2->regTable[3][0], ui->labelImgBoard2->regTable[3][1], ui->labelImgBoard2->regTable[3][2], ui->labelImgBoard2->regTable[3][3]);
     file.write(str);
 
-    sprintf(str,"Board3 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+    sprintf(str,"Board3 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+            ui->labelImgBoard3->displayModeReg,
+            ui->labelImgBoard3->img3GIn1SizeReg,
+            ui->labelImgBoard3->img3GIn2SizeReg,
             ui->labelImgBoard3->regTable[0][0], ui->labelImgBoard3->regTable[0][1], ui->labelImgBoard3->regTable[0][2], ui->labelImgBoard3->regTable[0][3],
             ui->labelImgBoard3->regTable[1][0], ui->labelImgBoard3->regTable[1][1], ui->labelImgBoard3->regTable[1][2], ui->labelImgBoard3->regTable[1][3],
             ui->labelImgBoard3->regTable[2][0], ui->labelImgBoard3->regTable[2][1], ui->labelImgBoard3->regTable[2][2], ui->labelImgBoard3->regTable[2][3],
@@ -4741,35 +4816,50 @@ void MainWindow::on_btnWorkControlSave_clicked()
     file.write(str);
 
 
-    sprintf(str,"Board4 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+    sprintf(str,"Board4 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+            ui->labelImgBoard4->displayModeReg,
+            ui->labelImgBoard4->img3GIn1SizeReg,
+            ui->labelImgBoard4->img3GIn2SizeReg,
             ui->labelImgBoard4->regTable[0][0], ui->labelImgBoard4->regTable[0][1], ui->labelImgBoard4->regTable[0][2], ui->labelImgBoard4->regTable[0][3],
             ui->labelImgBoard4->regTable[1][0], ui->labelImgBoard4->regTable[1][1], ui->labelImgBoard4->regTable[1][2], ui->labelImgBoard4->regTable[1][3],
             ui->labelImgBoard4->regTable[2][0], ui->labelImgBoard4->regTable[2][1], ui->labelImgBoard4->regTable[2][2], ui->labelImgBoard4->regTable[2][3],
             ui->labelImgBoard4->regTable[3][0], ui->labelImgBoard4->regTable[3][1], ui->labelImgBoard4->regTable[3][2], ui->labelImgBoard4->regTable[3][3]);
     file.write(str);
 
-    sprintf(str,"Board5 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+    sprintf(str,"Board5 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+            ui->labelImgBoard5->displayModeReg,
+            ui->labelImgBoard5->img3GIn1SizeReg,
+            ui->labelImgBoard5->img3GIn2SizeReg,
             ui->labelImgBoard5->regTable[0][0], ui->labelImgBoard5->regTable[0][1], ui->labelImgBoard5->regTable[0][2], ui->labelImgBoard5->regTable[0][3],
             ui->labelImgBoard5->regTable[1][0], ui->labelImgBoard5->regTable[1][1], ui->labelImgBoard5->regTable[1][2], ui->labelImgBoard5->regTable[1][3],
             ui->labelImgBoard5->regTable[2][0], ui->labelImgBoard5->regTable[2][1], ui->labelImgBoard5->regTable[2][2], ui->labelImgBoard5->regTable[2][3],
             ui->labelImgBoard5->regTable[3][0], ui->labelImgBoard5->regTable[3][1], ui->labelImgBoard5->regTable[3][2], ui->labelImgBoard5->regTable[3][3]);
     file.write(str);
 
-    sprintf(str,"Board6 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+    sprintf(str,"Board6 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+            ui->labelImgBoard6->displayModeReg,
+            ui->labelImgBoard6->img3GIn1SizeReg,
+            ui->labelImgBoard6->img3GIn2SizeReg,
             ui->labelImgBoard6->regTable[0][0], ui->labelImgBoard6->regTable[0][1], ui->labelImgBoard6->regTable[0][2], ui->labelImgBoard6->regTable[0][3],
             ui->labelImgBoard6->regTable[1][0], ui->labelImgBoard6->regTable[1][1], ui->labelImgBoard6->regTable[1][2], ui->labelImgBoard6->regTable[1][3],
             ui->labelImgBoard6->regTable[2][0], ui->labelImgBoard6->regTable[2][1], ui->labelImgBoard6->regTable[2][2], ui->labelImgBoard6->regTable[2][3],
             ui->labelImgBoard6->regTable[3][0], ui->labelImgBoard6->regTable[3][1], ui->labelImgBoard6->regTable[3][2], ui->labelImgBoard6->regTable[3][3]);
     file.write(str);
 
-    sprintf(str,"Board7 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+    sprintf(str,"Board7 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+            ui->labelImgBoard7->displayModeReg,
+            ui->labelImgBoard7->img3GIn1SizeReg,
+            ui->labelImgBoard7->img3GIn2SizeReg,
             ui->labelImgBoard7->regTable[0][0], ui->labelImgBoard7->regTable[0][1], ui->labelImgBoard7->regTable[0][2], ui->labelImgBoard7->regTable[0][3],
             ui->labelImgBoard7->regTable[1][0], ui->labelImgBoard7->regTable[1][1], ui->labelImgBoard7->regTable[1][2], ui->labelImgBoard7->regTable[1][3],
             ui->labelImgBoard7->regTable[2][0], ui->labelImgBoard7->regTable[2][1], ui->labelImgBoard7->regTable[2][2], ui->labelImgBoard7->regTable[2][3],
             ui->labelImgBoard7->regTable[3][0], ui->labelImgBoard7->regTable[3][1], ui->labelImgBoard7->regTable[3][2], ui->labelImgBoard7->regTable[3][3]);
     file.write(str);
 
-    sprintf(str,"Board8 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+    sprintf(str,"Board8 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+            ui->labelImgBoard8->displayModeReg,
+            ui->labelImgBoard8->img3GIn1SizeReg,
+            ui->labelImgBoard8->img3GIn2SizeReg,
             ui->labelImgBoard8->regTable[0][0], ui->labelImgBoard8->regTable[0][1], ui->labelImgBoard8->regTable[0][2], ui->labelImgBoard8->regTable[0][3],
             ui->labelImgBoard8->regTable[1][0], ui->labelImgBoard8->regTable[1][1], ui->labelImgBoard8->regTable[1][2], ui->labelImgBoard8->regTable[1][3],
             ui->labelImgBoard8->regTable[2][0], ui->labelImgBoard8->regTable[2][1], ui->labelImgBoard8->regTable[2][2], ui->labelImgBoard8->regTable[2][3],
@@ -5808,4 +5898,39 @@ void MainWindow::on_horizontalSliderOsdAlphaBoard8_sliderReleased()
     }
     canthread->sendData(ID,(unsigned char*)send_str);
     sleep(10);
+}
+
+void MainWindow::on_btnWorkControlClearall_clicked()
+{
+    ui->labelImgBoard1->resetRegData1();
+    emit ui->labelImgBoard1->regChange((unsigned int *) ui->labelImgBoard1->regTable);
+    emit ui->labelImgBoard1->mousePaint();
+
+    ui->labelImgBoard2->resetRegData();
+    emit ui->labelImgBoard2->regChange((unsigned int *) ui->labelImgBoard2->regTable);
+    emit ui->labelImgBoard2->mousePaint();
+
+    ui->labelImgBoard3->resetRegData();
+    emit ui->labelImgBoard3->regChange((unsigned int *) ui->labelImgBoard3->regTable);
+    emit ui->labelImgBoard3->mousePaint();
+
+    ui->labelImgBoard4->resetRegData();
+    emit ui->labelImgBoard4->regChange((unsigned int *) ui->labelImgBoard4->regTable);
+    emit ui->labelImgBoard4->mousePaint();
+
+    ui->labelImgBoard5->resetRegData();
+    emit ui->labelImgBoard5->regChange((unsigned int *) ui->labelImgBoard5->regTable);
+    emit ui->labelImgBoard5->mousePaint();
+
+    ui->labelImgBoard6->resetRegData();
+    emit ui->labelImgBoard6->regChange((unsigned int *) ui->labelImgBoard6->regTable);
+    emit ui->labelImgBoard6->mousePaint();
+
+    ui->labelImgBoard7->resetRegData();
+    emit ui->labelImgBoard7->regChange((unsigned int *) ui->labelImgBoard7->regTable);
+    emit ui->labelImgBoard7->mousePaint();
+
+    ui->labelImgBoard8->resetRegData();
+    emit ui->labelImgBoard8->regChange((unsigned int *) ui->labelImgBoard8->regTable);
+    emit ui->labelImgBoard8->mousePaint();
 }

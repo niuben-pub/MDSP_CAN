@@ -806,8 +806,7 @@ void ImgLabel::mousePressEvent(QMouseEvent *event)
 
     if(event->button() == Qt::RightButton)
     {
-        qDebug()<<"RightButton press"<<endl;
-        PrintRegTable();
+        //PrintRegTable();
     }
 
 }
