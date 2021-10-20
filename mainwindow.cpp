@@ -1683,42 +1683,50 @@ void MainWindow::initImaLabel()
     ui->labelImgBoard1->pixBlank.load(":/images/0.png");
     ui->labelImgBoard1->pix3GIN1.load(":/images/1.png");
     ui->labelImgBoard1->pix3GIN2.load(":/images/2.png");
-    ui->labelImgBoard1->pixDetection.load(":/images/a1.png");
+    ui->labelImgBoard1->pixDetectionIN1.load(":/images/a1.png");
+    ui->labelImgBoard1->pixDetectionIN2.load(":/images/a2.png");
     ui->labelImgBoard1->pixColor.load(":/images/col1.png");
     ui->labelImgBoard2->pixBlank.load(":/images/0.png");
     ui->labelImgBoard2->pix3GIN1.load(":/images/3.png");
     ui->labelImgBoard2->pix3GIN2.load(":/images/4.png");
-    ui->labelImgBoard2->pixDetection.load(":/images/a2.png");
+    ui->labelImgBoard2->pixDetectionIN1.load(":/images/a3.png");
+    ui->labelImgBoard2->pixDetectionIN2.load(":/images/a4.png");
     ui->labelImgBoard2->pixColor.load(":/images/col2.png");
     ui->labelImgBoard3->pixBlank.load(":/images/0.png");
     ui->labelImgBoard3->pix3GIN1.load(":/images/5.png");
     ui->labelImgBoard3->pix3GIN2.load(":/images/6.png");
-    ui->labelImgBoard3->pixDetection.load(":/images/a3.png");
+    ui->labelImgBoard3->pixDetectionIN1.load(":/images/a5.png");
+    ui->labelImgBoard3->pixDetectionIN2.load(":/images/a6.png");
     ui->labelImgBoard3->pixColor.load(":/images/col3.png");
     ui->labelImgBoard4->pixBlank.load(":/images/0.png");
     ui->labelImgBoard4->pix3GIN1.load(":/images/7.png");
     ui->labelImgBoard4->pix3GIN2.load(":/images/8.png");
-    ui->labelImgBoard4->pixDetection.load(":/images/a4.png");
+    ui->labelImgBoard4->pixDetectionIN1.load(":/images/a7.png");
+    ui->labelImgBoard4->pixDetectionIN2.load(":/images/a8.png");
     ui->labelImgBoard4->pixColor.load(":/images/col4.png");
     ui->labelImgBoard5->pixBlank.load(":/images/0.png");
     ui->labelImgBoard5->pix3GIN1.load(":/images/9.png");
     ui->labelImgBoard5->pix3GIN2.load(":/images/10.png");
-    ui->labelImgBoard5->pixDetection.load(":/images/a5.png");
+    ui->labelImgBoard5->pixDetectionIN1.load(":/images/a9.png");
+    ui->labelImgBoard5->pixDetectionIN2.load(":/images/a10.png");
     ui->labelImgBoard5->pixColor.load(":/images/col5.png");
     ui->labelImgBoard6->pixBlank.load(":/images/0.png");
     ui->labelImgBoard6->pix3GIN1.load(":/images/11.png");
     ui->labelImgBoard6->pix3GIN2.load(":/images/12.png");
-    ui->labelImgBoard6->pixDetection.load(":/images/a6.png");
+    ui->labelImgBoard6->pixDetectionIN1.load(":/images/a11.png");
+    ui->labelImgBoard6->pixDetectionIN2.load(":/images/a12.png");
     ui->labelImgBoard6->pixColor.load(":/images/col6.png");
     ui->labelImgBoard7->pixBlank.load(":/images/0.png");
     ui->labelImgBoard7->pix3GIN1.load(":/images/13.png");
     ui->labelImgBoard7->pix3GIN2.load(":/images/14.png");
-    ui->labelImgBoard7->pixDetection.load(":/images/a7.png");
+    ui->labelImgBoard7->pixDetectionIN1.load(":/images/a13.png");
+    ui->labelImgBoard7->pixDetectionIN2.load(":/images/a14.png");
     ui->labelImgBoard7->pixColor.load(":/images/col7.png");
     ui->labelImgBoard8->pixBlank.load(":/images/0.png");
     ui->labelImgBoard8->pix3GIN1.load(":/images/15.png");
     ui->labelImgBoard8->pix3GIN2.load(":/images/16.png");
-    ui->labelImgBoard8->pixDetection.load(":/images/a8.png");
+    ui->labelImgBoard8->pixDetectionIN1.load(":/images/a15.png");
+    ui->labelImgBoard8->pixDetectionIN2.load(":/images/a16.png");
     ui->labelImgBoard8->pixColor.load(":/images/col8.png");
 
     ui->labelOverly->pixBlank.load(":/images/0.png");
@@ -2030,6 +2038,15 @@ void MainWindow::updateOverlyImgRegArray()
     ui->labelOverly->displayModeRegBoard[6] = ui->labelImgBoard7->displayModeReg;
     ui->labelOverly->displayModeRegBoard[7] = ui->labelImgBoard8->displayModeReg;
 
+    ui->labelOverly->displayDetectionModeRegBoard[0] = ui->labelImgBoard1->detectionStateReg;
+    ui->labelOverly->displayDetectionModeRegBoard[1] = ui->labelImgBoard2->detectionStateReg;
+    ui->labelOverly->displayDetectionModeRegBoard[2] = ui->labelImgBoard3->detectionStateReg;
+    ui->labelOverly->displayDetectionModeRegBoard[3] = ui->labelImgBoard4->detectionStateReg;
+    ui->labelOverly->displayDetectionModeRegBoard[4] = ui->labelImgBoard5->detectionStateReg;
+    ui->labelOverly->displayDetectionModeRegBoard[5] = ui->labelImgBoard6->detectionStateReg;
+    ui->labelOverly->displayDetectionModeRegBoard[6] = ui->labelImgBoard7->detectionStateReg;
+    ui->labelOverly->displayDetectionModeRegBoard[7] = ui->labelImgBoard8->detectionStateReg;
+
 
     ui->labelOverly->update();
 
@@ -2083,6 +2100,18 @@ void MainWindow::writeBoard1FpgaImgconfigReg(unsigned int *regTable)
     canthread->sendData(ID,(unsigned char*)send_str);
     sleep(10);
 
+    //发送目标识别配置
+    regaddr = ui->labelImgBoard1->detectionStateRegAddr;
+    regdata = ui->labelImgBoard1->detectionStateReg;
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int k = 0; k < 8; k++)
+    {
+        send_str[k] = p[7 - k];
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
 
 
     //再发送输入显示分辨率
@@ -2152,7 +2181,18 @@ void MainWindow::writeBoard2FpgaImgconfigReg(unsigned int *regTable)
     canthread->sendData(ID,(unsigned char*)send_str);
     sleep(10);
 
-
+    //发送目标识别配置
+    regaddr = ui->labelImgBoard2->detectionStateRegAddr;
+    regdata = ui->labelImgBoard2->detectionStateReg;
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int k = 0; k < 8; k++)
+    {
+        send_str[k] = p[7 - k];
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
 
     //再发送输入显示分辨率
     for (int i = 0; i < 16; i++)
@@ -2222,6 +2262,18 @@ void MainWindow::writeBoard3FpgaImgconfigReg(unsigned int *regTable)
     sleep(10);
 
 
+    //发送目标识别配置
+    regaddr = ui->labelImgBoard3->detectionStateRegAddr;
+    regdata = ui->labelImgBoard3->detectionStateReg;
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int k = 0; k < 8; k++)
+    {
+        send_str[k] = p[7 - k];
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
 
     //再发送输入显示分辨率
     for (int i = 0; i < 16; i++)
@@ -2292,6 +2344,19 @@ void MainWindow::writeBoard4FpgaImgconfigReg(unsigned int *regTable)
     sleep(10);
 
 
+    //发送目标识别配置
+    regaddr = ui->labelImgBoard4->detectionStateRegAddr;
+    regdata = ui->labelImgBoard4->detectionStateReg;
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int k = 0; k < 8; k++)
+    {
+        send_str[k] = p[7 - k];
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
 
     //再发送输入显示分辨率
     for (int i = 0; i < 16; i++)
@@ -2361,7 +2426,18 @@ void MainWindow::writeBoard5FpgaImgconfigReg(unsigned int *regTable)
     canthread->sendData(ID,(unsigned char*)send_str);
     sleep(10);
 
-
+    //发送目标识别配置
+    regaddr = ui->labelImgBoard5->detectionStateRegAddr;
+    regdata = ui->labelImgBoard5->detectionStateReg;
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int k = 0; k < 8; k++)
+    {
+        send_str[k] = p[7 - k];
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
 
     //再发送输入显示分辨率
     for (int i = 0; i < 16; i++)
@@ -2430,6 +2506,18 @@ void MainWindow::writeBoard6FpgaImgconfigReg(unsigned int *regTable)
     canthread->sendData(ID,(unsigned char*)send_str);
     sleep(10);
 
+    //发送目标识别配置
+    regaddr = ui->labelImgBoard6->detectionStateRegAddr;
+    regdata = ui->labelImgBoard6->detectionStateReg;
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int k = 0; k < 8; k++)
+    {
+        send_str[k] = p[7 - k];
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
 
 
     //再发送输入显示分辨率
@@ -2499,7 +2587,18 @@ void MainWindow::writeBoard7FpgaImgconfigReg(unsigned int *regTable)
     canthread->sendData(ID,(unsigned char*)send_str);
     sleep(10);
 
-
+    //发送目标识别配置
+    regaddr = ui->labelImgBoard7->detectionStateRegAddr;
+    regdata = ui->labelImgBoard7->detectionStateReg;
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int k = 0; k < 8; k++)
+    {
+        send_str[k] = p[7 - k];
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
 
     //再发送输入显示分辨率
     for (int i = 0; i < 16; i++)
@@ -2568,7 +2667,18 @@ void MainWindow::writeBoard8FpgaImgconfigReg(unsigned int *regTable)
     canthread->sendData(ID,(unsigned char*)send_str);
     sleep(10);
 
-
+    //发送目标识别配置
+    regaddr = ui->labelImgBoard8->detectionStateRegAddr;
+    regdata = ui->labelImgBoard8->detectionStateReg;
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int k = 0; k < 8; k++)
+    {
+        send_str[k] = p[7 - k];
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
 
     //再发送输入显示分辨率
     for (int i = 0; i < 16; i++)
@@ -4051,13 +4161,17 @@ void MainWindow::on_comboBoxImgBoard1_currentIndexChanged(int index)
     }
     else if (index == 2)
     {
-        ui->labelImgBoard1->ImgType = IMG_AI;
+        ui->labelImgBoard1->ImgType = IMG_AI_IN1;
     }
     else if (index == 3)
     {
-        ui->labelImgBoard1->ImgType = IMG_COLOR;
+        ui->labelImgBoard1->ImgType = IMG_AI_IN2;
     }
     else if (index == 4)
+    {
+        ui->labelImgBoard1->ImgType = IMG_COLOR;
+    }
+    else if (index == 5)
     {
         ui->labelImgBoard1->ImgType = IMG_LVDS_IN;
     }
@@ -4122,11 +4236,19 @@ void MainWindow::on_comboBoxImgBoard2_currentIndexChanged(int index)
     }
     else if (index == 2)
     {
-        ui->labelImgBoard2->ImgType = IMG_AI;
+        ui->labelImgBoard2->ImgType = IMG_AI_IN1;
     }
     else if (index == 3)
     {
+        ui->labelImgBoard2->ImgType = IMG_AI_IN2;
+    }
+    else if (index == 4)
+    {
         ui->labelImgBoard2->ImgType = IMG_COLOR;
+    }
+    else if (index == 5)
+    {
+        ui->labelImgBoard2->ImgType = IMG_LVDS_IN;
     }
     else
     {
@@ -4186,11 +4308,19 @@ void MainWindow::on_comboBoxImgBoard3_currentIndexChanged(int index)
     }
     else if (index == 2)
     {
-        ui->labelImgBoard3->ImgType = IMG_AI;
+        ui->labelImgBoard3->ImgType = IMG_AI_IN1;
     }
     else if (index == 3)
     {
+        ui->labelImgBoard3->ImgType = IMG_AI_IN2;
+    }
+    else if (index == 4)
+    {
         ui->labelImgBoard3->ImgType = IMG_COLOR;
+    }
+    else if (index == 5)
+    {
+        ui->labelImgBoard3->ImgType = IMG_LVDS_IN;
     }
     else
     {
@@ -4250,11 +4380,19 @@ void MainWindow::on_comboBoxImgBoard4_currentIndexChanged(int index)
     }
     else if (index == 2)
     {
-        ui->labelImgBoard4->ImgType = IMG_AI;
+        ui->labelImgBoard4->ImgType = IMG_AI_IN1;
     }
     else if (index == 3)
     {
+        ui->labelImgBoard4->ImgType = IMG_AI_IN2;
+    }
+    else if (index == 4)
+    {
         ui->labelImgBoard4->ImgType = IMG_COLOR;
+    }
+    else if (index == 5)
+    {
+        ui->labelImgBoard4->ImgType = IMG_LVDS_IN;
     }
     else
     {
@@ -4314,11 +4452,19 @@ void MainWindow::on_comboBoxImgBoard5_currentIndexChanged(int index)
     }
     else if (index == 2)
     {
-        ui->labelImgBoard5->ImgType = IMG_AI;
+        ui->labelImgBoard5->ImgType = IMG_AI_IN1;
     }
     else if (index == 3)
     {
+        ui->labelImgBoard5->ImgType = IMG_AI_IN2;
+    }
+    else if (index == 4)
+    {
         ui->labelImgBoard5->ImgType = IMG_COLOR;
+    }
+    else if (index == 5)
+    {
+        ui->labelImgBoard5->ImgType = IMG_LVDS_IN;
     }
     else
     {
@@ -4379,11 +4525,19 @@ void MainWindow::on_comboBoxImgBoard6_currentIndexChanged(int index)
     }
     else if (index == 2)
     {
-        ui->labelImgBoard6->ImgType = IMG_AI;
+        ui->labelImgBoard6->ImgType = IMG_AI_IN1;
     }
     else if (index == 3)
     {
+        ui->labelImgBoard6->ImgType = IMG_AI_IN2;
+    }
+    else if (index == 4)
+    {
         ui->labelImgBoard6->ImgType = IMG_COLOR;
+    }
+    else if (index == 5)
+    {
+        ui->labelImgBoard6->ImgType = IMG_LVDS_IN;
     }
     else
     {
@@ -4444,11 +4598,19 @@ void MainWindow::on_comboBoxImgBoard7_currentIndexChanged(int index)
     }
     else if (index == 2)
     {
-        ui->labelImgBoard7->ImgType = IMG_AI;
+        ui->labelImgBoard7->ImgType = IMG_AI_IN1;
     }
     else if (index == 3)
     {
+        ui->labelImgBoard7->ImgType = IMG_AI_IN2;
+    }
+    else if (index == 4)
+    {
         ui->labelImgBoard7->ImgType = IMG_COLOR;
+    }
+    else if (index == 5)
+    {
+        ui->labelImgBoard7->ImgType = IMG_LVDS_IN;
     }
     else
     {
@@ -4508,11 +4670,19 @@ void MainWindow::on_comboBoxImgBoard8_currentIndexChanged(int index)
     }
     else if (index == 2)
     {
-        ui->labelImgBoard8->ImgType = IMG_AI;
+        ui->labelImgBoard8->ImgType = IMG_AI_IN1;
     }
     else if (index == 3)
     {
+        ui->labelImgBoard8->ImgType = IMG_AI_IN2;
+    }
+    else if (index == 4)
+    {
         ui->labelImgBoard8->ImgType = IMG_COLOR;
+    }
+    else if (index == 5)
+    {
+        ui->labelImgBoard8->ImgType = IMG_LVDS_IN;
     }
     else
     {
@@ -4560,7 +4730,8 @@ void MainWindow::on_btnWorkControlLoad_clicked()
             {
                 unsigned int arr[4][4];
                 char *chline = line.data();
-                sscanf(chline,"Board1 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                sscanf(chline,"Board1 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                       &ui->labelImgBoard1->detectionStateReg,
                        &ui->labelImgBoard1->displayModeReg,
                        &ui->labelImgBoard1->img3GIn1SizeReg,
                        &ui->labelImgBoard1->img3GIn2SizeReg,
@@ -4579,6 +4750,7 @@ void MainWindow::on_btnWorkControlLoad_clicked()
                     }
                 }
                 emit ui->labelImgBoard1->regChange((unsigned int *)ui->labelImgBoard1->regTable);
+                emit ui->labelImgBoard1->regChange((unsigned int *)ui->labelImgBoard1->regTable);
                 emit ui->labelImgBoard1->mousePaint();
 
             }
@@ -4586,7 +4758,8 @@ void MainWindow::on_btnWorkControlLoad_clicked()
             {
                 unsigned int arr[4][4];
                 char *chline = line.data();
-                sscanf(chline,"Board2 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                sscanf(chline,"Board2 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                       &ui->labelImgBoard2->detectionStateReg,
                        &ui->labelImgBoard2->displayModeReg,
                        &ui->labelImgBoard2->img3GIn1SizeReg,
                        &ui->labelImgBoard2->img3GIn2SizeReg,
@@ -4605,13 +4778,15 @@ void MainWindow::on_btnWorkControlLoad_clicked()
                     }
                 }
                 emit ui->labelImgBoard2->regChange((unsigned int *)ui->labelImgBoard2->regTable);
+                emit ui->labelImgBoard2->regChange((unsigned int *)ui->labelImgBoard2->regTable);
                 emit ui->labelImgBoard2->mousePaint();
             }
             if(line[5] == '3')
             {
                 unsigned int arr[4][4];
                 char *chline = line.data();
-                sscanf(chline,"Board3 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                sscanf(chline,"Board3 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                       &ui->labelImgBoard3->detectionStateReg,
                        &ui->labelImgBoard3->displayModeReg,
                        &ui->labelImgBoard3->img3GIn1SizeReg,
                        &ui->labelImgBoard3->img3GIn2SizeReg,
@@ -4630,13 +4805,15 @@ void MainWindow::on_btnWorkControlLoad_clicked()
                     }
                 }
                 emit ui->labelImgBoard3->regChange((unsigned int *)ui->labelImgBoard3->regTable);
+                emit ui->labelImgBoard3->regChange((unsigned int *)ui->labelImgBoard3->regTable);
                 emit ui->labelImgBoard3->mousePaint();
             }
             if(line[5] == '4')
             {
                 unsigned int arr[4][4];
                 char *chline = line.data();
-                sscanf(chline,"Board4 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                sscanf(chline,"Board4 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                       &ui->labelImgBoard4->detectionStateReg,
                        &ui->labelImgBoard4->displayModeReg,
                        &ui->labelImgBoard4->img3GIn1SizeReg,
                        &ui->labelImgBoard4->img3GIn2SizeReg,
@@ -4655,13 +4832,15 @@ void MainWindow::on_btnWorkControlLoad_clicked()
                     }
                 }
                 emit ui->labelImgBoard4->regChange((unsigned int *)ui->labelImgBoard4->regTable);
+                emit ui->labelImgBoard4->regChange((unsigned int *)ui->labelImgBoard4->regTable);
                 emit ui->labelImgBoard4->mousePaint();
             }
             if(line[5] == '5')
             {
                 unsigned int arr[4][4];
                 char *chline = line.data();
-                sscanf(chline,"Board5 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                sscanf(chline,"Board5 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                       &ui->labelImgBoard5->detectionStateReg,
                        &ui->labelImgBoard5->displayModeReg,
                        &ui->labelImgBoard5->img3GIn1SizeReg,
                        &ui->labelImgBoard5->img3GIn2SizeReg,
@@ -4680,13 +4859,15 @@ void MainWindow::on_btnWorkControlLoad_clicked()
                     }
                 }
                 emit ui->labelImgBoard5->regChange((unsigned int *)ui->labelImgBoard5->regTable);
+                emit ui->labelImgBoard5->regChange((unsigned int *)ui->labelImgBoard5->regTable);
                 emit ui->labelImgBoard5->mousePaint();
             }
             if(line[5] == '6')
             {
                 unsigned int arr[4][4];
                 char *chline = line.data();
-                sscanf(chline,"Board6 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                sscanf(chline,"Board6 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                       &ui->labelImgBoard6->detectionStateReg,
                        &ui->labelImgBoard6->displayModeReg,
                        &ui->labelImgBoard6->img3GIn1SizeReg,
                        &ui->labelImgBoard6->img3GIn2SizeReg,
@@ -4705,13 +4886,15 @@ void MainWindow::on_btnWorkControlLoad_clicked()
                     }
                 }
                 emit ui->labelImgBoard6->regChange((unsigned int *)ui->labelImgBoard6->regTable);
+                emit ui->labelImgBoard6->regChange((unsigned int *)ui->labelImgBoard6->regTable);
                 emit ui->labelImgBoard6->mousePaint();
             }
             if(line[5] == '7')
             {
                 unsigned int arr[4][4];
                 char *chline = line.data();
-                sscanf(chline,"Board7%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                sscanf(chline,"Board7 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                       &ui->labelImgBoard7->detectionStateReg,
                        &ui->labelImgBoard7->displayModeReg,
                        &ui->labelImgBoard7->img3GIn1SizeReg,
                        &ui->labelImgBoard7->img3GIn2SizeReg,
@@ -4730,6 +4913,7 @@ void MainWindow::on_btnWorkControlLoad_clicked()
                     }
                 }
                 emit ui->labelImgBoard7->regChange((unsigned int *)ui->labelImgBoard7->regTable);
+                emit ui->labelImgBoard7->regChange((unsigned int *)ui->labelImgBoard7->regTable);
                 emit ui->labelImgBoard7->mousePaint();
 
             }
@@ -4737,7 +4921,8 @@ void MainWindow::on_btnWorkControlLoad_clicked()
             {
                 unsigned int arr[4][4];
                 char *chline = line.data();
-                sscanf(chline,"Board8 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                sscanf(chline,"Board8 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                       &ui->labelImgBoard8->detectionStateReg,
                        &ui->labelImgBoard8->displayModeReg,
                        &ui->labelImgBoard8->img3GIn1SizeReg,
                        &ui->labelImgBoard8->img3GIn2SizeReg,
@@ -4755,6 +4940,7 @@ void MainWindow::on_btnWorkControlLoad_clicked()
                        ui->labelImgBoard8->regTable[table_i][table_j] = arr[table_i][table_j];
                     }
                 }
+                emit ui->labelImgBoard8->regChange((unsigned int *)ui->labelImgBoard8->regTable);
                 emit ui->labelImgBoard8->regChange((unsigned int *)ui->labelImgBoard8->regTable);
                 emit ui->labelImgBoard8->mousePaint();
 
@@ -4785,7 +4971,8 @@ void MainWindow::on_btnWorkControlSave_clicked()
     file.flush();
     char str[64] = "";
 
-    sprintf(str,"Board1 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+    sprintf(str,"Board1 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+            ui->labelImgBoard1->detectionStateReg,
             ui->labelImgBoard1->displayModeReg,
             ui->labelImgBoard1->img3GIn1SizeReg,
             ui->labelImgBoard1->img3GIn2SizeReg,
@@ -4795,7 +4982,8 @@ void MainWindow::on_btnWorkControlSave_clicked()
             ui->labelImgBoard1->regTable[3][0], ui->labelImgBoard1->regTable[3][1], ui->labelImgBoard1->regTable[3][2], ui->labelImgBoard1->regTable[3][3]);
     file.write(str);
 
-    sprintf(str,"Board2 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+    sprintf(str,"Board2 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+            ui->labelImgBoard2->detectionStateReg,
             ui->labelImgBoard2->displayModeReg,
             ui->labelImgBoard2->img3GIn1SizeReg,
             ui->labelImgBoard2->img3GIn2SizeReg,
@@ -4805,7 +4993,8 @@ void MainWindow::on_btnWorkControlSave_clicked()
             ui->labelImgBoard2->regTable[3][0], ui->labelImgBoard2->regTable[3][1], ui->labelImgBoard2->regTable[3][2], ui->labelImgBoard2->regTable[3][3]);
     file.write(str);
 
-    sprintf(str,"Board3 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+    sprintf(str,"Board3 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+            ui->labelImgBoard3->detectionStateReg,
             ui->labelImgBoard3->displayModeReg,
             ui->labelImgBoard3->img3GIn1SizeReg,
             ui->labelImgBoard3->img3GIn2SizeReg,
@@ -4816,7 +5005,8 @@ void MainWindow::on_btnWorkControlSave_clicked()
     file.write(str);
 
 
-    sprintf(str,"Board4 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+    sprintf(str,"Board4 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+            ui->labelImgBoard4->detectionStateReg,
             ui->labelImgBoard4->displayModeReg,
             ui->labelImgBoard4->img3GIn1SizeReg,
             ui->labelImgBoard4->img3GIn2SizeReg,
@@ -4826,7 +5016,8 @@ void MainWindow::on_btnWorkControlSave_clicked()
             ui->labelImgBoard4->regTable[3][0], ui->labelImgBoard4->regTable[3][1], ui->labelImgBoard4->regTable[3][2], ui->labelImgBoard4->regTable[3][3]);
     file.write(str);
 
-    sprintf(str,"Board5 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+    sprintf(str,"Board5 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+            ui->labelImgBoard5->detectionStateReg,
             ui->labelImgBoard5->displayModeReg,
             ui->labelImgBoard5->img3GIn1SizeReg,
             ui->labelImgBoard5->img3GIn2SizeReg,
@@ -4836,7 +5027,8 @@ void MainWindow::on_btnWorkControlSave_clicked()
             ui->labelImgBoard5->regTable[3][0], ui->labelImgBoard5->regTable[3][1], ui->labelImgBoard5->regTable[3][2], ui->labelImgBoard5->regTable[3][3]);
     file.write(str);
 
-    sprintf(str,"Board6 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+    sprintf(str,"Board6 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+            ui->labelImgBoard6->detectionStateReg,
             ui->labelImgBoard6->displayModeReg,
             ui->labelImgBoard6->img3GIn1SizeReg,
             ui->labelImgBoard6->img3GIn2SizeReg,
@@ -4846,7 +5038,8 @@ void MainWindow::on_btnWorkControlSave_clicked()
             ui->labelImgBoard6->regTable[3][0], ui->labelImgBoard6->regTable[3][1], ui->labelImgBoard6->regTable[3][2], ui->labelImgBoard6->regTable[3][3]);
     file.write(str);
 
-    sprintf(str,"Board7 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+    sprintf(str,"Board7 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+            ui->labelImgBoard7->detectionStateReg,
             ui->labelImgBoard7->displayModeReg,
             ui->labelImgBoard7->img3GIn1SizeReg,
             ui->labelImgBoard7->img3GIn2SizeReg,
@@ -4856,7 +5049,8 @@ void MainWindow::on_btnWorkControlSave_clicked()
             ui->labelImgBoard7->regTable[3][0], ui->labelImgBoard7->regTable[3][1], ui->labelImgBoard7->regTable[3][2], ui->labelImgBoard7->regTable[3][3]);
     file.write(str);
 
-    sprintf(str,"Board8 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+    sprintf(str,"Board8 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+            ui->labelImgBoard8->detectionStateReg,
             ui->labelImgBoard8->displayModeReg,
             ui->labelImgBoard8->img3GIn1SizeReg,
             ui->labelImgBoard8->img3GIn2SizeReg,

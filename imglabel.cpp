@@ -8,6 +8,8 @@ ImgLabel::ImgLabel(QWidget *parent) : QLabel(parent)
 
 void ImgLabel::resetRegData()
 {
+    //目标识别开关
+    detectionStateReg = DETECTION_OFF;
     //硬件版本号
     hardwareVersionReg = 0;
     //设备状态寄存器
@@ -33,6 +35,8 @@ void ImgLabel::resetRegData()
 
 void ImgLabel::resetRegData1()
 {
+    //目标识别开关
+    detectionStateReg = DETECTION_OFF;
     //硬件版本号
     hardwareVersionReg = 0;
     //设备状态寄存器
@@ -533,8 +537,113 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
         }
 
     }
-    else if(ImgType == IMG_AI)
+    else if(ImgType == IMG_AI_IN1)
     {
+
+        this->detectionStateReg = DETECTION_IN1;
+        if(regindex == 0 || regindex == 1 ||regindex == 4 || regindex == 5)
+        {
+            if(regTable[0][0] == IN2_3G_1920x1080 || regTable[0][0] == IN1_3G_1920x1080)
+            {
+                this->regTable[0][0] =  0;
+                this->regTable[0][1] =  0;
+                this->regTable[1][0] =  0;
+                this->regTable[1][1] =  0;
+                emit this->regChange((unsigned int *)regTable);
+
+                this->regTable[zone_y][zone_x] = DETECTION_960x540;
+                emit this->regChange((unsigned int *)regTable);
+
+            }
+            else
+            {
+                this->regTable[zone_y][zone_x] = regindex;
+                emit this->regChange((unsigned int *)regTable);
+
+                this->regTable[zone_y][zone_x] = DETECTION_960x540;
+                emit this->regChange((unsigned int *)regTable);
+
+            }
+        }
+        else if(regindex == 2 || regindex == 3 ||regindex == 6 || regindex == 7)
+        {
+            if(regTable[0][2] == IN2_3G_1920x1080 || regTable[0][2] == IN1_3G_1920x1080)
+            {
+                this->regTable[0][2] =  0;
+                this->regTable[0][3] =  0;
+                this->regTable[1][2] =  0;
+                this->regTable[1][3] =  0;
+                emit this->regChange((unsigned int *)regTable);
+
+                this->regTable[zone_y][zone_x] = DETECTION_960x540;
+                emit this->regChange((unsigned int *)regTable);
+
+            }
+            else
+            {
+                this->regTable[zone_y][zone_x] = regindex;
+                emit this->regChange((unsigned int *)regTable);
+
+                this->regTable[zone_y][zone_x] = DETECTION_960x540;
+                emit this->regChange((unsigned int *)regTable);
+
+            }
+        }
+        else if(regindex == 8 || regindex == 9 ||regindex == 12 || regindex == 13)
+        {
+            if(regTable[2][0] == IN2_3G_1920x1080 || regTable[2][0] == IN1_3G_1920x1080)
+            {
+                this->regTable[2][0] =  0;
+                this->regTable[2][1] =  0;
+                this->regTable[3][0] =  0;
+                this->regTable[3][1] =  0;
+                emit this->regChange((unsigned int *)regTable);
+
+                this->regTable[zone_y][zone_x] = DETECTION_960x540;
+                emit this->regChange((unsigned int *)regTable);
+
+            }
+            else
+            {
+                this->regTable[zone_y][zone_x] = regindex;
+                emit this->regChange((unsigned int *)regTable);
+
+                this->regTable[zone_y][zone_x] = DETECTION_960x540;
+                emit this->regChange((unsigned int *)regTable);
+
+            }
+
+        }
+        else if(regindex == 10 || regindex == 11 ||regindex == 14 || regindex == 15)
+        {
+            if(regTable[2][2] == IN2_3G_1920x1080 || regTable[2][2] == IN1_3G_1920x1080)
+            {
+                this->regTable[2][2] =  0;
+                this->regTable[2][3] =  0;
+                this->regTable[3][2] =  0;
+                this->regTable[3][3] =  0;
+                emit this->regChange((unsigned int *)regTable);
+
+                this->regTable[zone_y][zone_x] = DETECTION_960x540;
+                emit this->regChange((unsigned int *)regTable);
+
+            }
+            else
+            {
+                this->regTable[zone_y][zone_x] = regindex;
+                emit this->regChange((unsigned int *)regTable);
+
+                this->regTable[zone_y][zone_x] = DETECTION_960x540;
+                emit this->regChange((unsigned int *)regTable);
+
+            }
+        }
+
+    }
+    else if(ImgType == IMG_AI_IN2)
+    {
+
+        this->detectionStateReg = DETECTION_IN2;
         if(regindex == 0 || regindex == 1 ||regindex == 4 || regindex == 5)
         {
             if(regTable[0][0] == IN2_3G_1920x1080 || regTable[0][0] == IN1_3G_1920x1080)
@@ -1188,7 +1297,7 @@ void ImgLabel::clearImg(unsigned int zone_x, unsigned int zone_y)
         }
 
     }
-    else if(ImgType == IMG_AI)
+    else if(ImgType == IMG_AI_IN1 || ImgType == IMG_AI_IN2)
     {
         if(regindex == 0 || regindex == 1 ||regindex == 4 || regindex == 5)
         {
@@ -1560,7 +1669,15 @@ void ImgLabel::paintEvent(QPaintEvent *event)
             }
             if(this->regTable[i][j] == DETECTION_960x540)
             {
-                painter->drawPixmap(j*DrawWindowQuarWidth,i*DrawWindowQuarHeight,DrawWindowQuarWidth,DrawWindowQuarHeight,this->pixDetection);
+                if(this->detectionStateReg == DETECTION_IN1)
+                {
+                    painter->drawPixmap(j*DrawWindowQuarWidth,i*DrawWindowQuarHeight,DrawWindowQuarWidth,DrawWindowQuarHeight,this->pixDetectionIN1);
+                }
+                else if(this->detectionStateReg == DETECTION_IN2)
+                {
+                    painter->drawPixmap(j*DrawWindowQuarWidth,i*DrawWindowQuarHeight,DrawWindowQuarWidth,DrawWindowQuarHeight,this->pixDetectionIN2);
+                }
+
             }
 
         }

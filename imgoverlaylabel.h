@@ -6,7 +6,8 @@
 #include <QPainter>
 #include <QPixmap>
 
-
+#define OVERLY_DETECTION_IN1       (0x0001)  //目标识别  3G in2
+#define OVERLY_DETECTION_IN2       (0x0003)  //目标识别  3G in2
 #define OVERLY_IN1_3G_1920x1080  (0x0080)
 #define OVERLY_IN2_3G_1920x1080  (0x008c)
 #define OVERLY_IN1_3G_960x540  (0x00c0)
@@ -30,7 +31,7 @@ class imgoverlayLabel : public QLabel
 public:
     unsigned int regTableBoard[8][4][4];
     unsigned int displayModeRegBoard[8];
-
+    unsigned int displayDetectionModeRegBoard[8];
 
     unsigned int DrawWindowWidth = OVERLY_DRAW_WIDTH;
     unsigned int DrawWindowHeight = OVERLY_DRAW_HIGHT;

@@ -853,17 +853,17 @@
          </item>
          <item>
           <property name="text">
-           <string>Detection</string>
+           <string>AI IN1</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>AI IN2</string>
           </property>
          </item>
          <item>
           <property name="text">
            <string>Color</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Lvds in</string>
           </property>
          </item>
         </widget>
@@ -1041,7 +1041,12 @@ font: 10pt &quot;Arial&quot;;</string>
          </item>
          <item>
           <property name="text">
-           <string>Detection</string>
+           <string>AI IN1</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>AI IN2</string>
           </property>
          </item>
          <item>
@@ -1224,7 +1229,12 @@ font: 10pt &quot;Arial&quot;;</string>
          </item>
          <item>
           <property name="text">
-           <string>Detection</string>
+           <string>AI IN1</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>AI IN2</string>
           </property>
          </item>
          <item>
@@ -1407,7 +1417,12 @@ font: 10pt &quot;Arial&quot;;</string>
          </item>
          <item>
           <property name="text">
-           <string>Detection</string>
+           <string>AI IN1</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>AI IN2</string>
           </property>
          </item>
          <item>
@@ -1590,7 +1605,12 @@ font: 10pt &quot;Arial&quot;;</string>
          </item>
          <item>
           <property name="text">
-           <string>Detection</string>
+           <string>AI IN1</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>AI IN2</string>
           </property>
          </item>
          <item>
@@ -1773,7 +1793,12 @@ font: 10pt &quot;Arial&quot;;</string>
          </item>
          <item>
           <property name="text">
-           <string>Detection</string>
+           <string>AI IN1</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>AI IN2</string>
           </property>
          </item>
          <item>
@@ -1956,7 +1981,12 @@ font: 10pt &quot;Arial&quot;;</string>
          </item>
          <item>
           <property name="text">
-           <string>Detection</string>
+           <string>AI IN1</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>AI IN2</string>
           </property>
          </item>
          <item>
@@ -2139,7 +2169,12 @@ font: 10pt &quot;Arial&quot;;</string>
          </item>
          <item>
           <property name="text">
-           <string>Detection</string>
+           <string>AI IN1</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>AI IN2</string>
           </property>
          </item>
          <item>
