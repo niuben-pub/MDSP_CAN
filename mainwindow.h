@@ -237,6 +237,12 @@ private slots:
 
     void on_btnWorkControlClearall_clicked();
 
+    void on_pushButtonUpgradeOsdBoard2_clicked();
+
+    void on_pushButtonUpgradeOsdColorBoard2_clicked();
+
+    void on_pushButtonUpgradeOsdSetColorBoard2_clicked();
+
 private:
     Ui::MainWindow *ui;
     CANThread *canthread;

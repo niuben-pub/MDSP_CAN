@@ -763,7 +763,7 @@
        <enum>QTabWidget::West</enum>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tabControl">
        <attribute name="title">
@@ -2570,7 +2570,7 @@ font: 10pt &quot;Arial&quot;;</string>
           <x>300</x>
           <y>150</y>
           <width>261</width>
-          <height>221</height>
+          <height>321</height>
          </rect>
         </property>
         <property name="styleSheet">
@@ -2583,7 +2583,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>10</x>
-           <y>33</y>
+           <y>133</y>
            <width>41</width>
            <height>16</height>
           </rect>
@@ -2596,7 +2596,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>10</x>
-           <y>60</y>
+           <y>160</y>
            <width>41</width>
            <height>16</height>
           </rect>
@@ -2609,7 +2609,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>10</x>
-           <y>90</y>
+           <y>190</y>
            <width>31</width>
            <height>21</height>
           </rect>
@@ -2622,7 +2622,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>10</x>
-           <y>120</y>
+           <y>220</y>
            <width>41</width>
            <height>16</height>
           </rect>
@@ -2635,7 +2635,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>90</x>
-           <y>180</y>
+           <y>280</y>
            <width>75</width>
            <height>23</height>
           </rect>
@@ -2648,7 +2648,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>50</x>
-           <y>150</y>
+           <y>250</y>
            <width>131</width>
            <height>21</height>
           </rect>
@@ -2661,7 +2661,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>190</x>
-           <y>150</y>
+           <y>250</y>
            <width>61</width>
            <height>22</height>
           </rect>
@@ -2671,7 +2671,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>10</x>
-           <y>150</y>
+           <y>250</y>
            <width>41</width>
            <height>16</height>
           </rect>
@@ -2684,7 +2684,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>50</x>
-           <y>30</y>
+           <y>130</y>
            <width>131</width>
            <height>21</height>
           </rect>
@@ -2697,7 +2697,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>50</x>
-           <y>60</y>
+           <y>160</y>
            <width>131</width>
            <height>21</height>
           </rect>
@@ -2710,7 +2710,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>50</x>
-           <y>90</y>
+           <y>190</y>
            <width>131</width>
            <height>21</height>
           </rect>
@@ -2723,7 +2723,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>50</x>
-           <y>120</y>
+           <y>220</y>
            <width>131</width>
            <height>21</height>
           </rect>
@@ -2736,7 +2736,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>190</x>
-           <y>120</y>
+           <y>220</y>
            <width>61</width>
            <height>22</height>
           </rect>
@@ -2746,7 +2746,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>190</x>
-           <y>90</y>
+           <y>190</y>
            <width>61</width>
            <height>22</height>
           </rect>
@@ -2756,7 +2756,7 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>190</x>
-           <y>60</y>
+           <y>160</y>
            <width>61</width>
            <height>22</height>
           </rect>
@@ -2766,10 +2766,159 @@ font: 10pt &quot;Arial&quot;;</string>
          <property name="geometry">
           <rect>
            <x>190</x>
-           <y>30</y>
+           <y>130</y>
            <width>61</width>
            <height>22</height>
           </rect>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEditOsdBoard2">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>30</y>
+           <width>111</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButtonUpgradeOsdBoard2">
+         <property name="geometry">
+          <rect>
+           <x>188</x>
+           <y>28</y>
+           <width>63</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Upgrade</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButtonUpgradeOsdColorBoard2">
+         <property name="geometry">
+          <rect>
+           <x>188</x>
+           <y>61</y>
+           <width>63</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Pallet</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="labelOsdTextBoard2">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>32</y>
+           <width>41</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Text</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="labelOsdColorRBoard2">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>57</y>
+           <width>16</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>R</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="labelOsdColorGBoard2">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>84</y>
+           <width>16</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>G</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="labelOsdColorBBoard2">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>110</y>
+           <width>16</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>B</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEditOsdRBoard2">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>55</y>
+           <width>111</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEditOsdGBoard2">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>80</y>
+           <width>111</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="lineEditOsdBBoard2">
+         <property name="geometry">
+          <rect>
+           <x>50</x>
+           <y>104</y>
+           <width>111</width>
+           <height>20</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButtonUpgradeOsdSetColorBoard2">
+         <property name="geometry">
+          <rect>
+           <x>188</x>
+           <y>93</y>
+           <width>63</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Set</string>
          </property>
         </widget>
        </widget>
@@ -4883,7 +5032,7 @@ font: 10pt &quot;Arial&quot;;</string>
        <enum>QTabWidget::West</enum>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tabRealtime">
        <attribute name="title">
@@ -7251,7 +7400,7 @@ font: 10pt &quot;Arial&quot;;</string>
        <enum>QTabWidget::West</enum>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab_21">
        <attribute name="title">

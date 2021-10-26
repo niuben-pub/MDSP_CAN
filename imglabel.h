@@ -118,12 +118,16 @@ public:
     unsigned int DrawWindowHeight = DRAW_HIGHT;
     unsigned int DrawWindowQuarWidth = DRAW_QUAR_WIDTH;
     unsigned int DrawWindowQuarHeight = DRAW_QUAR_HIGHT;
+
+    bool isBoard1 = false;
     QPixmap pixBlank;
     QPixmap pix3GIN1;
     QPixmap pix3GIN2;
     QPixmap pixColor;
     QPixmap pixDetectionIN1;
     QPixmap pixDetectionIN2;
+
+
 
 private:
     void InitConnect(void);

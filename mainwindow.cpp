@@ -1680,6 +1680,7 @@ void MainWindow::initUi()
 
 void MainWindow::initImaLabel()
 {
+    ui->labelImgBoard1->isBoard1 = true;
     ui->labelImgBoard1->pixBlank.load(":/images/0.png");
     ui->labelImgBoard1->pix3GIN1.load(":/images/1.png");
     ui->labelImgBoard1->pix3GIN2.load(":/images/2.png");
@@ -1754,7 +1755,7 @@ void MainWindow::initImaLabel()
     ui->labelOverly->pixIN1LVDSinBoard[2].load(":/images/l5.png");
     ui->labelOverly->pixIN2LVDSinBoard[2].load(":/images/l6.png");
     ui->labelOverly->pixColorBoard[2].load(":/images/col3.png");
-;
+
     ui->labelOverly->pix3GIN1Board[3].load(":/images/7.png");
     ui->labelOverly->pix3GIN2Board[3].load(":/images/8.png");
     ui->labelOverly->pixIN1DetectionBoard[3].load(":/images/a7.png");
@@ -2883,6 +2884,9 @@ void MainWindow::on_btnUpdate_2_clicked()
     }
     this->ui->labelUpdateMsg_2->setText("update completed");
     file.close();
+
+
+
 }
 
 
@@ -3369,6 +3373,47 @@ void MainWindow::on_btnUpdate_3_clicked()
     }
     this->ui->labelUpdateMsg->setText("update completed");
     file.close();
+
+
+
+
+
+    /**切换回STATUSMODE模式**/
+
+    send_str[0] = 0;
+    send_str[1] = 0;
+    send_str[2] = 0;
+    send_str[3] = 0;
+    send_str[4] = 0;
+    send_str[5] = 0;
+    send_str[6] = 0;
+    send_str[7] = STATUSMODE;
+
+    ID = (PGN56468 << 8) + this->board1->writerAddr;  //工作模式切换命令
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(50);
+    ID = (PGN56468 << 8) + this->board2->writerAddr;  //工作模式切换命令
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(50);
+    ID = (PGN56468 << 8) + this->board3->writerAddr;  //工作模式切换命令
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(50);
+    ID = (PGN56468 << 8) + this->board4->writerAddr;  //工作模式切换命令
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(50);
+    ID = (PGN56468 << 8) + this->board5->writerAddr;  //工作模式切换命令
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(50);
+    ID = (PGN56468 << 8) + this->board6->writerAddr;  //工作模式切换命令
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(50);
+    ID = (PGN56468 << 8) + this->board7->writerAddr;  //工作模式切换命令
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(50);
+    ID = (PGN56468 << 8) + this->board8->writerAddr;  //工作模式切换命令
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(50);
+
 }
 
 void MainWindow::on_pushButtonTestWBoard1_clicked()
@@ -6127,4 +6172,218 @@ void MainWindow::on_btnWorkControlClearall_clicked()
     ui->labelImgBoard8->resetRegData();
     emit ui->labelImgBoard8->regChange((unsigned int *) ui->labelImgBoard8->regTable);
     emit ui->labelImgBoard8->mousePaint();
+}
+
+void MainWindow::on_pushButtonUpgradeOsdBoard2_clicked()
+{
+    unsigned char send_str[8] = {0};
+    int ID = (PGN57856 << 8) + this->board2->writerAddr;  //写FPGA命令
+    quint64 regaddr = 0x0037;//设置OSD数据寄存器
+    quint64 regdata = 0x0000;
+    quint64 data = 0x00;
+    QString str = ui->lineEditOsdBoard2->text();
+    int len = ui->lineEditOsdBoard2->text().size();
+    if(len < 16)
+    {
+        for(int i = 0; i < 16 - len; i++)
+        {
+            str += " ";
+        }
+    }
+
+    qDebug()<<str<<endl;
+    //开始更新数据
+    regdata = 0x0001;
+    data = (regaddr<<16) + regdata;
+    char *p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    for(int i = 0; i < len; i++)
+    {
+        regdata = (i + 1) << 8;
+        regdata += str.at(i).toLatin1() - 32;  //字码表的行数
+        data = (regaddr<<16) + regdata;
+        for(int i = 0; i < 8; i++)
+        {
+            send_str[i] = p[7 - i];
+        }
+        canthread->sendData(ID,(unsigned char*)send_str);
+        sleep(10);
+    }
+
+    //更新数据完成
+    regdata = 0x0000;
+    data = (regaddr<<16) + regdata;
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+}
+
+
+void MainWindow::on_pushButtonUpgradeOsdColorBoard2_clicked()
+{
+    QColor color = QColorDialog::getColor(Qt::white, this);
+    int R = 0;
+    int G = 0;
+    int B = 0;
+    unsigned char Y = 0;
+    unsigned char Cb = 0;
+    unsigned char Cr = 0;
+    color.getRgb(&R, &G, &B);
+    ui->lineEditOsdRBoard2->setText( QString::number(R));
+    ui->lineEditOsdGBoard2->setText( QString::number(G));
+    ui->lineEditOsdBBoard2->setText( QString::number(B));
+//    Y = (unsigned char)(R * 0.256789 + G * 0.504129  + B * 0.097906)+ 16;
+//    Cb= (unsigned char)(R *-0.148223 + G * -0.290992 + B * 0.439215)+ 128;
+//    Cr= (unsigned char)(R * 0.439215 + G * -0.367789 + B *-0.071426)+ 128;
+
+    Y = (66*R + 129*G + 25*B + 128)/256 + 16;
+    Cb = (-38*R - 74*G + 112*B + 128)/256 + 128;
+    Cr = (112*R - 94*G - 18*B + 128)/256 + 128;
+    Y = (Y<0?0:(Y>255?255:Y));
+    Cb =(Cb<0?0:(Cb>255?255:Cb));
+    Cr =(Cr<0?0:(Cr>255?255:Cr));
+    qDebug()<<Y<<Cb<<Cr<<endl;
+
+    unsigned char send_str[8] = {0};
+    int ID = (PGN57856 << 8) + this->board2->writerAddr;  //写FPGA命令
+    quint64 regaddr = 0x0038;//设置OSD颜色
+    quint64 regdata = 0x0000;
+    quint64 data = 0x00;
+
+    //开始更新数据
+    regdata = 0x0001;
+    data = (regaddr<<16) + regdata;
+    char *p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    //Y
+    regdata = 0x0100 + Y;
+    data = (regaddr<<16) + regdata;
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    //Cb
+    regdata = 0x0100 + Cb;
+    data = (regaddr<<16) + regdata;
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    //c
+    regdata = 0x0100 + Cr;
+    data = (regaddr<<16) + regdata;
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+
+    //更新数据完成
+    regdata = 0x0000;
+    data = (regaddr<<16) + regdata;
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+}
+
+void MainWindow::on_pushButtonUpgradeOsdSetColorBoard2_clicked()
+{
+    int R = ui->lineEditOsdRBoard2->text().toInt();
+    int G = ui->lineEditOsdGBoard2->text().toInt();
+    int B = ui->lineEditOsdBBoard2->text().toInt();
+    unsigned char Y = 0;
+    unsigned char Cb = 0;
+    unsigned char Cr = 0;
+    Y = (unsigned char)(R * 0.256789f + G * 0.504129f  + B * 0.097906f)+ 16;
+    Cb= (unsigned char)(R * (-0.148223f) + G * (-0.290992f) + B * 0.439215f)+ 128;
+    Cr= (unsigned char)(R * 0.439215f + G * (-0.367789f) + B * (-0.071426f))+ 128;
+
+    unsigned char send_str[8] = {0};
+    int ID = (PGN57856 << 8) + this->board2->writerAddr;  //写FPGA命令
+    quint64 regaddr = 0x0038;//设置OSD颜色
+    quint64 regdata = 0x0000;
+    quint64 data = 0x00;
+
+    //开始更新数据
+    regdata = 0x0001;
+    data = (regaddr<<16) + regdata;
+    char *p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    //Y
+    regdata = 0x0100 + Y;
+    data = (regaddr<<16) + regdata;
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    //Cb
+    regdata = 0x0100 + Cb;
+    data = (regaddr<<16) + regdata;
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    //c
+    regdata = 0x0100 + Cr;
+    data = (regaddr<<16) + regdata;
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+
+    //更新数据完成
+    regdata = 0x0000;
+    data = (regaddr<<16) + regdata;
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
 }
