@@ -1686,48 +1686,64 @@ void MainWindow::initImaLabel()
     ui->labelImgBoard1->pix3GIN2.load(":/images/2.png");
     ui->labelImgBoard1->pixDetectionIN1.load(":/images/a1.png");
     ui->labelImgBoard1->pixDetectionIN2.load(":/images/a2.png");
+    ui->labelImgBoard1->lvdsIN1.load(":/images/l1.png");
+    ui->labelImgBoard1->lvdsIN2.load(":/images/l2.png");
     ui->labelImgBoard1->pixColor.load(":/images/col1.png");
     ui->labelImgBoard2->pixBlank.load(":/images/0.png");
     ui->labelImgBoard2->pix3GIN1.load(":/images/3.png");
     ui->labelImgBoard2->pix3GIN2.load(":/images/4.png");
     ui->labelImgBoard2->pixDetectionIN1.load(":/images/a3.png");
     ui->labelImgBoard2->pixDetectionIN2.load(":/images/a4.png");
+    ui->labelImgBoard2->lvdsIN1.load(":/images/l3.png");
+    ui->labelImgBoard2->lvdsIN2.load(":/images/l4.png");
     ui->labelImgBoard2->pixColor.load(":/images/col2.png");
     ui->labelImgBoard3->pixBlank.load(":/images/0.png");
     ui->labelImgBoard3->pix3GIN1.load(":/images/5.png");
     ui->labelImgBoard3->pix3GIN2.load(":/images/6.png");
     ui->labelImgBoard3->pixDetectionIN1.load(":/images/a5.png");
     ui->labelImgBoard3->pixDetectionIN2.load(":/images/a6.png");
+    ui->labelImgBoard3->lvdsIN1.load(":/images/l5.png");
+    ui->labelImgBoard3->lvdsIN2.load(":/images/l6.png");
     ui->labelImgBoard3->pixColor.load(":/images/col3.png");
     ui->labelImgBoard4->pixBlank.load(":/images/0.png");
     ui->labelImgBoard4->pix3GIN1.load(":/images/7.png");
     ui->labelImgBoard4->pix3GIN2.load(":/images/8.png");
     ui->labelImgBoard4->pixDetectionIN1.load(":/images/a7.png");
     ui->labelImgBoard4->pixDetectionIN2.load(":/images/a8.png");
+    ui->labelImgBoard4->lvdsIN1.load(":/images/l7.png");
+    ui->labelImgBoard4->lvdsIN2.load(":/images/l8.png");
     ui->labelImgBoard4->pixColor.load(":/images/col4.png");
     ui->labelImgBoard5->pixBlank.load(":/images/0.png");
     ui->labelImgBoard5->pix3GIN1.load(":/images/9.png");
     ui->labelImgBoard5->pix3GIN2.load(":/images/10.png");
     ui->labelImgBoard5->pixDetectionIN1.load(":/images/a9.png");
     ui->labelImgBoard5->pixDetectionIN2.load(":/images/a10.png");
+    ui->labelImgBoard5->lvdsIN1.load(":/images/l9.png");
+    ui->labelImgBoard5->lvdsIN2.load(":/images/l10.png");
     ui->labelImgBoard5->pixColor.load(":/images/col5.png");
     ui->labelImgBoard6->pixBlank.load(":/images/0.png");
     ui->labelImgBoard6->pix3GIN1.load(":/images/11.png");
     ui->labelImgBoard6->pix3GIN2.load(":/images/12.png");
     ui->labelImgBoard6->pixDetectionIN1.load(":/images/a11.png");
     ui->labelImgBoard6->pixDetectionIN2.load(":/images/a12.png");
+    ui->labelImgBoard6->lvdsIN1.load(":/images/l11.png");
+    ui->labelImgBoard6->lvdsIN2.load(":/images/l12.png");
     ui->labelImgBoard6->pixColor.load(":/images/col6.png");
     ui->labelImgBoard7->pixBlank.load(":/images/0.png");
     ui->labelImgBoard7->pix3GIN1.load(":/images/13.png");
     ui->labelImgBoard7->pix3GIN2.load(":/images/14.png");
     ui->labelImgBoard7->pixDetectionIN1.load(":/images/a13.png");
     ui->labelImgBoard7->pixDetectionIN2.load(":/images/a14.png");
+    ui->labelImgBoard7->lvdsIN1.load(":/images/l13.png");
+    ui->labelImgBoard7->lvdsIN2.load(":/images/l14.png");
     ui->labelImgBoard7->pixColor.load(":/images/col7.png");
     ui->labelImgBoard8->pixBlank.load(":/images/0.png");
     ui->labelImgBoard8->pix3GIN1.load(":/images/15.png");
     ui->labelImgBoard8->pix3GIN2.load(":/images/16.png");
     ui->labelImgBoard8->pixDetectionIN1.load(":/images/a15.png");
     ui->labelImgBoard8->pixDetectionIN2.load(":/images/a16.png");
+    ui->labelImgBoard8->lvdsIN1.load(":/images/l15.png");
+    ui->labelImgBoard8->lvdsIN2.load(":/images/l16.png");
     ui->labelImgBoard8->pixColor.load(":/images/col8.png");
 
     ui->labelOverly->pixBlank.load(":/images/0.png");
@@ -2049,6 +2065,16 @@ void MainWindow::updateOverlyImgRegArray()
     ui->labelOverly->displayDetectionModeRegBoard[7] = ui->labelImgBoard8->detectionStateReg;
 
 
+    ui->labelOverly->displayLvdsINRegBoard[0] = ui->labelImgBoard1->lvdsInSwitchReg;
+    ui->labelOverly->displayLvdsINRegBoard[1] = ui->labelImgBoard2->lvdsInSwitchReg;
+    ui->labelOverly->displayLvdsINRegBoard[2] = ui->labelImgBoard3->lvdsInSwitchReg;
+    ui->labelOverly->displayLvdsINRegBoard[3] = ui->labelImgBoard4->lvdsInSwitchReg;
+    ui->labelOverly->displayLvdsINRegBoard[4] = ui->labelImgBoard5->lvdsInSwitchReg;
+    ui->labelOverly->displayLvdsINRegBoard[5] = ui->labelImgBoard6->lvdsInSwitchReg;
+    ui->labelOverly->displayLvdsINRegBoard[6] = ui->labelImgBoard7->lvdsInSwitchReg;
+    ui->labelOverly->displayLvdsINRegBoard[7] = ui->labelImgBoard8->lvdsInSwitchReg;
+
+
     ui->labelOverly->update();
 
 }
@@ -2104,6 +2130,20 @@ void MainWindow::writeBoard1FpgaImgconfigReg(unsigned int *regTable)
     //发送目标识别配置
     regaddr = ui->labelImgBoard1->detectionStateRegAddr;
     regdata = ui->labelImgBoard1->detectionStateReg;
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int k = 0; k < 8; k++)
+    {
+        send_str[k] = p[7 - k];
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+    //发送lvdsIN配置
+    regaddr = ui->labelImgBoard1->lvdsInSwitchRegAddr;
+    regdata = ui->labelImgBoard1->lvdsInSwitchReg;
     data = (regaddr<<16) + regdata;
     p = (char *)(&data);
     for(int k = 0; k < 8; k++)
@@ -2195,6 +2235,19 @@ void MainWindow::writeBoard2FpgaImgconfigReg(unsigned int *regTable)
     canthread->sendData(ID,(unsigned char*)send_str);
     sleep(10);
 
+    //发送lvdsIN配置
+    regaddr = ui->labelImgBoard2->lvdsInSwitchRegAddr;
+    regdata = ui->labelImgBoard2->lvdsInSwitchReg;
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int k = 0; k < 8; k++)
+    {
+        send_str[k] = p[7 - k];
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
     //再发送输入显示分辨率
     for (int i = 0; i < 16; i++)
     {
@@ -2266,6 +2319,19 @@ void MainWindow::writeBoard3FpgaImgconfigReg(unsigned int *regTable)
     //发送目标识别配置
     regaddr = ui->labelImgBoard3->detectionStateRegAddr;
     regdata = ui->labelImgBoard3->detectionStateReg;
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int k = 0; k < 8; k++)
+    {
+        send_str[k] = p[7 - k];
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    //发送lvdsIN配置
+    regaddr = ui->labelImgBoard3->lvdsInSwitchRegAddr;
+    regdata = ui->labelImgBoard3->lvdsInSwitchReg;
     data = (regaddr<<16) + regdata;
     p = (char *)(&data);
     for(int k = 0; k < 8; k++)
@@ -2359,6 +2425,19 @@ void MainWindow::writeBoard4FpgaImgconfigReg(unsigned int *regTable)
     sleep(10);
 
 
+    //发送lvdsIN配置
+    regaddr = ui->labelImgBoard4->lvdsInSwitchRegAddr;
+    regdata = ui->labelImgBoard4->lvdsInSwitchReg;
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int k = 0; k < 8; k++)
+    {
+        send_str[k] = p[7 - k];
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
     //再发送输入显示分辨率
     for (int i = 0; i < 16; i++)
     {
@@ -2440,6 +2519,21 @@ void MainWindow::writeBoard5FpgaImgconfigReg(unsigned int *regTable)
     canthread->sendData(ID,(unsigned char*)send_str);
     sleep(10);
 
+
+    //发送lvdsIN配置
+    regaddr = ui->labelImgBoard5->lvdsInSwitchRegAddr;
+    regdata = ui->labelImgBoard5->lvdsInSwitchReg;
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int k = 0; k < 8; k++)
+    {
+        send_str[k] = p[7 - k];
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
     //再发送输入显示分辨率
     for (int i = 0; i < 16; i++)
     {
@@ -2510,6 +2604,21 @@ void MainWindow::writeBoard6FpgaImgconfigReg(unsigned int *regTable)
     //发送目标识别配置
     regaddr = ui->labelImgBoard6->detectionStateRegAddr;
     regdata = ui->labelImgBoard6->detectionStateReg;
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int k = 0; k < 8; k++)
+    {
+        send_str[k] = p[7 - k];
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+
+    //发送lvdsIN配置
+    regaddr = ui->labelImgBoard6->lvdsInSwitchRegAddr;
+    regdata = ui->labelImgBoard6->lvdsInSwitchReg;
     data = (regaddr<<16) + regdata;
     p = (char *)(&data);
     for(int k = 0; k < 8; k++)
@@ -2601,6 +2710,21 @@ void MainWindow::writeBoard7FpgaImgconfigReg(unsigned int *regTable)
     canthread->sendData(ID,(unsigned char*)send_str);
     sleep(10);
 
+
+    //发送lvdsIN配置
+    regaddr = ui->labelImgBoard7->lvdsInSwitchRegAddr;
+    regdata = ui->labelImgBoard7->lvdsInSwitchReg;
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int k = 0; k < 8; k++)
+    {
+        send_str[k] = p[7 - k];
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
     //再发送输入显示分辨率
     for (int i = 0; i < 16; i++)
     {
@@ -2671,6 +2795,19 @@ void MainWindow::writeBoard8FpgaImgconfigReg(unsigned int *regTable)
     //发送目标识别配置
     regaddr = ui->labelImgBoard8->detectionStateRegAddr;
     regdata = ui->labelImgBoard8->detectionStateReg;
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int k = 0; k < 8; k++)
+    {
+        send_str[k] = p[7 - k];
+        //qDebug("send_str[%d] = 0x%02x",i,send_str[i]);
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    //发送lvdsIN配置
+    regaddr = ui->labelImgBoard8->lvdsInSwitchRegAddr;
+    regdata = ui->labelImgBoard8->lvdsInSwitchReg;
     data = (regaddr<<16) + regdata;
     p = (char *)(&data);
     for(int k = 0; k < 8; k++)
@@ -4218,7 +4355,11 @@ void MainWindow::on_comboBoxImgBoard1_currentIndexChanged(int index)
     }
     else if (index == 5)
     {
-        ui->labelImgBoard1->ImgType = IMG_LVDS_IN;
+        ui->labelImgBoard1->ImgType = IMG_LVDS_IN1;
+    }
+    else if (index == 6)
+    {
+        ui->labelImgBoard1->ImgType = IMG_LVDS_IN2;
     }
     else
     {
@@ -4293,7 +4434,11 @@ void MainWindow::on_comboBoxImgBoard2_currentIndexChanged(int index)
     }
     else if (index == 5)
     {
-        ui->labelImgBoard2->ImgType = IMG_LVDS_IN;
+        ui->labelImgBoard2->ImgType = IMG_LVDS_IN1;
+    }
+    else if (index == 6)
+    {
+        ui->labelImgBoard2->ImgType = IMG_LVDS_IN2;
     }
     else
     {
@@ -4365,7 +4510,11 @@ void MainWindow::on_comboBoxImgBoard3_currentIndexChanged(int index)
     }
     else if (index == 5)
     {
-        ui->labelImgBoard3->ImgType = IMG_LVDS_IN;
+        ui->labelImgBoard3->ImgType = IMG_LVDS_IN1;
+    }
+    else if (index == 6)
+    {
+        ui->labelImgBoard3->ImgType = IMG_LVDS_IN2;
     }
     else
     {
@@ -4437,7 +4586,11 @@ void MainWindow::on_comboBoxImgBoard4_currentIndexChanged(int index)
     }
     else if (index == 5)
     {
-        ui->labelImgBoard4->ImgType = IMG_LVDS_IN;
+        ui->labelImgBoard4->ImgType = IMG_LVDS_IN1;
+    }
+    else if (index == 6)
+    {
+        ui->labelImgBoard4->ImgType = IMG_LVDS_IN2;
     }
     else
     {
@@ -4509,7 +4662,11 @@ void MainWindow::on_comboBoxImgBoard5_currentIndexChanged(int index)
     }
     else if (index == 5)
     {
-        ui->labelImgBoard5->ImgType = IMG_LVDS_IN;
+        ui->labelImgBoard5->ImgType = IMG_LVDS_IN1;
+    }
+    else if (index == 6)
+    {
+        ui->labelImgBoard5->ImgType = IMG_LVDS_IN2;
     }
     else
     {
@@ -4582,7 +4739,11 @@ void MainWindow::on_comboBoxImgBoard6_currentIndexChanged(int index)
     }
     else if (index == 5)
     {
-        ui->labelImgBoard6->ImgType = IMG_LVDS_IN;
+        ui->labelImgBoard6->ImgType = IMG_LVDS_IN1;
+    }
+    else if (index == 6)
+    {
+        ui->labelImgBoard6->ImgType = IMG_LVDS_IN2;
     }
     else
     {
@@ -4655,7 +4816,11 @@ void MainWindow::on_comboBoxImgBoard7_currentIndexChanged(int index)
     }
     else if (index == 5)
     {
-        ui->labelImgBoard7->ImgType = IMG_LVDS_IN;
+        ui->labelImgBoard7->ImgType = IMG_LVDS_IN1;
+    }
+    else if (index == 6)
+    {
+        ui->labelImgBoard7->ImgType = IMG_LVDS_IN2;
     }
     else
     {
@@ -4727,7 +4892,11 @@ void MainWindow::on_comboBoxImgBoard8_currentIndexChanged(int index)
     }
     else if (index == 5)
     {
-        ui->labelImgBoard8->ImgType = IMG_LVDS_IN;
+        ui->labelImgBoard8->ImgType = IMG_LVDS_IN1;
+    }
+    else if (index == 6)
+    {
+        ui->labelImgBoard8->ImgType = IMG_LVDS_IN2;
     }
     else
     {
@@ -4775,7 +4944,8 @@ void MainWindow::on_btnWorkControlLoad_clicked()
             {
                 unsigned int arr[4][4];
                 char *chline = line.data();
-                sscanf(chline,"Board1 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                sscanf(chline,"Board1 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                       &ui->labelImgBoard1->lvdsInSwitchReg,
                        &ui->labelImgBoard1->detectionStateReg,
                        &ui->labelImgBoard1->displayModeReg,
                        &ui->labelImgBoard1->img3GIn1SizeReg,
@@ -4794,8 +4964,9 @@ void MainWindow::on_btnWorkControlLoad_clicked()
                        ui->labelImgBoard1->regTable[table_i][table_j] = arr[table_i][table_j];
                     }
                 }
+
                 emit ui->labelImgBoard1->regChange((unsigned int *)ui->labelImgBoard1->regTable);
-                emit ui->labelImgBoard1->regChange((unsigned int *)ui->labelImgBoard1->regTable);
+                sleep(10);
                 emit ui->labelImgBoard1->mousePaint();
 
             }
@@ -4803,7 +4974,8 @@ void MainWindow::on_btnWorkControlLoad_clicked()
             {
                 unsigned int arr[4][4];
                 char *chline = line.data();
-                sscanf(chline,"Board2 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                sscanf(chline,"Board2 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                       &ui->labelImgBoard2->lvdsInSwitchReg,
                        &ui->labelImgBoard2->detectionStateReg,
                        &ui->labelImgBoard2->displayModeReg,
                        &ui->labelImgBoard2->img3GIn1SizeReg,
@@ -4822,15 +4994,17 @@ void MainWindow::on_btnWorkControlLoad_clicked()
                        ui->labelImgBoard2->regTable[table_i][table_j] = arr[table_i][table_j];
                     }
                 }
+
                 emit ui->labelImgBoard2->regChange((unsigned int *)ui->labelImgBoard2->regTable);
-                emit ui->labelImgBoard2->regChange((unsigned int *)ui->labelImgBoard2->regTable);
+                sleep(10);
                 emit ui->labelImgBoard2->mousePaint();
             }
             if(line[5] == '3')
             {
                 unsigned int arr[4][4];
                 char *chline = line.data();
-                sscanf(chline,"Board3 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                sscanf(chline,"Board3 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                       &ui->labelImgBoard3->lvdsInSwitchReg,
                        &ui->labelImgBoard3->detectionStateReg,
                        &ui->labelImgBoard3->displayModeReg,
                        &ui->labelImgBoard3->img3GIn1SizeReg,
@@ -4849,15 +5023,17 @@ void MainWindow::on_btnWorkControlLoad_clicked()
                        ui->labelImgBoard3->regTable[table_i][table_j] = arr[table_i][table_j];
                     }
                 }
+
                 emit ui->labelImgBoard3->regChange((unsigned int *)ui->labelImgBoard3->regTable);
-                emit ui->labelImgBoard3->regChange((unsigned int *)ui->labelImgBoard3->regTable);
+                sleep(10);
                 emit ui->labelImgBoard3->mousePaint();
             }
             if(line[5] == '4')
             {
                 unsigned int arr[4][4];
                 char *chline = line.data();
-                sscanf(chline,"Board4 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                sscanf(chline,"Board4 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                       &ui->labelImgBoard4->lvdsInSwitchReg,
                        &ui->labelImgBoard4->detectionStateReg,
                        &ui->labelImgBoard4->displayModeReg,
                        &ui->labelImgBoard4->img3GIn1SizeReg,
@@ -4876,15 +5052,17 @@ void MainWindow::on_btnWorkControlLoad_clicked()
                        ui->labelImgBoard4->regTable[table_i][table_j] = arr[table_i][table_j];
                     }
                 }
+
                 emit ui->labelImgBoard4->regChange((unsigned int *)ui->labelImgBoard4->regTable);
-                emit ui->labelImgBoard4->regChange((unsigned int *)ui->labelImgBoard4->regTable);
+                sleep(10);
                 emit ui->labelImgBoard4->mousePaint();
             }
             if(line[5] == '5')
             {
                 unsigned int arr[4][4];
                 char *chline = line.data();
-                sscanf(chline,"Board5 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                sscanf(chline,"Board5 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                       &ui->labelImgBoard5->lvdsInSwitchReg,
                        &ui->labelImgBoard5->detectionStateReg,
                        &ui->labelImgBoard5->displayModeReg,
                        &ui->labelImgBoard5->img3GIn1SizeReg,
@@ -4903,15 +5081,17 @@ void MainWindow::on_btnWorkControlLoad_clicked()
                        ui->labelImgBoard5->regTable[table_i][table_j] = arr[table_i][table_j];
                     }
                 }
+
                 emit ui->labelImgBoard5->regChange((unsigned int *)ui->labelImgBoard5->regTable);
-                emit ui->labelImgBoard5->regChange((unsigned int *)ui->labelImgBoard5->regTable);
+                sleep(10);
                 emit ui->labelImgBoard5->mousePaint();
             }
             if(line[5] == '6')
             {
                 unsigned int arr[4][4];
                 char *chline = line.data();
-                sscanf(chline,"Board6 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                sscanf(chline,"Board6 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                       &ui->labelImgBoard6->lvdsInSwitchReg,
                        &ui->labelImgBoard6->detectionStateReg,
                        &ui->labelImgBoard6->displayModeReg,
                        &ui->labelImgBoard6->img3GIn1SizeReg,
@@ -4930,15 +5110,17 @@ void MainWindow::on_btnWorkControlLoad_clicked()
                        ui->labelImgBoard6->regTable[table_i][table_j] = arr[table_i][table_j];
                     }
                 }
+
                 emit ui->labelImgBoard6->regChange((unsigned int *)ui->labelImgBoard6->regTable);
-                emit ui->labelImgBoard6->regChange((unsigned int *)ui->labelImgBoard6->regTable);
+                sleep(10);
                 emit ui->labelImgBoard6->mousePaint();
             }
             if(line[5] == '7')
             {
                 unsigned int arr[4][4];
                 char *chline = line.data();
-                sscanf(chline,"Board7 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                sscanf(chline,"Board7 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                       &ui->labelImgBoard7->lvdsInSwitchReg,
                        &ui->labelImgBoard7->detectionStateReg,
                        &ui->labelImgBoard7->displayModeReg,
                        &ui->labelImgBoard7->img3GIn1SizeReg,
@@ -4957,8 +5139,9 @@ void MainWindow::on_btnWorkControlLoad_clicked()
                        ui->labelImgBoard7->regTable[table_i][table_j] = arr[table_i][table_j];
                     }
                 }
+
                 emit ui->labelImgBoard7->regChange((unsigned int *)ui->labelImgBoard7->regTable);
-                emit ui->labelImgBoard7->regChange((unsigned int *)ui->labelImgBoard7->regTable);
+                sleep(10);
                 emit ui->labelImgBoard7->mousePaint();
 
             }
@@ -4966,7 +5149,8 @@ void MainWindow::on_btnWorkControlLoad_clicked()
             {
                 unsigned int arr[4][4];
                 char *chline = line.data();
-                sscanf(chline,"Board8 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                sscanf(chline,"Board8 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;",
+                       &ui->labelImgBoard8->lvdsInSwitchReg,
                        &ui->labelImgBoard8->detectionStateReg,
                        &ui->labelImgBoard8->displayModeReg,
                        &ui->labelImgBoard8->img3GIn1SizeReg,
@@ -4985,8 +5169,9 @@ void MainWindow::on_btnWorkControlLoad_clicked()
                        ui->labelImgBoard8->regTable[table_i][table_j] = arr[table_i][table_j];
                     }
                 }
+
                 emit ui->labelImgBoard8->regChange((unsigned int *)ui->labelImgBoard8->regTable);
-                emit ui->labelImgBoard8->regChange((unsigned int *)ui->labelImgBoard8->regTable);
+                sleep(10);
                 emit ui->labelImgBoard8->mousePaint();
 
             }
@@ -5016,7 +5201,8 @@ void MainWindow::on_btnWorkControlSave_clicked()
     file.flush();
     char str[64] = "";
 
-    sprintf(str,"Board1 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+    sprintf(str,"Board1 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+            ui->labelImgBoard1->lvdsInSwitchReg,
             ui->labelImgBoard1->detectionStateReg,
             ui->labelImgBoard1->displayModeReg,
             ui->labelImgBoard1->img3GIn1SizeReg,
@@ -5027,7 +5213,8 @@ void MainWindow::on_btnWorkControlSave_clicked()
             ui->labelImgBoard1->regTable[3][0], ui->labelImgBoard1->regTable[3][1], ui->labelImgBoard1->regTable[3][2], ui->labelImgBoard1->regTable[3][3]);
     file.write(str);
 
-    sprintf(str,"Board2 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+    sprintf(str,"Board2 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+            ui->labelImgBoard2->lvdsInSwitchReg,
             ui->labelImgBoard2->detectionStateReg,
             ui->labelImgBoard2->displayModeReg,
             ui->labelImgBoard2->img3GIn1SizeReg,
@@ -5038,7 +5225,8 @@ void MainWindow::on_btnWorkControlSave_clicked()
             ui->labelImgBoard2->regTable[3][0], ui->labelImgBoard2->regTable[3][1], ui->labelImgBoard2->regTable[3][2], ui->labelImgBoard2->regTable[3][3]);
     file.write(str);
 
-    sprintf(str,"Board3 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+    sprintf(str,"Board3 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+            ui->labelImgBoard3->lvdsInSwitchReg,
             ui->labelImgBoard3->detectionStateReg,
             ui->labelImgBoard3->displayModeReg,
             ui->labelImgBoard3->img3GIn1SizeReg,
@@ -5050,7 +5238,8 @@ void MainWindow::on_btnWorkControlSave_clicked()
     file.write(str);
 
 
-    sprintf(str,"Board4 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+    sprintf(str,"Board4 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+            ui->labelImgBoard4->lvdsInSwitchReg,
             ui->labelImgBoard4->detectionStateReg,
             ui->labelImgBoard4->displayModeReg,
             ui->labelImgBoard4->img3GIn1SizeReg,
@@ -5061,7 +5250,8 @@ void MainWindow::on_btnWorkControlSave_clicked()
             ui->labelImgBoard4->regTable[3][0], ui->labelImgBoard4->regTable[3][1], ui->labelImgBoard4->regTable[3][2], ui->labelImgBoard4->regTable[3][3]);
     file.write(str);
 
-    sprintf(str,"Board5 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+    sprintf(str,"Board5 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+            ui->labelImgBoard5->lvdsInSwitchReg,
             ui->labelImgBoard5->detectionStateReg,
             ui->labelImgBoard5->displayModeReg,
             ui->labelImgBoard5->img3GIn1SizeReg,
@@ -5072,7 +5262,8 @@ void MainWindow::on_btnWorkControlSave_clicked()
             ui->labelImgBoard5->regTable[3][0], ui->labelImgBoard5->regTable[3][1], ui->labelImgBoard5->regTable[3][2], ui->labelImgBoard5->regTable[3][3]);
     file.write(str);
 
-    sprintf(str,"Board6 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+    sprintf(str,"Board6 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+            ui->labelImgBoard6->lvdsInSwitchReg,
             ui->labelImgBoard6->detectionStateReg,
             ui->labelImgBoard6->displayModeReg,
             ui->labelImgBoard6->img3GIn1SizeReg,
@@ -5083,7 +5274,8 @@ void MainWindow::on_btnWorkControlSave_clicked()
             ui->labelImgBoard6->regTable[3][0], ui->labelImgBoard6->regTable[3][1], ui->labelImgBoard6->regTable[3][2], ui->labelImgBoard6->regTable[3][3]);
     file.write(str);
 
-    sprintf(str,"Board7 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+    sprintf(str,"Board7 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+            ui->labelImgBoard7->lvdsInSwitchReg,
             ui->labelImgBoard7->detectionStateReg,
             ui->labelImgBoard7->displayModeReg,
             ui->labelImgBoard7->img3GIn1SizeReg,
@@ -5094,7 +5286,8 @@ void MainWindow::on_btnWorkControlSave_clicked()
             ui->labelImgBoard7->regTable[3][0], ui->labelImgBoard7->regTable[3][1], ui->labelImgBoard7->regTable[3][2], ui->labelImgBoard7->regTable[3][3]);
     file.write(str);
 
-    sprintf(str,"Board8 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+    sprintf(str,"Board8 %x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;%x;\r\n",
+            ui->labelImgBoard8->lvdsInSwitchReg,
             ui->labelImgBoard8->detectionStateReg,
             ui->labelImgBoard8->displayModeReg,
             ui->labelImgBoard8->img3GIn1SizeReg,
@@ -6174,6 +6367,61 @@ void MainWindow::on_btnWorkControlClearall_clicked()
     emit ui->labelImgBoard8->mousePaint();
 }
 
+void MainWindow::on_pushButtonUpgradeOsdBoard1_clicked()
+{
+    unsigned char send_str[8] = {0};
+    int ID = (PGN57856 << 8) + this->board1->writerAddr;  //写FPGA命令
+    quint64 regaddr = 0x0037;//设置OSD数据寄存器
+    quint64 regdata = 0x0000;
+    quint64 data = 0x00;
+    QString str = ui->lineEditOsdBoard1->text();
+    int len = ui->lineEditOsdBoard1->text().size();
+    if(len < 16)
+    {
+        for(int i = 0; i < 16 - len; i++)
+        {
+            str += " ";
+        }
+    }
+
+    qDebug()<<str<<endl;
+    //开始更新数据
+    regdata = 0x0001;
+    data = (regaddr<<16) + regdata;
+    char *p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    for(int i = 0; i < len; i++)
+    {
+        regdata = (i + 1) << 8;
+        regdata += str.at(i).toLatin1() - 32;  //字码表的行数
+        data = (regaddr<<16) + regdata;
+        for(int i = 0; i < 8; i++)
+        {
+            send_str[i] = p[7 - i];
+        }
+        canthread->sendData(ID,(unsigned char*)send_str);
+        sleep(10);
+    }
+
+    //更新数据完成
+    regdata = 0x0000;
+    data = (regaddr<<16) + regdata;
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+}
+
 void MainWindow::on_pushButtonUpgradeOsdBoard2_clicked()
 {
     unsigned char send_str[8] = {0};
@@ -6230,7 +6478,341 @@ void MainWindow::on_pushButtonUpgradeOsdBoard2_clicked()
 }
 
 
-void MainWindow::on_pushButtonUpgradeOsdColorBoard2_clicked()
+void MainWindow::on_pushButtonUpgradeOsdBoard3_clicked()
+{
+    unsigned char send_str[8] = {0};
+    int ID = (PGN57856 << 8) + this->board3->writerAddr;  //写FPGA命令
+    quint64 regaddr = 0x0037;//设置OSD数据寄存器
+    quint64 regdata = 0x0000;
+    quint64 data = 0x00;
+    QString str = ui->lineEditOsdBoard3->text();
+    int len = ui->lineEditOsdBoard3->text().size();
+    if(len < 16)
+    {
+        for(int i = 0; i < 16 - len; i++)
+        {
+            str += " ";
+        }
+    }
+
+    qDebug()<<str<<endl;
+    //开始更新数据
+    regdata = 0x0001;
+    data = (regaddr<<16) + regdata;
+    char *p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    for(int i = 0; i < len; i++)
+    {
+        regdata = (i + 1) << 8;
+        regdata += str.at(i).toLatin1() - 32;  //字码表的行数
+        data = (regaddr<<16) + regdata;
+        for(int i = 0; i < 8; i++)
+        {
+            send_str[i] = p[7 - i];
+        }
+        canthread->sendData(ID,(unsigned char*)send_str);
+        sleep(10);
+    }
+
+    //更新数据完成
+    regdata = 0x0000;
+    data = (regaddr<<16) + regdata;
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+}
+
+void MainWindow::on_pushButtonUpgradeOsdBoard4_clicked()
+{
+    unsigned char send_str[8] = {0};
+    int ID = (PGN57856 << 8) + this->board4->writerAddr;  //写FPGA命令
+    quint64 regaddr = 0x0037;//设置OSD数据寄存器
+    quint64 regdata = 0x0000;
+    quint64 data = 0x00;
+    QString str = ui->lineEditOsdBoard4->text();
+    int len = ui->lineEditOsdBoard4->text().size();
+    if(len < 16)
+    {
+        for(int i = 0; i < 16 - len; i++)
+        {
+            str += " ";
+        }
+    }
+
+    qDebug()<<str<<endl;
+    //开始更新数据
+    regdata = 0x0001;
+    data = (regaddr<<16) + regdata;
+    char *p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    for(int i = 0; i < len; i++)
+    {
+        regdata = (i + 1) << 8;
+        regdata += str.at(i).toLatin1() - 32;  //字码表的行数
+        data = (regaddr<<16) + regdata;
+        for(int i = 0; i < 8; i++)
+        {
+            send_str[i] = p[7 - i];
+        }
+        canthread->sendData(ID,(unsigned char*)send_str);
+        sleep(10);
+    }
+
+    //更新数据完成
+    regdata = 0x0000;
+    data = (regaddr<<16) + regdata;
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+}
+
+
+void MainWindow::on_pushButtonUpgradeOsdBoard5_clicked()
+{
+    unsigned char send_str[8] = {0};
+    int ID = (PGN57856 << 8) + this->board5->writerAddr;  //写FPGA命令
+    quint64 regaddr = 0x0037;//设置OSD数据寄存器
+    quint64 regdata = 0x0000;
+    quint64 data = 0x00;
+    QString str = ui->lineEditOsdBoard5->text();
+    int len = ui->lineEditOsdBoard5->text().size();
+    if(len < 16)
+    {
+        for(int i = 0; i < 16 - len; i++)
+        {
+            str += " ";
+        }
+    }
+
+    qDebug()<<str<<endl;
+    //开始更新数据
+    regdata = 0x0001;
+    data = (regaddr<<16) + regdata;
+    char *p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    for(int i = 0; i < len; i++)
+    {
+        regdata = (i + 1) << 8;
+        regdata += str.at(i).toLatin1() - 32;  //字码表的行数
+        data = (regaddr<<16) + regdata;
+        for(int i = 0; i < 8; i++)
+        {
+            send_str[i] = p[7 - i];
+        }
+        canthread->sendData(ID,(unsigned char*)send_str);
+        sleep(10);
+    }
+
+    //更新数据完成
+    regdata = 0x0000;
+    data = (regaddr<<16) + regdata;
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+}
+
+void MainWindow::on_pushButtonUpgradeOsdBoard6_clicked()
+{
+    unsigned char send_str[8] = {0};
+    int ID = (PGN57856 << 8) + this->board6->writerAddr;  //写FPGA命令
+    quint64 regaddr = 0x0037;//设置OSD数据寄存器
+    quint64 regdata = 0x0000;
+    quint64 data = 0x00;
+    QString str = ui->lineEditOsdBoard6->text();
+    int len = ui->lineEditOsdBoard6->text().size();
+    if(len < 16)
+    {
+        for(int i = 0; i < 16 - len; i++)
+        {
+            str += " ";
+        }
+    }
+
+    qDebug()<<str<<endl;
+    //开始更新数据
+    regdata = 0x0001;
+    data = (regaddr<<16) + regdata;
+    char *p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    for(int i = 0; i < len; i++)
+    {
+        regdata = (i + 1) << 8;
+        regdata += str.at(i).toLatin1() - 32;  //字码表的行数
+        data = (regaddr<<16) + regdata;
+        for(int i = 0; i < 8; i++)
+        {
+            send_str[i] = p[7 - i];
+        }
+        canthread->sendData(ID,(unsigned char*)send_str);
+        sleep(10);
+    }
+
+    //更新数据完成
+    regdata = 0x0000;
+    data = (regaddr<<16) + regdata;
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+}
+
+
+void MainWindow::on_pushButtonUpgradeOsdBoard7_clicked()
+{
+    unsigned char send_str[8] = {0};
+    int ID = (PGN57856 << 8) + this->board7->writerAddr;  //写FPGA命令
+    quint64 regaddr = 0x0037;//设置OSD数据寄存器
+    quint64 regdata = 0x0000;
+    quint64 data = 0x00;
+    QString str = ui->lineEditOsdBoard7->text();
+    int len = ui->lineEditOsdBoard7->text().size();
+    if(len < 16)
+    {
+        for(int i = 0; i < 16 - len; i++)
+        {
+            str += " ";
+        }
+    }
+
+    qDebug()<<str<<endl;
+    //开始更新数据
+    regdata = 0x0001;
+    data = (regaddr<<16) + regdata;
+    char *p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    for(int i = 0; i < len; i++)
+    {
+        regdata = (i + 1) << 8;
+        regdata += str.at(i).toLatin1() - 32;  //字码表的行数
+        data = (regaddr<<16) + regdata;
+        for(int i = 0; i < 8; i++)
+        {
+            send_str[i] = p[7 - i];
+        }
+        canthread->sendData(ID,(unsigned char*)send_str);
+        sleep(10);
+    }
+
+    //更新数据完成
+    regdata = 0x0000;
+    data = (regaddr<<16) + regdata;
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+}
+
+
+
+void MainWindow::on_pushButtonUpgradeOsdBoard8_clicked()
+{
+    unsigned char send_str[8] = {0};
+    int ID = (PGN57856 << 8) + this->board8->writerAddr;  //写FPGA命令
+    quint64 regaddr = 0x0037;//设置OSD数据寄存器
+    quint64 regdata = 0x0000;
+    quint64 data = 0x00;
+    QString str = ui->lineEditOsdBoard8->text();
+    int len = ui->lineEditOsdBoard8->text().size();
+    if(len < 16)
+    {
+        for(int i = 0; i < 16 - len; i++)
+        {
+            str += " ";
+        }
+    }
+
+    qDebug()<<str<<endl;
+    //开始更新数据
+    regdata = 0x0001;
+    data = (regaddr<<16) + regdata;
+    char *p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    for(int i = 0; i < len; i++)
+    {
+        regdata = (i + 1) << 8;
+        regdata += str.at(i).toLatin1() - 32;  //字码表的行数
+        data = (regaddr<<16) + regdata;
+        for(int i = 0; i < 8; i++)
+        {
+            send_str[i] = p[7 - i];
+        }
+        canthread->sendData(ID,(unsigned char*)send_str);
+        sleep(10);
+    }
+
+    //更新数据完成
+    regdata = 0x0000;
+    data = (regaddr<<16) + regdata;
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+}
+
+void MainWindow::on_pushButtonUpgradeOsdColorBoard1_clicked()
 {
     QColor color = QColorDialog::getColor(Qt::white, this);
     int R = 0;
@@ -6240,23 +6822,13 @@ void MainWindow::on_pushButtonUpgradeOsdColorBoard2_clicked()
     unsigned char Cb = 0;
     unsigned char Cr = 0;
     color.getRgb(&R, &G, &B);
-    ui->lineEditOsdRBoard2->setText( QString::number(R));
-    ui->lineEditOsdGBoard2->setText( QString::number(G));
-    ui->lineEditOsdBBoard2->setText( QString::number(B));
-//    Y = (unsigned char)(R * 0.256789 + G * 0.504129  + B * 0.097906)+ 16;
-//    Cb= (unsigned char)(R *-0.148223 + G * -0.290992 + B * 0.439215)+ 128;
-//    Cr= (unsigned char)(R * 0.439215 + G * -0.367789 + B *-0.071426)+ 128;
 
-    Y = (66*R + 129*G + 25*B + 128)/256 + 16;
-    Cb = (-38*R - 74*G + 112*B + 128)/256 + 128;
-    Cr = (112*R - 94*G - 18*B + 128)/256 + 128;
-    Y = (Y<0?0:(Y>255?255:Y));
-    Cb =(Cb<0?0:(Cb>255?255:Cb));
-    Cr =(Cr<0?0:(Cr>255?255:Cr));
-    qDebug()<<Y<<Cb<<Cr<<endl;
+    Y = (unsigned char)(R * 0.256789f + G * 0.504129f  + B * 0.097906f)+ 16;
+    Cb= (unsigned char)(R * (-0.148223f) + G * (-0.290992f) + B * 0.439215f)+ 128;
+    Cr= (unsigned char)(R * 0.439215f + G * (-0.367789f) + B * (-0.071426f))+ 128;
 
     unsigned char send_str[8] = {0};
-    int ID = (PGN57856 << 8) + this->board2->writerAddr;  //写FPGA命令
+    int ID = (PGN57856 << 8) + this->board1->writerAddr;  //写FPGA命令
     quint64 regaddr = 0x0038;//设置OSD颜色
     quint64 regdata = 0x0000;
     quint64 data = 0x00;
@@ -6283,7 +6855,7 @@ void MainWindow::on_pushButtonUpgradeOsdColorBoard2_clicked()
     sleep(10);
 
     //Cb
-    regdata = 0x0100 + Cb;
+    regdata = 0x0200 + Cb;
     data = (regaddr<<16) + regdata;
     for(int i = 0; i < 8; i++)
     {
@@ -6293,7 +6865,7 @@ void MainWindow::on_pushButtonUpgradeOsdColorBoard2_clicked()
     sleep(10);
 
     //c
-    regdata = 0x0100 + Cr;
+    regdata = 0x0300 + Cr;
     data = (regaddr<<16) + regdata;
     for(int i = 0; i < 8; i++)
     {
@@ -6316,14 +6888,19 @@ void MainWindow::on_pushButtonUpgradeOsdColorBoard2_clicked()
 
 }
 
-void MainWindow::on_pushButtonUpgradeOsdSetColorBoard2_clicked()
+
+
+void MainWindow::on_pushButtonUpgradeOsdColorBoard2_clicked()
 {
-    int R = ui->lineEditOsdRBoard2->text().toInt();
-    int G = ui->lineEditOsdGBoard2->text().toInt();
-    int B = ui->lineEditOsdBBoard2->text().toInt();
+    QColor color = QColorDialog::getColor(Qt::white, this);
+    int R = 0;
+    int G = 0;
+    int B = 0;
     unsigned char Y = 0;
     unsigned char Cb = 0;
     unsigned char Cr = 0;
+    color.getRgb(&R, &G, &B);
+
     Y = (unsigned char)(R * 0.256789f + G * 0.504129f  + B * 0.097906f)+ 16;
     Cb= (unsigned char)(R * (-0.148223f) + G * (-0.290992f) + B * 0.439215f)+ 128;
     Cr= (unsigned char)(R * 0.439215f + G * (-0.367789f) + B * (-0.071426f))+ 128;
@@ -6356,7 +6933,7 @@ void MainWindow::on_pushButtonUpgradeOsdSetColorBoard2_clicked()
     sleep(10);
 
     //Cb
-    regdata = 0x0100 + Cb;
+    regdata = 0x0200 + Cb;
     data = (regaddr<<16) + regdata;
     for(int i = 0; i < 8; i++)
     {
@@ -6366,7 +6943,7 @@ void MainWindow::on_pushButtonUpgradeOsdSetColorBoard2_clicked()
     sleep(10);
 
     //c
-    regdata = 0x0100 + Cr;
+    regdata = 0x0300 + Cr;
     data = (regaddr<<16) + regdata;
     for(int i = 0; i < 8; i++)
     {
@@ -6386,4 +6963,463 @@ void MainWindow::on_pushButtonUpgradeOsdSetColorBoard2_clicked()
     }
     canthread->sendData(ID,(unsigned char*)send_str);
     sleep(10);
+
+}
+
+void MainWindow::on_pushButtonUpgradeOsdColorBoard3_clicked()
+{
+    QColor color = QColorDialog::getColor(Qt::white, this);
+    int R = 0;
+    int G = 0;
+    int B = 0;
+    unsigned char Y = 0;
+    unsigned char Cb = 0;
+    unsigned char Cr = 0;
+    color.getRgb(&R, &G, &B);
+
+    Y = (unsigned char)(R * 0.256789f + G * 0.504129f  + B * 0.097906f)+ 16;
+    Cb= (unsigned char)(R * (-0.148223f) + G * (-0.290992f) + B * 0.439215f)+ 128;
+    Cr= (unsigned char)(R * 0.439215f + G * (-0.367789f) + B * (-0.071426f))+ 128;
+
+    unsigned char send_str[8] = {0};
+    int ID = (PGN57856 << 8) + this->board3->writerAddr;  //写FPGA命令
+    quint64 regaddr = 0x0038;//设置OSD颜色
+    quint64 regdata = 0x0000;
+    quint64 data = 0x00;
+
+    //开始更新数据
+    regdata = 0x0001;
+    data = (regaddr<<16) + regdata;
+    char *p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    //Y
+    regdata = 0x0100 + Y;
+    data = (regaddr<<16) + regdata;
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    //Cb
+    regdata = 0x0200 + Cb;
+    data = (regaddr<<16) + regdata;
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    //c
+    regdata = 0x0300 + Cr;
+    data = (regaddr<<16) + regdata;
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+
+    //更新数据完成
+    regdata = 0x0000;
+    data = (regaddr<<16) + regdata;
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+}
+
+
+
+void MainWindow::on_pushButtonUpgradeOsdColorBoard4_clicked()
+{
+    QColor color = QColorDialog::getColor(Qt::white, this);
+    int R = 0;
+    int G = 0;
+    int B = 0;
+    unsigned char Y = 0;
+    unsigned char Cb = 0;
+    unsigned char Cr = 0;
+    color.getRgb(&R, &G, &B);
+
+    Y = (unsigned char)(R * 0.256789f + G * 0.504129f  + B * 0.097906f)+ 16;
+    Cb= (unsigned char)(R * (-0.148223f) + G * (-0.290992f) + B * 0.439215f)+ 128;
+    Cr= (unsigned char)(R * 0.439215f + G * (-0.367789f) + B * (-0.071426f))+ 128;
+
+    unsigned char send_str[8] = {0};
+    int ID = (PGN57856 << 8) + this->board4->writerAddr;  //写FPGA命令
+    quint64 regaddr = 0x0038;//设置OSD颜色
+    quint64 regdata = 0x0000;
+    quint64 data = 0x00;
+
+    //开始更新数据
+    regdata = 0x0001;
+    data = (regaddr<<16) + regdata;
+    char *p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    //Y
+    regdata = 0x0100 + Y;
+    data = (regaddr<<16) + regdata;
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    //Cb
+    regdata = 0x0200 + Cb;
+    data = (regaddr<<16) + regdata;
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    //c
+    regdata = 0x0300 + Cr;
+    data = (regaddr<<16) + regdata;
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+
+    //更新数据完成
+    regdata = 0x0000;
+    data = (regaddr<<16) + regdata;
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+}
+
+void MainWindow::on_pushButtonUpgradeOsdColorBoard5_clicked()
+{
+    QColor color = QColorDialog::getColor(Qt::white, this);
+    int R = 0;
+    int G = 0;
+    int B = 0;
+    unsigned char Y = 0;
+    unsigned char Cb = 0;
+    unsigned char Cr = 0;
+    color.getRgb(&R, &G, &B);
+
+    Y = (unsigned char)(R * 0.256789f + G * 0.504129f  + B * 0.097906f)+ 16;
+    Cb= (unsigned char)(R * (-0.148223f) + G * (-0.290992f) + B * 0.439215f)+ 128;
+    Cr= (unsigned char)(R * 0.439215f + G * (-0.367789f) + B * (-0.071426f))+ 128;
+
+    unsigned char send_str[8] = {0};
+    int ID = (PGN57856 << 8) + this->board5->writerAddr;  //写FPGA命令
+    quint64 regaddr = 0x0038;//设置OSD颜色
+    quint64 regdata = 0x0000;
+    quint64 data = 0x00;
+
+    //开始更新数据
+    regdata = 0x0001;
+    data = (regaddr<<16) + regdata;
+    char *p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    //Y
+    regdata = 0x0100 + Y;
+    data = (regaddr<<16) + regdata;
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    //Cb
+    regdata = 0x0200 + Cb;
+    data = (regaddr<<16) + regdata;
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    //c
+    regdata = 0x0300 + Cr;
+    data = (regaddr<<16) + regdata;
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+
+    //更新数据完成
+    regdata = 0x0000;
+    data = (regaddr<<16) + regdata;
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+}
+
+void MainWindow::on_pushButtonUpgradeOsdColorBoard6_clicked()
+{
+    QColor color = QColorDialog::getColor(Qt::white, this);
+    int R = 0;
+    int G = 0;
+    int B = 0;
+    unsigned char Y = 0;
+    unsigned char Cb = 0;
+    unsigned char Cr = 0;
+    color.getRgb(&R, &G, &B);
+
+    Y = (unsigned char)(R * 0.256789f + G * 0.504129f  + B * 0.097906f)+ 16;
+    Cb= (unsigned char)(R * (-0.148223f) + G * (-0.290992f) + B * 0.439215f)+ 128;
+    Cr= (unsigned char)(R * 0.439215f + G * (-0.367789f) + B * (-0.071426f))+ 128;
+
+    unsigned char send_str[8] = {0};
+    int ID = (PGN57856 << 8) + this->board6->writerAddr;  //写FPGA命令
+    quint64 regaddr = 0x0038;//设置OSD颜色
+    quint64 regdata = 0x0000;
+    quint64 data = 0x00;
+
+    //开始更新数据
+    regdata = 0x0001;
+    data = (regaddr<<16) + regdata;
+    char *p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    //Y
+    regdata = 0x0100 + Y;
+    data = (regaddr<<16) + regdata;
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    //Cb
+    regdata = 0x0200 + Cb;
+    data = (regaddr<<16) + regdata;
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    //c
+    regdata = 0x0300 + Cr;
+    data = (regaddr<<16) + regdata;
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+
+    //更新数据完成
+    regdata = 0x0000;
+    data = (regaddr<<16) + regdata;
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+}
+
+void MainWindow::on_pushButtonUpgradeOsdColorBoard7_clicked()
+{
+    QColor color = QColorDialog::getColor(Qt::white, this);
+    int R = 0;
+    int G = 0;
+    int B = 0;
+    unsigned char Y = 0;
+    unsigned char Cb = 0;
+    unsigned char Cr = 0;
+    color.getRgb(&R, &G, &B);
+
+    Y = (unsigned char)(R * 0.256789f + G * 0.504129f  + B * 0.097906f)+ 16;
+    Cb= (unsigned char)(R * (-0.148223f) + G * (-0.290992f) + B * 0.439215f)+ 128;
+    Cr= (unsigned char)(R * 0.439215f + G * (-0.367789f) + B * (-0.071426f))+ 128;
+
+    unsigned char send_str[8] = {0};
+    int ID = (PGN57856 << 8) + this->board7->writerAddr;  //写FPGA命令
+    quint64 regaddr = 0x0038;//设置OSD颜色
+    quint64 regdata = 0x0000;
+    quint64 data = 0x00;
+
+    //开始更新数据
+    regdata = 0x0001;
+    data = (regaddr<<16) + regdata;
+    char *p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    //Y
+    regdata = 0x0100 + Y;
+    data = (regaddr<<16) + regdata;
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    //Cb
+    regdata = 0x0200 + Cb;
+    data = (regaddr<<16) + regdata;
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    //c
+    regdata = 0x0300 + Cr;
+    data = (regaddr<<16) + regdata;
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+
+    //更新数据完成
+    regdata = 0x0000;
+    data = (regaddr<<16) + regdata;
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+}
+
+void MainWindow::on_pushButtonUpgradeOsdColorBoard8_clicked()
+{
+    QColor color = QColorDialog::getColor(Qt::white, this);
+    int R = 0;
+    int G = 0;
+    int B = 0;
+    unsigned char Y = 0;
+    unsigned char Cb = 0;
+    unsigned char Cr = 0;
+    color.getRgb(&R, &G, &B);
+
+    Y = (unsigned char)(R * 0.256789f + G * 0.504129f  + B * 0.097906f)+ 16;
+    Cb= (unsigned char)(R * (-0.148223f) + G * (-0.290992f) + B * 0.439215f)+ 128;
+    Cr= (unsigned char)(R * 0.439215f + G * (-0.367789f) + B * (-0.071426f))+ 128;
+
+    unsigned char send_str[8] = {0};
+    int ID = (PGN57856 << 8) + this->board8->writerAddr;  //写FPGA命令
+    quint64 regaddr = 0x0038;//设置OSD颜色
+    quint64 regdata = 0x0000;
+    quint64 data = 0x00;
+
+    //开始更新数据
+    regdata = 0x0001;
+    data = (regaddr<<16) + regdata;
+    char *p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    //Y
+    regdata = 0x0100 + Y;
+    data = (regaddr<<16) + regdata;
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    //Cb
+    regdata = 0x0200 + Cb;
+    data = (regaddr<<16) + regdata;
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    //c
+    regdata = 0x0300 + Cr;
+    data = (regaddr<<16) + regdata;
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+
+    //更新数据完成
+    regdata = 0x0000;
+    data = (regaddr<<16) + regdata;
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
 }

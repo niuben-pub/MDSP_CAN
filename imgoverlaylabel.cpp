@@ -56,6 +56,17 @@ void imgoverlayLabel::paintEvent(QPaintEvent *event)
                     {
                         painter->drawPixmap(j*DrawWindowQuarWidth,i*DrawWindowQuarHeight,DrawWindowQuarWidth,DrawWindowQuarHeight,this->pixIN2DetectionBoard[index]);
                     }
+                }
+                if(this->regTableBoard[index][i][j] == OVERLY_LVDS_IN_960x540)
+                {
+                    if(this->displayLvdsINRegBoard[index] == OVERLY_LVDS_IN1)
+                    {
+                        painter->drawPixmap(j*DrawWindowQuarWidth,i*DrawWindowQuarHeight,DrawWindowQuarWidth,DrawWindowQuarHeight,this->pixIN1LVDSinBoard[index]);
+                    }
+                    else if(this->displayLvdsINRegBoard[index] == OVERLY_LVDS_IN2)
+                    {
+                        painter->drawPixmap(j*DrawWindowQuarWidth,i*DrawWindowQuarHeight,DrawWindowQuarWidth,DrawWindowQuarHeight,this->pixIN2LVDSinBoard[index]);
+                    }
 
 
                 }

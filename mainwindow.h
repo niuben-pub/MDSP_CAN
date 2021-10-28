@@ -237,11 +237,25 @@ private slots:
 
     void on_btnWorkControlClearall_clicked();
 
+    void on_pushButtonUpgradeOsdBoard1_clicked();
     void on_pushButtonUpgradeOsdBoard2_clicked();
+    void on_pushButtonUpgradeOsdBoard3_clicked();
+    void on_pushButtonUpgradeOsdBoard4_clicked();
+    void on_pushButtonUpgradeOsdBoard5_clicked();
+    void on_pushButtonUpgradeOsdBoard6_clicked();
+    void on_pushButtonUpgradeOsdBoard7_clicked();
+    void on_pushButtonUpgradeOsdBoard8_clicked();
 
+    void on_pushButtonUpgradeOsdColorBoard1_clicked();
     void on_pushButtonUpgradeOsdColorBoard2_clicked();
+    void on_pushButtonUpgradeOsdColorBoard3_clicked();
+    void on_pushButtonUpgradeOsdColorBoard4_clicked();
+    void on_pushButtonUpgradeOsdColorBoard5_clicked();
+    void on_pushButtonUpgradeOsdColorBoard6_clicked();
+    void on_pushButtonUpgradeOsdColorBoard7_clicked();
+    void on_pushButtonUpgradeOsdColorBoard8_clicked();
 
-    void on_pushButtonUpgradeOsdSetColorBoard2_clicked();
+
 
 private:
     Ui::MainWindow *ui;

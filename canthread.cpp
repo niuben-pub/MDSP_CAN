@@ -183,7 +183,7 @@ void CANThread::sendData(int ID,unsigned char *ch)
     {
         qDebug()<<"发送错误："<<dwRel;
     }
-    usleep(200);  //延时不能小于200us
+    usleep(500);  //延时不能小于200us
     CanThreadMutex.unlock();
 }
 

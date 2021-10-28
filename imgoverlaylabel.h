@@ -6,14 +6,21 @@
 #include <QPainter>
 #include <QPixmap>
 
-#define OVERLY_DETECTION_IN1       (0x0001)  //目标识别  3G in2
-#define OVERLY_DETECTION_IN2       (0x0003)  //目标识别  3G in2
-#define OVERLY_IN1_3G_1920x1080  (0x0080)
-#define OVERLY_IN2_3G_1920x1080  (0x008c)
-#define OVERLY_IN1_3G_960x540  (0x00c0)
-#define OVERLY_IN2_3G_960x540  (0x00c6)
-#define OVERLY_COLOR_960x540  (0x00cc)
-#define OVERLY_DETECTION_960x540  (0x00cd)
+#define OVERLY_DETECTION_IN1        (0x0001)  //目标识别  3G in2
+#define OVERLY_DETECTION_IN2        (0x0003)  //目标识别  3G in2
+#define OVERLY_IN1_3G_1920x1080     (0x0080)
+#define OVERLY_IN2_3G_1920x1080     (0x008c)
+#define OVERLY_IN1_3G_960x540       (0x00c0)
+#define OVERLY_IN2_3G_960x540       (0x00c6)
+#define OVERLY_COLOR_960x540        (0x00cc)
+#define OVERLY_DETECTION_960x540    (0x00cd)
+
+
+#define OVERLY_LVDS_IN1            (0x0000)  //lvds  3G in1
+#define OVERLY_LVDS_IN2            (0x0001)  //lvds  3G in2
+#define OVERLY_LVDS_IN_960x540      (0x00d0)  //显示尺寸540P   lvds输入图像
+
+
 
 #define OVERLY_DRAW_WIDTH (480)
 #define OVERLY_DRAW_HIGHT (270)
@@ -32,6 +39,7 @@ public:
     unsigned int regTableBoard[8][4][4];
     unsigned int displayModeRegBoard[8];
     unsigned int displayDetectionModeRegBoard[8];
+    unsigned int displayLvdsINRegBoard[8];
 
     unsigned int DrawWindowWidth = OVERLY_DRAW_WIDTH;
     unsigned int DrawWindowHeight = OVERLY_DRAW_HIGHT;

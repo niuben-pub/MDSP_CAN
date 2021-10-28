@@ -13,7 +13,7 @@
 #define FPGA_TEMP_REG_ADDR          (0x0003) //FPGA内部温度寄存器地址
 
 #define DETECTION_STATE_REG_ADDR    (0x0060) //FPGA目标识别开关及通道选择寄存器
-
+#define LVDS_IN_REG_ADDR            (0x0051) // lvds视频输出的视频来源 0-IN1，1-IN2
 #define IN1_3G_SIZE_REG_ADDR        (0x0020) //3G IN1 输入视频尺寸寄存器地址
 #define IN2_3G_SIZE_REG_ADDR        (0x0021) //3G IN2 输入视频尺寸寄存器地址
 #define IN_12G_SWITCH_REG_ADDR      (0x0024) //12G 开关控制寄存器地址
@@ -23,9 +23,10 @@
 //寄存器数据
 
 #define DETECTION_OFF       (0x0000)  //目标识别  关闭
-#define DETECTION_IN1       (0x0001)  //目标识别  3G in2
+#define DETECTION_IN1       (0x0001)  //目标识别  3G in1
 #define DETECTION_IN2       (0x0003)  //目标识别  3G in2
-
+#define LVDS_IN1            (0x0000)  //lvds  3G in2
+#define LVDS_IN2            (0x0001)  //lvds  3G in2
 #define IN1_3G_1920x1080    (0x0080)  //显示尺寸1080P  3G in1
 #define IN2_3G_1920x1080    (0x008c)  //显示尺寸1080P  3G in2
 #define IN1_3G_960x540      (0x00c0)  //显示尺寸540P   3G in1
@@ -68,7 +69,8 @@ enum IMGTYPE
     IMG_AI_IN1= 2,
     IMG_AI_IN2= 3,
     IMG_COLOR = 4,
-    IMG_LVDS_IN = 5
+    IMG_LVDS_IN1 = 5,
+    IMG_LVDS_IN2 = 6
 };
 class ImgLabel : public QLabel
 {
@@ -86,6 +88,10 @@ public:
     const unsigned int fpgaTempRegAddr = FPGA_TEMP_REG_ADDR;
     unsigned int fpgaTempReg = 0;
 
+
+    //LVDS通路选择寄存器
+    const unsigned int lvdsInSwitchRegAddr = LVDS_IN_REG_ADDR;
+    unsigned int lvdsInSwitchReg = LVDS_IN1;
     //目标识别开关及通路选择寄存器
     const unsigned int detectionStateRegAddr = DETECTION_STATE_REG_ADDR;
     unsigned int detectionStateReg = DETECTION_OFF;
@@ -126,6 +132,8 @@ public:
     QPixmap pixColor;
     QPixmap pixDetectionIN1;
     QPixmap pixDetectionIN2;
+    QPixmap lvdsIN1;
+    QPixmap lvdsIN2;
 
 
 

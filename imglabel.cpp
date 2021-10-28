@@ -743,8 +743,111 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
         }
 
     }
-    else if(ImgType == IMG_LVDS_IN)
+    else if(ImgType == IMG_LVDS_IN1)
     {
+        this->lvdsInSwitchReg = LVDS_IN1;
+        if(regindex == 0 || regindex == 1 ||regindex == 4 || regindex == 5)
+        {
+            if(regTable[0][0] == IN2_3G_1920x1080 || regTable[0][0] == IN1_3G_1920x1080)
+            {
+                this->regTable[0][0] =  0;
+                this->regTable[0][1] =  0;
+                this->regTable[1][0] =  0;
+                this->regTable[1][1] =  0;
+                emit this->regChange((unsigned int *)regTable);
+
+                this->regTable[zone_y][zone_x] = LVDS_IN_960x540;
+                emit this->regChange((unsigned int *)regTable);
+
+            }
+            else
+            {
+                this->regTable[zone_y][zone_x] = regindex;
+                emit this->regChange((unsigned int *)regTable);
+
+                this->regTable[zone_y][zone_x] = LVDS_IN_960x540;
+                emit this->regChange((unsigned int *)regTable);
+
+            }
+        }
+        else if(regindex == 2 || regindex == 3 ||regindex == 6 || regindex == 7)
+        {
+            if(regTable[0][2] == IN2_3G_1920x1080 || regTable[0][2] == IN1_3G_1920x1080)
+            {
+                this->regTable[0][2] =  0;
+                this->regTable[0][3] =  0;
+                this->regTable[1][2] =  0;
+                this->regTable[1][3] =  0;
+                emit this->regChange((unsigned int *)regTable);
+
+                this->regTable[zone_y][zone_x] = LVDS_IN_960x540;
+                emit this->regChange((unsigned int *)regTable);
+
+            }
+            else
+            {
+                this->regTable[zone_y][zone_x] = regindex;
+                emit this->regChange((unsigned int *)regTable);
+
+                this->regTable[zone_y][zone_x] = LVDS_IN_960x540;
+                emit this->regChange((unsigned int *)regTable);
+
+            }
+        }
+        else if(regindex == 8 || regindex == 9 ||regindex == 12 || regindex == 13)
+        {
+            if(regTable[2][0] == IN2_3G_1920x1080 || regTable[2][0] == IN1_3G_1920x1080)
+            {
+                this->regTable[2][0] =  0;
+                this->regTable[2][1] =  0;
+                this->regTable[3][0] =  0;
+                this->regTable[3][1] =  0;
+                emit this->regChange((unsigned int *)regTable);
+
+                this->regTable[zone_y][zone_x] = LVDS_IN_960x540;
+                emit this->regChange((unsigned int *)regTable);
+
+            }
+            else
+            {
+                this->regTable[zone_y][zone_x] = regindex;
+                emit this->regChange((unsigned int *)regTable);
+
+                this->regTable[zone_y][zone_x] = LVDS_IN_960x540;
+                emit this->regChange((unsigned int *)regTable);
+
+            }
+
+        }
+        else if(regindex == 10 || regindex == 11 ||regindex == 14 || regindex == 15)
+        {
+            if(regTable[2][2] == IN2_3G_1920x1080 || regTable[2][2] == IN1_3G_1920x1080)
+            {
+                this->regTable[2][2] =  0;
+                this->regTable[2][3] =  0;
+                this->regTable[3][2] =  0;
+                this->regTable[3][3] =  0;
+                emit this->regChange((unsigned int *)regTable);
+
+                this->regTable[zone_y][zone_x] = LVDS_IN_960x540;
+                emit this->regChange((unsigned int *)regTable);
+
+            }
+            else
+            {
+                this->regTable[zone_y][zone_x] = regindex;
+                emit this->regChange((unsigned int *)regTable);
+
+                this->regTable[zone_y][zone_x] = LVDS_IN_960x540;
+                emit this->regChange((unsigned int *)regTable);
+
+            }
+        }
+    }
+
+    else if(ImgType == IMG_LVDS_IN2)
+    {
+        this->lvdsInSwitchReg = LVDS_IN2;
         if(regindex == 0 || regindex == 1 ||regindex == 4 || regindex == 5)
         {
             if(regTable[0][0] == IN2_3G_1920x1080 || regTable[0][0] == IN1_3G_1920x1080)
@@ -1847,7 +1950,7 @@ void ImgLabel::clearImg(unsigned int zone_x, unsigned int zone_y)
         }
 
     }
-    else if(ImgType == IMG_LVDS_IN)
+    else if(ImgType == IMG_LVDS_IN1)
     {
         if(regindex == 0 || regindex == 1 ||regindex == 4 || regindex == 5)
         {
@@ -2226,6 +2329,17 @@ void ImgLabel::paintEvent(QPaintEvent *event)
                     painter->drawPixmap(j*DrawWindowQuarWidth,i*DrawWindowQuarHeight,DrawWindowQuarWidth,DrawWindowQuarHeight,this->pixDetectionIN2);
                 }
 
+            }
+            if(this->regTable[i][j] == LVDS_IN_960x540)
+            {
+                if(this->lvdsInSwitchReg == LVDS_IN1)
+                {
+                    painter->drawPixmap(j*DrawWindowQuarWidth,i*DrawWindowQuarHeight,DrawWindowQuarWidth,DrawWindowQuarHeight,this->lvdsIN1);
+                }
+                else if(this->lvdsInSwitchReg == LVDS_IN2)
+                {
+                    painter->drawPixmap(j*DrawWindowQuarWidth,i*DrawWindowQuarHeight,DrawWindowQuarWidth,DrawWindowQuarHeight,this->lvdsIN2);
+                }
             }
 
         }
