@@ -129,6 +129,16 @@ void MainWindow::updataFlashTime()
 
 void MainWindow::displayMonitor(VCI_CAN_OBJ *vci, DWORD dwRel)
 {
+
+    //读回来的FLASH内容
+    if(vci->ID == ( PGN53760 << 8) + board1->readAddr)
+    {
+        QDataStream out(this->file);
+        for(int i = 0 ; i < 8; i++)
+        {
+            out<<vci[0].Data[i];
+        }
+    }
     //显示接收到ADC数据
 
     if(vci->ID == (PGN57600 << 8) + (this->board1->readAddr))
@@ -161,10 +171,6 @@ void MainWindow::displayMonitor(VCI_CAN_OBJ *vci, DWORD dwRel)
              ui->chartView5VBoard1->prepareData(this->protocolHand->MDSP_Board_LV);
              ui->chartViewCavityTempBoard1->prepareData(this->protocolHand->MDSP_Board_temperature);
              ui->chartViewFpgaTempBoard1->prepareData(this->protocolHand->MDSP_Board_FPGAtemperature);
-
-
-
-
          }
 
     }
@@ -1265,6 +1271,9 @@ void MainWindow::displayMonitor(VCI_CAN_OBJ *vci, DWORD dwRel)
             setLED(ui->labDSPLEDBoard8, 2, 16);
         }
     }
+
+
+
 }
 
 void MainWindow::initUi()
@@ -7423,3 +7432,48 @@ void MainWindow::on_pushButtonUpgradeOsdColorBoard8_clicked()
     sleep(10);
 
 }
+
+void MainWindow::on_pushButton_clicked()
+{
+
+    //创建要保存的文件
+    this->readFlashFileName = QFileDialog::getSaveFileName(this, tr("Save As"), "", tr("Normal text File (*.bbt)"));
+    this->file = new QFile(this->readFlashFileName);
+
+    if(!file->open(QIODevice::WriteOnly | QIODevice::Append))
+    {
+        qDebug()<<"open file false";
+        return;
+    }
+
+    bool ok;
+    quint64 size = ui->lineEdit->text().toULongLong(&ok,10);
+    qDebug()<<"read size" << size;
+
+    int ID = (PGN53760 << 8) + this->board1->writerAddr;  //读Len芯片
+    unsigned char send_str[8] = {0};
+
+
+
+    for(quint64 i = 0; i < size; i+=8)
+    {
+        char *p = (char *)(&i);
+
+        for(int j = 0; j < 8; j++)
+        {
+            send_str[j] = p[7 - j];
+        }
+      //   qDebug()<<send_str[0]<<send_str[1]<<send_str[2]<<send_str[3]<<send_str[4]<<send_str[5]<<send_str[6]<<send_str[7];
+     //  qDebug()<< "i = "<<i;
+
+        canthread->sendData(ID,(unsigned char*)send_str);
+       // sleep(1);
+    }
+
+    this->file->close();
+    qDebug()<<"read end";
+//    QDataStream out(&file);
+
+
+}
+

@@ -51,7 +51,7 @@
      <enum>QTabWidget::West</enum>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="tabCanParam">
      <attribute name="title">
@@ -763,7 +763,7 @@
        <enum>QTabWidget::West</enum>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="tabControl">
        <attribute name="title">
@@ -5421,7 +5421,7 @@ font: 10pt &quot;Arial&quot;;</string>
        <enum>QTabWidget::West</enum>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>6</number>
       </property>
       <widget class="QWidget" name="tabRealtime">
        <attribute name="title">
@@ -7929,6 +7929,32 @@ font: 10pt &quot;Arial&quot;;</string>
         </property>
         <property name="text">
          <string>Paragram</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton">
+        <property name="geometry">
+         <rect>
+          <x>652</x>
+          <y>520</y>
+          <width>110</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+        </property>
+        <property name="text">
+         <string>ReadCode</string>
+        </property>
+       </widget>
+       <widget class="QLineEdit" name="lineEdit">
+        <property name="geometry">
+         <rect>
+          <x>490</x>
+          <y>520</y>
+          <width>113</width>
+          <height>21</height>
+         </rect>
         </property>
        </widget>
       </widget>

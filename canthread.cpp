@@ -183,7 +183,7 @@ void CANThread::sendData(int ID,unsigned char *ch)
     {
         qDebug()<<"发送错误："<<dwRel;
     }
-    usleep(500);  //延时不能小于200us
+    usleep(2000);  //延时不能小于200us
     CanThreadMutex.unlock();
 }
 
@@ -280,5 +280,4 @@ void CANThread::usleep(unsigned int usec)
         time=(double)(nEndTime.QuadPart-nBeginTime.QuadPart)/(double)nFreq.QuadPart;
         QCoreApplication::processEvents(QEventLoop::AllEvents, 100);  //保证其它线程不会被阻塞
     }
-
 }

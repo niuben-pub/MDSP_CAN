@@ -8,10 +8,12 @@
 
 #define CAN_FLASH_ERASE (0x01);
 
+#define PGN53760 (0xD200)  // ¶ÁFlashÄÚÈİ
+#define PGN53504 (0xD100)  // Ğ´Íø¿¨Ğ¾Æ¬¼Ä´æÆ÷
+#define PGN53248 (0xD000)  // ¶ÁÍø¿¨Ğ¾Æ¬¼Ä´æÆ÷
 
 
 #define PGN61184 (0xEF00)  // ²âÊÔ°ü
-
 
 #define PGN60928 (0xEE00)  // IDOG
 #define PGN60672 (0xED00)  // ¶ÁĞ´ CANÊÕ·¢µØÖ·

@@ -257,6 +257,10 @@ private slots:
 
 
 
+    void on_pushButton_clicked();
+
+
+
 private:
     Ui::MainWindow *ui;
     CANThread *canthread;
@@ -264,6 +268,8 @@ private:
     QTimer *FlashWriteTimer;  //定时器
     unsigned int FlashWriteTimeSec = 0;
 
+    QString readFlashFileName;
+    QFile *file;
     boardinfo *board1;
     boardinfo *board2;
     boardinfo *board3;
