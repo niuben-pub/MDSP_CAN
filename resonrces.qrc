@@ -57,5 +57,13 @@
         <file>images/l14.png</file>
         <file>images/l15.png</file>
         <file>images/l16.png</file>
+        <file>images/G1.png</file>
+        <file>images/G2.png</file>
+        <file>images/G3.png</file>
+        <file>images/G4.png</file>
+        <file>images/G5.png</file>
+        <file>images/G6.png</file>
+        <file>images/G7.png</file>
+        <file>images/G8.png</file>
     </qresource>
 </RCC>

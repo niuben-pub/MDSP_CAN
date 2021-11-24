@@ -763,7 +763,7 @@
        <enum>QTabWidget::West</enum>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tabControl">
        <attribute name="title">
@@ -874,6 +874,11 @@
          <item>
           <property name="text">
            <string>Lvds IN2</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>GE IN</string>
           </property>
          </item>
         </widget>
@@ -1074,6 +1079,11 @@ font: 10pt &quot;Arial&quot;;</string>
            <string>Lvds IN2</string>
           </property>
          </item>
+         <item>
+          <property name="text">
+           <string>GE IN</string>
+          </property>
+         </item>
         </widget>
         <widget class="QComboBox" name="comboBox3Gin2SizeBoard2">
          <property name="geometry">
@@ -1270,6 +1280,11 @@ font: 10pt &quot;Arial&quot;;</string>
          <item>
           <property name="text">
            <string>Lvds IN2</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>GE IN</string>
           </property>
          </item>
         </widget>
@@ -1470,6 +1485,11 @@ font: 10pt &quot;Arial&quot;;</string>
            <string>Lvds IN2</string>
           </property>
          </item>
+         <item>
+          <property name="text">
+           <string>GE IN</string>
+          </property>
+         </item>
         </widget>
         <widget class="QComboBox" name="comboBox3Gin2SizeBoard4">
          <property name="geometry">
@@ -1666,6 +1686,11 @@ font: 10pt &quot;Arial&quot;;</string>
          <item>
           <property name="text">
            <string>Lvds IN2</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>GE IN</string>
           </property>
          </item>
         </widget>
@@ -1866,6 +1891,11 @@ font: 10pt &quot;Arial&quot;;</string>
            <string>Lvds IN2</string>
           </property>
          </item>
+         <item>
+          <property name="text">
+           <string>GE IN</string>
+          </property>
+         </item>
         </widget>
         <widget class="QComboBox" name="comboBox3Gin2SizeBoard6">
          <property name="geometry">
@@ -2064,6 +2094,11 @@ font: 10pt &quot;Arial&quot;;</string>
            <string>Lvds IN2</string>
           </property>
          </item>
+         <item>
+          <property name="text">
+           <string>GE IN</string>
+          </property>
+         </item>
         </widget>
         <widget class="QComboBox" name="comboBox3Gin2SizeBoard7">
          <property name="geometry">
@@ -2260,6 +2295,11 @@ font: 10pt &quot;Arial&quot;;</string>
          <item>
           <property name="text">
            <string>Lvds IN2</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>GE IN</string>
           </property>
          </item>
         </widget>
@@ -5400,6 +5440,2139 @@ font: 10pt &quot;Arial&quot;;</string>
         <property name="text">
          <string>Test Mode</string>
         </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_8">
+       <attribute name="title">
+        <string>Net</string>
+       </attribute>
+       <widget class="QGroupBox" name="groupBox_29">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>140</y>
+          <width>271</width>
+          <height>231</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+        </property>
+        <property name="title">
+         <string>Board1</string>
+        </property>
+        <widget class="QGroupBox" name="groupBox_28">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>110</y>
+           <width>251</width>
+           <height>80</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="title">
+          <string>Host</string>
+         </property>
+         <widget class="QLineEdit" name="lineEditHostPortBoard1">
+          <property name="geometry">
+           <rect>
+            <x>180</x>
+            <y>50</y>
+            <width>51</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>1234</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="labelHostPortBoard1">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>50</y>
+            <width>31</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Port</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="labelHostIPAddrBoard1">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>50</y>
+            <width>16</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>IP</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEditHostMacAddrBoard1">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>20</y>
+            <width>181</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>34-97-f6-53-b5-1b</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="labelHostMacAddrBoard1">
+          <property name="geometry">
+           <rect>
+            <x>16</x>
+            <y>19</y>
+            <width>31</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>MAC</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEditHostIPAddrBoard1">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>50</y>
+            <width>91</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>192.168.0.5</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QGroupBox" name="groupBox_27">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>251</width>
+           <height>80</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="title">
+          <string>Board</string>
+         </property>
+         <widget class="QLabel" name="labelBoardPortBoard1">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>50</y>
+            <width>31</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Port</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="labelBoardIPAddrBoard1">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>50</y>
+            <width>16</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>IP</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="labelBoardMacAddrBoard1">
+          <property name="geometry">
+           <rect>
+            <x>16</x>
+            <y>19</y>
+            <width>31</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>MAC</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEditBoardIPAddrBoard1">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>50</y>
+            <width>91</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>192.168.0.6</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEditBoardPortBoard1">
+          <property name="geometry">
+           <rect>
+            <x>180</x>
+            <y>50</y>
+            <width>51</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>1234</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEditBoardMacAddrBoard1">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>20</y>
+            <width>181</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>12-34-56-78-9a-bc</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QPushButton" name="pushButtonSetNetRegBoard1">
+         <property name="geometry">
+          <rect>
+           <x>43</x>
+           <y>197</y>
+           <width>75</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Set</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButtonClearNetRegBoard1">
+         <property name="geometry">
+          <rect>
+           <x>170</x>
+           <y>197</y>
+           <width>75</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Clear</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_30">
+        <property name="geometry">
+         <rect>
+          <x>290</x>
+          <y>140</y>
+          <width>271</width>
+          <height>231</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+        </property>
+        <property name="title">
+         <string>Board2</string>
+        </property>
+        <widget class="QGroupBox" name="groupBox_31">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>110</y>
+           <width>251</width>
+           <height>80</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="title">
+          <string>Host</string>
+         </property>
+         <widget class="QLineEdit" name="lineEditHostPortBoard2">
+          <property name="geometry">
+           <rect>
+            <x>180</x>
+            <y>50</y>
+            <width>51</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>1234</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="labelHostPortBoard2">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>50</y>
+            <width>31</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Port</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="labelHostIPAddrBoard2">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>50</y>
+            <width>16</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>IP</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEditHostMacAddrBoard2">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>20</y>
+            <width>181</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>34-97-f6-53-b5-1b</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="labelHostMacAddrBoard2">
+          <property name="geometry">
+           <rect>
+            <x>16</x>
+            <y>19</y>
+            <width>31</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>MAC</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEditHostIPAddrBoard2">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>50</y>
+            <width>91</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>192.168.0.5</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QGroupBox" name="groupBox_32">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>251</width>
+           <height>80</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="title">
+          <string>Board</string>
+         </property>
+         <widget class="QLabel" name="labelBoardPortBoard2">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>50</y>
+            <width>31</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Port</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="labelBoardIPAddrBoard2">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>50</y>
+            <width>16</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>IP</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="labelBoardMacAddrBoard2">
+          <property name="geometry">
+           <rect>
+            <x>16</x>
+            <y>19</y>
+            <width>31</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>MAC</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEditBoardIPAddrBoard2">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>50</y>
+            <width>91</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>192.168.0.6</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEditBoardPortBoard2">
+          <property name="geometry">
+           <rect>
+            <x>180</x>
+            <y>50</y>
+            <width>51</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>1234</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEditBoardMacAddrBoard2">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>20</y>
+            <width>181</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>12-34-56-78-9a-bc</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QPushButton" name="pushButtonSetNetRegBoard2">
+         <property name="geometry">
+          <rect>
+           <x>43</x>
+           <y>197</y>
+           <width>75</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Set</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButtonClearNetRegBoard2">
+         <property name="geometry">
+          <rect>
+           <x>170</x>
+           <y>197</y>
+           <width>75</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Clear</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_33">
+        <property name="geometry">
+         <rect>
+          <x>570</x>
+          <y>140</y>
+          <width>271</width>
+          <height>231</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+        </property>
+        <property name="title">
+         <string>Board3</string>
+        </property>
+        <widget class="QGroupBox" name="groupBox_34">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>110</y>
+           <width>251</width>
+           <height>80</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="title">
+          <string>Host</string>
+         </property>
+         <widget class="QLineEdit" name="lineEditHostPortBoard3">
+          <property name="geometry">
+           <rect>
+            <x>180</x>
+            <y>50</y>
+            <width>51</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>1234</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="labelHostPortBoard3">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>50</y>
+            <width>31</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Port</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="labelHostIPAddrBoard3">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>50</y>
+            <width>16</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>IP</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEditHostMacAddrBoard3">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>20</y>
+            <width>181</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>34-97-f6-53-b5-1b</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="labelHostMacAddrBoard3">
+          <property name="geometry">
+           <rect>
+            <x>16</x>
+            <y>19</y>
+            <width>31</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>MAC</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEditHostIPAddrBoard3">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>50</y>
+            <width>91</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>192.168.0.5</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QGroupBox" name="groupBox_35">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>251</width>
+           <height>80</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="title">
+          <string>Board</string>
+         </property>
+         <widget class="QLabel" name="labelBoardPortBoard3">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>50</y>
+            <width>31</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Port</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="labelBoardIPAddrBoard3">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>50</y>
+            <width>16</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>IP</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="labelBoardMacAddrBoard3">
+          <property name="geometry">
+           <rect>
+            <x>16</x>
+            <y>19</y>
+            <width>31</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>MAC</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEditBoardIPAddrBoard3">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>50</y>
+            <width>91</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>192.168.0.6</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEditBoardPortBoard3">
+          <property name="geometry">
+           <rect>
+            <x>180</x>
+            <y>50</y>
+            <width>51</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>1234</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEditBoardMacAddrBoard3">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>20</y>
+            <width>181</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>12-34-56-78-9a-bc</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QPushButton" name="pushButtonSetNetRegBoard3">
+         <property name="geometry">
+          <rect>
+           <x>43</x>
+           <y>197</y>
+           <width>75</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Set</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButtonClearNetRegBoard3">
+         <property name="geometry">
+          <rect>
+           <x>170</x>
+           <y>197</y>
+           <width>75</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Clear</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_36">
+        <property name="geometry">
+         <rect>
+          <x>850</x>
+          <y>140</y>
+          <width>271</width>
+          <height>231</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+        </property>
+        <property name="title">
+         <string>Board4</string>
+        </property>
+        <widget class="QGroupBox" name="groupBox_37">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>110</y>
+           <width>251</width>
+           <height>80</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="title">
+          <string>Host</string>
+         </property>
+         <widget class="QLineEdit" name="lineEditHostPortBoard4">
+          <property name="geometry">
+           <rect>
+            <x>180</x>
+            <y>50</y>
+            <width>51</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>1234</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="labelHostPortBoard4">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>50</y>
+            <width>31</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Port</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="labelHostIPAddrBoard4">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>50</y>
+            <width>16</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>IP</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEditHostMacAddrBoard4">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>20</y>
+            <width>181</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>34-97-f6-53-b5-1b</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="labelHostMacAddrBoard4">
+          <property name="geometry">
+           <rect>
+            <x>16</x>
+            <y>19</y>
+            <width>31</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>MAC</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEditHostIPAddrBoard4">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>50</y>
+            <width>91</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>192.168.0.5</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QGroupBox" name="groupBox_38">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>251</width>
+           <height>80</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="title">
+          <string>Board</string>
+         </property>
+         <widget class="QLabel" name="labelBoardPortBoard4">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>50</y>
+            <width>31</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Port</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="labelBoardIPAddrBoard4">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>50</y>
+            <width>16</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>IP</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="labelBoardMacAddrBoard4">
+          <property name="geometry">
+           <rect>
+            <x>16</x>
+            <y>19</y>
+            <width>31</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>MAC</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEditBoardIPAddrBoard4">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>50</y>
+            <width>91</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>192.168.0.6</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEditBoardPortBoard4">
+          <property name="geometry">
+           <rect>
+            <x>180</x>
+            <y>50</y>
+            <width>51</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>1234</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEditBoardMacAddrBoard4">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>20</y>
+            <width>181</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>12-34-56-78-9a-bc</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QPushButton" name="pushButtonSetNetRegBoard4">
+         <property name="geometry">
+          <rect>
+           <x>43</x>
+           <y>197</y>
+           <width>75</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Set</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButtonClearNetRegBoard4">
+         <property name="geometry">
+          <rect>
+           <x>170</x>
+           <y>197</y>
+           <width>75</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Clear</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_39">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>480</y>
+          <width>271</width>
+          <height>231</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+        </property>
+        <property name="title">
+         <string>Board5</string>
+        </property>
+        <widget class="QGroupBox" name="groupBox_40">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>110</y>
+           <width>251</width>
+           <height>80</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="title">
+          <string>Host</string>
+         </property>
+         <widget class="QLineEdit" name="lineEditHostPortBoard5">
+          <property name="geometry">
+           <rect>
+            <x>180</x>
+            <y>50</y>
+            <width>51</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>1234</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="labelHostPortBoard5">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>50</y>
+            <width>31</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Port</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="labelHostIPAddrBoard5">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>50</y>
+            <width>16</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>IP</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEditHostMacAddrBoard5">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>20</y>
+            <width>181</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>34-97-f6-53-b5-1b</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="labelHostMacAddrBoard5">
+          <property name="geometry">
+           <rect>
+            <x>16</x>
+            <y>19</y>
+            <width>31</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>MAC</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEditHostIPAddrBoard5">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>50</y>
+            <width>91</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>192.168.0.5</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QGroupBox" name="groupBox_41">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>251</width>
+           <height>80</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="title">
+          <string>Board</string>
+         </property>
+         <widget class="QLabel" name="labelBoardPortBoard5">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>50</y>
+            <width>31</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Port</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="labelBoardIPAddrBoard5">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>50</y>
+            <width>16</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>IP</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="labelBoardMacAddrBoard5">
+          <property name="geometry">
+           <rect>
+            <x>16</x>
+            <y>19</y>
+            <width>31</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>MAC</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEditBoardIPAddrBoard5">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>50</y>
+            <width>91</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>192.168.0.6</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEditBoardPortBoard5">
+          <property name="geometry">
+           <rect>
+            <x>180</x>
+            <y>50</y>
+            <width>51</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>1234</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEditBoardMacAddrBoard5">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>20</y>
+            <width>181</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>12-34-56-78-9a-bc</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QPushButton" name="pushButtonSetNetRegBoard5">
+         <property name="geometry">
+          <rect>
+           <x>43</x>
+           <y>197</y>
+           <width>75</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Set</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButtonClearNetRegBoard5">
+         <property name="geometry">
+          <rect>
+           <x>170</x>
+           <y>197</y>
+           <width>75</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Clear</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_42">
+        <property name="geometry">
+         <rect>
+          <x>290</x>
+          <y>480</y>
+          <width>271</width>
+          <height>231</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+        </property>
+        <property name="title">
+         <string>Board6</string>
+        </property>
+        <widget class="QGroupBox" name="groupBox_43">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>110</y>
+           <width>251</width>
+           <height>80</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="title">
+          <string>Host</string>
+         </property>
+         <widget class="QLineEdit" name="lineEditHostPortBoard6">
+          <property name="geometry">
+           <rect>
+            <x>180</x>
+            <y>50</y>
+            <width>51</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>1234</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="labelHostPortBoard6">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>50</y>
+            <width>31</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Port</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="labelHostIPAddrBoard6">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>50</y>
+            <width>16</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>IP</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEditHostMacAddrBoard6">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>20</y>
+            <width>181</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>34-97-f6-53-b5-1b</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="labelHostMacAddrBoard6">
+          <property name="geometry">
+           <rect>
+            <x>16</x>
+            <y>19</y>
+            <width>31</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>MAC</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEditHostIPAddrBoard6">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>50</y>
+            <width>91</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>192.168.0.5</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QGroupBox" name="groupBox_44">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>251</width>
+           <height>80</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="title">
+          <string>Board</string>
+         </property>
+         <widget class="QLabel" name="labelBoardPortBoard6">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>50</y>
+            <width>31</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Port</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="labelBoardIPAddrBoard6">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>50</y>
+            <width>16</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>IP</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="labelBoardMacAddrBoard6">
+          <property name="geometry">
+           <rect>
+            <x>16</x>
+            <y>19</y>
+            <width>31</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>MAC</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEditBoardIPAddrBoard6">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>50</y>
+            <width>91</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>192.168.0.6</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEditBoardPortBoard6">
+          <property name="geometry">
+           <rect>
+            <x>180</x>
+            <y>50</y>
+            <width>51</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>1234</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEditBoardMacAddrBoard6">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>20</y>
+            <width>181</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>12-34-56-78-9a-bc</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QPushButton" name="pushButtonSetNetRegBoard6">
+         <property name="geometry">
+          <rect>
+           <x>43</x>
+           <y>197</y>
+           <width>75</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Set</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButtonClearNetRegBoard6">
+         <property name="geometry">
+          <rect>
+           <x>170</x>
+           <y>197</y>
+           <width>75</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Clear</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_45">
+        <property name="geometry">
+         <rect>
+          <x>570</x>
+          <y>480</y>
+          <width>271</width>
+          <height>231</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+        </property>
+        <property name="title">
+         <string>Board7</string>
+        </property>
+        <widget class="QGroupBox" name="groupBox_46">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>110</y>
+           <width>251</width>
+           <height>80</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="title">
+          <string>Host</string>
+         </property>
+         <widget class="QLineEdit" name="lineEditHostPortBoard7">
+          <property name="geometry">
+           <rect>
+            <x>180</x>
+            <y>50</y>
+            <width>51</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>1234</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="labelHostPortBoard7">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>50</y>
+            <width>31</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Port</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="labelHostIPAddrBoard7">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>50</y>
+            <width>16</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>IP</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEditHostMacAddrBoard7">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>20</y>
+            <width>181</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>34-97-f6-53-b5-1b</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="labelHostMacAddrBoard7">
+          <property name="geometry">
+           <rect>
+            <x>16</x>
+            <y>19</y>
+            <width>31</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>MAC</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEditHostIPAddrBoard7">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>50</y>
+            <width>91</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>192.168.0.5</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QGroupBox" name="groupBox_47">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>251</width>
+           <height>80</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="title">
+          <string>Board</string>
+         </property>
+         <widget class="QLabel" name="labelBoardPortBoard7">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>50</y>
+            <width>31</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Port</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="labelBoardIPAddrBoard7">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>50</y>
+            <width>16</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>IP</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="labelBoardMacAddrBoard7">
+          <property name="geometry">
+           <rect>
+            <x>16</x>
+            <y>19</y>
+            <width>31</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>MAC</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEditBoardIPAddrBoard7">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>50</y>
+            <width>91</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>192.168.0.6</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEditBoardPortBoard7">
+          <property name="geometry">
+           <rect>
+            <x>180</x>
+            <y>50</y>
+            <width>51</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>1234</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEditBoardMacAddrBoard7">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>20</y>
+            <width>181</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>12-34-56-78-9a-bc</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QPushButton" name="pushButtonSetNetRegBoard7">
+         <property name="geometry">
+          <rect>
+           <x>43</x>
+           <y>197</y>
+           <width>75</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Set</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButtonClearNetRegBoard7">
+         <property name="geometry">
+          <rect>
+           <x>170</x>
+           <y>197</y>
+           <width>75</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Clear</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_48">
+        <property name="geometry">
+         <rect>
+          <x>850</x>
+          <y>480</y>
+          <width>271</width>
+          <height>231</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+        </property>
+        <property name="title">
+         <string>Board8</string>
+        </property>
+        <widget class="QGroupBox" name="groupBox_49">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>110</y>
+           <width>251</width>
+           <height>80</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="title">
+          <string>Host</string>
+         </property>
+         <widget class="QLineEdit" name="lineEditHostPortBoard8">
+          <property name="geometry">
+           <rect>
+            <x>180</x>
+            <y>50</y>
+            <width>51</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>1234</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="labelHostPortBoard8">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>50</y>
+            <width>31</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Port</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="labelHostIPAddrBoard8">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>50</y>
+            <width>16</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>IP</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEditHostMacAddrBoard8">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>20</y>
+            <width>181</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>34-97-f6-53-b5-1b</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="labelHostMacAddrBoard8">
+          <property name="geometry">
+           <rect>
+            <x>16</x>
+            <y>19</y>
+            <width>31</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>MAC</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEditHostIPAddrBoard8">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>50</y>
+            <width>91</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>192.168.0.5</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QGroupBox" name="groupBox_50">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>251</width>
+           <height>80</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+         </property>
+         <property name="title">
+          <string>Board</string>
+         </property>
+         <widget class="QLabel" name="labelBoardPortBoard8">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>50</y>
+            <width>31</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Port</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="labelBoardIPAddrBoard8">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>50</y>
+            <width>16</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>IP</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="labelBoardMacAddrBoard8">
+          <property name="geometry">
+           <rect>
+            <x>16</x>
+            <y>19</y>
+            <width>31</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>MAC</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEditBoardIPAddrBoard8">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>50</y>
+            <width>91</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>192.168.0.6</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEditBoardPortBoard8">
+          <property name="geometry">
+           <rect>
+            <x>180</x>
+            <y>50</y>
+            <width>51</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>1234</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEditBoardMacAddrBoard8">
+          <property name="geometry">
+           <rect>
+            <x>50</x>
+            <y>20</y>
+            <width>181</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 9pt &quot;Arial&quot;;</string>
+          </property>
+          <property name="text">
+           <string>12-34-56-78-9a-bc</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QPushButton" name="pushButtonSetNetRegBoard8">
+         <property name="geometry">
+          <rect>
+           <x>43</x>
+           <y>197</y>
+           <width>75</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Set</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="pushButtonClearNetRegBoard8">
+         <property name="geometry">
+          <rect>
+           <x>170</x>
+           <y>197</y>
+           <width>75</width>
+           <height>23</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Clear</string>
+         </property>
+        </widget>
        </widget>
       </widget>
      </widget>

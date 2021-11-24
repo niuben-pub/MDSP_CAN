@@ -14,7 +14,7 @@
 #define OVERLY_IN2_3G_960x540       (0x00c6)
 #define OVERLY_COLOR_960x540        (0x00cc)
 #define OVERLY_DETECTION_960x540    (0x00cd)
-
+#define OVERLY_GE_IN_960x540        (0x00d3)  //œ‘ æ≥ﬂ¥Á540P   GE ‰»ÎÕºœÒ
 
 #define OVERLY_LVDS_IN1            (0x0000)  //lvds  3G in1
 #define OVERLY_LVDS_IN2            (0x0001)  //lvds  3G in2
@@ -118,6 +118,16 @@ public:
     QPixmap pixIN2LVDSinBoard6;
     QPixmap pixIN2LVDSinBoard7;
     QPixmap pixIN2LVDSinBoard8;
+
+    QPixmap pixGEinBoard[8];
+    QPixmap pixGEinBoard1;
+    QPixmap pixGEinBoard2;
+    QPixmap pixGEinBoard3;
+    QPixmap pixGEinBoard4;
+    QPixmap pixGEinBoard5;
+    QPixmap pixGEinBoard6;
+    QPixmap pixGEinBoard7;
+    QPixmap pixGEinBoard8;
 
 public:
     explicit imgoverlayLabel(QWidget *parent = nullptr);

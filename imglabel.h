@@ -34,6 +34,11 @@
 #define COLOR_960x540       (0x00cc)  //显示尺寸540P   彩条
 #define DETECTION_960x540   (0x00cd)  //显示尺寸540P   目标识别
 #define LVDS_IN_960x540     (0x00d0)  //显示尺寸540P   lvds输入图像
+#define GE_IN_960x540       (0x00d3)  //显示尺寸540P   GE输入图像
+
+
+
+
 
 #define IN_3G_SIZE_1920X1080 (0x0001) //3g in的输入尺寸1080p
 #define IN_3G_SIZE_960x540   (0x0000) //3g in的输入尺寸540p
@@ -70,7 +75,8 @@ enum IMGTYPE
     IMG_AI_IN2= 3,
     IMG_COLOR = 4,
     IMG_LVDS_IN1 = 5,
-    IMG_LVDS_IN2 = 6
+    IMG_LVDS_IN2 = 6,
+    IMG_GE = 7
 };
 class ImgLabel : public QLabel
 {
@@ -134,7 +140,7 @@ public:
     QPixmap pixDetectionIN2;
     QPixmap lvdsIN1;
     QPixmap lvdsIN2;
-
+    QPixmap pixGE;
 
 
 private:

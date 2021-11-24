@@ -11,6 +11,8 @@
 #include <QTimer>
 
 #include <QtCharts>
+
+#include <QUdpSocket>
 using namespace QtCharts;
 
 
@@ -32,6 +34,31 @@ private:
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
+
+
+private:
+    Ui::MainWindow *ui;
+    CANThread *canthread;
+    ProtocolThrend *protocolHand;
+    QTimer *FlashWriteTimer;  //定时器
+    unsigned int FlashWriteTimeSec = 0;
+
+    QString readFlashFileName;
+    QFile *file;
+    boardinfo *board1;
+    boardinfo *board2;
+    boardinfo *board3;
+    boardinfo *board4;
+    boardinfo *board5;
+    boardinfo *board6;
+    boardinfo *board7;
+    boardinfo *board8;
+
+
+
+
+
+
 
 private slots:
     void updateOverlyImgRegArray(void);
@@ -261,26 +288,6 @@ private slots:
 
 
 
-private:
-    Ui::MainWindow *ui;
-    CANThread *canthread;
-    ProtocolThrend *protocolHand;
-    QTimer *FlashWriteTimer;  //定时器
-    unsigned int FlashWriteTimeSec = 0;
-
-    QString readFlashFileName;
-    QFile *file;
-    boardinfo *board1;
-    boardinfo *board2;
-    boardinfo *board3;
-    boardinfo *board4;
-    boardinfo *board5;
-    boardinfo *board6;
-    boardinfo *board7;
-    boardinfo *board8;
-
-
-///图表相关
 
 
 
@@ -288,6 +295,38 @@ private:
 
 
 
+    void on_pushButtonSetNetRegBoard1_clicked();
+
+    void on_pushButtonClearNetRegBoard1_clicked();
+
+
+    void on_pushButtonSetNetRegBoard2_clicked();
+
+    void on_pushButtonClearNetRegBoard2_clicked();
+
+    void on_pushButtonSetNetRegBoard3_clicked();
+
+    void on_pushButtonClearNetRegBoard3_clicked();
+
+    void on_pushButtonSetNetRegBoard4_clicked();
+
+    void on_pushButtonClearNetRegBoard4_clicked();
+
+    void on_pushButtonSetNetRegBoard5_clicked();
+
+    void on_pushButtonClearNetRegBoard5_clicked();
+
+    void on_pushButtonSetNetRegBoard6_clicked();
+
+    void on_pushButtonClearNetRegBoard6_clicked();
+
+    void on_pushButtonSetNetRegBoard7_clicked();
+
+    void on_pushButtonClearNetRegBoard7_clicked();
+
+    void on_pushButtonSetNetRegBoard8_clicked();
+
+    void on_pushButtonClearNetRegBoard8_clicked();
 
 public:
     void sleep(unsigned int msec);

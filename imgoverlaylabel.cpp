@@ -46,6 +46,10 @@ void imgoverlayLabel::paintEvent(QPaintEvent *event)
                 {
                     painter->drawPixmap(j*DrawWindowQuarWidth,i*DrawWindowQuarHeight,DrawWindowQuarWidth,DrawWindowQuarHeight,this->pixColorBoard[index]);
                 }
+                if(this->regTableBoard[index][i][j] == OVERLY_GE_IN_960x540)
+                {
+                    painter->drawPixmap(j*DrawWindowQuarWidth,i*DrawWindowQuarHeight,DrawWindowQuarWidth,DrawWindowQuarHeight,this->pixGEinBoard[index]);
+                }
                 if(this->regTableBoard[index][i][j] == OVERLY_DETECTION_960x540)
                 {
                     if(this->displayDetectionModeRegBoard[index] == OVERLY_DETECTION_IN1)

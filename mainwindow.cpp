@@ -1698,6 +1698,7 @@ void MainWindow::initImaLabel()
     ui->labelImgBoard1->lvdsIN1.load(":/images/l1.png");
     ui->labelImgBoard1->lvdsIN2.load(":/images/l2.png");
     ui->labelImgBoard1->pixColor.load(":/images/col1.png");
+    ui->labelImgBoard1->pixGE.load(":/images/G1.png");
     ui->labelImgBoard2->pixBlank.load(":/images/0.png");
     ui->labelImgBoard2->pix3GIN1.load(":/images/3.png");
     ui->labelImgBoard2->pix3GIN2.load(":/images/4.png");
@@ -1706,6 +1707,7 @@ void MainWindow::initImaLabel()
     ui->labelImgBoard2->lvdsIN1.load(":/images/l3.png");
     ui->labelImgBoard2->lvdsIN2.load(":/images/l4.png");
     ui->labelImgBoard2->pixColor.load(":/images/col2.png");
+    ui->labelImgBoard2->pixGE.load(":/images/G2.png");
     ui->labelImgBoard3->pixBlank.load(":/images/0.png");
     ui->labelImgBoard3->pix3GIN1.load(":/images/5.png");
     ui->labelImgBoard3->pix3GIN2.load(":/images/6.png");
@@ -1714,6 +1716,7 @@ void MainWindow::initImaLabel()
     ui->labelImgBoard3->lvdsIN1.load(":/images/l5.png");
     ui->labelImgBoard3->lvdsIN2.load(":/images/l6.png");
     ui->labelImgBoard3->pixColor.load(":/images/col3.png");
+    ui->labelImgBoard3->pixGE.load(":/images/G3.png");
     ui->labelImgBoard4->pixBlank.load(":/images/0.png");
     ui->labelImgBoard4->pix3GIN1.load(":/images/7.png");
     ui->labelImgBoard4->pix3GIN2.load(":/images/8.png");
@@ -1722,6 +1725,7 @@ void MainWindow::initImaLabel()
     ui->labelImgBoard4->lvdsIN1.load(":/images/l7.png");
     ui->labelImgBoard4->lvdsIN2.load(":/images/l8.png");
     ui->labelImgBoard4->pixColor.load(":/images/col4.png");
+    ui->labelImgBoard4->pixGE.load(":/images/G4.png");
     ui->labelImgBoard5->pixBlank.load(":/images/0.png");
     ui->labelImgBoard5->pix3GIN1.load(":/images/9.png");
     ui->labelImgBoard5->pix3GIN2.load(":/images/10.png");
@@ -1730,6 +1734,7 @@ void MainWindow::initImaLabel()
     ui->labelImgBoard5->lvdsIN1.load(":/images/l9.png");
     ui->labelImgBoard5->lvdsIN2.load(":/images/l10.png");
     ui->labelImgBoard5->pixColor.load(":/images/col5.png");
+    ui->labelImgBoard5->pixGE.load(":/images/G5.png");
     ui->labelImgBoard6->pixBlank.load(":/images/0.png");
     ui->labelImgBoard6->pix3GIN1.load(":/images/11.png");
     ui->labelImgBoard6->pix3GIN2.load(":/images/12.png");
@@ -1738,6 +1743,7 @@ void MainWindow::initImaLabel()
     ui->labelImgBoard6->lvdsIN1.load(":/images/l11.png");
     ui->labelImgBoard6->lvdsIN2.load(":/images/l12.png");
     ui->labelImgBoard6->pixColor.load(":/images/col6.png");
+    ui->labelImgBoard6->pixGE.load(":/images/G6.png");
     ui->labelImgBoard7->pixBlank.load(":/images/0.png");
     ui->labelImgBoard7->pix3GIN1.load(":/images/13.png");
     ui->labelImgBoard7->pix3GIN2.load(":/images/14.png");
@@ -1746,6 +1752,7 @@ void MainWindow::initImaLabel()
     ui->labelImgBoard7->lvdsIN1.load(":/images/l13.png");
     ui->labelImgBoard7->lvdsIN2.load(":/images/l14.png");
     ui->labelImgBoard7->pixColor.load(":/images/col7.png");
+    ui->labelImgBoard7->pixGE.load(":/images/G7.png");
     ui->labelImgBoard8->pixBlank.load(":/images/0.png");
     ui->labelImgBoard8->pix3GIN1.load(":/images/15.png");
     ui->labelImgBoard8->pix3GIN2.load(":/images/16.png");
@@ -1754,6 +1761,7 @@ void MainWindow::initImaLabel()
     ui->labelImgBoard8->lvdsIN1.load(":/images/l15.png");
     ui->labelImgBoard8->lvdsIN2.load(":/images/l16.png");
     ui->labelImgBoard8->pixColor.load(":/images/col8.png");
+    ui->labelImgBoard8->pixGE.load(":/images/G8.png");
 
     ui->labelOverly->pixBlank.load(":/images/0.png");
 
@@ -1764,6 +1772,7 @@ void MainWindow::initImaLabel()
     ui->labelOverly->pixIN1LVDSinBoard[0].load(":/images/l1.png");
     ui->labelOverly->pixIN2LVDSinBoard[0].load(":/images/l2.png");
     ui->labelOverly->pixColorBoard[0].load(":/images/col1.png");
+    ui->labelOverly->pixGEinBoard[0].load(":/images/G1.png");
 
     ui->labelOverly->pix3GIN1Board[1].load(":/images/3.png");
     ui->labelOverly->pix3GIN2Board[1].load(":/images/4.png");
@@ -1772,6 +1781,7 @@ void MainWindow::initImaLabel()
     ui->labelOverly->pixIN1LVDSinBoard[1].load(":/images/l3.png");
     ui->labelOverly->pixIN2LVDSinBoard[1].load(":/images/l4.png");
     ui->labelOverly->pixColorBoard[1].load(":/images/col2.png");
+    ui->labelOverly->pixGEinBoard[1].load(":/images/G2.png");
 
     ui->labelOverly->pix3GIN1Board[2].load(":/images/5.png");
     ui->labelOverly->pix3GIN2Board[2].load(":/images/6.png");
@@ -1780,6 +1790,7 @@ void MainWindow::initImaLabel()
     ui->labelOverly->pixIN1LVDSinBoard[2].load(":/images/l5.png");
     ui->labelOverly->pixIN2LVDSinBoard[2].load(":/images/l6.png");
     ui->labelOverly->pixColorBoard[2].load(":/images/col3.png");
+    ui->labelOverly->pixGEinBoard[2].load(":/images/G3.png");
 
     ui->labelOverly->pix3GIN1Board[3].load(":/images/7.png");
     ui->labelOverly->pix3GIN2Board[3].load(":/images/8.png");
@@ -1788,6 +1799,7 @@ void MainWindow::initImaLabel()
     ui->labelOverly->pixIN1LVDSinBoard[3].load(":/images/l7.png");
     ui->labelOverly->pixIN2LVDSinBoard[3].load(":/images/l8.png");
     ui->labelOverly->pixColorBoard[3].load(":/images/col4.png");
+    ui->labelOverly->pixGEinBoard[3].load(":/images/G4.png");
 
     ui->labelOverly->pix3GIN1Board[4].load(":/images/9.png");
     ui->labelOverly->pix3GIN2Board[4].load(":/images/10.png");
@@ -1796,6 +1808,7 @@ void MainWindow::initImaLabel()
     ui->labelOverly->pixIN1LVDSinBoard[4].load(":/images/l9.png");
     ui->labelOverly->pixIN2LVDSinBoard[4].load(":/images/l10.png");
     ui->labelOverly->pixColorBoard4.load(":/images/col5.png");
+    ui->labelOverly->pixGEinBoard[4].load(":/images/G5.png");
 
     ui->labelOverly->pix3GIN1Board[5].load(":/images/11.png");
     ui->labelOverly->pix3GIN2Board[5].load(":/images/12.png");
@@ -1804,6 +1817,7 @@ void MainWindow::initImaLabel()
     ui->labelOverly->pixIN1LVDSinBoard[5].load(":/images/l11.png");
     ui->labelOverly->pixIN2LVDSinBoard[5].load(":/images/l12.png");
     ui->labelOverly->pixColorBoard[5].load(":/images/col6.png");
+    ui->labelOverly->pixGEinBoard[5].load(":/images/G6.png");
 
     ui->labelOverly->pix3GIN1Board[6].load(":/images/13.png");
     ui->labelOverly->pix3GIN2Board[6].load(":/images/14.png");
@@ -1812,6 +1826,7 @@ void MainWindow::initImaLabel()
     ui->labelOverly->pixIN1LVDSinBoard[6].load(":/images/l13.png");
     ui->labelOverly->pixIN2LVDSinBoard[6].load(":/images/l14.png");
     ui->labelOverly->pixColorBoard[6].load(":/images/col7.png");
+    ui->labelOverly->pixGEinBoard[6].load(":/images/G7.png");
 
     ui->labelOverly->pix3GIN1Board[7].load(":/images/15.png");
     ui->labelOverly->pix3GIN2Board[7].load(":/images/16.png");
@@ -1820,6 +1835,7 @@ void MainWindow::initImaLabel()
     ui->labelOverly->pixIN1LVDSinBoard[7].load(":/images/l15.png");
     ui->labelOverly->pixIN2LVDSinBoard[7].load(":/images/l16.png");
     ui->labelOverly->pixColorBoard[7].load(":/images/col8.png");
+    ui->labelOverly->pixGEinBoard[7].load(":/images/G8.png");
 
 }
 
@@ -4370,6 +4386,10 @@ void MainWindow::on_comboBoxImgBoard1_currentIndexChanged(int index)
     {
         ui->labelImgBoard1->ImgType = IMG_LVDS_IN2;
     }
+    else if (index == 7)
+    {
+        ui->labelImgBoard1->ImgType = IMG_GE;
+    }
     else
     {
         ui->labelImgBoard1->ImgType = INPUT_SIZE_1920X1080;
@@ -4449,6 +4469,10 @@ void MainWindow::on_comboBoxImgBoard2_currentIndexChanged(int index)
     {
         ui->labelImgBoard2->ImgType = IMG_LVDS_IN2;
     }
+    else if (index == 7)
+    {
+        ui->labelImgBoard2->ImgType = IMG_GE;
+    }
     else
     {
         ui->labelImgBoard2->ImgType = INPUT_SIZE_1920X1080;
@@ -4524,6 +4548,10 @@ void MainWindow::on_comboBoxImgBoard3_currentIndexChanged(int index)
     else if (index == 6)
     {
         ui->labelImgBoard3->ImgType = IMG_LVDS_IN2;
+    }
+    else if (index == 7)
+    {
+        ui->labelImgBoard3->ImgType = IMG_GE;
     }
     else
     {
@@ -4601,6 +4629,10 @@ void MainWindow::on_comboBoxImgBoard4_currentIndexChanged(int index)
     {
         ui->labelImgBoard4->ImgType = IMG_LVDS_IN2;
     }
+    else if (index == 7)
+    {
+        ui->labelImgBoard4->ImgType = IMG_GE;
+    }
     else
     {
         ui->labelImgBoard4->ImgType = INPUT_SIZE_1920X1080;
@@ -4676,6 +4708,10 @@ void MainWindow::on_comboBoxImgBoard5_currentIndexChanged(int index)
     else if (index == 6)
     {
         ui->labelImgBoard5->ImgType = IMG_LVDS_IN2;
+    }
+    else if (index == 7)
+    {
+        ui->labelImgBoard5->ImgType = IMG_GE;
     }
     else
     {
@@ -4754,6 +4790,10 @@ void MainWindow::on_comboBoxImgBoard6_currentIndexChanged(int index)
     {
         ui->labelImgBoard6->ImgType = IMG_LVDS_IN2;
     }
+    else if (index == 7)
+    {
+        ui->labelImgBoard6->ImgType = IMG_GE;
+    }
     else
     {
         ui->labelImgBoard6->ImgType = INPUT_SIZE_1920X1080;
@@ -4831,6 +4871,10 @@ void MainWindow::on_comboBoxImgBoard7_currentIndexChanged(int index)
     {
         ui->labelImgBoard7->ImgType = IMG_LVDS_IN2;
     }
+    else if (index == 7)
+    {
+        ui->labelImgBoard7->ImgType = IMG_GE;
+    }
     else
     {
         ui->labelImgBoard7->ImgType = INPUT_SIZE_1920X1080;
@@ -4906,6 +4950,10 @@ void MainWindow::on_comboBoxImgBoard8_currentIndexChanged(int index)
     else if (index == 6)
     {
         ui->labelImgBoard8->ImgType = IMG_LVDS_IN2;
+    }
+    else if (index == 7)
+    {
+        ui->labelImgBoard8->ImgType = IMG_GE;
     }
     else
     {
@@ -7477,3 +7525,1612 @@ void MainWindow::on_pushButton_clicked()
 
 }
 
+
+void MainWindow::on_pushButtonSetNetRegBoard1_clicked()
+{
+    unsigned char send_str[8] = {0};
+    int ID = (PGN57856 << 8) + this->board1->writerAddr;  //写FPGA命令
+    bool ok;
+    quint64 regaddr = 0;
+    quint64 regdata = 0;
+    quint64 data = 0;
+    char *p = (char *)(&data);
+
+
+    /***set Board MAC addr***/
+
+    QStringList MacAddrList = ui->lineEditBoardMacAddrBoard1->text().split("-");
+    qDebug()<<MacAddrList;
+    regaddr = 0x0072;
+
+    regdata = MacAddrList.at(0).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(1).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x0073;
+    regdata = MacAddrList.at(2).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(3).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x0074;
+    regdata = MacAddrList.at(4).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(5).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    /***set Board IP addr***/
+    QStringList ipAddrList = ui->lineEditBoardIPAddrBoard1->text().split(".");
+    regaddr = 0x0075;
+    regdata = ipAddrList.at(0).toUInt()<<8;
+    regdata += ipAddrList.at(1).toUInt();
+
+
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x0076;
+    regdata = ipAddrList.at(2).toUInt()<<8;
+    regdata += ipAddrList.at(3).toUInt();
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+     /***set Board Port addr***/
+    QString strBoardPortAaddr = ui->lineEditBoardPortBoard1->text();
+
+    regaddr = 0x0077;
+    regdata = strBoardPortAaddr.toUInt();
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+    /***set PC MAC addr***/
+
+    MacAddrList = ui->lineEditHostMacAddrBoard1->text().split("-");
+    qDebug()<<MacAddrList;
+    regaddr = 0x0078;
+
+    regdata = MacAddrList.at(0).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(1).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x0079;
+    regdata = MacAddrList.at(2).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(3).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x007a;
+    regdata = MacAddrList.at(4).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(5).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    /***set PC IP addr***/
+    ipAddrList = ui->lineEditHostIPAddrBoard1->text().split(".");
+
+    regaddr = 0x007b;
+    regdata = ipAddrList.at(0).toUInt()<<8;
+    regdata += ipAddrList.at(1).toUInt();
+
+
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x007c;
+    regdata = ipAddrList.at(2).toUInt()<<8;
+    regdata += ipAddrList.at(3).toUInt();
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+
+     /***set Board Port addr***/
+    QString strHostPortAaddr = ui->lineEditBoardPortBoard1->text();
+
+    regaddr = 0x007d;
+    regdata = strHostPortAaddr.toUInt();
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+}
+
+void MainWindow::on_pushButtonClearNetRegBoard1_clicked()
+{
+    ui->lineEditBoardMacAddrBoard1->clear();
+    ui->lineEditBoardIPAddrBoard1->clear();
+    ui->lineEditBoardPortBoard1->clear();
+    ui->lineEditHostMacAddrBoard1->clear();
+    ui->lineEditHostIPAddrBoard1->clear();
+    ui->lineEditHostPortBoard1->clear();
+}
+
+
+void MainWindow::on_pushButtonSetNetRegBoard2_clicked()
+{
+
+    unsigned char send_str[8] = {0};
+    int ID = (PGN57856 << 8) + this->board2->writerAddr;  //写FPGA命令
+    bool ok;
+    quint64 regaddr = 0;
+    quint64 regdata = 0;
+    quint64 data = 0;
+    char *p = (char *)(&data);
+
+
+    /***set Board MAC addr***/
+
+    QStringList MacAddrList = ui->lineEditBoardMacAddrBoard2->text().split("-");
+    qDebug()<<MacAddrList;
+    regaddr = 0x0072;
+
+    regdata = MacAddrList.at(0).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(1).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x0073;
+    regdata = MacAddrList.at(2).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(3).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x0074;
+    regdata = MacAddrList.at(4).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(5).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    /***set Board IP addr***/
+    QStringList ipAddrList = ui->lineEditBoardIPAddrBoard2->text().split(".");
+    regaddr = 0x0075;
+    regdata = ipAddrList.at(0).toUInt()<<8;
+    regdata += ipAddrList.at(1).toUInt();
+
+
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x0076;
+    regdata = ipAddrList.at(2).toUInt()<<8;
+    regdata += ipAddrList.at(3).toUInt();
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+     /***set Board Port addr***/
+    QString strBoardPortAaddr = ui->lineEditBoardPortBoard2->text();
+
+    regaddr = 0x0077;
+    regdata = strBoardPortAaddr.toUInt();
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+    /***set PC MAC addr***/
+
+    MacAddrList = ui->lineEditHostMacAddrBoard2->text().split("-");
+    qDebug()<<MacAddrList;
+    regaddr = 0x0078;
+
+    regdata = MacAddrList.at(0).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(1).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x0079;
+    regdata = MacAddrList.at(2).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(3).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x007a;
+    regdata = MacAddrList.at(4).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(5).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    /***set PC IP addr***/
+    ipAddrList = ui->lineEditHostIPAddrBoard2->text().split(".");
+
+    regaddr = 0x007b;
+    regdata = ipAddrList.at(0).toUInt()<<8;
+    regdata += ipAddrList.at(1).toUInt();
+
+
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x007c;
+    regdata = ipAddrList.at(2).toUInt()<<8;
+    regdata += ipAddrList.at(3).toUInt();
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+
+     /***set Board Port addr***/
+    QString strHostPortAaddr = ui->lineEditBoardPortBoard2->text();
+
+    regaddr = 0x007d;
+    regdata = strHostPortAaddr.toUInt();
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+}
+
+void MainWindow::on_pushButtonClearNetRegBoard2_clicked()
+{
+    ui->lineEditBoardMacAddrBoard2->clear();
+    ui->lineEditBoardIPAddrBoard2->clear();
+    ui->lineEditBoardPortBoard2->clear();
+    ui->lineEditHostMacAddrBoard2->clear();
+    ui->lineEditHostIPAddrBoard2->clear();
+    ui->lineEditHostPortBoard2->clear();
+}
+
+void MainWindow::on_pushButtonSetNetRegBoard3_clicked()
+{
+    unsigned char send_str[8] = {0};
+    int ID = (PGN57856 << 8) + this->board3->writerAddr;  //写FPGA命令
+    bool ok;
+    quint64 regaddr = 0;
+    quint64 regdata = 0;
+    quint64 data = 0;
+    char *p = (char *)(&data);
+
+
+    /***set Board MAC addr***/
+
+    QStringList MacAddrList = ui->lineEditBoardMacAddrBoard3->text().split("-");
+    qDebug()<<MacAddrList;
+    regaddr = 0x0072;
+
+    regdata = MacAddrList.at(0).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(1).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x0073;
+    regdata = MacAddrList.at(2).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(3).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x0074;
+    regdata = MacAddrList.at(4).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(5).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    /***set Board IP addr***/
+    QStringList ipAddrList = ui->lineEditBoardIPAddrBoard3->text().split(".");
+    regaddr = 0x0075;
+    regdata = ipAddrList.at(0).toUInt()<<8;
+    regdata += ipAddrList.at(1).toUInt();
+
+
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x0076;
+    regdata = ipAddrList.at(2).toUInt()<<8;
+    regdata += ipAddrList.at(3).toUInt();
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+     /***set Board Port addr***/
+    QString strBoardPortAaddr = ui->lineEditBoardPortBoard3->text();
+
+    regaddr = 0x0077;
+    regdata = strBoardPortAaddr.toUInt();
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+    /***set PC MAC addr***/
+
+    MacAddrList = ui->lineEditHostMacAddrBoard3->text().split("-");
+    qDebug()<<MacAddrList;
+    regaddr = 0x0078;
+
+    regdata = MacAddrList.at(0).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(1).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x0079;
+    regdata = MacAddrList.at(2).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(3).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x007a;
+    regdata = MacAddrList.at(4).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(5).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    /***set PC IP addr***/
+    ipAddrList = ui->lineEditHostIPAddrBoard3->text().split(".");
+
+    regaddr = 0x007b;
+    regdata = ipAddrList.at(0).toUInt()<<8;
+    regdata += ipAddrList.at(1).toUInt();
+
+
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x007c;
+    regdata = ipAddrList.at(2).toUInt()<<8;
+    regdata += ipAddrList.at(3).toUInt();
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+
+     /***set Board Port addr***/
+    QString strHostPortAaddr = ui->lineEditBoardPortBoard3->text();
+
+    regaddr = 0x007d;
+    regdata = strHostPortAaddr.toUInt();
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+}
+
+void MainWindow::on_pushButtonClearNetRegBoard3_clicked()
+{
+    ui->lineEditBoardMacAddrBoard3->clear();
+    ui->lineEditBoardIPAddrBoard3->clear();
+    ui->lineEditBoardPortBoard3->clear();
+    ui->lineEditHostMacAddrBoard3->clear();
+    ui->lineEditHostIPAddrBoard3->clear();
+    ui->lineEditHostPortBoard3->clear();
+
+}
+
+void MainWindow::on_pushButtonSetNetRegBoard4_clicked()
+{
+    unsigned char send_str[8] = {0};
+    int ID = (PGN57856 << 8) + this->board4->writerAddr;  //写FPGA命令
+    bool ok;
+    quint64 regaddr = 0;
+    quint64 regdata = 0;
+    quint64 data = 0;
+    char *p = (char *)(&data);
+
+
+    /***set Board MAC addr***/
+
+    QStringList MacAddrList = ui->lineEditBoardMacAddrBoard4->text().split("-");
+    qDebug()<<MacAddrList;
+    regaddr = 0x0072;
+
+    regdata = MacAddrList.at(0).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(1).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x0073;
+    regdata = MacAddrList.at(2).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(3).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x0074;
+    regdata = MacAddrList.at(4).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(5).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    /***set Board IP addr***/
+    QStringList ipAddrList = ui->lineEditBoardIPAddrBoard4->text().split(".");
+    regaddr = 0x0075;
+    regdata = ipAddrList.at(0).toUInt()<<8;
+    regdata += ipAddrList.at(1).toUInt();
+
+
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x0076;
+    regdata = ipAddrList.at(2).toUInt()<<8;
+    regdata += ipAddrList.at(3).toUInt();
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+     /***set Board Port addr***/
+    QString strBoardPortAaddr = ui->lineEditBoardPortBoard4->text();
+
+    regaddr = 0x0077;
+    regdata = strBoardPortAaddr.toUInt();
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+    /***set PC MAC addr***/
+
+    MacAddrList = ui->lineEditHostMacAddrBoard4->text().split("-");
+    qDebug()<<MacAddrList;
+    regaddr = 0x0078;
+
+    regdata = MacAddrList.at(0).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(1).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x0079;
+    regdata = MacAddrList.at(2).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(3).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x007a;
+    regdata = MacAddrList.at(4).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(5).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    /***set PC IP addr***/
+    ipAddrList = ui->lineEditHostIPAddrBoard4->text().split(".");
+
+    regaddr = 0x007b;
+    regdata = ipAddrList.at(0).toUInt()<<8;
+    regdata += ipAddrList.at(1).toUInt();
+
+
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x007c;
+    regdata = ipAddrList.at(2).toUInt()<<8;
+    regdata += ipAddrList.at(3).toUInt();
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+
+     /***set Board Port addr***/
+    QString strHostPortAaddr = ui->lineEditBoardPortBoard4->text();
+
+    regaddr = 0x007d;
+    regdata = strHostPortAaddr.toUInt();
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+}
+
+void MainWindow::on_pushButtonClearNetRegBoard4_clicked()
+{
+    ui->lineEditBoardMacAddrBoard4->clear();
+    ui->lineEditBoardIPAddrBoard4->clear();
+    ui->lineEditBoardPortBoard4->clear();
+    ui->lineEditHostMacAddrBoard4->clear();
+    ui->lineEditHostIPAddrBoard4->clear();
+    ui->lineEditHostPortBoard4->clear();
+
+}
+
+void MainWindow::on_pushButtonSetNetRegBoard5_clicked()
+{
+    unsigned char send_str[8] = {0};
+    int ID = (PGN57856 << 8) + this->board5->writerAddr;  //写FPGA命令
+    bool ok;
+    quint64 regaddr = 0;
+    quint64 regdata = 0;
+    quint64 data = 0;
+    char *p = (char *)(&data);
+
+
+    /***set Board MAC addr***/
+
+    QStringList MacAddrList = ui->lineEditBoardMacAddrBoard5->text().split("-");
+    qDebug()<<MacAddrList;
+    regaddr = 0x0072;
+
+    regdata = MacAddrList.at(0).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(1).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x0073;
+    regdata = MacAddrList.at(2).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(3).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x0074;
+    regdata = MacAddrList.at(4).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(5).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    /***set Board IP addr***/
+    QStringList ipAddrList = ui->lineEditBoardIPAddrBoard5->text().split(".");
+    regaddr = 0x0075;
+    regdata = ipAddrList.at(0).toUInt()<<8;
+    regdata += ipAddrList.at(1).toUInt();
+
+
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x0076;
+    regdata = ipAddrList.at(2).toUInt()<<8;
+    regdata += ipAddrList.at(3).toUInt();
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+     /***set Board Port addr***/
+    QString strBoardPortAaddr = ui->lineEditBoardPortBoard5->text();
+
+    regaddr = 0x0077;
+    regdata = strBoardPortAaddr.toUInt();
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+    /***set PC MAC addr***/
+
+    MacAddrList = ui->lineEditHostMacAddrBoard5->text().split("-");
+    qDebug()<<MacAddrList;
+    regaddr = 0x0078;
+
+    regdata = MacAddrList.at(0).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(1).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x0079;
+    regdata = MacAddrList.at(2).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(3).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x007a;
+    regdata = MacAddrList.at(4).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(5).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    /***set PC IP addr***/
+    ipAddrList = ui->lineEditHostIPAddrBoard5->text().split(".");
+
+    regaddr = 0x007b;
+    regdata = ipAddrList.at(0).toUInt()<<8;
+    regdata += ipAddrList.at(1).toUInt();
+
+
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x007c;
+    regdata = ipAddrList.at(2).toUInt()<<8;
+    regdata += ipAddrList.at(3).toUInt();
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+
+     /***set Board Port addr***/
+    QString strHostPortAaddr = ui->lineEditBoardPortBoard5->text();
+
+    regaddr = 0x007d;
+    regdata = strHostPortAaddr.toUInt();
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+}
+
+void MainWindow::on_pushButtonClearNetRegBoard5_clicked()
+{
+    ui->lineEditBoardMacAddrBoard5->clear();
+    ui->lineEditBoardIPAddrBoard5->clear();
+    ui->lineEditBoardPortBoard5->clear();
+    ui->lineEditHostMacAddrBoard5->clear();
+    ui->lineEditHostIPAddrBoard5->clear();
+    ui->lineEditHostPortBoard5->clear();
+
+}
+
+void MainWindow::on_pushButtonSetNetRegBoard6_clicked()
+{
+    unsigned char send_str[8] = {0};
+    int ID = (PGN57856 << 8) + this->board6->writerAddr;  //写FPGA命令
+    bool ok;
+    quint64 regaddr = 0;
+    quint64 regdata = 0;
+    quint64 data = 0;
+    char *p = (char *)(&data);
+
+
+    /***set Board MAC addr***/
+
+    QStringList MacAddrList = ui->lineEditBoardMacAddrBoard6->text().split("-");
+    qDebug()<<MacAddrList;
+    regaddr = 0x0072;
+
+    regdata = MacAddrList.at(0).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(1).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x0073;
+    regdata = MacAddrList.at(2).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(3).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x0074;
+    regdata = MacAddrList.at(4).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(5).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    /***set Board IP addr***/
+    QStringList ipAddrList = ui->lineEditBoardIPAddrBoard6->text().split(".");
+    regaddr = 0x0075;
+    regdata = ipAddrList.at(0).toUInt()<<8;
+    regdata += ipAddrList.at(1).toUInt();
+
+
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x0076;
+    regdata = ipAddrList.at(2).toUInt()<<8;
+    regdata += ipAddrList.at(3).toUInt();
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+     /***set Board Port addr***/
+    QString strBoardPortAaddr = ui->lineEditBoardPortBoard6->text();
+
+    regaddr = 0x0077;
+    regdata = strBoardPortAaddr.toUInt();
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+    /***set PC MAC addr***/
+
+    MacAddrList = ui->lineEditHostMacAddrBoard6->text().split("-");
+    qDebug()<<MacAddrList;
+    regaddr = 0x0078;
+
+    regdata = MacAddrList.at(0).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(1).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x0079;
+    regdata = MacAddrList.at(2).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(3).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x007a;
+    regdata = MacAddrList.at(4).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(5).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    /***set PC IP addr***/
+    ipAddrList = ui->lineEditHostIPAddrBoard6->text().split(".");
+
+    regaddr = 0x007b;
+    regdata = ipAddrList.at(0).toUInt()<<8;
+    regdata += ipAddrList.at(1).toUInt();
+
+
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x007c;
+    regdata = ipAddrList.at(2).toUInt()<<8;
+    regdata += ipAddrList.at(3).toUInt();
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+
+     /***set Board Port addr***/
+    QString strHostPortAaddr = ui->lineEditBoardPortBoard6->text();
+
+    regaddr = 0x007d;
+    regdata = strHostPortAaddr.toUInt();
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+}
+
+void MainWindow::on_pushButtonClearNetRegBoard6_clicked()
+{
+    ui->lineEditBoardMacAddrBoard6->clear();
+    ui->lineEditBoardIPAddrBoard6->clear();
+    ui->lineEditBoardPortBoard6->clear();
+    ui->lineEditHostMacAddrBoard6->clear();
+    ui->lineEditHostIPAddrBoard6->clear();
+    ui->lineEditHostPortBoard6->clear();
+
+}
+
+void MainWindow::on_pushButtonSetNetRegBoard7_clicked()
+{
+    unsigned char send_str[8] = {0};
+    int ID = (PGN57856 << 8) + this->board7->writerAddr;  //写FPGA命令
+    bool ok;
+    quint64 regaddr = 0;
+    quint64 regdata = 0;
+    quint64 data = 0;
+    char *p = (char *)(&data);
+
+
+    /***set Board MAC addr***/
+
+    QStringList MacAddrList = ui->lineEditBoardMacAddrBoard7->text().split("-");
+    qDebug()<<MacAddrList;
+    regaddr = 0x0072;
+
+    regdata = MacAddrList.at(0).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(1).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x0073;
+    regdata = MacAddrList.at(2).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(3).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x0074;
+    regdata = MacAddrList.at(4).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(5).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    /***set Board IP addr***/
+    QStringList ipAddrList = ui->lineEditBoardIPAddrBoard7->text().split(".");
+    regaddr = 0x0075;
+    regdata = ipAddrList.at(0).toUInt()<<8;
+    regdata += ipAddrList.at(1).toUInt();
+
+
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x0076;
+    regdata = ipAddrList.at(2).toUInt()<<8;
+    regdata += ipAddrList.at(3).toUInt();
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+     /***set Board Port addr***/
+    QString strBoardPortAaddr = ui->lineEditBoardPortBoard7->text();
+
+    regaddr = 0x0077;
+    regdata = strBoardPortAaddr.toUInt();
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+    /***set PC MAC addr***/
+
+    MacAddrList = ui->lineEditHostMacAddrBoard7->text().split("-");
+    qDebug()<<MacAddrList;
+    regaddr = 0x0078;
+
+    regdata = MacAddrList.at(0).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(1).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x0079;
+    regdata = MacAddrList.at(2).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(3).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x007a;
+    regdata = MacAddrList.at(4).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(5).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    /***set PC IP addr***/
+    ipAddrList = ui->lineEditHostIPAddrBoard7->text().split(".");
+
+    regaddr = 0x007b;
+    regdata = ipAddrList.at(0).toUInt()<<8;
+    regdata += ipAddrList.at(1).toUInt();
+
+
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x007c;
+    regdata = ipAddrList.at(2).toUInt()<<8;
+    regdata += ipAddrList.at(3).toUInt();
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+
+     /***set Board Port addr***/
+    QString strHostPortAaddr = ui->lineEditBoardPortBoard7->text();
+
+    regaddr = 0x007d;
+    regdata = strHostPortAaddr.toUInt();
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+}
+
+void MainWindow::on_pushButtonClearNetRegBoard7_clicked()
+{
+    ui->lineEditBoardMacAddrBoard7->clear();
+    ui->lineEditBoardIPAddrBoard7->clear();
+    ui->lineEditBoardPortBoard7->clear();
+    ui->lineEditHostMacAddrBoard7->clear();
+    ui->lineEditHostIPAddrBoard7->clear();
+    ui->lineEditHostPortBoard7->clear();
+}
+
+void MainWindow::on_pushButtonSetNetRegBoard8_clicked()
+{
+    unsigned char send_str[8] = {0};
+    int ID = (PGN57856 << 8) + this->board8->writerAddr;  //写FPGA命令
+    bool ok;
+    quint64 regaddr = 0;
+    quint64 regdata = 0;
+    quint64 data = 0;
+    char *p = (char *)(&data);
+
+
+    /***set Board MAC addr***/
+
+    QStringList MacAddrList = ui->lineEditBoardMacAddrBoard8->text().split("-");
+    qDebug()<<MacAddrList;
+    regaddr = 0x0072;
+
+    regdata = MacAddrList.at(0).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(1).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x0073;
+    regdata = MacAddrList.at(2).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(3).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x0074;
+    regdata = MacAddrList.at(4).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(5).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    /***set Board IP addr***/
+    QStringList ipAddrList = ui->lineEditBoardIPAddrBoard8->text().split(".");
+    regaddr = 0x0075;
+    regdata = ipAddrList.at(0).toUInt()<<8;
+    regdata += ipAddrList.at(1).toUInt();
+
+
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x0076;
+    regdata = ipAddrList.at(2).toUInt()<<8;
+    regdata += ipAddrList.at(3).toUInt();
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+     /***set Board Port addr***/
+    QString strBoardPortAaddr = ui->lineEditBoardPortBoard8->text();
+
+    regaddr = 0x0077;
+    regdata = strBoardPortAaddr.toUInt();
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+    /***set PC MAC addr***/
+
+    MacAddrList = ui->lineEditHostMacAddrBoard8->text().split("-");
+    qDebug()<<MacAddrList;
+    regaddr = 0x0078;
+
+    regdata = MacAddrList.at(0).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(1).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x0079;
+    regdata = MacAddrList.at(2).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(3).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x007a;
+    regdata = MacAddrList.at(4).toInt(&ok,16)<<8;
+    regdata += MacAddrList.at(5).toInt(&ok,16);
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    qDebug()<<send_str[6]<<send_str[7];
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    /***set PC IP addr***/
+    ipAddrList = ui->lineEditHostIPAddrBoard8->text().split(".");
+
+    regaddr = 0x007b;
+    regdata = ipAddrList.at(0).toUInt()<<8;
+    regdata += ipAddrList.at(1).toUInt();
+
+
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+    regaddr = 0x007c;
+    regdata = ipAddrList.at(2).toUInt()<<8;
+    regdata += ipAddrList.at(3).toUInt();
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+
+
+
+     /***set Board Port addr***/
+    QString strHostPortAaddr = ui->lineEditBoardPortBoard8->text();
+
+    regaddr = 0x007d;
+    regdata = strHostPortAaddr.toUInt();
+    data = (regaddr<<16) + regdata;
+    p = (char *)(&data);
+    for(int i = 0; i < 8; i++)
+    {
+        send_str[i] = p[7 - i];
+    }
+    canthread->sendData(ID,(unsigned char*)send_str);
+    sleep(10);
+}
+
+void MainWindow::on_pushButtonClearNetRegBoard8_clicked()
+{
+    ui->lineEditBoardMacAddrBoard8->clear();
+    ui->lineEditBoardIPAddrBoard8->clear();
+    ui->lineEditBoardPortBoard8->clear();
+    ui->lineEditHostMacAddrBoard8->clear();
+    ui->lineEditHostIPAddrBoard8->clear();
+    ui->lineEditHostPortBoard8->clear();
+}
