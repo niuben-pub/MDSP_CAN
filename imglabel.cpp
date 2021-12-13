@@ -83,11 +83,23 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             img3GIn1SizeReg = IN_3G_SIZE_1920X1080;
             if(regindex == 0 || regindex == 1 ||regindex == 4 || regindex == 5)
             {
-                this->regTable[0][0] = 0;
-                this->regTable[0][1] = 0;
-                this->regTable[1][0] = 0;
-                this->regTable[1][1] = 0;
-                emit this->regChange((unsigned int *)regTable);
+                if(this->isBoard1)
+                {
+                    this->regTable[0][0] = COLOR_960x540;
+                    this->regTable[0][1] = COLOR_960x540;
+                    this->regTable[1][0] = COLOR_960x540;
+                    this->regTable[1][1] = COLOR_960x540;
+                    emit this->regChange((unsigned int *)regTable);
+                }
+                else
+                {
+                    this->regTable[0][0] = 0;
+                    this->regTable[0][1] = 0;
+                    this->regTable[1][0] = 0;
+                    this->regTable[1][1] = 0;
+                    emit this->regChange((unsigned int *)regTable);
+                }
+
 
                 this->regTable[0][0] = IN1_3G_1920x1080;
                 this->regTable[0][1] = IN1_3G_1920x1080;
@@ -98,11 +110,23 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             }
             else if(regindex == 2 || regindex == 3 ||regindex == 6 || regindex == 7)
             {
-                this->regTable[0][2] = 0;
-                this->regTable[0][3] = 0;
-                this->regTable[1][2] = 0;
-                this->regTable[1][3] = 0;
-                emit this->regChange((unsigned int *)regTable);
+
+                if(this->isBoard1)
+                {
+                    this->regTable[0][2] = COLOR_960x540;
+                    this->regTable[0][3] = COLOR_960x540;
+                    this->regTable[1][2] = COLOR_960x540;
+                    this->regTable[1][3] = COLOR_960x540;
+                    emit this->regChange((unsigned int *)regTable);
+                }
+                else
+                {
+                    this->regTable[0][2] = 0;
+                    this->regTable[0][3] = 0;
+                    this->regTable[1][2] = 0;
+                    this->regTable[1][3] = 0;
+                    emit this->regChange((unsigned int *)regTable);
+                }
 
                 this->regTable[0][2] = IN1_3G_1920x1080;
                 this->regTable[0][3] = IN1_3G_1920x1080;
@@ -114,11 +138,23 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             }
             else if(regindex == 8 || regindex == 9 ||regindex == 12 || regindex == 13)
             {
-                this->regTable[2][0] = 0;
-                this->regTable[2][1] = 0;
-                this->regTable[3][0] = 0;
-                this->regTable[3][1] = 0;
-                emit this->regChange((unsigned int *)regTable);
+
+                if(this->isBoard1)
+                {
+                    this->regTable[2][0] = COLOR_960x540;
+                    this->regTable[2][1] = COLOR_960x540;
+                    this->regTable[3][0] = COLOR_960x540;
+                    this->regTable[3][1] = COLOR_960x540;
+                    emit this->regChange((unsigned int *)regTable);
+                }
+                else
+                {
+                    this->regTable[2][0] = 0;
+                    this->regTable[2][1] = 0;
+                    this->regTable[3][0] = 0;
+                    this->regTable[3][1] = 0;
+                    emit this->regChange((unsigned int *)regTable);
+                }
 
                 this->regTable[2][0] = IN1_3G_1920x1080;
                 this->regTable[2][1] = IN1_3G_1920x1080;
@@ -130,11 +166,22 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             }
             else if(regindex == 10 || regindex == 11 ||regindex == 14 || regindex == 15)
             {
-                this->regTable[2][2] = 0;
-                this->regTable[2][3] = 0;
-                this->regTable[3][2] = 0;
-                this->regTable[3][3] = 0;
-                emit this->regChange((unsigned int *)regTable);
+                if(this->isBoard1)
+                {
+                    this->regTable[2][2] = COLOR_960x540;
+                    this->regTable[2][3] = COLOR_960x540;
+                    this->regTable[3][2] = COLOR_960x540;
+                    this->regTable[3][3] = COLOR_960x540;
+                    emit this->regChange((unsigned int *)regTable);
+                }
+                else
+                {
+                    this->regTable[2][2] = 0;
+                    this->regTable[2][3] = 0;
+                    this->regTable[3][2] = 0;
+                    this->regTable[3][3] = 0;
+                    emit this->regChange((unsigned int *)regTable);
+                }
 
                 this->regTable[2][2] = IN1_3G_1920x1080;
                 this->regTable[2][3] = IN1_3G_1920x1080;
@@ -151,11 +198,23 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             {
                 if(regTable[0][0] == IN1_3G_1920x1080 || regTable[0][0] == IN2_3G_1920x1080)
                 {
-                    this->regTable[0][0] = 0;
-                    this->regTable[0][1] = 0;
-                    this->regTable[1][0] = 0;
-                    this->regTable[1][1] = 0;
-                    emit this->regChange((unsigned int *)regTable);
+
+                    if(this->isBoard1)
+                    {
+                        this->regTable[0][0] = COLOR_960x540;
+                        this->regTable[0][1] = COLOR_960x540;
+                        this->regTable[1][0] = COLOR_960x540;
+                        this->regTable[1][1] = COLOR_960x540;
+                        emit this->regChange((unsigned int *)regTable);
+                    }
+                    else
+                    {
+                        this->regTable[0][0] = 0;
+                        this->regTable[0][1] = 0;
+                        this->regTable[1][0] = 0;
+                        this->regTable[1][1] = 0;
+                        emit this->regChange((unsigned int *)regTable);
+                    }
 
                     this->regTable[zone_y][zone_x] = IN1_3G_960x540;
                     emit this->regChange((unsigned int *)regTable);
@@ -163,9 +222,6 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
                 }
                 else
                 {
-                    this->regTable[zone_y][zone_x] = regindex;
-                    emit this->regChange((unsigned int *)regTable);
-
                     this->regTable[zone_y][zone_x] = IN1_3G_960x540;
                     emit this->regChange((unsigned int *)regTable);
 
@@ -175,11 +231,24 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             {
                 if(regTable[0][2] == IN1_3G_1920x1080 || regTable[0][2] == IN2_3G_1920x1080)
                 {
-                    this->regTable[0][2] = 0;
-                    this->regTable[0][3] = 0;
-                    this->regTable[1][2] = 0;
-                    this->regTable[1][3] = 0;
-                    emit this->regChange((unsigned int *)regTable);
+                    if(this->isBoard1)
+                    {
+                        this->regTable[0][2] = COLOR_960x540;
+                        this->regTable[0][3] = COLOR_960x540;
+                        this->regTable[1][2] = COLOR_960x540;
+                        this->regTable[1][3] = COLOR_960x540;
+                        emit this->regChange((unsigned int *)regTable);
+                    }
+                    else
+                    {
+                        this->regTable[0][2] = 0;
+                        this->regTable[0][3] = 0;
+                        this->regTable[1][2] = 0;
+                        this->regTable[1][3] = 0;
+                        emit this->regChange((unsigned int *)regTable);
+                    }
+
+
 
                     this->regTable[zone_y][zone_x] = IN1_3G_960x540;
                     emit this->regChange((unsigned int *)regTable);
@@ -187,23 +256,31 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
                 }
                 else
                 {
-                    this->regTable[zone_y][zone_x] = regindex;
-                    emit this->regChange((unsigned int *)regTable);
-
                     this->regTable[zone_y][zone_x] = IN1_3G_960x540;
                     emit this->regChange((unsigned int *)regTable);
-
                 }
             }
             else if(regindex == 8 || regindex == 9 ||regindex == 12 || regindex == 13)
             {
                 if(regTable[2][0] == IN1_3G_1920x1080 || regTable[2][0] == IN2_3G_1920x1080)
                 {
-                    this->regTable[2][0] = 0;
-                    this->regTable[2][1] = 0;
-                    this->regTable[3][0] = 0;
-                    this->regTable[3][1] = 0;
-                    emit this->regChange((unsigned int *)regTable);
+
+                    if(this->isBoard1)
+                    {
+                        this->regTable[2][0] = COLOR_960x540;
+                        this->regTable[2][1] = COLOR_960x540;
+                        this->regTable[3][0] = COLOR_960x540;
+                        this->regTable[3][1] = COLOR_960x540;
+                        emit this->regChange((unsigned int *)regTable);
+                    }
+                    else
+                    {
+                        this->regTable[2][0] = 0;
+                        this->regTable[2][1] = 0;
+                        this->regTable[3][0] = 0;
+                        this->regTable[3][1] = 0;
+                        emit this->regChange((unsigned int *)regTable);
+                    }
 
                     this->regTable[zone_y][zone_x] = IN1_3G_960x540;
                     emit this->regChange((unsigned int *)regTable);
@@ -211,8 +288,6 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
                 }
                 else
                 {
-                    this->regTable[zone_y][zone_x] = regindex;
-                    emit this->regChange((unsigned int *)regTable);
 
                     this->regTable[zone_y][zone_x] = IN1_3G_960x540;
                     emit this->regChange((unsigned int *)regTable);
@@ -224,11 +299,22 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             {
                 if(regTable[2][2] == IN1_3G_1920x1080 || regTable[2][2] == IN2_3G_1920x1080)
                 {
-                    this->regTable[2][2] = 0;
-                    this->regTable[2][3] = 0;
-                    this->regTable[3][2] = 0;
-                    this->regTable[3][3] = 0;
-                    emit this->regChange((unsigned int *)regTable);
+                    if(this->isBoard1)
+                    {
+                        this->regTable[2][2] = COLOR_960x540;
+                        this->regTable[2][3] = COLOR_960x540;
+                        this->regTable[3][2] = COLOR_960x540;
+                        this->regTable[3][3] = COLOR_960x540;
+                        emit this->regChange((unsigned int *)regTable);
+                    }
+                    else
+                    {
+                        this->regTable[2][2] = 0;
+                        this->regTable[2][3] = 0;
+                        this->regTable[3][2] = 0;
+                        this->regTable[3][3] = 0;
+                        emit this->regChange((unsigned int *)regTable);
+                    }
 
                     this->regTable[zone_y][zone_x] = IN1_3G_960x540;
                     emit this->regChange((unsigned int *)regTable);
@@ -236,9 +322,6 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
                 }
                 else
                 {
-                    this->regTable[zone_y][zone_x] = regindex;
-                    emit this->regChange((unsigned int *)regTable);
-
                     this->regTable[zone_y][zone_x] = IN1_3G_960x540;
                     emit this->regChange((unsigned int *)regTable);
 
@@ -263,11 +346,6 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             img3GIn2SizeReg = IN_3G_SIZE_1920X1080;
             if(regindex == 0 || regindex == 1 ||regindex == 4 || regindex == 5)
             {
-                this->regTable[0][0] = 0;
-                this->regTable[0][1] = 0;
-                this->regTable[1][0] = 0;
-                this->regTable[1][1] = 0;
-                emit this->regChange((unsigned int *)regTable);
 
                 this->regTable[0][0] = IN2_3G_1920x1080;
                 this->regTable[0][1] = IN2_3G_1920x1080;
@@ -278,11 +356,6 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             }
             else if(regindex == 2 || regindex == 3 ||regindex == 6 || regindex == 7)
             {
-                this->regTable[0][2] = 0;
-                this->regTable[0][3] = 0;
-                this->regTable[1][2] = 0;
-                this->regTable[1][3] = 0;
-                emit this->regChange((unsigned int *)regTable);
 
                 this->regTable[0][2] = IN2_3G_1920x1080;
                 this->regTable[0][3] = IN2_3G_1920x1080;
@@ -294,11 +367,6 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             }
             else if(regindex == 8 || regindex == 9 ||regindex == 12 || regindex == 13)
             {
-                this->regTable[2][0] = 0;
-                this->regTable[2][1] = 0;
-                this->regTable[3][0] = 0;
-                this->regTable[3][1] = 0;
-                emit this->regChange((unsigned int *)regTable);
 
                 this->regTable[2][0] = IN2_3G_1920x1080;
                 this->regTable[2][1] = IN2_3G_1920x1080;
@@ -310,11 +378,6 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             }
             else if(regindex == 10 || regindex == 11 ||regindex == 14 || regindex == 15)
             {
-                this->regTable[2][2] = 0;
-                this->regTable[2][3] = 0;
-                this->regTable[3][2] = 0;
-                this->regTable[3][3] = 0;
-                emit this->regChange((unsigned int *)regTable);
 
                 this->regTable[2][2] = IN2_3G_1920x1080;
                 this->regTable[2][3] = IN2_3G_1920x1080;
@@ -331,11 +394,23 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             {
                 if(regTable[0][0] == IN2_3G_1920x1080 || regTable[0][0] == IN1_3G_1920x1080)
                 {
-                    this->regTable[0][0] = 0;
-                    this->regTable[0][1] = 0;
-                    this->regTable[1][0] = 0;
-                    this->regTable[1][1] = 0;
-                    emit this->regChange((unsigned int *)regTable);
+
+                    if(this->isBoard1)
+                    {
+                        this->regTable[0][0] = COLOR_960x540;
+                        this->regTable[0][1] = COLOR_960x540;
+                        this->regTable[1][0] = COLOR_960x540;
+                        this->regTable[1][1] = COLOR_960x540;
+                        emit this->regChange((unsigned int *)regTable);
+                    }
+                    else
+                    {
+                        this->regTable[0][0] = 0;
+                        this->regTable[0][1] = 0;
+                        this->regTable[1][0] = 0;
+                        this->regTable[1][1] = 0;
+                        emit this->regChange((unsigned int *)regTable);
+                    }
 
                     this->regTable[zone_y][zone_x] = IN2_3G_960x540;
                     emit this->regChange((unsigned int *)regTable);
@@ -343,9 +418,6 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
                 }
                 else
                 {
-                    this->regTable[zone_y][zone_x] = regindex;
-                    emit this->regChange((unsigned int *)regTable);
-
                     this->regTable[zone_y][zone_x] = IN2_3G_960x540;
                     emit this->regChange((unsigned int *)regTable);
 
@@ -355,11 +427,22 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             {
                 if(regTable[0][2] == IN2_3G_1920x1080 || regTable[0][2] == IN1_3G_1920x1080)
                 {
-                    this->regTable[0][2] = 0;
-                    this->regTable[0][3] = 0;
-                    this->regTable[1][2] = 0;
-                    this->regTable[1][3] = 0;
-                    emit this->regChange((unsigned int *)regTable);
+                    if(this->isBoard1)
+                    {
+                        this->regTable[0][2] = COLOR_960x540;
+                        this->regTable[0][3] = COLOR_960x540;
+                        this->regTable[1][2] = COLOR_960x540;
+                        this->regTable[1][3] = COLOR_960x540;
+                        emit this->regChange((unsigned int *)regTable);
+                    }
+                    else
+                    {
+                        this->regTable[0][2] = 0;
+                        this->regTable[0][3] = 0;
+                        this->regTable[1][2] = 0;
+                        this->regTable[1][3] = 0;
+                        emit this->regChange((unsigned int *)regTable);
+                    }
 
                     this->regTable[zone_y][zone_x] = IN2_3G_960x540;
                     emit this->regChange((unsigned int *)regTable);
@@ -367,23 +450,31 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
                 }
                 else
                 {
-                    this->regTable[zone_y][zone_x] = regindex;
-                    emit this->regChange((unsigned int *)regTable);
-
                     this->regTable[zone_y][zone_x] = IN2_3G_960x540;
                     emit this->regChange((unsigned int *)regTable);
-
                 }
             }
             else if(regindex == 8 || regindex == 9 ||regindex == 12 || regindex == 13)
             {
                 if(regTable[2][0] == IN2_3G_1920x1080 || regTable[2][0] == IN1_3G_1920x1080)
                 {
-                    this->regTable[2][0] = 0;
-                    this->regTable[2][1] = 0;
-                    this->regTable[3][0] = 0;
-                    this->regTable[3][1] = 0;
-                    emit this->regChange((unsigned int *)regTable);
+
+                    if(this->isBoard1)
+                    {
+                        this->regTable[2][0] = COLOR_960x540;
+                        this->regTable[2][1] = COLOR_960x540;
+                        this->regTable[3][0] = COLOR_960x540;
+                        this->regTable[3][1] = COLOR_960x540;
+                        emit this->regChange((unsigned int *)regTable);
+                    }
+                    else
+                    {
+                        this->regTable[2][0] = 0;
+                        this->regTable[2][1] = 0;
+                        this->regTable[3][0] = 0;
+                        this->regTable[3][1] = 0;
+                        emit this->regChange((unsigned int *)regTable);
+                    }
 
                     this->regTable[zone_y][zone_x] = IN2_3G_960x540;
                     emit this->regChange((unsigned int *)regTable);
@@ -391,12 +482,8 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
                 }
                 else
                 {
-                    this->regTable[zone_y][zone_x] = regindex;
-                    emit this->regChange((unsigned int *)regTable);
-
                     this->regTable[zone_y][zone_x] = IN2_3G_960x540;
                     emit this->regChange((unsigned int *)regTable);
-
                 }
 
             }
@@ -404,11 +491,23 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             {
                 if(regTable[2][2] == IN2_3G_1920x1080 || regTable[2][2] == IN1_3G_1920x1080)
                 {
-                    this->regTable[2][2] = 0;
-                    this->regTable[2][3] = 0;
-                    this->regTable[3][2] = 0;
-                    this->regTable[3][3] = 0;
-                    emit this->regChange((unsigned int *)regTable);
+                    if(this->isBoard1)
+                    {
+                        this->regTable[2][2] = COLOR_960x540;
+                        this->regTable[2][3] = COLOR_960x540;
+                        this->regTable[3][2] = COLOR_960x540;
+                        this->regTable[3][3] = COLOR_960x540;
+                        emit this->regChange((unsigned int *)regTable);
+                    }
+                    else
+                    {
+                        this->regTable[2][2] = 0;
+                        this->regTable[2][3] = 0;
+                        this->regTable[3][2] = 0;
+                        this->regTable[3][3] = 0;
+                        emit this->regChange((unsigned int *)regTable);
+                    }
+
 
                     this->regTable[zone_y][zone_x] = IN2_3G_960x540;
                     emit this->regChange((unsigned int *)regTable);
@@ -416,12 +515,8 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
                 }
                 else
                 {
-                    this->regTable[zone_y][zone_x] = regindex;
-                    emit this->regChange((unsigned int *)regTable);
-
                     this->regTable[zone_y][zone_x] = IN2_3G_960x540;
                     emit this->regChange((unsigned int *)regTable);
-
                 }
             }
         }
@@ -442,11 +537,23 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
         {
             if(regTable[0][0] == IN2_3G_1920x1080 || regTable[0][0] == IN1_3G_1920x1080)
             {
-                this->regTable[0][0] =  0;
-                this->regTable[0][1] =  0;
-                this->regTable[1][0] =  0;
-                this->regTable[1][1] =  0;
-                emit this->regChange((unsigned int *)regTable);
+
+                if(this->isBoard1)
+                {
+                    this->regTable[0][0] = COLOR_960x540;
+                    this->regTable[0][1] = COLOR_960x540;
+                    this->regTable[1][0] = COLOR_960x540;
+                    this->regTable[1][1] = COLOR_960x540;
+                    emit this->regChange((unsigned int *)regTable);
+                }
+                else
+                {
+                    this->regTable[0][0] = 0;
+                    this->regTable[0][1] = 0;
+                    this->regTable[1][0] = 0;
+                    this->regTable[1][1] = 0;
+                    emit this->regChange((unsigned int *)regTable);
+                }
 
                 this->regTable[zone_y][zone_x] = COLOR_960x540;
                 emit this->regChange((unsigned int *)regTable);
@@ -454,23 +561,31 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             }
             else
             {
-                this->regTable[zone_y][zone_x] = regindex;
-                emit this->regChange((unsigned int *)regTable);
-
                 this->regTable[zone_y][zone_x] = COLOR_960x540;
                 emit this->regChange((unsigned int *)regTable);
-
             }
         }
         else if(regindex == 2 || regindex == 3 ||regindex == 6 || regindex == 7)
         {
             if(regTable[0][2] == IN2_3G_1920x1080 || regTable[0][2] == IN1_3G_1920x1080)
             {
-                this->regTable[0][2] =  0;
-                this->regTable[0][3] =  0;
-                this->regTable[1][2] =  0;
-                this->regTable[1][3] =  0;
-                emit this->regChange((unsigned int *)regTable);
+
+                if(this->isBoard1)
+                {
+                    this->regTable[0][2] = COLOR_960x540;
+                    this->regTable[0][3] = COLOR_960x540;
+                    this->regTable[1][2] = COLOR_960x540;
+                    this->regTable[1][3] = COLOR_960x540;
+                    emit this->regChange((unsigned int *)regTable);
+                }
+                else
+                {
+                    this->regTable[0][2] = 0;
+                    this->regTable[0][3] = 0;
+                    this->regTable[1][2] = 0;
+                    this->regTable[1][3] = 0;
+                    emit this->regChange((unsigned int *)regTable);
+                }
 
                 this->regTable[zone_y][zone_x] = COLOR_960x540;
                 emit this->regChange((unsigned int *)regTable);
@@ -478,9 +593,6 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             }
             else
             {
-                this->regTable[zone_y][zone_x] = regindex;
-                emit this->regChange((unsigned int *)regTable);
-
                 this->regTable[zone_y][zone_x] = COLOR_960x540;
                 emit this->regChange((unsigned int *)regTable);
 
@@ -490,11 +602,22 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
         {
             if(regTable[2][0] == IN2_3G_1920x1080 || regTable[2][0] == IN1_3G_1920x1080)
             {
-                this->regTable[2][0] =  0;
-                this->regTable[2][1] =  0;
-                this->regTable[3][0] =  0;
-                this->regTable[3][1] =  0;
-                emit this->regChange((unsigned int *)regTable);
+                if(this->isBoard1)
+                {
+                    this->regTable[2][0] = COLOR_960x540;
+                    this->regTable[2][1] = COLOR_960x540;
+                    this->regTable[3][0] = COLOR_960x540;
+                    this->regTable[3][1] = COLOR_960x540;
+                    emit this->regChange((unsigned int *)regTable);
+                }
+                else
+                {
+                    this->regTable[2][0] = 0;
+                    this->regTable[2][1] = 0;
+                    this->regTable[3][0] = 0;
+                    this->regTable[3][1] = 0;
+                    emit this->regChange((unsigned int *)regTable);
+                }
 
                 this->regTable[zone_y][zone_x] = COLOR_960x540;
                 emit this->regChange((unsigned int *)regTable);
@@ -502,9 +625,6 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             }
             else
             {
-                this->regTable[zone_y][zone_x] = regindex;
-                emit this->regChange((unsigned int *)regTable);
-
                 this->regTable[zone_y][zone_x] = COLOR_960x540;
                 emit this->regChange((unsigned int *)regTable);
 
@@ -515,11 +635,23 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
         {
             if(regTable[2][2] == IN2_3G_1920x1080 || regTable[2][2] == IN1_3G_1920x1080)
             {
-                this->regTable[2][2] =  0;
-                this->regTable[2][3] =  0;
-                this->regTable[3][2] =  0;
-                this->regTable[3][3] =  0;
-                emit this->regChange((unsigned int *)regTable);
+
+                if(this->isBoard1)
+                {
+                    this->regTable[2][2] = COLOR_960x540;
+                    this->regTable[2][3] = COLOR_960x540;
+                    this->regTable[3][2] = COLOR_960x540;
+                    this->regTable[3][3] = COLOR_960x540;
+                    emit this->regChange((unsigned int *)regTable);
+                }
+                else
+                {
+                    this->regTable[2][2] = 0;
+                    this->regTable[2][3] = 0;
+                    this->regTable[3][2] = 0;
+                    this->regTable[3][3] = 0;
+                    emit this->regChange((unsigned int *)regTable);
+                }
 
                 this->regTable[zone_y][zone_x] = COLOR_960x540;
                 emit this->regChange((unsigned int *)regTable);
@@ -527,12 +659,8 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             }
             else
             {
-                this->regTable[zone_y][zone_x] = regindex;
-                emit this->regChange((unsigned int *)regTable);
-
                 this->regTable[zone_y][zone_x] = COLOR_960x540;
                 emit this->regChange((unsigned int *)regTable);
-
             }
         }
 
@@ -543,11 +671,22 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
         {
             if(regTable[0][0] == IN2_3G_1920x1080 || regTable[0][0] == IN1_3G_1920x1080)
             {
-                this->regTable[0][0] =  0;
-                this->regTable[0][1] =  0;
-                this->regTable[1][0] =  0;
-                this->regTable[1][1] =  0;
-                emit this->regChange((unsigned int *)regTable);
+                if(this->isBoard1)
+                {
+                    this->regTable[0][0] = COLOR_960x540;
+                    this->regTable[0][1] = COLOR_960x540;
+                    this->regTable[1][0] = COLOR_960x540;
+                    this->regTable[1][1] = COLOR_960x540;
+                    emit this->regChange((unsigned int *)regTable);
+                }
+                else
+                {
+                    this->regTable[0][0] = 0;
+                    this->regTable[0][1] = 0;
+                    this->regTable[1][0] = 0;
+                    this->regTable[1][1] = 0;
+                    emit this->regChange((unsigned int *)regTable);
+                }
 
                 this->regTable[zone_y][zone_x] = GE_IN_960x540;
                 emit this->regChange((unsigned int *)regTable);
@@ -555,9 +694,6 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             }
             else
             {
-                this->regTable[zone_y][zone_x] = regindex;
-                emit this->regChange((unsigned int *)regTable);
-
                 this->regTable[zone_y][zone_x] = GE_IN_960x540;
                 emit this->regChange((unsigned int *)regTable);
 
@@ -567,11 +703,22 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
         {
             if(regTable[0][2] == IN2_3G_1920x1080 || regTable[0][2] == IN1_3G_1920x1080)
             {
-                this->regTable[0][2] =  0;
-                this->regTable[0][3] =  0;
-                this->regTable[1][2] =  0;
-                this->regTable[1][3] =  0;
-                emit this->regChange((unsigned int *)regTable);
+                if(this->isBoard1)
+                {
+                    this->regTable[0][2] = COLOR_960x540;
+                    this->regTable[0][3] = COLOR_960x540;
+                    this->regTable[1][2] = COLOR_960x540;
+                    this->regTable[1][3] = COLOR_960x540;
+                    emit this->regChange((unsigned int *)regTable);
+                }
+                else
+                {
+                    this->regTable[0][2] = 0;
+                    this->regTable[0][3] = 0;
+                    this->regTable[1][2] = 0;
+                    this->regTable[1][3] = 0;
+                    emit this->regChange((unsigned int *)regTable);
+                }
 
                 this->regTable[zone_y][zone_x] = GE_IN_960x540;
                 emit this->regChange((unsigned int *)regTable);
@@ -579,23 +726,30 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             }
             else
             {
-                this->regTable[zone_y][zone_x] = regindex;
-                emit this->regChange((unsigned int *)regTable);
-
                 this->regTable[zone_y][zone_x] = GE_IN_960x540;
                 emit this->regChange((unsigned int *)regTable);
-
             }
         }
         else if(regindex == 8 || regindex == 9 ||regindex == 12 || regindex == 13)
         {
             if(regTable[2][0] == IN2_3G_1920x1080 || regTable[2][0] == IN1_3G_1920x1080)
             {
-                this->regTable[2][0] =  0;
-                this->regTable[2][1] =  0;
-                this->regTable[3][0] =  0;
-                this->regTable[3][1] =  0;
-                emit this->regChange((unsigned int *)regTable);
+                if(this->isBoard1)
+                {
+                    this->regTable[2][0] = COLOR_960x540;
+                    this->regTable[2][1] = COLOR_960x540;
+                    this->regTable[3][0] = COLOR_960x540;
+                    this->regTable[3][1] = COLOR_960x540;
+                    emit this->regChange((unsigned int *)regTable);
+                }
+                else
+                {
+                    this->regTable[2][0] = 0;
+                    this->regTable[2][1] = 0;
+                    this->regTable[3][0] = 0;
+                    this->regTable[3][1] = 0;
+                    emit this->regChange((unsigned int *)regTable);
+                }
 
                 this->regTable[zone_y][zone_x] = GE_IN_960x540;
                 emit this->regChange((unsigned int *)regTable);
@@ -603,12 +757,8 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             }
             else
             {
-                this->regTable[zone_y][zone_x] = regindex;
-                emit this->regChange((unsigned int *)regTable);
-
                 this->regTable[zone_y][zone_x] = GE_IN_960x540;
                 emit this->regChange((unsigned int *)regTable);
-
             }
 
         }
@@ -616,11 +766,23 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
         {
             if(regTable[2][2] == IN2_3G_1920x1080 || regTable[2][2] == IN1_3G_1920x1080)
             {
-                this->regTable[2][2] =  0;
-                this->regTable[2][3] =  0;
-                this->regTable[3][2] =  0;
-                this->regTable[3][3] =  0;
-                emit this->regChange((unsigned int *)regTable);
+                if(this->isBoard1)
+                {
+                    this->regTable[2][2] = COLOR_960x540;
+                    this->regTable[2][3] = COLOR_960x540;
+                    this->regTable[3][2] = COLOR_960x540;
+                    this->regTable[3][3] = COLOR_960x540;
+                    emit this->regChange((unsigned int *)regTable);
+                }
+                else
+                {
+                    this->regTable[2][2] = 0;
+                    this->regTable[2][3] = 0;
+                    this->regTable[3][2] = 0;
+                    this->regTable[3][3] = 0;
+                    emit this->regChange((unsigned int *)regTable);
+                }
+
 
                 this->regTable[zone_y][zone_x] = GE_IN_960x540;
                 emit this->regChange((unsigned int *)regTable);
@@ -628,12 +790,8 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             }
             else
             {
-                this->regTable[zone_y][zone_x] = regindex;
-                emit this->regChange((unsigned int *)regTable);
-
                 this->regTable[zone_y][zone_x] = GE_IN_960x540;
                 emit this->regChange((unsigned int *)regTable);
-
             }
         }
 
@@ -646,11 +804,23 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
         {
             if(regTable[0][0] == IN2_3G_1920x1080 || regTable[0][0] == IN1_3G_1920x1080)
             {
-                this->regTable[0][0] =  0;
-                this->regTable[0][1] =  0;
-                this->regTable[1][0] =  0;
-                this->regTable[1][1] =  0;
-                emit this->regChange((unsigned int *)regTable);
+                if(this->isBoard1)
+                {
+                    this->regTable[0][0] = COLOR_960x540;
+                    this->regTable[0][1] = COLOR_960x540;
+                    this->regTable[1][0] = COLOR_960x540;
+                    this->regTable[1][1] = COLOR_960x540;
+                    emit this->regChange((unsigned int *)regTable);
+                }
+                else
+                {
+                    this->regTable[0][0] = 0;
+                    this->regTable[0][1] = 0;
+                    this->regTable[1][0] = 0;
+                    this->regTable[1][1] = 0;
+                    emit this->regChange((unsigned int *)regTable);
+                }
+
 
                 this->regTable[zone_y][zone_x] = DETECTION_960x540;
                 emit this->regChange((unsigned int *)regTable);
@@ -658,23 +828,30 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             }
             else
             {
-                this->regTable[zone_y][zone_x] = regindex;
-                emit this->regChange((unsigned int *)regTable);
-
                 this->regTable[zone_y][zone_x] = DETECTION_960x540;
                 emit this->regChange((unsigned int *)regTable);
-
             }
         }
         else if(regindex == 2 || regindex == 3 ||regindex == 6 || regindex == 7)
         {
             if(regTable[0][2] == IN2_3G_1920x1080 || regTable[0][2] == IN1_3G_1920x1080)
             {
-                this->regTable[0][2] =  0;
-                this->regTable[0][3] =  0;
-                this->regTable[1][2] =  0;
-                this->regTable[1][3] =  0;
-                emit this->regChange((unsigned int *)regTable);
+                if(this->isBoard1)
+                {
+                    this->regTable[0][2] = COLOR_960x540;
+                    this->regTable[0][3] = COLOR_960x540;
+                    this->regTable[1][2] = COLOR_960x540;
+                    this->regTable[1][3] = COLOR_960x540;
+                    emit this->regChange((unsigned int *)regTable);
+                }
+                else
+                {
+                    this->regTable[0][2] = 0;
+                    this->regTable[0][3] = 0;
+                    this->regTable[1][2] = 0;
+                    this->regTable[1][3] = 0;
+                    emit this->regChange((unsigned int *)regTable);
+                }
 
                 this->regTable[zone_y][zone_x] = DETECTION_960x540;
                 emit this->regChange((unsigned int *)regTable);
@@ -682,23 +859,30 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             }
             else
             {
-                this->regTable[zone_y][zone_x] = regindex;
-                emit this->regChange((unsigned int *)regTable);
-
                 this->regTable[zone_y][zone_x] = DETECTION_960x540;
                 emit this->regChange((unsigned int *)regTable);
-
             }
         }
         else if(regindex == 8 || regindex == 9 ||regindex == 12 || regindex == 13)
         {
             if(regTable[2][0] == IN2_3G_1920x1080 || regTable[2][0] == IN1_3G_1920x1080)
             {
-                this->regTable[2][0] =  0;
-                this->regTable[2][1] =  0;
-                this->regTable[3][0] =  0;
-                this->regTable[3][1] =  0;
-                emit this->regChange((unsigned int *)regTable);
+                if(this->isBoard1)
+                {
+                    this->regTable[2][0] = COLOR_960x540;
+                    this->regTable[2][1] = COLOR_960x540;
+                    this->regTable[3][0] = COLOR_960x540;
+                    this->regTable[3][1] = COLOR_960x540;
+                    emit this->regChange((unsigned int *)regTable);
+                }
+                else
+                {
+                    this->regTable[2][0] = 0;
+                    this->regTable[2][1] = 0;
+                    this->regTable[3][0] = 0;
+                    this->regTable[3][1] = 0;
+                    emit this->regChange((unsigned int *)regTable);
+                }
 
                 this->regTable[zone_y][zone_x] = DETECTION_960x540;
                 emit this->regChange((unsigned int *)regTable);
@@ -706,12 +890,8 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             }
             else
             {
-                this->regTable[zone_y][zone_x] = regindex;
-                emit this->regChange((unsigned int *)regTable);
-
                 this->regTable[zone_y][zone_x] = DETECTION_960x540;
                 emit this->regChange((unsigned int *)regTable);
-
             }
 
         }
@@ -719,11 +899,22 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
         {
             if(regTable[2][2] == IN2_3G_1920x1080 || regTable[2][2] == IN1_3G_1920x1080)
             {
-                this->regTable[2][2] =  0;
-                this->regTable[2][3] =  0;
-                this->regTable[3][2] =  0;
-                this->regTable[3][3] =  0;
-                emit this->regChange((unsigned int *)regTable);
+                if(this->isBoard1)
+                {
+                    this->regTable[2][2] = COLOR_960x540;
+                    this->regTable[2][3] = COLOR_960x540;
+                    this->regTable[3][2] = COLOR_960x540;
+                    this->regTable[3][3] = COLOR_960x540;
+                    emit this->regChange((unsigned int *)regTable);
+                }
+                else
+                {
+                    this->regTable[2][2] = 0;
+                    this->regTable[2][3] = 0;
+                    this->regTable[3][2] = 0;
+                    this->regTable[3][3] = 0;
+                    emit this->regChange((unsigned int *)regTable);
+                }
 
                 this->regTable[zone_y][zone_x] = DETECTION_960x540;
                 emit this->regChange((unsigned int *)regTable);
@@ -731,12 +922,8 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             }
             else
             {
-                this->regTable[zone_y][zone_x] = regindex;
-                emit this->regChange((unsigned int *)regTable);
-
                 this->regTable[zone_y][zone_x] = DETECTION_960x540;
                 emit this->regChange((unsigned int *)regTable);
-
             }
         }
 
@@ -749,11 +936,22 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
         {
             if(regTable[0][0] == IN2_3G_1920x1080 || regTable[0][0] == IN1_3G_1920x1080)
             {
-                this->regTable[0][0] =  0;
-                this->regTable[0][1] =  0;
-                this->regTable[1][0] =  0;
-                this->regTable[1][1] =  0;
-                emit this->regChange((unsigned int *)regTable);
+                if(this->isBoard1)
+                {
+                    this->regTable[0][0] = COLOR_960x540;
+                    this->regTable[0][1] = COLOR_960x540;
+                    this->regTable[1][0] = COLOR_960x540;
+                    this->regTable[1][1] = COLOR_960x540;
+                    emit this->regChange((unsigned int *)regTable);
+                }
+                else
+                {
+                    this->regTable[0][0] = 0;
+                    this->regTable[0][1] = 0;
+                    this->regTable[1][0] = 0;
+                    this->regTable[1][1] = 0;
+                    emit this->regChange((unsigned int *)regTable);
+                }
 
                 this->regTable[zone_y][zone_x] = DETECTION_960x540;
                 emit this->regChange((unsigned int *)regTable);
@@ -761,9 +959,6 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             }
             else
             {
-                this->regTable[zone_y][zone_x] = regindex;
-                emit this->regChange((unsigned int *)regTable);
-
                 this->regTable[zone_y][zone_x] = DETECTION_960x540;
                 emit this->regChange((unsigned int *)regTable);
 
@@ -773,11 +968,22 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
         {
             if(regTable[0][2] == IN2_3G_1920x1080 || regTable[0][2] == IN1_3G_1920x1080)
             {
-                this->regTable[0][2] =  0;
-                this->regTable[0][3] =  0;
-                this->regTable[1][2] =  0;
-                this->regTable[1][3] =  0;
-                emit this->regChange((unsigned int *)regTable);
+                if(this->isBoard1)
+                {
+                    this->regTable[0][2] = COLOR_960x540;
+                    this->regTable[0][3] = COLOR_960x540;
+                    this->regTable[1][2] = COLOR_960x540;
+                    this->regTable[1][3] = COLOR_960x540;
+                    emit this->regChange((unsigned int *)regTable);
+                }
+                else
+                {
+                    this->regTable[0][2] = 0;
+                    this->regTable[0][3] = 0;
+                    this->regTable[1][2] = 0;
+                    this->regTable[1][3] = 0;
+                    emit this->regChange((unsigned int *)regTable);
+                }
 
                 this->regTable[zone_y][zone_x] = DETECTION_960x540;
                 emit this->regChange((unsigned int *)regTable);
@@ -785,23 +991,30 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             }
             else
             {
-                this->regTable[zone_y][zone_x] = regindex;
-                emit this->regChange((unsigned int *)regTable);
-
                 this->regTable[zone_y][zone_x] = DETECTION_960x540;
                 emit this->regChange((unsigned int *)regTable);
-
             }
         }
         else if(regindex == 8 || regindex == 9 ||regindex == 12 || regindex == 13)
         {
             if(regTable[2][0] == IN2_3G_1920x1080 || regTable[2][0] == IN1_3G_1920x1080)
             {
-                this->regTable[2][0] =  0;
-                this->regTable[2][1] =  0;
-                this->regTable[3][0] =  0;
-                this->regTable[3][1] =  0;
-                emit this->regChange((unsigned int *)regTable);
+                if(this->isBoard1)
+                {
+                    this->regTable[2][0] = COLOR_960x540;
+                    this->regTable[2][1] = COLOR_960x540;
+                    this->regTable[3][0] = COLOR_960x540;
+                    this->regTable[3][1] = COLOR_960x540;
+                    emit this->regChange((unsigned int *)regTable);
+                }
+                else
+                {
+                    this->regTable[2][0] = 0;
+                    this->regTable[2][1] = 0;
+                    this->regTable[3][0] = 0;
+                    this->regTable[3][1] = 0;
+                    emit this->regChange((unsigned int *)regTable);
+                }
 
                 this->regTable[zone_y][zone_x] = DETECTION_960x540;
                 emit this->regChange((unsigned int *)regTable);
@@ -809,12 +1022,8 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             }
             else
             {
-                this->regTable[zone_y][zone_x] = regindex;
-                emit this->regChange((unsigned int *)regTable);
-
                 this->regTable[zone_y][zone_x] = DETECTION_960x540;
                 emit this->regChange((unsigned int *)regTable);
-
             }
 
         }
@@ -822,11 +1031,22 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
         {
             if(regTable[2][2] == IN2_3G_1920x1080 || regTable[2][2] == IN1_3G_1920x1080)
             {
-                this->regTable[2][2] =  0;
-                this->regTable[2][3] =  0;
-                this->regTable[3][2] =  0;
-                this->regTable[3][3] =  0;
-                emit this->regChange((unsigned int *)regTable);
+                if(this->isBoard1)
+                {
+                    this->regTable[2][2] = COLOR_960x540;
+                    this->regTable[2][3] = COLOR_960x540;
+                    this->regTable[3][2] = COLOR_960x540;
+                    this->regTable[3][3] = COLOR_960x540;
+                    emit this->regChange((unsigned int *)regTable);
+                }
+                else
+                {
+                    this->regTable[2][2] = 0;
+                    this->regTable[2][3] = 0;
+                    this->regTable[3][2] = 0;
+                    this->regTable[3][3] = 0;
+                    emit this->regChange((unsigned int *)regTable);
+                }
 
                 this->regTable[zone_y][zone_x] = DETECTION_960x540;
                 emit this->regChange((unsigned int *)regTable);
@@ -834,12 +1054,8 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             }
             else
             {
-                this->regTable[zone_y][zone_x] = regindex;
-                emit this->regChange((unsigned int *)regTable);
-
                 this->regTable[zone_y][zone_x] = DETECTION_960x540;
                 emit this->regChange((unsigned int *)regTable);
-
             }
         }
 
@@ -851,11 +1067,22 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
         {
             if(regTable[0][0] == IN2_3G_1920x1080 || regTable[0][0] == IN1_3G_1920x1080)
             {
-                this->regTable[0][0] =  0;
-                this->regTable[0][1] =  0;
-                this->regTable[1][0] =  0;
-                this->regTable[1][1] =  0;
-                emit this->regChange((unsigned int *)regTable);
+                if(this->isBoard1)
+                {
+                    this->regTable[0][0] = COLOR_960x540;
+                    this->regTable[0][1] = COLOR_960x540;
+                    this->regTable[1][0] = COLOR_960x540;
+                    this->regTable[1][1] = COLOR_960x540;
+                    emit this->regChange((unsigned int *)regTable);
+                }
+                else
+                {
+                    this->regTable[0][0] = 0;
+                    this->regTable[0][1] = 0;
+                    this->regTable[1][0] = 0;
+                    this->regTable[1][1] = 0;
+                    emit this->regChange((unsigned int *)regTable);
+                }
 
                 this->regTable[zone_y][zone_x] = LVDS_IN_960x540;
                 emit this->regChange((unsigned int *)regTable);
@@ -863,23 +1090,30 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             }
             else
             {
-                this->regTable[zone_y][zone_x] = regindex;
-                emit this->regChange((unsigned int *)regTable);
-
                 this->regTable[zone_y][zone_x] = LVDS_IN_960x540;
                 emit this->regChange((unsigned int *)regTable);
-
             }
         }
         else if(regindex == 2 || regindex == 3 ||regindex == 6 || regindex == 7)
         {
             if(regTable[0][2] == IN2_3G_1920x1080 || regTable[0][2] == IN1_3G_1920x1080)
             {
-                this->regTable[0][2] =  0;
-                this->regTable[0][3] =  0;
-                this->regTable[1][2] =  0;
-                this->regTable[1][3] =  0;
-                emit this->regChange((unsigned int *)regTable);
+                if(this->isBoard1)
+                {
+                    this->regTable[0][2] = COLOR_960x540;
+                    this->regTable[0][3] = COLOR_960x540;
+                    this->regTable[1][2] = COLOR_960x540;
+                    this->regTable[1][3] = COLOR_960x540;
+                    emit this->regChange((unsigned int *)regTable);
+                }
+                else
+                {
+                    this->regTable[0][2] = 0;
+                    this->regTable[0][3] = 0;
+                    this->regTable[1][2] = 0;
+                    this->regTable[1][3] = 0;
+                    emit this->regChange((unsigned int *)regTable);
+                }
 
                 this->regTable[zone_y][zone_x] = LVDS_IN_960x540;
                 emit this->regChange((unsigned int *)regTable);
@@ -887,23 +1121,30 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             }
             else
             {
-                this->regTable[zone_y][zone_x] = regindex;
-                emit this->regChange((unsigned int *)regTable);
-
                 this->regTable[zone_y][zone_x] = LVDS_IN_960x540;
                 emit this->regChange((unsigned int *)regTable);
-
             }
         }
         else if(regindex == 8 || regindex == 9 ||regindex == 12 || regindex == 13)
         {
             if(regTable[2][0] == IN2_3G_1920x1080 || regTable[2][0] == IN1_3G_1920x1080)
             {
-                this->regTable[2][0] =  0;
-                this->regTable[2][1] =  0;
-                this->regTable[3][0] =  0;
-                this->regTable[3][1] =  0;
-                emit this->regChange((unsigned int *)regTable);
+                if(this->isBoard1)
+                {
+                    this->regTable[2][0] = COLOR_960x540;
+                    this->regTable[2][1] = COLOR_960x540;
+                    this->regTable[3][0] = COLOR_960x540;
+                    this->regTable[3][1] = COLOR_960x540;
+                    emit this->regChange((unsigned int *)regTable);
+                }
+                else
+                {
+                    this->regTable[2][0] = 0;
+                    this->regTable[2][1] = 0;
+                    this->regTable[3][0] = 0;
+                    this->regTable[3][1] = 0;
+                    emit this->regChange((unsigned int *)regTable);
+                }
 
                 this->regTable[zone_y][zone_x] = LVDS_IN_960x540;
                 emit this->regChange((unsigned int *)regTable);
@@ -911,12 +1152,8 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             }
             else
             {
-                this->regTable[zone_y][zone_x] = regindex;
-                emit this->regChange((unsigned int *)regTable);
-
                 this->regTable[zone_y][zone_x] = LVDS_IN_960x540;
                 emit this->regChange((unsigned int *)regTable);
-
             }
 
         }
@@ -924,11 +1161,22 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
         {
             if(regTable[2][2] == IN2_3G_1920x1080 || regTable[2][2] == IN1_3G_1920x1080)
             {
-                this->regTable[2][2] =  0;
-                this->regTable[2][3] =  0;
-                this->regTable[3][2] =  0;
-                this->regTable[3][3] =  0;
-                emit this->regChange((unsigned int *)regTable);
+                if(this->isBoard1)
+                {
+                    this->regTable[2][2] = COLOR_960x540;
+                    this->regTable[2][3] = COLOR_960x540;
+                    this->regTable[3][2] = COLOR_960x540;
+                    this->regTable[3][3] = COLOR_960x540;
+                    emit this->regChange((unsigned int *)regTable);
+                }
+                else
+                {
+                    this->regTable[2][2] = 0;
+                    this->regTable[2][3] = 0;
+                    this->regTable[3][2] = 0;
+                    this->regTable[3][3] = 0;
+                    emit this->regChange((unsigned int *)regTable);
+                }
 
                 this->regTable[zone_y][zone_x] = LVDS_IN_960x540;
                 emit this->regChange((unsigned int *)regTable);
@@ -936,16 +1184,11 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             }
             else
             {
-                this->regTable[zone_y][zone_x] = regindex;
-                emit this->regChange((unsigned int *)regTable);
-
                 this->regTable[zone_y][zone_x] = LVDS_IN_960x540;
                 emit this->regChange((unsigned int *)regTable);
-
             }
         }
     }
-
     else if(ImgType == IMG_LVDS_IN2)
     {
         this->lvdsInSwitchReg = LVDS_IN2;
@@ -953,11 +1196,22 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
         {
             if(regTable[0][0] == IN2_3G_1920x1080 || regTable[0][0] == IN1_3G_1920x1080)
             {
-                this->regTable[0][0] =  0;
-                this->regTable[0][1] =  0;
-                this->regTable[1][0] =  0;
-                this->regTable[1][1] =  0;
-                emit this->regChange((unsigned int *)regTable);
+                if(this->isBoard1)
+                {
+                    this->regTable[0][0] = COLOR_960x540;
+                    this->regTable[0][1] = COLOR_960x540;
+                    this->regTable[1][0] = COLOR_960x540;
+                    this->regTable[1][1] = COLOR_960x540;
+                    emit this->regChange((unsigned int *)regTable);
+                }
+                else
+                {
+                    this->regTable[0][0] = 0;
+                    this->regTable[0][1] = 0;
+                    this->regTable[1][0] = 0;
+                    this->regTable[1][1] = 0;
+                    emit this->regChange((unsigned int *)regTable);
+                }
 
                 this->regTable[zone_y][zone_x] = LVDS_IN_960x540;
                 emit this->regChange((unsigned int *)regTable);
@@ -965,23 +1219,30 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             }
             else
             {
-                this->regTable[zone_y][zone_x] = regindex;
-                emit this->regChange((unsigned int *)regTable);
-
                 this->regTable[zone_y][zone_x] = LVDS_IN_960x540;
                 emit this->regChange((unsigned int *)regTable);
-
             }
         }
         else if(regindex == 2 || regindex == 3 ||regindex == 6 || regindex == 7)
         {
             if(regTable[0][2] == IN2_3G_1920x1080 || regTable[0][2] == IN1_3G_1920x1080)
             {
-                this->regTable[0][2] =  0;
-                this->regTable[0][3] =  0;
-                this->regTable[1][2] =  0;
-                this->regTable[1][3] =  0;
-                emit this->regChange((unsigned int *)regTable);
+                if(this->isBoard1)
+                {
+                    this->regTable[0][2] = COLOR_960x540;
+                    this->regTable[0][3] = COLOR_960x540;
+                    this->regTable[1][2] = COLOR_960x540;
+                    this->regTable[1][3] = COLOR_960x540;
+                    emit this->regChange((unsigned int *)regTable);
+                }
+                else
+                {
+                    this->regTable[0][2] = 0;
+                    this->regTable[0][3] = 0;
+                    this->regTable[1][2] = 0;
+                    this->regTable[1][3] = 0;
+                    emit this->regChange((unsigned int *)regTable);
+                }
 
                 this->regTable[zone_y][zone_x] = LVDS_IN_960x540;
                 emit this->regChange((unsigned int *)regTable);
@@ -989,9 +1250,6 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             }
             else
             {
-                this->regTable[zone_y][zone_x] = regindex;
-                emit this->regChange((unsigned int *)regTable);
-
                 this->regTable[zone_y][zone_x] = LVDS_IN_960x540;
                 emit this->regChange((unsigned int *)regTable);
 
@@ -1001,11 +1259,22 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
         {
             if(regTable[2][0] == IN2_3G_1920x1080 || regTable[2][0] == IN1_3G_1920x1080)
             {
-                this->regTable[2][0] =  0;
-                this->regTable[2][1] =  0;
-                this->regTable[3][0] =  0;
-                this->regTable[3][1] =  0;
-                emit this->regChange((unsigned int *)regTable);
+                if(this->isBoard1)
+                {
+                    this->regTable[2][0] = COLOR_960x540;
+                    this->regTable[2][1] = COLOR_960x540;
+                    this->regTable[3][0] = COLOR_960x540;
+                    this->regTable[3][1] = COLOR_960x540;
+                    emit this->regChange((unsigned int *)regTable);
+                }
+                else
+                {
+                    this->regTable[2][0] = 0;
+                    this->regTable[2][1] = 0;
+                    this->regTable[3][0] = 0;
+                    this->regTable[3][1] = 0;
+                    emit this->regChange((unsigned int *)regTable);
+                }
 
                 this->regTable[zone_y][zone_x] = LVDS_IN_960x540;
                 emit this->regChange((unsigned int *)regTable);
@@ -1013,12 +1282,8 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             }
             else
             {
-                this->regTable[zone_y][zone_x] = regindex;
-                emit this->regChange((unsigned int *)regTable);
-
                 this->regTable[zone_y][zone_x] = LVDS_IN_960x540;
                 emit this->regChange((unsigned int *)regTable);
-
             }
 
         }
@@ -1026,11 +1291,22 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
         {
             if(regTable[2][2] == IN2_3G_1920x1080 || regTable[2][2] == IN1_3G_1920x1080)
             {
-                this->regTable[2][2] =  0;
-                this->regTable[2][3] =  0;
-                this->regTable[3][2] =  0;
-                this->regTable[3][3] =  0;
-                emit this->regChange((unsigned int *)regTable);
+                if(this->isBoard1)
+                {
+                    this->regTable[2][2] = COLOR_960x540;
+                    this->regTable[2][3] = COLOR_960x540;
+                    this->regTable[3][2] = COLOR_960x540;
+                    this->regTable[3][3] = COLOR_960x540;
+                    emit this->regChange((unsigned int *)regTable);
+                }
+                else
+                {
+                    this->regTable[2][2] = 0;
+                    this->regTable[2][3] = 0;
+                    this->regTable[3][2] = 0;
+                    this->regTable[3][3] = 0;
+                    emit this->regChange((unsigned int *)regTable);
+                }
 
                 this->regTable[zone_y][zone_x] = LVDS_IN_960x540;
                 emit this->regChange((unsigned int *)regTable);
@@ -1038,12 +1314,8 @@ void ImgLabel::handleImgControl(unsigned int zone_x, unsigned int zone_y)
             }
             else
             {
-                this->regTable[zone_y][zone_x] = regindex;
-                emit this->regChange((unsigned int *)regTable);
-
                 this->regTable[zone_y][zone_x] = LVDS_IN_960x540;
                 emit this->regChange((unsigned int *)regTable);
-
             }
         }
     }
@@ -1181,9 +1453,6 @@ void ImgLabel::clearImg(unsigned int zone_x, unsigned int zone_y)
                 }
                 else
                 {
-                    this->regTable[zone_y][zone_x] = regindex;
-                    emit this->regChange((unsigned int *)regTable);
-
                     if(this->isBoard1)
                     {
                         this->regTable[zone_y][zone_x] = COLOR_960x540;
@@ -1230,9 +1499,6 @@ void ImgLabel::clearImg(unsigned int zone_x, unsigned int zone_y)
                 }
                 else
                 {
-                    this->regTable[zone_y][zone_x] = regindex;
-                    emit this->regChange((unsigned int *)regTable);
-
                     if(this->isBoard1)
                     {
                         this->regTable[zone_y][zone_x] = COLOR_960x540;
@@ -1279,9 +1545,6 @@ void ImgLabel::clearImg(unsigned int zone_x, unsigned int zone_y)
                 }
                 else
                 {
-                    this->regTable[zone_y][zone_x] = regindex;
-                    emit this->regChange((unsigned int *)regTable);
-
                     if(this->isBoard1)
                     {
                         this->regTable[zone_y][zone_x] = COLOR_960x540;
@@ -1330,9 +1593,6 @@ void ImgLabel::clearImg(unsigned int zone_x, unsigned int zone_y)
                 }
                 else
                 {
-                    this->regTable[zone_y][zone_x] = regindex;
-                    emit this->regChange((unsigned int *)regTable);
-
                     if(this->isBoard1)
                     {
                         this->regTable[zone_y][zone_x] = COLOR_960x540;
@@ -1348,8 +1608,18 @@ void ImgLabel::clearImg(unsigned int zone_x, unsigned int zone_y)
         }
         else if(Img3GIn1Size == INPUT_SIZE_FULL)
         {
-            this->resetRegData();
-            emit this->regChange((unsigned int *)regTable);
+            if(this->isBoard1)
+            {
+                this->resetRegData1();
+                emit this->regChange((unsigned int *)regTable);
+
+            }
+            else
+            {
+                this->resetRegData();
+                emit this->regChange((unsigned int *)regTable);
+            }
+
         }
     }
     else if(ImgType == IMG_IN2_3G)
@@ -1477,9 +1747,6 @@ void ImgLabel::clearImg(unsigned int zone_x, unsigned int zone_y)
                 }
                 else
                 {
-                    this->regTable[zone_y][zone_x] = regindex;
-                    emit this->regChange((unsigned int *)regTable);
-
                     if(this->isBoard1)
                     {
                         this->regTable[zone_y][zone_x] = COLOR_960x540;
@@ -1526,9 +1793,6 @@ void ImgLabel::clearImg(unsigned int zone_x, unsigned int zone_y)
                 }
                 else
                 {
-                    this->regTable[zone_y][zone_x] = regindex;
-                    emit this->regChange((unsigned int *)regTable);
-
                     if(this->isBoard1)
                     {
                         this->regTable[zone_y][zone_x] = COLOR_960x540;
@@ -1575,9 +1839,6 @@ void ImgLabel::clearImg(unsigned int zone_x, unsigned int zone_y)
                 }
                 else
                 {
-                    this->regTable[zone_y][zone_x] = regindex;
-                    emit this->regChange((unsigned int *)regTable);
-
                     if(this->isBoard1)
                     {
                         this->regTable[zone_y][zone_x] = COLOR_960x540;
@@ -1625,8 +1886,6 @@ void ImgLabel::clearImg(unsigned int zone_x, unsigned int zone_y)
                 }
                 else
                 {
-                    this->regTable[zone_y][zone_x] = regindex;
-                    emit this->regChange((unsigned int *)regTable);
 
                     if(this->isBoard1)
                     {
@@ -1643,8 +1902,18 @@ void ImgLabel::clearImg(unsigned int zone_x, unsigned int zone_y)
         }
         else if(Img3GIn2Size == INPUT_SIZE_FULL)
         {
-            this->resetRegData();
-            emit this->regChange((unsigned int *)regTable);
+            if(this->isBoard1)
+            {
+                this->resetRegData1();
+                emit this->regChange((unsigned int *)regTable);
+
+            }
+            else
+            {
+                this->resetRegData();
+                emit this->regChange((unsigned int *)regTable);
+            }
+
         }
 
     }
@@ -1683,9 +1952,6 @@ void ImgLabel::clearImg(unsigned int zone_x, unsigned int zone_y)
             }
             else
             {
-                this->regTable[zone_y][zone_x] = regindex;
-                emit this->regChange((unsigned int *)regTable);
-
                 if(this->isBoard1)
                 {
                     this->regTable[zone_y][zone_x] = COLOR_960x540;
@@ -1732,9 +1998,6 @@ void ImgLabel::clearImg(unsigned int zone_x, unsigned int zone_y)
             }
             else
             {
-                this->regTable[zone_y][zone_x] = regindex;
-                emit this->regChange((unsigned int *)regTable);
-
                 if(this->isBoard1)
                 {
                     this->regTable[zone_y][zone_x] = COLOR_960x540;
@@ -1781,9 +2044,6 @@ void ImgLabel::clearImg(unsigned int zone_x, unsigned int zone_y)
             }
             else
             {
-                this->regTable[zone_y][zone_x] = regindex;
-                emit this->regChange((unsigned int *)regTable);
-
                 if(this->isBoard1)
                 {
                     this->regTable[zone_y][zone_x] = COLOR_960x540;
@@ -1831,9 +2091,6 @@ void ImgLabel::clearImg(unsigned int zone_x, unsigned int zone_y)
             }
             else
             {
-                this->regTable[zone_y][zone_x] = regindex;
-                emit this->regChange((unsigned int *)regTable);
-
                 if(this->isBoard1)
                 {
                     this->regTable[zone_y][zone_x] = COLOR_960x540;
@@ -1884,9 +2141,6 @@ void ImgLabel::clearImg(unsigned int zone_x, unsigned int zone_y)
             }
             else
             {
-                this->regTable[zone_y][zone_x] = regindex;
-                emit this->regChange((unsigned int *)regTable);
-
                 if(this->isBoard1)
                 {
                     this->regTable[zone_y][zone_x] = COLOR_960x540;
@@ -1933,9 +2187,6 @@ void ImgLabel::clearImg(unsigned int zone_x, unsigned int zone_y)
             }
             else
             {
-                this->regTable[zone_y][zone_x] = regindex;
-                emit this->regChange((unsigned int *)regTable);
-
                 if(this->isBoard1)
                 {
                     this->regTable[zone_y][zone_x] = COLOR_960x540;
@@ -1983,9 +2234,6 @@ void ImgLabel::clearImg(unsigned int zone_x, unsigned int zone_y)
             }
             else
             {
-                this->regTable[zone_y][zone_x] = regindex;
-                emit this->regChange((unsigned int *)regTable);
-
                 if(this->isBoard1)
                 {
                     this->regTable[zone_y][zone_x] = COLOR_960x540;
@@ -2034,9 +2282,6 @@ void ImgLabel::clearImg(unsigned int zone_x, unsigned int zone_y)
             }
             else
             {
-                this->regTable[zone_y][zone_x] = regindex;
-                emit this->regChange((unsigned int *)regTable);
-
                 if(this->isBoard1)
                 {
                     this->regTable[zone_y][zone_x] = COLOR_960x540;
@@ -2051,7 +2296,7 @@ void ImgLabel::clearImg(unsigned int zone_x, unsigned int zone_y)
         }
 
     }
-    else if(ImgType == IMG_LVDS_IN1)
+    else if(ImgType == IMG_LVDS_IN1 || ImgType == IMG_LVDS_IN2)
     {
         if(regindex == 0 || regindex == 1 ||regindex == 4 || regindex == 5)
         {
@@ -2087,8 +2332,6 @@ void ImgLabel::clearImg(unsigned int zone_x, unsigned int zone_y)
             }
             else
             {
-                this->regTable[zone_y][zone_x] = regindex;
-                emit this->regChange((unsigned int *)regTable);
 
                 if(this->isBoard1)
                 {
@@ -2136,9 +2379,6 @@ void ImgLabel::clearImg(unsigned int zone_x, unsigned int zone_y)
             }
             else
             {
-                this->regTable[zone_y][zone_x] = regindex;
-                emit this->regChange((unsigned int *)regTable);
-
                 if(this->isBoard1)
                 {
                     this->regTable[zone_y][zone_x] = COLOR_960x540;
@@ -2184,9 +2424,6 @@ void ImgLabel::clearImg(unsigned int zone_x, unsigned int zone_y)
             }
             else
             {
-                this->regTable[zone_y][zone_x] = regindex;
-                emit this->regChange((unsigned int *)regTable);
-
                 if(this->isBoard1)
                 {
                     this->regTable[zone_y][zone_x] = COLOR_960x540;
@@ -2234,9 +2471,6 @@ void ImgLabel::clearImg(unsigned int zone_x, unsigned int zone_y)
             }
             else
             {
-                this->regTable[zone_y][zone_x] = regindex;
-                emit this->regChange((unsigned int *)regTable);
-
                 if(this->isBoard1)
                 {
                     this->regTable[zone_y][zone_x] = COLOR_960x540;

@@ -1328,23 +1328,23 @@ void MainWindow::initUi()
     ui->spinBoxOsdAlphaBoard8->setMaximum(255);
 
 
-    ui->horizontalSliderOsdStartXBoard1->setMinimum(0);
-    ui->horizontalSliderOsdStartXBoard2->setMinimum(0);
-    ui->horizontalSliderOsdStartXBoard3->setMinimum(0);
-    ui->horizontalSliderOsdStartXBoard4->setMinimum(0);
-    ui->horizontalSliderOsdStartXBoard5->setMinimum(0);
-    ui->horizontalSliderOsdStartXBoard6->setMinimum(0);
-    ui->horizontalSliderOsdStartXBoard7->setMinimum(0);
-    ui->horizontalSliderOsdStartXBoard8->setMinimum(0);
+    ui->horizontalSliderOsdStartXBoard1->setMinimum(10);
+    ui->horizontalSliderOsdStartXBoard2->setMinimum(10);
+    ui->horizontalSliderOsdStartXBoard3->setMinimum(10);
+    ui->horizontalSliderOsdStartXBoard4->setMinimum(10);
+    ui->horizontalSliderOsdStartXBoard5->setMinimum(10);
+    ui->horizontalSliderOsdStartXBoard6->setMinimum(10);
+    ui->horizontalSliderOsdStartXBoard7->setMinimum(10);
+    ui->horizontalSliderOsdStartXBoard8->setMinimum(10);
 
-    ui->horizontalSliderOsdStartXBoard1->setMaximum(1919);
-    ui->horizontalSliderOsdStartXBoard2->setMaximum(1919);
-    ui->horizontalSliderOsdStartXBoard3->setMaximum(1919);
-    ui->horizontalSliderOsdStartXBoard4->setMaximum(1919);
-    ui->horizontalSliderOsdStartXBoard5->setMaximum(1919);
-    ui->horizontalSliderOsdStartXBoard6->setMaximum(1919);
-    ui->horizontalSliderOsdStartXBoard7->setMaximum(1919);
-    ui->horizontalSliderOsdStartXBoard8->setMaximum(1919);
+    ui->horizontalSliderOsdStartXBoard1->setMaximum(1630);
+    ui->horizontalSliderOsdStartXBoard2->setMaximum(1630);
+    ui->horizontalSliderOsdStartXBoard3->setMaximum(1630);
+    ui->horizontalSliderOsdStartXBoard4->setMaximum(1630);
+    ui->horizontalSliderOsdStartXBoard5->setMaximum(1630);
+    ui->horizontalSliderOsdStartXBoard6->setMaximum(1630);
+    ui->horizontalSliderOsdStartXBoard7->setMaximum(1630);
+    ui->horizontalSliderOsdStartXBoard8->setMaximum(1630);
 
     ui->horizontalSliderOsdStartXBoard1->setSingleStep(1);  // 步长
     ui->horizontalSliderOsdStartXBoard2->setSingleStep(1);  // 步长
@@ -1355,41 +1355,41 @@ void MainWindow::initUi()
     ui->horizontalSliderOsdStartXBoard7->setSingleStep(1);  // 步长
     ui->horizontalSliderOsdStartXBoard8->setSingleStep(1);  // 步长
 
-    ui->spinBoxOsdStartXBoard1->setMinimum(0);
-    ui->spinBoxOsdStartXBoard2->setMinimum(0);
-    ui->spinBoxOsdStartXBoard3->setMinimum(0);
-    ui->spinBoxOsdStartXBoard4->setMinimum(0);
-    ui->spinBoxOsdStartXBoard5->setMinimum(0);
-    ui->spinBoxOsdStartXBoard6->setMinimum(0);
-    ui->spinBoxOsdStartXBoard7->setMinimum(0);
-    ui->spinBoxOsdStartXBoard8->setMinimum(0);
+    ui->spinBoxOsdStartXBoard1->setMinimum(10);
+    ui->spinBoxOsdStartXBoard2->setMinimum(10);
+    ui->spinBoxOsdStartXBoard3->setMinimum(10);
+    ui->spinBoxOsdStartXBoard4->setMinimum(10);
+    ui->spinBoxOsdStartXBoard5->setMinimum(10);
+    ui->spinBoxOsdStartXBoard6->setMinimum(10);
+    ui->spinBoxOsdStartXBoard7->setMinimum(10);
+    ui->spinBoxOsdStartXBoard8->setMinimum(10);
 
-    ui->spinBoxOsdStartXBoard1->setMaximum(1919);
-    ui->spinBoxOsdStartXBoard2->setMaximum(1919);
-    ui->spinBoxOsdStartXBoard3->setMaximum(1919);
-    ui->spinBoxOsdStartXBoard4->setMaximum(1919);
-    ui->spinBoxOsdStartXBoard5->setMaximum(1919);
-    ui->spinBoxOsdStartXBoard6->setMaximum(1919);
-    ui->spinBoxOsdStartXBoard7->setMaximum(1919);
-    ui->spinBoxOsdStartXBoard8->setMaximum(1919);
+    ui->spinBoxOsdStartXBoard1->setMaximum(1630);
+    ui->spinBoxOsdStartXBoard2->setMaximum(1630);
+    ui->spinBoxOsdStartXBoard3->setMaximum(1630);
+    ui->spinBoxOsdStartXBoard4->setMaximum(1630);
+    ui->spinBoxOsdStartXBoard5->setMaximum(1630);
+    ui->spinBoxOsdStartXBoard6->setMaximum(1630);
+    ui->spinBoxOsdStartXBoard7->setMaximum(1630);
+    ui->spinBoxOsdStartXBoard8->setMaximum(1630);
 
-    ui->horizontalSliderOsdStartYBoard1->setMinimum(0);
-    ui->horizontalSliderOsdStartYBoard2->setMinimum(0);
-    ui->horizontalSliderOsdStartYBoard3->setMinimum(0);
-    ui->horizontalSliderOsdStartYBoard4->setMinimum(0);
-    ui->horizontalSliderOsdStartYBoard5->setMinimum(0);
-    ui->horizontalSliderOsdStartYBoard6->setMinimum(0);
-    ui->horizontalSliderOsdStartYBoard7->setMinimum(0);
-    ui->horizontalSliderOsdStartYBoard8->setMinimum(0);
+    ui->horizontalSliderOsdStartYBoard1->setMinimum(45);
+    ui->horizontalSliderOsdStartYBoard2->setMinimum(45);
+    ui->horizontalSliderOsdStartYBoard3->setMinimum(45);
+    ui->horizontalSliderOsdStartYBoard4->setMinimum(45);
+    ui->horizontalSliderOsdStartYBoard5->setMinimum(45);
+    ui->horizontalSliderOsdStartYBoard6->setMinimum(45);
+    ui->horizontalSliderOsdStartYBoard7->setMinimum(45);
+    ui->horizontalSliderOsdStartYBoard8->setMinimum(45);
 
-    ui->horizontalSliderOsdStartYBoard1->setMaximum(1079);
-    ui->horizontalSliderOsdStartYBoard2->setMaximum(1079);
-    ui->horizontalSliderOsdStartYBoard3->setMaximum(1079);
-    ui->horizontalSliderOsdStartYBoard4->setMaximum(1079);
-    ui->horizontalSliderOsdStartYBoard5->setMaximum(1079);
-    ui->horizontalSliderOsdStartYBoard6->setMaximum(1079);
-    ui->horizontalSliderOsdStartYBoard7->setMaximum(1079);
-    ui->horizontalSliderOsdStartYBoard8->setMaximum(1079);
+    ui->horizontalSliderOsdStartYBoard1->setMaximum(1070);
+    ui->horizontalSliderOsdStartYBoard2->setMaximum(1070);
+    ui->horizontalSliderOsdStartYBoard3->setMaximum(1070);
+    ui->horizontalSliderOsdStartYBoard4->setMaximum(1070);
+    ui->horizontalSliderOsdStartYBoard5->setMaximum(1070);
+    ui->horizontalSliderOsdStartYBoard6->setMaximum(1070);
+    ui->horizontalSliderOsdStartYBoard7->setMaximum(1070);
+    ui->horizontalSliderOsdStartYBoard8->setMaximum(1070);
 
     ui->horizontalSliderOsdStartYBoard1->setSingleStep(1);  // 步长
     ui->horizontalSliderOsdStartYBoard2->setSingleStep(1);  // 步长
@@ -1400,23 +1400,23 @@ void MainWindow::initUi()
     ui->horizontalSliderOsdStartYBoard7->setSingleStep(1);  // 步长
     ui->horizontalSliderOsdStartYBoard8->setSingleStep(1);  // 步长
 
-    ui->spinBoxOsdStartYBoard1->setMinimum(0);
-    ui->spinBoxOsdStartYBoard2->setMinimum(0);
-    ui->spinBoxOsdStartYBoard3->setMinimum(0);
-    ui->spinBoxOsdStartYBoard4->setMinimum(0);
-    ui->spinBoxOsdStartYBoard5->setMinimum(0);
-    ui->spinBoxOsdStartYBoard6->setMinimum(0);
-    ui->spinBoxOsdStartYBoard7->setMinimum(0);
-    ui->spinBoxOsdStartYBoard8->setMinimum(0);
+    ui->spinBoxOsdStartYBoard1->setMinimum(45);
+    ui->spinBoxOsdStartYBoard2->setMinimum(45);
+    ui->spinBoxOsdStartYBoard3->setMinimum(45);
+    ui->spinBoxOsdStartYBoard4->setMinimum(45);
+    ui->spinBoxOsdStartYBoard5->setMinimum(45);
+    ui->spinBoxOsdStartYBoard6->setMinimum(45);
+    ui->spinBoxOsdStartYBoard7->setMinimum(45);
+    ui->spinBoxOsdStartYBoard8->setMinimum(45);
 
-    ui->spinBoxOsdStartYBoard1->setMaximum(1079);
-    ui->spinBoxOsdStartYBoard2->setMaximum(1079);
-    ui->spinBoxOsdStartYBoard3->setMaximum(1079);
-    ui->spinBoxOsdStartYBoard4->setMaximum(1079);
-    ui->spinBoxOsdStartYBoard5->setMaximum(1079);
-    ui->spinBoxOsdStartYBoard6->setMaximum(1079);
-    ui->spinBoxOsdStartYBoard7->setMaximum(1079);
-    ui->spinBoxOsdStartYBoard8->setMaximum(1079);
+    ui->spinBoxOsdStartYBoard1->setMaximum(1070);
+    ui->spinBoxOsdStartYBoard2->setMaximum(1070);
+    ui->spinBoxOsdStartYBoard3->setMaximum(1070);
+    ui->spinBoxOsdStartYBoard4->setMaximum(1070);
+    ui->spinBoxOsdStartYBoard5->setMaximum(1070);
+    ui->spinBoxOsdStartYBoard6->setMaximum(1070);
+    ui->spinBoxOsdStartYBoard7->setMaximum(1070);
+    ui->spinBoxOsdStartYBoard8->setMaximum(1070);
 
     ui->horizontalSliderOsdWidthBoard1->setMinimum(1);
     ui->horizontalSliderOsdWidthBoard2->setMinimum(1);
@@ -1426,6 +1426,11 @@ void MainWindow::initUi()
     ui->horizontalSliderOsdWidthBoard6->setMinimum(1);
     ui->horizontalSliderOsdWidthBoard7->setMinimum(1);
     ui->horizontalSliderOsdWidthBoard8->setMinimum(1);
+
+
+
+
+
 
     ui->horizontalSliderOsdWidthBoard1->setMaximum(1920);
     ui->horizontalSliderOsdWidthBoard2->setMaximum(1920);
@@ -5575,34 +5580,34 @@ void MainWindow::on_horizontalSliderOsdStartYBoard1_sliderReleased()
 
 void MainWindow::on_horizontalSliderOsdWidthBoard1_sliderReleased()
 {
-    unsigned char send_str[8] = {0};
-    int ID = (PGN57856 << 8) + this->board1->writerAddr;  //写FPGA命令
-    quint64 regaddr = 0x0032;
-    quint64 regdata = ui->spinBoxOsdWidthBoard1->value();
-    quint64 data = (regaddr<<16) + regdata;
-    char *p = (char *)(&data);
-    for(int i = 0; i < 8; i++)
-    {
-        send_str[i] = p[7 - i];
-    }
-    canthread->sendData(ID,(unsigned char*)send_str);
-    sleep(10);
+//    unsigned char send_str[8] = {0};
+//    int ID = (PGN57856 << 8) + this->board1->writerAddr;  //写FPGA命令
+//    quint64 regaddr = 0x0032;
+//    quint64 regdata = ui->spinBoxOsdWidthBoard1->value();
+//    quint64 data = (regaddr<<16) + regdata;
+//    char *p = (char *)(&data);
+//    for(int i = 0; i < 8; i++)
+//    {
+//        send_str[i] = p[7 - i];
+//    }
+//    canthread->sendData(ID,(unsigned char*)send_str);
+//    sleep(10);
 }
 
 void MainWindow::on_horizontalSliderOsdHeightBoard1_sliderReleased()
 {
-    unsigned char send_str[8] = {0};
-    int ID = (PGN57856 << 8) + this->board1->writerAddr;  //写FPGA命令
-    quint64 regaddr = 0x0033;
-    quint64 regdata = ui->spinBoxOsdHeightBoard1->value();
-    quint64 data = (regaddr<<16) + regdata;
-    char *p = (char *)(&data);
-    for(int i = 0; i < 8; i++)
-    {
-        send_str[i] = p[7 - i];
-    }
-    canthread->sendData(ID,(unsigned char*)send_str);
-    sleep(10);
+//    unsigned char send_str[8] = {0};
+//    int ID = (PGN57856 << 8) + this->board1->writerAddr;  //写FPGA命令
+//    quint64 regaddr = 0x0033;
+//    quint64 regdata = ui->spinBoxOsdHeightBoard1->value();
+//    quint64 data = (regaddr<<16) + regdata;
+//    char *p = (char *)(&data);
+//    for(int i = 0; i < 8; i++)
+//    {
+//        send_str[i] = p[7 - i];
+//    }
+//    canthread->sendData(ID,(unsigned char*)send_str);
+//    sleep(10);
 }
 
 void MainWindow::on_horizontalSliderOsdAlphaBoard1_sliderReleased()
@@ -5684,34 +5689,34 @@ void MainWindow::on_horizontalSliderOsdStartYBoard2_sliderReleased()
 
 void MainWindow::on_horizontalSliderOsdWidthBoard2_sliderReleased()
 {
-    unsigned char send_str[8] = {0};
-    int ID = (PGN57856 << 8) + this->board2->writerAddr;  //写FPGA命令
-    quint64 regaddr = 0x0032;
-    quint64 regdata = ui->spinBoxOsdWidthBoard2->value();
-    quint64 data = (regaddr<<16) + regdata;
-    char *p = (char *)(&data);
-    for(int i = 0; i < 8; i++)
-    {
-        send_str[i] = p[7 - i];
-    }
-    canthread->sendData(ID,(unsigned char*)send_str);
-    sleep(10);
+//    unsigned char send_str[8] = {0};
+//    int ID = (PGN57856 << 8) + this->board2->writerAddr;  //写FPGA命令
+//    quint64 regaddr = 0x0032;
+//    quint64 regdata = ui->spinBoxOsdWidthBoard2->value();
+//    quint64 data = (regaddr<<16) + regdata;
+//    char *p = (char *)(&data);
+//    for(int i = 0; i < 8; i++)
+//    {
+//        send_str[i] = p[7 - i];
+//    }
+//    canthread->sendData(ID,(unsigned char*)send_str);
+//    sleep(10);
 }
 
 void MainWindow::on_horizontalSliderOsdHeightBoard2_sliderReleased()
 {
-    unsigned char send_str[8] = {0};
-    int ID = (PGN57856 << 8) + this->board2->writerAddr;  //写FPGA命令
-    quint64 regaddr = 0x0033;
-    quint64 regdata = ui->spinBoxOsdHeightBoard2->value();
-    quint64 data = (regaddr<<16) + regdata;
-    char *p = (char *)(&data);
-    for(int i = 0; i < 8; i++)
-    {
-        send_str[i] = p[7 - i];
-    }
-    canthread->sendData(ID,(unsigned char*)send_str);
-    sleep(10);
+//    unsigned char send_str[8] = {0};
+//    int ID = (PGN57856 << 8) + this->board2->writerAddr;  //写FPGA命令
+//    quint64 regaddr = 0x0033;
+//    quint64 regdata = ui->spinBoxOsdHeightBoard2->value();
+//    quint64 data = (regaddr<<16) + regdata;
+//    char *p = (char *)(&data);
+//    for(int i = 0; i < 8; i++)
+//    {
+//        send_str[i] = p[7 - i];
+//    }
+//    canthread->sendData(ID,(unsigned char*)send_str);
+//    sleep(10);
 }
 
 void MainWindow::on_horizontalSliderOsdAlphaBoard2_sliderReleased()
@@ -5793,34 +5798,34 @@ void MainWindow::on_horizontalSliderOsdStartYBoard3_sliderReleased()
 
 void MainWindow::on_horizontalSliderOsdWidthBoard3_sliderReleased()
 {
-    unsigned char send_str[8] = {0};
-    int ID = (PGN57856 << 8) + this->board3->writerAddr;  //写FPGA命令
-    quint64 regaddr = 0x0032;
-    quint64 regdata = ui->spinBoxOsdWidthBoard3->value();
-    quint64 data = (regaddr<<16) + regdata;
-    char *p = (char *)(&data);
-    for(int i = 0; i < 8; i++)
-    {
-        send_str[i] = p[7 - i];
-    }
-    canthread->sendData(ID,(unsigned char*)send_str);
-    sleep(10);
+//    unsigned char send_str[8] = {0};
+//    int ID = (PGN57856 << 8) + this->board3->writerAddr;  //写FPGA命令
+//    quint64 regaddr = 0x0032;
+//    quint64 regdata = ui->spinBoxOsdWidthBoard3->value();
+//    quint64 data = (regaddr<<16) + regdata;
+//    char *p = (char *)(&data);
+//    for(int i = 0; i < 8; i++)
+//    {
+//        send_str[i] = p[7 - i];
+//    }
+//    canthread->sendData(ID,(unsigned char*)send_str);
+//    sleep(10);
 }
 
 void MainWindow::on_horizontalSliderOsdHeightBoard3_sliderReleased()
 {
-    unsigned char send_str[8] = {0};
-    int ID = (PGN57856 << 8) + this->board3->writerAddr;  //写FPGA命令
-    quint64 regaddr = 0x0033;
-    quint64 regdata = ui->spinBoxOsdHeightBoard3->value();
-    quint64 data = (regaddr<<16) + regdata;
-    char *p = (char *)(&data);
-    for(int i = 0; i < 8; i++)
-    {
-        send_str[i] = p[7 - i];
-    }
-    canthread->sendData(ID,(unsigned char*)send_str);
-    sleep(10);
+//    unsigned char send_str[8] = {0};
+//    int ID = (PGN57856 << 8) + this->board3->writerAddr;  //写FPGA命令
+//    quint64 regaddr = 0x0033;
+//    quint64 regdata = ui->spinBoxOsdHeightBoard3->value();
+//    quint64 data = (regaddr<<16) + regdata;
+//    char *p = (char *)(&data);
+//    for(int i = 0; i < 8; i++)
+//    {
+//        send_str[i] = p[7 - i];
+//    }
+//    canthread->sendData(ID,(unsigned char*)send_str);
+//    sleep(10);
 }
 
 void MainWindow::on_horizontalSliderOsdAlphaBoard3_sliderReleased()
@@ -5903,34 +5908,34 @@ void MainWindow::on_horizontalSliderOsdStartYBoard4_sliderReleased()
 
 void MainWindow::on_horizontalSliderOsdWidthBoard4_sliderReleased()
 {
-    unsigned char send_str[8] = {0};
-    int ID = (PGN57856 << 8) + this->board4->writerAddr;  //写FPGA命令
-    quint64 regaddr = 0x0032;
-    quint64 regdata = ui->spinBoxOsdWidthBoard4->value();
-    quint64 data = (regaddr<<16) + regdata;
-    char *p = (char *)(&data);
-    for(int i = 0; i < 8; i++)
-    {
-        send_str[i] = p[7 - i];
-    }
-    canthread->sendData(ID,(unsigned char*)send_str);
-    sleep(10);
+//    unsigned char send_str[8] = {0};
+//    int ID = (PGN57856 << 8) + this->board4->writerAddr;  //写FPGA命令
+//    quint64 regaddr = 0x0032;
+//    quint64 regdata = ui->spinBoxOsdWidthBoard4->value();
+//    quint64 data = (regaddr<<16) + regdata;
+//    char *p = (char *)(&data);
+//    for(int i = 0; i < 8; i++)
+//    {
+//        send_str[i] = p[7 - i];
+//    }
+//    canthread->sendData(ID,(unsigned char*)send_str);
+//    sleep(10);
 }
 
 void MainWindow::on_horizontalSliderOsdHeightBoard4_sliderReleased()
 {
-    unsigned char send_str[8] = {0};
-    int ID = (PGN57856 << 8) + this->board4->writerAddr;  //写FPGA命令
-    quint64 regaddr = 0x0033;
-    quint64 regdata = ui->spinBoxOsdHeightBoard4->value();
-    quint64 data = (regaddr<<16) + regdata;
-    char *p = (char *)(&data);
-    for(int i = 0; i < 8; i++)
-    {
-        send_str[i] = p[7 - i];
-    }
-    canthread->sendData(ID,(unsigned char*)send_str);
-    sleep(10);
+//    unsigned char send_str[8] = {0};
+//    int ID = (PGN57856 << 8) + this->board4->writerAddr;  //写FPGA命令
+//    quint64 regaddr = 0x0033;
+//    quint64 regdata = ui->spinBoxOsdHeightBoard4->value();
+//    quint64 data = (regaddr<<16) + regdata;
+//    char *p = (char *)(&data);
+//    for(int i = 0; i < 8; i++)
+//    {
+//        send_str[i] = p[7 - i];
+//    }
+//    canthread->sendData(ID,(unsigned char*)send_str);
+//    sleep(10);
 }
 
 void MainWindow::on_horizontalSliderOsdAlphaBoard4_sliderReleased()
@@ -6013,34 +6018,34 @@ void MainWindow::on_horizontalSliderOsdStartYBoard5_sliderReleased()
 
 void MainWindow::on_horizontalSliderOsdWidthBoard5_sliderReleased()
 {
-    unsigned char send_str[8] = {0};
-    int ID = (PGN57856 << 8) + this->board5->writerAddr;  //写FPGA命令
-    quint64 regaddr = 0x0032;
-    quint64 regdata = ui->spinBoxOsdWidthBoard5->value();
-    quint64 data = (regaddr<<16) + regdata;
-    char *p = (char *)(&data);
-    for(int i = 0; i < 8; i++)
-    {
-        send_str[i] = p[7 - i];
-    }
-    canthread->sendData(ID,(unsigned char*)send_str);
-    sleep(10);
+//    unsigned char send_str[8] = {0};
+//    int ID = (PGN57856 << 8) + this->board5->writerAddr;  //写FPGA命令
+//    quint64 regaddr = 0x0032;
+//    quint64 regdata = ui->spinBoxOsdWidthBoard5->value();
+//    quint64 data = (regaddr<<16) + regdata;
+//    char *p = (char *)(&data);
+//    for(int i = 0; i < 8; i++)
+//    {
+//        send_str[i] = p[7 - i];
+//    }
+//    canthread->sendData(ID,(unsigned char*)send_str);
+//    sleep(10);
 }
 
 void MainWindow::on_horizontalSliderOsdHeightBoard5_sliderReleased()
 {
-    unsigned char send_str[8] = {0};
-    int ID = (PGN57856 << 8) + this->board5->writerAddr;  //写FPGA命令
-    quint64 regaddr = 0x0033;
-    quint64 regdata = ui->spinBoxOsdHeightBoard5->value();
-    quint64 data = (regaddr<<16) + regdata;
-    char *p = (char *)(&data);
-    for(int i = 0; i < 8; i++)
-    {
-        send_str[i] = p[7 - i];
-    }
-    canthread->sendData(ID,(unsigned char*)send_str);
-    sleep(10);
+//    unsigned char send_str[8] = {0};
+//    int ID = (PGN57856 << 8) + this->board5->writerAddr;  //写FPGA命令
+//    quint64 regaddr = 0x0033;
+//    quint64 regdata = ui->spinBoxOsdHeightBoard5->value();
+//    quint64 data = (regaddr<<16) + regdata;
+//    char *p = (char *)(&data);
+//    for(int i = 0; i < 8; i++)
+//    {
+//        send_str[i] = p[7 - i];
+//    }
+//    canthread->sendData(ID,(unsigned char*)send_str);
+//    sleep(10);
 }
 
 void MainWindow::on_horizontalSliderOsdAlphaBoard5_sliderReleased()
@@ -6123,34 +6128,34 @@ void MainWindow::on_horizontalSliderOsdStartYBoard6_sliderReleased()
 
 void MainWindow::on_horizontalSliderOsdWidthBoard6_sliderReleased()
 {
-    unsigned char send_str[8] = {0};
-    int ID = (PGN57856 << 8) + this->board6->writerAddr;  //写FPGA命令
-    quint64 regaddr = 0x0032;
-    quint64 regdata = ui->spinBoxOsdWidthBoard6->value();
-    quint64 data = (regaddr<<16) + regdata;
-    char *p = (char *)(&data);
-    for(int i = 0; i < 8; i++)
-    {
-        send_str[i] = p[7 - i];
-    }
-    canthread->sendData(ID,(unsigned char*)send_str);
-    sleep(10);
+//    unsigned char send_str[8] = {0};
+//    int ID = (PGN57856 << 8) + this->board6->writerAddr;  //写FPGA命令
+//    quint64 regaddr = 0x0032;
+//    quint64 regdata = ui->spinBoxOsdWidthBoard6->value();
+//    quint64 data = (regaddr<<16) + regdata;
+//    char *p = (char *)(&data);
+//    for(int i = 0; i < 8; i++)
+//    {
+//        send_str[i] = p[7 - i];
+//    }
+//    canthread->sendData(ID,(unsigned char*)send_str);
+//    sleep(10);
 }
 
 void MainWindow::on_horizontalSliderOsdHeightBoard6_sliderReleased()
 {
-    unsigned char send_str[8] = {0};
-    int ID = (PGN57856 << 8) + this->board6->writerAddr;  //写FPGA命令
-    quint64 regaddr = 0x0033;
-    quint64 regdata = ui->spinBoxOsdHeightBoard6->value();
-    quint64 data = (regaddr<<16) + regdata;
-    char *p = (char *)(&data);
-    for(int i = 0; i < 8; i++)
-    {
-        send_str[i] = p[7 - i];
-    }
-    canthread->sendData(ID,(unsigned char*)send_str);
-    sleep(10);
+//    unsigned char send_str[8] = {0};
+//    int ID = (PGN57856 << 8) + this->board6->writerAddr;  //写FPGA命令
+//    quint64 regaddr = 0x0033;
+//    quint64 regdata = ui->spinBoxOsdHeightBoard6->value();
+//    quint64 data = (regaddr<<16) + regdata;
+//    char *p = (char *)(&data);
+//    for(int i = 0; i < 8; i++)
+//    {
+//        send_str[i] = p[7 - i];
+//    }
+//    canthread->sendData(ID,(unsigned char*)send_str);
+//    sleep(10);
 }
 
 void MainWindow::on_horizontalSliderOsdAlphaBoard6_sliderReleased()
@@ -6233,34 +6238,34 @@ void MainWindow::on_horizontalSliderOsdStartYBoard7_sliderReleased()
 
 void MainWindow::on_horizontalSliderOsdWidthBoard7_sliderReleased()
 {
-    unsigned char send_str[8] = {0};
-    int ID = (PGN57856 << 8) + this->board7->writerAddr;  //写FPGA命令
-    quint64 regaddr = 0x0032;
-    quint64 regdata = ui->spinBoxOsdWidthBoard7->value();
-    quint64 data = (regaddr<<16) + regdata;
-    char *p = (char *)(&data);
-    for(int i = 0; i < 8; i++)
-    {
-        send_str[i] = p[7 - i];
-    }
-    canthread->sendData(ID,(unsigned char*)send_str);
-    sleep(10);
+//    unsigned char send_str[8] = {0};
+//    int ID = (PGN57856 << 8) + this->board7->writerAddr;  //写FPGA命令
+//    quint64 regaddr = 0x0032;
+//    quint64 regdata = ui->spinBoxOsdWidthBoard7->value();
+//    quint64 data = (regaddr<<16) + regdata;
+//    char *p = (char *)(&data);
+//    for(int i = 0; i < 8; i++)
+//    {
+//        send_str[i] = p[7 - i];
+//    }
+//    canthread->sendData(ID,(unsigned char*)send_str);
+//    sleep(10);
 }
 
 void MainWindow::on_horizontalSliderOsdHeightBoard7_sliderReleased()
 {
-    unsigned char send_str[8] = {0};
-    int ID = (PGN57856 << 8) + this->board7->writerAddr;  //写FPGA命令
-    quint64 regaddr = 0x0033;
-    quint64 regdata = ui->spinBoxOsdHeightBoard7->value();
-    quint64 data = (regaddr<<16) + regdata;
-    char *p = (char *)(&data);
-    for(int i = 0; i < 8; i++)
-    {
-        send_str[i] = p[7 - i];
-    }
-    canthread->sendData(ID,(unsigned char*)send_str);
-    sleep(10);
+//    unsigned char send_str[8] = {0};
+//    int ID = (PGN57856 << 8) + this->board7->writerAddr;  //写FPGA命令
+//    quint64 regaddr = 0x0033;
+//    quint64 regdata = ui->spinBoxOsdHeightBoard7->value();
+//    quint64 data = (regaddr<<16) + regdata;
+//    char *p = (char *)(&data);
+//    for(int i = 0; i < 8; i++)
+//    {
+//        send_str[i] = p[7 - i];
+//    }
+//    canthread->sendData(ID,(unsigned char*)send_str);
+//    sleep(10);
 }
 
 void MainWindow::on_horizontalSliderOsdAlphaBoard7_sliderReleased()
@@ -6343,34 +6348,34 @@ void MainWindow::on_horizontalSliderOsdStartYBoard8_sliderReleased()
 
 void MainWindow::on_horizontalSliderOsdWidthBoard8_sliderReleased()
 {
-    unsigned char send_str[8] = {0};
-    int ID = (PGN57856 << 8) + this->board8->writerAddr;  //写FPGA命令
-    quint64 regaddr = 0x0032;
-    quint64 regdata = ui->spinBoxOsdWidthBoard8->value();
-    quint64 data = (regaddr<<16) + regdata;
-    char *p = (char *)(&data);
-    for(int i = 0; i < 8; i++)
-    {
-        send_str[i] = p[7 - i];
-    }
-    canthread->sendData(ID,(unsigned char*)send_str);
-    sleep(10);
+//    unsigned char send_str[8] = {0};
+//    int ID = (PGN57856 << 8) + this->board8->writerAddr;  //写FPGA命令
+//    quint64 regaddr = 0x0032;
+//    quint64 regdata = ui->spinBoxOsdWidthBoard8->value();
+//    quint64 data = (regaddr<<16) + regdata;
+//    char *p = (char *)(&data);
+//    for(int i = 0; i < 8; i++)
+//    {
+//        send_str[i] = p[7 - i];
+//    }
+//    canthread->sendData(ID,(unsigned char*)send_str);
+//    sleep(10);
 }
 
 void MainWindow::on_horizontalSliderOsdHeightBoard8_sliderReleased()
 {
-    unsigned char send_str[8] = {0};
-    int ID = (PGN57856 << 8) + this->board8->writerAddr;  //写FPGA命令
-    quint64 regaddr = 0x0033;
-    quint64 regdata = ui->spinBoxOsdHeightBoard8->value();
-    quint64 data = (regaddr<<16) + regdata;
-    char *p = (char *)(&data);
-    for(int i = 0; i < 8; i++)
-    {
-        send_str[i] = p[7 - i];
-    }
-    canthread->sendData(ID,(unsigned char*)send_str);
-    sleep(10);
+//    unsigned char send_str[8] = {0};
+//    int ID = (PGN57856 << 8) + this->board8->writerAddr;  //写FPGA命令
+//    quint64 regaddr = 0x0033;
+//    quint64 regdata = ui->spinBoxOsdHeightBoard8->value();
+//    quint64 data = (regaddr<<16) + regdata;
+//    char *p = (char *)(&data);
+//    for(int i = 0; i < 8; i++)
+//    {
+//        send_str[i] = p[7 - i];
+//    }
+//    canthread->sendData(ID,(unsigned char*)send_str);
+//    sleep(10);
 }
 
 void MainWindow::on_horizontalSliderOsdAlphaBoard8_sliderReleased()
@@ -6391,6 +6396,8 @@ void MainWindow::on_horizontalSliderOsdAlphaBoard8_sliderReleased()
 
 void MainWindow::on_btnWorkControlClearall_clicked()
 {
+    ui->btnWorkControlClearall->setEnabled(false);
+
     ui->labelImgBoard1->resetRegData1();
     emit ui->labelImgBoard1->regChange((unsigned int *) ui->labelImgBoard1->regTable);
     emit ui->labelImgBoard1->mousePaint();
@@ -6422,6 +6429,8 @@ void MainWindow::on_btnWorkControlClearall_clicked()
     ui->labelImgBoard8->resetRegData();
     emit ui->labelImgBoard8->regChange((unsigned int *) ui->labelImgBoard8->regTable);
     emit ui->labelImgBoard8->mousePaint();
+
+    ui->btnWorkControlClearall->setEnabled(true);
 }
 
 void MainWindow::on_pushButtonUpgradeOsdBoard1_clicked()
